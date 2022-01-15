@@ -97,6 +97,20 @@
 <v>StepDirection\StepDirection\PSoC 5LP Architecture TRM</v>
 <v>StepDirection\StepDirection\CY8C58LP Family Datasheet</v>
 <v>StepDirection\StepDirection\System Reference Guides</v>
+<v>StepDirection\StepDirection\and_v1_0.pdf</v>
+<v>StepDirection\StepDirection\Counter_v3_0</v>
+<v>StepDirection\StepDirection\Counter_v3_0\Counter_v3_0.pdf</v>
+<v>StepDirection\StepDirection\cy_clock_v2_20</v>
+<v>StepDirection\StepDirection\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>StepDirection\StepDirection\cy_constant_v1_0.pdf</v>
+<v>StepDirection\StepDirection\cy_isr_v1_70</v>
+<v>StepDirection\StepDirection\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>StepDirection\StepDirection\cy_pins_v2_20</v>
+<v>StepDirection\StepDirection\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>StepDirection\StepDirection\CyControlReg_v1_80</v>
+<v>StepDirection\StepDirection\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>StepDirection\StepDirection\not_v1_0.pdf</v>
+<v>StepDirection\StepDirection\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>StepDirection</v>
@@ -104,6 +118,20 @@
 <v>StepDirection\StepDirection\PSoC 5LP Architecture TRM</v>
 <v>StepDirection\StepDirection\CY8C58LP Family Datasheet</v>
 <v>StepDirection\StepDirection\System Reference Guides</v>
+<v>StepDirection\StepDirection\and_v1_0.pdf</v>
+<v>StepDirection\StepDirection\Counter_v3_0</v>
+<v>StepDirection\StepDirection\Counter_v3_0\Counter_v3_0.pdf</v>
+<v>StepDirection\StepDirection\cy_clock_v2_20</v>
+<v>StepDirection\StepDirection\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>StepDirection\StepDirection\cy_constant_v1_0.pdf</v>
+<v>StepDirection\StepDirection\cy_isr_v1_70</v>
+<v>StepDirection\StepDirection\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>StepDirection\StepDirection\cy_pins_v2_20</v>
+<v>StepDirection\StepDirection\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>StepDirection\StepDirection\CyControlReg_v1_80</v>
+<v>StepDirection\StepDirection\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>StepDirection\StepDirection\not_v1_0.pdf</v>
+<v>StepDirection\StepDirection\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -115,7 +143,6 @@
 <OpenDocs>
 <name v=".\StepDirection.cydsn\main.c" />
 <name v=".\StepDirection.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\StepDirection.cydsn\cyapicallbacks.h" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -123,7 +150,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2067, 1071" SelectedTabbedMdiWindow="eec86c42-122c-49f7-b837-9681b92bbfed"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f9102868-88ca-4853-ab28-0a28d99070b3" /><DocumentWindow Key="C:\Users\casey\Downloads\StepperMotor Tutorial\StepDirection.cydsn\main.c" Guid="eec86c42-122c-49f7-b837-9681b92bbfed" /><DocumentWindow Key="C:\Users\casey\Downloads\StepperMotor Tutorial\StepDirection.cydsn\TopDesign\TopDesign.cysch" Guid="98ddb009-03bc-4fab-ba79-a9f8549e251b" /><DocumentWindow Key="C:\Users\casey\Downloads\StepperMotor Tutorial\StepDirection.cydsn\cyapicallbacks.h" Guid="a07a3d21-78f8-428f-819b-03d6197b0121" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="2067, 1071" SelectedTabbedMdiWindow="ddf8d5f4-4f72-4333-84ad-b8fb7657d6be"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f9102868-88ca-4853-ab28-0a28d99070b3" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepDirection.cydsn\main.c" Guid="ddf8d5f4-4f72-4333-84ad-b8fb7657d6be" /><DocumentWindow Key="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepDirection.cydsn\TopDesign\TopDesign.cysch" Guid="8a5f9404-7f7e-4da0-b78e-a47a4bec4639" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

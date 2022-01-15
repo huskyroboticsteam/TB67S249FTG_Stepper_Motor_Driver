@@ -29,7 +29,7 @@ double newPosition = 320000*360;
 
 double getCurrentPosition()
 {
-    return (int)Step_Counter_ReadCounter() * stepSize;
+    return (int)Step_Counter_ReadCounter();
 }
 
 //Update the variables during the move to change the speed when accelerating
@@ -57,16 +57,18 @@ void UpdateMove()
 
 void StartMove(double targetPosition)
 {
+    int targetStep = round(targetPosition / stepSize);
+    
     //The move starts at the current position
     fromPosition = getCurrentPosition();
-    toPosition = targetPosition;
+    toPosition = targetStep;
     
     //Set step timer to execute first step immediately and wait for the period to be updated
     Step_Timer_WriteCounter(0);
     Step_Timer_WritePeriod(maxStepPeriod);
     Step_Timer_WriteCompare(maxStepPeriod);
     
-    int targetStep = round(targetPosition / stepSize);
+    
     uint32 compare = targetStep;
     //Set target position in step counter
     Step_Counter_WriteCompare(compare);
@@ -96,8 +98,10 @@ int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
     
-    Step_Interrupt_StartEx(On_Step);
-    Done_Interrupt_StartEx(On_Done);
+    step_int_StartEx(On_Step);
+    done_int_StartEx(On_Done);
+    lim_1_int_StartEx(On_Lim_1);
+    lim_2_int_StartEx(On_Lim_2);
     Step_Timer_Start();
     Step_Counter_Start();
     
