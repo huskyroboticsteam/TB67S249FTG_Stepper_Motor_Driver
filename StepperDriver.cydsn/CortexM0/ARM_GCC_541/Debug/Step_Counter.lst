@@ -1,0 +1,2254 @@
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Step_Counter.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Step_Counter_Enable,"ax",%progbits
+  20              		.align	2
+  21              		.global	Step_Counter_Enable
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	Step_Counter_Enable, %function
+  25              	Step_Counter_Enable:
+  26              	.LFB2:
+  27              		.file 1 "Generated_Source\\PSoC4\\Step_Counter.c"
+   1:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+   2:Generated_Source\PSoC4/Step_Counter.c **** * File Name: Step_Counter.c  
+   3:Generated_Source\PSoC4/Step_Counter.c **** * Version 3.0
+   4:Generated_Source\PSoC4/Step_Counter.c **** *
+   5:Generated_Source\PSoC4/Step_Counter.c **** *  Description:
+   6:Generated_Source\PSoC4/Step_Counter.c **** *     The Counter component consists of a 8, 16, 24 or 32-bit counter with
+   7:Generated_Source\PSoC4/Step_Counter.c **** *     a selectable period between 2 and 2^Width - 1.  
+   8:Generated_Source\PSoC4/Step_Counter.c **** *
+   9:Generated_Source\PSoC4/Step_Counter.c **** *   Note:
+  10:Generated_Source\PSoC4/Step_Counter.c **** *     None
+  11:Generated_Source\PSoC4/Step_Counter.c **** *
+  12:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+  13:Generated_Source\PSoC4/Step_Counter.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC4/Step_Counter.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  15:Generated_Source\PSoC4/Step_Counter.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  16:Generated_Source\PSoC4/Step_Counter.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+  18:Generated_Source\PSoC4/Step_Counter.c **** 
+  19:Generated_Source\PSoC4/Step_Counter.c **** #include "Step_Counter.h"
+  20:Generated_Source\PSoC4/Step_Counter.c **** 
+  21:Generated_Source\PSoC4/Step_Counter.c **** uint8 Step_Counter_initVar = 0u;
+  22:Generated_Source\PSoC4/Step_Counter.c **** 
+  23:Generated_Source\PSoC4/Step_Counter.c **** 
+  24:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+  25:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_Init
+  26:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+  27:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+  28:Generated_Source\PSoC4/Step_Counter.c **** *     Initialize to the schematic state
+  29:Generated_Source\PSoC4/Step_Counter.c **** * 
+  30:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 2
+
+
+  31:Generated_Source\PSoC4/Step_Counter.c **** *  void  
+  32:Generated_Source\PSoC4/Step_Counter.c **** *
+  33:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+  34:Generated_Source\PSoC4/Step_Counter.c **** *  void
+  35:Generated_Source\PSoC4/Step_Counter.c **** *
+  36:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+  37:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_Init(void) 
+  38:Generated_Source\PSoC4/Step_Counter.c **** {
+  39:Generated_Source\PSoC4/Step_Counter.c ****         #if (!Step_Counter_UsingFixedFunction && !Step_Counter_ControlRegRemoved)
+  40:Generated_Source\PSoC4/Step_Counter.c ****             uint8 ctrl;
+  41:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (!Step_Counter_UsingFixedFunction && !Step_Counter_ControlRegRemoved) */
+  42:Generated_Source\PSoC4/Step_Counter.c ****         
+  43:Generated_Source\PSoC4/Step_Counter.c ****         #if(!Step_Counter_UsingFixedFunction) 
+  44:Generated_Source\PSoC4/Step_Counter.c ****             /* Interrupt State Backup for Critical Region*/
+  45:Generated_Source\PSoC4/Step_Counter.c ****             uint8 Step_Counter_interruptState;
+  46:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (!Step_Counter_UsingFixedFunction) */
+  47:Generated_Source\PSoC4/Step_Counter.c ****         
+  48:Generated_Source\PSoC4/Step_Counter.c ****         #if (Step_Counter_UsingFixedFunction)
+  49:Generated_Source\PSoC4/Step_Counter.c ****             /* Clear all bits but the enable bit (if it's already set for Timer operation */
+  50:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_CONTROL &= Step_Counter_CTRL_ENABLE;
+  51:Generated_Source\PSoC4/Step_Counter.c ****             
+  52:Generated_Source\PSoC4/Step_Counter.c ****             /* Clear the mode bits for continuous run mode */
+  53:Generated_Source\PSoC4/Step_Counter.c ****             #if (CY_PSOC5A)
+  54:Generated_Source\PSoC4/Step_Counter.c ****                 Step_Counter_CONTROL2 &= ((uint8)(~Step_Counter_CTRL_MODE_MASK));
+  55:Generated_Source\PSoC4/Step_Counter.c ****             #endif /* (CY_PSOC5A) */
+  56:Generated_Source\PSoC4/Step_Counter.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  57:Generated_Source\PSoC4/Step_Counter.c ****                 Step_Counter_CONTROL3 &= ((uint8)(~Step_Counter_CTRL_MODE_MASK));                
+  58:Generated_Source\PSoC4/Step_Counter.c ****             #endif /* (CY_PSOC3 || CY_PSOC5LP) */
+  59:Generated_Source\PSoC4/Step_Counter.c ****             /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  60:Generated_Source\PSoC4/Step_Counter.c ****             #if (Step_Counter_RunModeUsed != 0x0u)
+  61:Generated_Source\PSoC4/Step_Counter.c ****                 /* Set 3rd bit of Control register to enable one shot mode */
+  62:Generated_Source\PSoC4/Step_Counter.c ****                 Step_Counter_CONTROL |= Step_Counter_ONESHOT;
+  63:Generated_Source\PSoC4/Step_Counter.c ****             #endif /* (Step_Counter_RunModeUsed != 0x0u) */
+  64:Generated_Source\PSoC4/Step_Counter.c ****             
+  65:Generated_Source\PSoC4/Step_Counter.c ****             /* Set the IRQ to use the status register interrupts */
+  66:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_CONTROL2 |= Step_Counter_CTRL2_IRQ_SEL;
+  67:Generated_Source\PSoC4/Step_Counter.c ****             
+  68:Generated_Source\PSoC4/Step_Counter.c ****             /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+  69:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_RT1 &= ((uint8)(~Step_Counter_RT1_MASK));
+  70:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_RT1 |= Step_Counter_SYNC;     
+  71:Generated_Source\PSoC4/Step_Counter.c ****                     
+  72:Generated_Source\PSoC4/Step_Counter.c ****             /*Enable DSI Sync all all inputs of the Timer*/
+  73:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_RT1 &= ((uint8)(~Step_Counter_SYNCDSI_MASK));
+  74:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_RT1 |= Step_Counter_SYNCDSI_EN;
+  75:Generated_Source\PSoC4/Step_Counter.c **** 
+  76:Generated_Source\PSoC4/Step_Counter.c ****         #else
+  77:Generated_Source\PSoC4/Step_Counter.c ****             #if(!Step_Counter_ControlRegRemoved)
+  78:Generated_Source\PSoC4/Step_Counter.c ****             /* Set the default compare mode defined in the parameter */
+  79:Generated_Source\PSoC4/Step_Counter.c ****             ctrl = Step_Counter_CONTROL & ((uint8)(~Step_Counter_CTRL_CMPMODE_MASK));
+  80:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_CONTROL = ctrl | Step_Counter_DEFAULT_COMPARE_MODE;
+  81:Generated_Source\PSoC4/Step_Counter.c ****             
+  82:Generated_Source\PSoC4/Step_Counter.c ****             /* Set the default capture mode defined in the parameter */
+  83:Generated_Source\PSoC4/Step_Counter.c ****             ctrl = Step_Counter_CONTROL & ((uint8)(~Step_Counter_CTRL_CAPMODE_MASK));
+  84:Generated_Source\PSoC4/Step_Counter.c ****             
+  85:Generated_Source\PSoC4/Step_Counter.c ****             #if( 0 != Step_Counter_CAPTURE_MODE_CONF)
+  86:Generated_Source\PSoC4/Step_Counter.c ****                 Step_Counter_CONTROL = ctrl | Step_Counter_DEFAULT_CAPTURE_MODE;
+  87:Generated_Source\PSoC4/Step_Counter.c ****             #else
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 3
+
+
+  88:Generated_Source\PSoC4/Step_Counter.c ****                 Step_Counter_CONTROL = ctrl;
+  89:Generated_Source\PSoC4/Step_Counter.c ****             #endif /* 0 != Step_Counter_CAPTURE_MODE */ 
+  90:Generated_Source\PSoC4/Step_Counter.c ****             
+  91:Generated_Source\PSoC4/Step_Counter.c ****             #endif /* (!Step_Counter_ControlRegRemoved) */
+  92:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (Step_Counter_UsingFixedFunction) */
+  93:Generated_Source\PSoC4/Step_Counter.c ****         
+  94:Generated_Source\PSoC4/Step_Counter.c ****         /* Clear all data in the FIFO's */
+  95:Generated_Source\PSoC4/Step_Counter.c ****         #if (!Step_Counter_UsingFixedFunction)
+  96:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_ClearFIFO();
+  97:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (!Step_Counter_UsingFixedFunction) */
+  98:Generated_Source\PSoC4/Step_Counter.c ****         
+  99:Generated_Source\PSoC4/Step_Counter.c ****         /* Set Initial values from Configuration */
+ 100:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_WritePeriod(Step_Counter_INIT_PERIOD_VALUE);
+ 101:Generated_Source\PSoC4/Step_Counter.c ****         #if (!(Step_Counter_UsingFixedFunction && (CY_PSOC5A)))
+ 102:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_WriteCounter(Step_Counter_INIT_COUNTER_VALUE);
+ 103:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (!(Step_Counter_UsingFixedFunction && (CY_PSOC5A))) */
+ 104:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_SetInterruptMode(Step_Counter_INIT_INTERRUPTS_MASK);
+ 105:Generated_Source\PSoC4/Step_Counter.c ****         
+ 106:Generated_Source\PSoC4/Step_Counter.c ****         #if (!Step_Counter_UsingFixedFunction)
+ 107:Generated_Source\PSoC4/Step_Counter.c ****             /* Read the status register to clear the unwanted interrupts */
+ 108:Generated_Source\PSoC4/Step_Counter.c ****             (void)Step_Counter_ReadStatusRegister();
+ 109:Generated_Source\PSoC4/Step_Counter.c ****             /* Set the compare value (only available to non-fixed function implementation */
+ 110:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_WriteCompare(Step_Counter_INIT_COMPARE_VALUE);
+ 111:Generated_Source\PSoC4/Step_Counter.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 112:Generated_Source\PSoC4/Step_Counter.c ****             
+ 113:Generated_Source\PSoC4/Step_Counter.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+ 114:Generated_Source\PSoC4/Step_Counter.c ****             /* Enter Critical Region*/
+ 115:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_interruptState = CyEnterCriticalSection();
+ 116:Generated_Source\PSoC4/Step_Counter.c ****             
+ 117:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_STATUS_AUX_CTRL |= Step_Counter_STATUS_ACTL_INT_EN_MASK;
+ 118:Generated_Source\PSoC4/Step_Counter.c ****             
+ 119:Generated_Source\PSoC4/Step_Counter.c ****             /* Exit Critical Region*/
+ 120:Generated_Source\PSoC4/Step_Counter.c ****             CyExitCriticalSection(Step_Counter_interruptState);
+ 121:Generated_Source\PSoC4/Step_Counter.c ****             
+ 122:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (!Step_Counter_UsingFixedFunction) */
+ 123:Generated_Source\PSoC4/Step_Counter.c **** }
+ 124:Generated_Source\PSoC4/Step_Counter.c **** 
+ 125:Generated_Source\PSoC4/Step_Counter.c **** 
+ 126:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 127:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_Enable
+ 128:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 129:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 130:Generated_Source\PSoC4/Step_Counter.c **** *     Enable the Counter
+ 131:Generated_Source\PSoC4/Step_Counter.c **** * 
+ 132:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 133:Generated_Source\PSoC4/Step_Counter.c **** *  void  
+ 134:Generated_Source\PSoC4/Step_Counter.c **** *
+ 135:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 136:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 137:Generated_Source\PSoC4/Step_Counter.c **** *
+ 138:Generated_Source\PSoC4/Step_Counter.c **** * Side Effects: 
+ 139:Generated_Source\PSoC4/Step_Counter.c **** *   If the Enable mode is set to Hardware only then this function has no effect 
+ 140:Generated_Source\PSoC4/Step_Counter.c **** *   on the operation of the counter.
+ 141:Generated_Source\PSoC4/Step_Counter.c **** *
+ 142:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 143:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_Enable(void) 
+ 144:Generated_Source\PSoC4/Step_Counter.c **** {
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 4
+
+
+  28              		.loc 1 144 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ 145:Generated_Source\PSoC4/Step_Counter.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 146:Generated_Source\PSoC4/Step_Counter.c ****     #if (Step_Counter_UsingFixedFunction)
+ 147:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_GLOBAL_ENABLE |= Step_Counter_BLOCK_EN_MASK;
+ 148:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_GLOBAL_STBY_ENABLE |= Step_Counter_BLOCK_STBY_EN_MASK;
+ 149:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */  
+ 150:Generated_Source\PSoC4/Step_Counter.c ****         
+ 151:Generated_Source\PSoC4/Step_Counter.c ****     /* Enable the counter from the control register  */
+ 152:Generated_Source\PSoC4/Step_Counter.c ****     /* If Fixed Function then make sure Mode is set correctly */
+ 153:Generated_Source\PSoC4/Step_Counter.c ****     /* else make sure reset is clear */
+ 154:Generated_Source\PSoC4/Step_Counter.c ****     #if(!Step_Counter_ControlRegRemoved || Step_Counter_UsingFixedFunction)
+ 155:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_CONTROL |= Step_Counter_CTRL_ENABLE;                
+  33              		.loc 1 155 0
+  34 0000 034A     		ldr	r2, .L2
+  35 0002 1178     		ldrb	r1, [r2]
+  36 0004 8023     		movs	r3, #128
+  37 0006 5B42     		rsbs	r3, r3, #0
+  38 0008 0B43     		orrs	r3, r1
+  39 000a DBB2     		uxtb	r3, r3
+  40 000c 1370     		strb	r3, [r2]
+ 156:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (!Step_Counter_ControlRegRemoved || Step_Counter_UsingFixedFunction) */
+ 157:Generated_Source\PSoC4/Step_Counter.c ****     
+ 158:Generated_Source\PSoC4/Step_Counter.c **** }
+  41              		.loc 1 158 0
+  42              		@ sp needed
+  43 000e 7047     		bx	lr
+  44              	.L3:
+  45              		.align	2
+  46              	.L2:
+  47 0010 71000F40 		.word	1074724977
+  48              		.cfi_endproc
+  49              	.LFE2:
+  50              		.size	Step_Counter_Enable, .-Step_Counter_Enable
+  51              		.section	.text.Step_Counter_Stop,"ax",%progbits
+  52              		.align	2
+  53              		.global	Step_Counter_Stop
+  54              		.code	16
+  55              		.thumb_func
+  56              		.type	Step_Counter_Stop, %function
+  57              	Step_Counter_Stop:
+  58              	.LFB4:
+ 159:Generated_Source\PSoC4/Step_Counter.c **** 
+ 160:Generated_Source\PSoC4/Step_Counter.c **** 
+ 161:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 162:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_Start
+ 163:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 164:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 165:Generated_Source\PSoC4/Step_Counter.c **** *  Enables the counter for operation 
+ 166:Generated_Source\PSoC4/Step_Counter.c **** *
+ 167:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 168:Generated_Source\PSoC4/Step_Counter.c **** *  void  
+ 169:Generated_Source\PSoC4/Step_Counter.c **** *
+ 170:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 5
+
+
+ 171:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 172:Generated_Source\PSoC4/Step_Counter.c **** *
+ 173:Generated_Source\PSoC4/Step_Counter.c **** * Global variables:
+ 174:Generated_Source\PSoC4/Step_Counter.c **** *  Step_Counter_initVar: Is modified when this function is called for the  
+ 175:Generated_Source\PSoC4/Step_Counter.c **** *   first time. Is used to ensure that initialization happens only once.
+ 176:Generated_Source\PSoC4/Step_Counter.c **** *
+ 177:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 178:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_Start(void) 
+ 179:Generated_Source\PSoC4/Step_Counter.c **** {
+ 180:Generated_Source\PSoC4/Step_Counter.c ****     if(Step_Counter_initVar == 0u)
+ 181:Generated_Source\PSoC4/Step_Counter.c ****     {
+ 182:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_Init();
+ 183:Generated_Source\PSoC4/Step_Counter.c ****         
+ 184:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_initVar = 1u; /* Clear this bit for Initialization */        
+ 185:Generated_Source\PSoC4/Step_Counter.c ****     }
+ 186:Generated_Source\PSoC4/Step_Counter.c ****     
+ 187:Generated_Source\PSoC4/Step_Counter.c ****     /* Enable the Counter */
+ 188:Generated_Source\PSoC4/Step_Counter.c ****     Step_Counter_Enable();        
+ 189:Generated_Source\PSoC4/Step_Counter.c **** }
+ 190:Generated_Source\PSoC4/Step_Counter.c **** 
+ 191:Generated_Source\PSoC4/Step_Counter.c **** 
+ 192:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 193:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_Stop
+ 194:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 195:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 196:Generated_Source\PSoC4/Step_Counter.c **** * Halts the counter, but does not change any modes or disable interrupts.
+ 197:Generated_Source\PSoC4/Step_Counter.c **** *
+ 198:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 199:Generated_Source\PSoC4/Step_Counter.c **** *  void  
+ 200:Generated_Source\PSoC4/Step_Counter.c **** *
+ 201:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 202:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 203:Generated_Source\PSoC4/Step_Counter.c **** *
+ 204:Generated_Source\PSoC4/Step_Counter.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 205:Generated_Source\PSoC4/Step_Counter.c **** *               has no effect on the operation of the counter.
+ 206:Generated_Source\PSoC4/Step_Counter.c **** *
+ 207:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 208:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_Stop(void) 
+ 209:Generated_Source\PSoC4/Step_Counter.c **** {
+  59              		.loc 1 209 0
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+ 210:Generated_Source\PSoC4/Step_Counter.c ****     /* Disable Counter */
+ 211:Generated_Source\PSoC4/Step_Counter.c ****     #if(!Step_Counter_ControlRegRemoved || Step_Counter_UsingFixedFunction)
+ 212:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_CONTROL &= ((uint8)(~Step_Counter_CTRL_ENABLE));        
+  64              		.loc 1 212 0
+  65 0000 024A     		ldr	r2, .L5
+  66 0002 1178     		ldrb	r1, [r2]
+  67 0004 7F23     		movs	r3, #127
+  68 0006 0B40     		ands	r3, r1
+  69 0008 1370     		strb	r3, [r2]
+ 213:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (!Step_Counter_ControlRegRemoved || Step_Counter_UsingFixedFunction) */
+ 214:Generated_Source\PSoC4/Step_Counter.c ****     
+ 215:Generated_Source\PSoC4/Step_Counter.c ****     /* Globally disable the Fixed Function Block chosen */
+ 216:Generated_Source\PSoC4/Step_Counter.c ****     #if (Step_Counter_UsingFixedFunction)
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 6
+
+
+ 217:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_GLOBAL_ENABLE &= ((uint8)(~Step_Counter_BLOCK_EN_MASK));
+ 218:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_GLOBAL_STBY_ENABLE &= ((uint8)(~Step_Counter_BLOCK_STBY_EN_MASK));
+ 219:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */
+ 220:Generated_Source\PSoC4/Step_Counter.c **** }
+  70              		.loc 1 220 0
+  71              		@ sp needed
+  72 000a 7047     		bx	lr
+  73              	.L6:
+  74              		.align	2
+  75              	.L5:
+  76 000c 71000F40 		.word	1074724977
+  77              		.cfi_endproc
+  78              	.LFE4:
+  79              		.size	Step_Counter_Stop, .-Step_Counter_Stop
+  80              		.section	.text.Step_Counter_SetInterruptMode,"ax",%progbits
+  81              		.align	2
+  82              		.global	Step_Counter_SetInterruptMode
+  83              		.code	16
+  84              		.thumb_func
+  85              		.type	Step_Counter_SetInterruptMode, %function
+  86              	Step_Counter_SetInterruptMode:
+  87              	.LFB5:
+ 221:Generated_Source\PSoC4/Step_Counter.c **** 
+ 222:Generated_Source\PSoC4/Step_Counter.c **** 
+ 223:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 224:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_SetInterruptMode
+ 225:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 226:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 227:Generated_Source\PSoC4/Step_Counter.c **** * Configures which interrupt sources are enabled to generate the final interrupt
+ 228:Generated_Source\PSoC4/Step_Counter.c **** *
+ 229:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 230:Generated_Source\PSoC4/Step_Counter.c **** *  InterruptsMask: This parameter is an or'd collection of the status bits
+ 231:Generated_Source\PSoC4/Step_Counter.c **** *                   which will be allowed to generate the counters interrupt.   
+ 232:Generated_Source\PSoC4/Step_Counter.c **** *
+ 233:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 234:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 235:Generated_Source\PSoC4/Step_Counter.c **** *
+ 236:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 237:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_SetInterruptMode(uint8 interruptsMask) 
+ 238:Generated_Source\PSoC4/Step_Counter.c **** {
+  88              		.loc 1 238 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
+  93              	.LVL0:
+ 239:Generated_Source\PSoC4/Step_Counter.c ****     Step_Counter_STATUS_MASK = interruptsMask;
+  94              		.loc 1 239 0
+  95 0000 014B     		ldr	r3, .L8
+  96 0002 1870     		strb	r0, [r3]
+ 240:Generated_Source\PSoC4/Step_Counter.c **** }
+  97              		.loc 1 240 0
+  98              		@ sp needed
+  99 0004 7047     		bx	lr
+ 100              	.L9:
+ 101 0006 C046     		.align	2
+ 102              	.L8:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 7
+
+
+ 103 0008 83000F40 		.word	1074724995
+ 104              		.cfi_endproc
+ 105              	.LFE5:
+ 106              		.size	Step_Counter_SetInterruptMode, .-Step_Counter_SetInterruptMode
+ 107              		.section	.text.Step_Counter_ReadStatusRegister,"ax",%progbits
+ 108              		.align	2
+ 109              		.global	Step_Counter_ReadStatusRegister
+ 110              		.code	16
+ 111              		.thumb_func
+ 112              		.type	Step_Counter_ReadStatusRegister, %function
+ 113              	Step_Counter_ReadStatusRegister:
+ 114              	.LFB6:
+ 241:Generated_Source\PSoC4/Step_Counter.c **** 
+ 242:Generated_Source\PSoC4/Step_Counter.c **** 
+ 243:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 244:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_ReadStatusRegister
+ 245:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 246:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 247:Generated_Source\PSoC4/Step_Counter.c **** *   Reads the status register and returns it's state. This function should use
+ 248:Generated_Source\PSoC4/Step_Counter.c **** *       defined types for the bit-field information as the bits in this
+ 249:Generated_Source\PSoC4/Step_Counter.c **** *       register may be permuteable.
+ 250:Generated_Source\PSoC4/Step_Counter.c **** *
+ 251:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 252:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 253:Generated_Source\PSoC4/Step_Counter.c **** *
+ 254:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 255:Generated_Source\PSoC4/Step_Counter.c **** *  (uint8) The contents of the status register
+ 256:Generated_Source\PSoC4/Step_Counter.c **** *
+ 257:Generated_Source\PSoC4/Step_Counter.c **** * Side Effects:
+ 258:Generated_Source\PSoC4/Step_Counter.c **** *   Status register bits may be clear on read. 
+ 259:Generated_Source\PSoC4/Step_Counter.c **** *
+ 260:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 261:Generated_Source\PSoC4/Step_Counter.c **** uint8   Step_Counter_ReadStatusRegister(void) 
+ 262:Generated_Source\PSoC4/Step_Counter.c **** {
+ 115              		.loc 1 262 0
+ 116              		.cfi_startproc
+ 117              		@ args = 0, pretend = 0, frame = 0
+ 118              		@ frame_needed = 0, uses_anonymous_args = 0
+ 119              		@ link register save eliminated.
+ 263:Generated_Source\PSoC4/Step_Counter.c ****     return Step_Counter_STATUS;
+ 120              		.loc 1 263 0
+ 121 0000 014B     		ldr	r3, .L11
+ 122 0002 1878     		ldrb	r0, [r3]
+ 123 0004 C0B2     		uxtb	r0, r0
+ 264:Generated_Source\PSoC4/Step_Counter.c **** }
+ 124              		.loc 1 264 0
+ 125              		@ sp needed
+ 126 0006 7047     		bx	lr
+ 127              	.L12:
+ 128              		.align	2
+ 129              	.L11:
+ 130 0008 63000F40 		.word	1074724963
+ 131              		.cfi_endproc
+ 132              	.LFE6:
+ 133              		.size	Step_Counter_ReadStatusRegister, .-Step_Counter_ReadStatusRegister
+ 134              		.section	.text.Step_Counter_ReadControlRegister,"ax",%progbits
+ 135              		.align	2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 8
+
+
+ 136              		.global	Step_Counter_ReadControlRegister
+ 137              		.code	16
+ 138              		.thumb_func
+ 139              		.type	Step_Counter_ReadControlRegister, %function
+ 140              	Step_Counter_ReadControlRegister:
+ 141              	.LFB7:
+ 265:Generated_Source\PSoC4/Step_Counter.c **** 
+ 266:Generated_Source\PSoC4/Step_Counter.c **** 
+ 267:Generated_Source\PSoC4/Step_Counter.c **** #if(!Step_Counter_ControlRegRemoved)
+ 268:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 269:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_ReadControlRegister
+ 270:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 271:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 272:Generated_Source\PSoC4/Step_Counter.c **** *   Reads the control register and returns it's state. This function should use
+ 273:Generated_Source\PSoC4/Step_Counter.c **** *       defined types for the bit-field information as the bits in this
+ 274:Generated_Source\PSoC4/Step_Counter.c **** *       register may be permuteable.
+ 275:Generated_Source\PSoC4/Step_Counter.c **** *
+ 276:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 277:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 278:Generated_Source\PSoC4/Step_Counter.c **** *
+ 279:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 280:Generated_Source\PSoC4/Step_Counter.c **** *  (uint8) The contents of the control register
+ 281:Generated_Source\PSoC4/Step_Counter.c **** *
+ 282:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 283:Generated_Source\PSoC4/Step_Counter.c **** uint8   Step_Counter_ReadControlRegister(void) 
+ 284:Generated_Source\PSoC4/Step_Counter.c **** {
+ 142              		.loc 1 284 0
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 0
+ 145              		@ frame_needed = 0, uses_anonymous_args = 0
+ 146              		@ link register save eliminated.
+ 285:Generated_Source\PSoC4/Step_Counter.c ****     return Step_Counter_CONTROL;
+ 147              		.loc 1 285 0
+ 148 0000 014B     		ldr	r3, .L14
+ 149 0002 1878     		ldrb	r0, [r3]
+ 150 0004 C0B2     		uxtb	r0, r0
+ 286:Generated_Source\PSoC4/Step_Counter.c **** }
+ 151              		.loc 1 286 0
+ 152              		@ sp needed
+ 153 0006 7047     		bx	lr
+ 154              	.L15:
+ 155              		.align	2
+ 156              	.L14:
+ 157 0008 71000F40 		.word	1074724977
+ 158              		.cfi_endproc
+ 159              	.LFE7:
+ 160              		.size	Step_Counter_ReadControlRegister, .-Step_Counter_ReadControlRegister
+ 161              		.section	.text.Step_Counter_WriteControlRegister,"ax",%progbits
+ 162              		.align	2
+ 163              		.global	Step_Counter_WriteControlRegister
+ 164              		.code	16
+ 165              		.thumb_func
+ 166              		.type	Step_Counter_WriteControlRegister, %function
+ 167              	Step_Counter_WriteControlRegister:
+ 168              	.LFB8:
+ 287:Generated_Source\PSoC4/Step_Counter.c **** 
+ 288:Generated_Source\PSoC4/Step_Counter.c **** 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 9
+
+
+ 289:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 290:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_WriteControlRegister
+ 291:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 292:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 293:Generated_Source\PSoC4/Step_Counter.c **** *   Sets the bit-field of the control register.  This function should use
+ 294:Generated_Source\PSoC4/Step_Counter.c **** *       defined types for the bit-field information as the bits in this
+ 295:Generated_Source\PSoC4/Step_Counter.c **** *       register may be permuteable.
+ 296:Generated_Source\PSoC4/Step_Counter.c **** *
+ 297:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 298:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 299:Generated_Source\PSoC4/Step_Counter.c **** *
+ 300:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 301:Generated_Source\PSoC4/Step_Counter.c **** *  (uint8) The contents of the control register
+ 302:Generated_Source\PSoC4/Step_Counter.c **** *
+ 303:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 304:Generated_Source\PSoC4/Step_Counter.c **** void    Step_Counter_WriteControlRegister(uint8 control) 
+ 305:Generated_Source\PSoC4/Step_Counter.c **** {
+ 169              		.loc 1 305 0
+ 170              		.cfi_startproc
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173              		@ link register save eliminated.
+ 174              	.LVL1:
+ 306:Generated_Source\PSoC4/Step_Counter.c ****     Step_Counter_CONTROL = control;
+ 175              		.loc 1 306 0
+ 176 0000 014B     		ldr	r3, .L17
+ 177 0002 1870     		strb	r0, [r3]
+ 307:Generated_Source\PSoC4/Step_Counter.c **** }
+ 178              		.loc 1 307 0
+ 179              		@ sp needed
+ 180 0004 7047     		bx	lr
+ 181              	.L18:
+ 182 0006 C046     		.align	2
+ 183              	.L17:
+ 184 0008 71000F40 		.word	1074724977
+ 185              		.cfi_endproc
+ 186              	.LFE8:
+ 187              		.size	Step_Counter_WriteControlRegister, .-Step_Counter_WriteControlRegister
+ 188              		.section	.text.Step_Counter_WriteCounter,"ax",%progbits
+ 189              		.align	2
+ 190              		.global	Step_Counter_WriteCounter
+ 191              		.code	16
+ 192              		.thumb_func
+ 193              		.type	Step_Counter_WriteCounter, %function
+ 194              	Step_Counter_WriteCounter:
+ 195              	.LFB9:
+ 308:Generated_Source\PSoC4/Step_Counter.c **** 
+ 309:Generated_Source\PSoC4/Step_Counter.c **** #endif  /* (!Step_Counter_ControlRegRemoved) */
+ 310:Generated_Source\PSoC4/Step_Counter.c **** 
+ 311:Generated_Source\PSoC4/Step_Counter.c **** 
+ 312:Generated_Source\PSoC4/Step_Counter.c **** #if (!(Step_Counter_UsingFixedFunction && (CY_PSOC5A)))
+ 313:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 314:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_WriteCounter
+ 315:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 316:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 317:Generated_Source\PSoC4/Step_Counter.c **** *   This funtion is used to set the counter to a specific value
+ 318:Generated_Source\PSoC4/Step_Counter.c **** *
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 10
+
+
+ 319:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 320:Generated_Source\PSoC4/Step_Counter.c **** *  counter:  New counter value. 
+ 321:Generated_Source\PSoC4/Step_Counter.c **** *
+ 322:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 323:Generated_Source\PSoC4/Step_Counter.c **** *  void 
+ 324:Generated_Source\PSoC4/Step_Counter.c **** *
+ 325:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 326:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_WriteCounter(uint32 counter) \
+ 327:Generated_Source\PSoC4/Step_Counter.c ****                                    
+ 328:Generated_Source\PSoC4/Step_Counter.c **** {
+ 196              		.loc 1 328 0
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200              		@ link register save eliminated.
+ 201              	.LVL2:
+ 329:Generated_Source\PSoC4/Step_Counter.c ****     #if(Step_Counter_UsingFixedFunction)
+ 330:Generated_Source\PSoC4/Step_Counter.c ****         /* assert if block is already enabled */
+ 331:Generated_Source\PSoC4/Step_Counter.c ****         CYASSERT (0u == (Step_Counter_GLOBAL_ENABLE & Step_Counter_BLOCK_EN_MASK));
+ 332:Generated_Source\PSoC4/Step_Counter.c ****         /* If block is disabled, enable it and then write the counter */
+ 333:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_GLOBAL_ENABLE |= Step_Counter_BLOCK_EN_MASK;
+ 334:Generated_Source\PSoC4/Step_Counter.c ****         CY_SET_REG16(Step_Counter_COUNTER_LSB_PTR, (uint16)counter);
+ 335:Generated_Source\PSoC4/Step_Counter.c ****         Step_Counter_GLOBAL_ENABLE &= ((uint8)(~Step_Counter_BLOCK_EN_MASK));
+ 336:Generated_Source\PSoC4/Step_Counter.c ****     #else
+ 337:Generated_Source\PSoC4/Step_Counter.c ****         CY_SET_REG32(Step_Counter_COUNTER_LSB_PTR, counter);
+ 202              		.loc 1 337 0
+ 203 0000 014B     		ldr	r3, .L20
+ 204 0002 1860     		str	r0, [r3]
+ 338:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */
+ 339:Generated_Source\PSoC4/Step_Counter.c **** }
+ 205              		.loc 1 339 0
+ 206              		@ sp needed
+ 207 0004 7047     		bx	lr
+ 208              	.L21:
+ 209 0006 C046     		.align	2
+ 210              	.L20:
+ 211 0008 10200F40 		.word	1074733072
+ 212              		.cfi_endproc
+ 213              	.LFE9:
+ 214              		.size	Step_Counter_WriteCounter, .-Step_Counter_WriteCounter
+ 215              		.section	.text.Step_Counter_ReadCounter,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	Step_Counter_ReadCounter
+ 218              		.code	16
+ 219              		.thumb_func
+ 220              		.type	Step_Counter_ReadCounter, %function
+ 221              	Step_Counter_ReadCounter:
+ 222              	.LFB10:
+ 340:Generated_Source\PSoC4/Step_Counter.c **** #endif /* (!(Step_Counter_UsingFixedFunction && (CY_PSOC5A))) */
+ 341:Generated_Source\PSoC4/Step_Counter.c **** 
+ 342:Generated_Source\PSoC4/Step_Counter.c **** 
+ 343:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 344:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_ReadCounter
+ 345:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 346:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 347:Generated_Source\PSoC4/Step_Counter.c **** * Returns the current value of the counter.  It doesn't matter
+ 348:Generated_Source\PSoC4/Step_Counter.c **** * if the counter is enabled or running.
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 11
+
+
+ 349:Generated_Source\PSoC4/Step_Counter.c **** *
+ 350:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 351:Generated_Source\PSoC4/Step_Counter.c **** *  void:  
+ 352:Generated_Source\PSoC4/Step_Counter.c **** *
+ 353:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 354:Generated_Source\PSoC4/Step_Counter.c **** *  (uint32) The present value of the counter.
+ 355:Generated_Source\PSoC4/Step_Counter.c **** *
+ 356:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 357:Generated_Source\PSoC4/Step_Counter.c **** uint32 Step_Counter_ReadCounter(void) 
+ 358:Generated_Source\PSoC4/Step_Counter.c **** {
+ 223              		.loc 1 358 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 0
+ 226              		@ frame_needed = 0, uses_anonymous_args = 0
+ 227              		@ link register save eliminated.
+ 359:Generated_Source\PSoC4/Step_Counter.c ****     /* Force capture by reading Accumulator */
+ 360:Generated_Source\PSoC4/Step_Counter.c ****     /* Must first do a software capture to be able to read the counter */
+ 361:Generated_Source\PSoC4/Step_Counter.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 362:Generated_Source\PSoC4/Step_Counter.c ****     #if(Step_Counter_UsingFixedFunction)
+ 363:Generated_Source\PSoC4/Step_Counter.c **** 		(void)CY_GET_REG16(Step_Counter_COUNTER_LSB_PTR);
+ 364:Generated_Source\PSoC4/Step_Counter.c **** 	#else
+ 365:Generated_Source\PSoC4/Step_Counter.c **** 		(void)CY_GET_REG8(Step_Counter_COUNTER_LSB_PTR_8BIT);
+ 228              		.loc 1 365 0
+ 229 0000 024B     		ldr	r3, .L23
+ 230 0002 1B78     		ldrb	r3, [r3]
+ 366:Generated_Source\PSoC4/Step_Counter.c **** 	#endif/* (Step_Counter_UsingFixedFunction) */
+ 367:Generated_Source\PSoC4/Step_Counter.c ****     
+ 368:Generated_Source\PSoC4/Step_Counter.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 369:Generated_Source\PSoC4/Step_Counter.c ****     #if(Step_Counter_UsingFixedFunction)
+ 370:Generated_Source\PSoC4/Step_Counter.c ****         return ((uint32)CY_GET_REG16(Step_Counter_STATICCOUNT_LSB_PTR));
+ 371:Generated_Source\PSoC4/Step_Counter.c ****     #else
+ 372:Generated_Source\PSoC4/Step_Counter.c ****         return (CY_GET_REG32(Step_Counter_STATICCOUNT_LSB_PTR));
+ 231              		.loc 1 372 0
+ 232 0004 024B     		ldr	r3, .L23+4
+ 233 0006 1868     		ldr	r0, [r3]
+ 373:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */
+ 374:Generated_Source\PSoC4/Step_Counter.c **** }
+ 234              		.loc 1 374 0
+ 235              		@ sp needed
+ 236 0008 7047     		bx	lr
+ 237              	.L24:
+ 238 000a C046     		.align	2
+ 239              	.L23:
+ 240 000c 04000F40 		.word	1074724868
+ 241 0010 10210F40 		.word	1074733328
+ 242              		.cfi_endproc
+ 243              	.LFE10:
+ 244              		.size	Step_Counter_ReadCounter, .-Step_Counter_ReadCounter
+ 245              		.section	.text.Step_Counter_ReadCapture,"ax",%progbits
+ 246              		.align	2
+ 247              		.global	Step_Counter_ReadCapture
+ 248              		.code	16
+ 249              		.thumb_func
+ 250              		.type	Step_Counter_ReadCapture, %function
+ 251              	Step_Counter_ReadCapture:
+ 252              	.LFB11:
+ 375:Generated_Source\PSoC4/Step_Counter.c **** 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 12
+
+
+ 376:Generated_Source\PSoC4/Step_Counter.c **** 
+ 377:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 378:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_ReadCapture
+ 379:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 380:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 381:Generated_Source\PSoC4/Step_Counter.c **** *   This function returns the last value captured.
+ 382:Generated_Source\PSoC4/Step_Counter.c **** *
+ 383:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 384:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 385:Generated_Source\PSoC4/Step_Counter.c **** *
+ 386:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 387:Generated_Source\PSoC4/Step_Counter.c **** *  (uint32) Present Capture value.
+ 388:Generated_Source\PSoC4/Step_Counter.c **** *
+ 389:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 390:Generated_Source\PSoC4/Step_Counter.c **** uint32 Step_Counter_ReadCapture(void) 
+ 391:Generated_Source\PSoC4/Step_Counter.c **** {
+ 253              		.loc 1 391 0
+ 254              		.cfi_startproc
+ 255              		@ args = 0, pretend = 0, frame = 0
+ 256              		@ frame_needed = 0, uses_anonymous_args = 0
+ 257              		@ link register save eliminated.
+ 392:Generated_Source\PSoC4/Step_Counter.c ****     #if(Step_Counter_UsingFixedFunction)
+ 393:Generated_Source\PSoC4/Step_Counter.c ****         return ((uint32)CY_GET_REG16(Step_Counter_STATICCOUNT_LSB_PTR));
+ 394:Generated_Source\PSoC4/Step_Counter.c ****     #else
+ 395:Generated_Source\PSoC4/Step_Counter.c ****         return (CY_GET_REG32(Step_Counter_STATICCOUNT_LSB_PTR));
+ 258              		.loc 1 395 0
+ 259 0000 014B     		ldr	r3, .L26
+ 260 0002 1868     		ldr	r0, [r3]
+ 396:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */
+ 397:Generated_Source\PSoC4/Step_Counter.c **** }
+ 261              		.loc 1 397 0
+ 262              		@ sp needed
+ 263 0004 7047     		bx	lr
+ 264              	.L27:
+ 265 0006 C046     		.align	2
+ 266              	.L26:
+ 267 0008 10210F40 		.word	1074733328
+ 268              		.cfi_endproc
+ 269              	.LFE11:
+ 270              		.size	Step_Counter_ReadCapture, .-Step_Counter_ReadCapture
+ 271              		.section	.text.Step_Counter_WritePeriod,"ax",%progbits
+ 272              		.align	2
+ 273              		.global	Step_Counter_WritePeriod
+ 274              		.code	16
+ 275              		.thumb_func
+ 276              		.type	Step_Counter_WritePeriod, %function
+ 277              	Step_Counter_WritePeriod:
+ 278              	.LFB12:
+ 398:Generated_Source\PSoC4/Step_Counter.c **** 
+ 399:Generated_Source\PSoC4/Step_Counter.c **** 
+ 400:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 401:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_WritePeriod
+ 402:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 403:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 404:Generated_Source\PSoC4/Step_Counter.c **** * Changes the period of the counter.  The new period 
+ 405:Generated_Source\PSoC4/Step_Counter.c **** * will be loaded the next time terminal count is detected.
+ 406:Generated_Source\PSoC4/Step_Counter.c **** *
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 13
+
+
+ 407:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 408:Generated_Source\PSoC4/Step_Counter.c **** *  period: (uint32) A value of 0 will result in
+ 409:Generated_Source\PSoC4/Step_Counter.c **** *         the counter remaining at zero.  
+ 410:Generated_Source\PSoC4/Step_Counter.c **** *
+ 411:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 412:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 413:Generated_Source\PSoC4/Step_Counter.c **** *
+ 414:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 415:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_WritePeriod(uint32 period) 
+ 416:Generated_Source\PSoC4/Step_Counter.c **** {
+ 279              		.loc 1 416 0
+ 280              		.cfi_startproc
+ 281              		@ args = 0, pretend = 0, frame = 0
+ 282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 283              		@ link register save eliminated.
+ 284              	.LVL3:
+ 417:Generated_Source\PSoC4/Step_Counter.c ****     #if(Step_Counter_UsingFixedFunction)
+ 418:Generated_Source\PSoC4/Step_Counter.c ****         CY_SET_REG16(Step_Counter_PERIOD_LSB_PTR,(uint16)period);
+ 419:Generated_Source\PSoC4/Step_Counter.c ****     #else
+ 420:Generated_Source\PSoC4/Step_Counter.c ****         CY_SET_REG32(Step_Counter_PERIOD_LSB_PTR, period);
+ 285              		.loc 1 420 0
+ 286 0000 014B     		ldr	r3, .L29
+ 287 0002 1860     		str	r0, [r3]
+ 421:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */
+ 422:Generated_Source\PSoC4/Step_Counter.c **** }
+ 288              		.loc 1 422 0
+ 289              		@ sp needed
+ 290 0004 7047     		bx	lr
+ 291              	.L30:
+ 292 0006 C046     		.align	2
+ 293              	.L29:
+ 294 0008 90200F40 		.word	1074733200
+ 295              		.cfi_endproc
+ 296              	.LFE12:
+ 297              		.size	Step_Counter_WritePeriod, .-Step_Counter_WritePeriod
+ 298              		.section	.text.Step_Counter_ReadPeriod,"ax",%progbits
+ 299              		.align	2
+ 300              		.global	Step_Counter_ReadPeriod
+ 301              		.code	16
+ 302              		.thumb_func
+ 303              		.type	Step_Counter_ReadPeriod, %function
+ 304              	Step_Counter_ReadPeriod:
+ 305              	.LFB13:
+ 423:Generated_Source\PSoC4/Step_Counter.c **** 
+ 424:Generated_Source\PSoC4/Step_Counter.c **** 
+ 425:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 426:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_ReadPeriod
+ 427:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 428:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 429:Generated_Source\PSoC4/Step_Counter.c **** * Reads the current period value without affecting counter operation.
+ 430:Generated_Source\PSoC4/Step_Counter.c **** *
+ 431:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 432:Generated_Source\PSoC4/Step_Counter.c **** *  void:  
+ 433:Generated_Source\PSoC4/Step_Counter.c **** *
+ 434:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 435:Generated_Source\PSoC4/Step_Counter.c **** *  (uint32) Present period value.
+ 436:Generated_Source\PSoC4/Step_Counter.c **** *
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 14
+
+
+ 437:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 438:Generated_Source\PSoC4/Step_Counter.c **** uint32 Step_Counter_ReadPeriod(void) 
+ 439:Generated_Source\PSoC4/Step_Counter.c **** {
+ 306              		.loc 1 439 0
+ 307              		.cfi_startproc
+ 308              		@ args = 0, pretend = 0, frame = 0
+ 309              		@ frame_needed = 0, uses_anonymous_args = 0
+ 310              		@ link register save eliminated.
+ 440:Generated_Source\PSoC4/Step_Counter.c ****     #if(Step_Counter_UsingFixedFunction)
+ 441:Generated_Source\PSoC4/Step_Counter.c ****         return ((uint32)CY_GET_REG16(Step_Counter_PERIOD_LSB_PTR));
+ 442:Generated_Source\PSoC4/Step_Counter.c ****     #else
+ 443:Generated_Source\PSoC4/Step_Counter.c ****         return (CY_GET_REG32(Step_Counter_PERIOD_LSB_PTR));
+ 311              		.loc 1 443 0
+ 312 0000 014B     		ldr	r3, .L32
+ 313 0002 1868     		ldr	r0, [r3]
+ 444:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */
+ 445:Generated_Source\PSoC4/Step_Counter.c **** }
+ 314              		.loc 1 445 0
+ 315              		@ sp needed
+ 316 0004 7047     		bx	lr
+ 317              	.L33:
+ 318 0006 C046     		.align	2
+ 319              	.L32:
+ 320 0008 90200F40 		.word	1074733200
+ 321              		.cfi_endproc
+ 322              	.LFE13:
+ 323              		.size	Step_Counter_ReadPeriod, .-Step_Counter_ReadPeriod
+ 324              		.section	.text.Step_Counter_WriteCompare,"ax",%progbits
+ 325              		.align	2
+ 326              		.global	Step_Counter_WriteCompare
+ 327              		.code	16
+ 328              		.thumb_func
+ 329              		.type	Step_Counter_WriteCompare, %function
+ 330              	Step_Counter_WriteCompare:
+ 331              	.LFB14:
+ 446:Generated_Source\PSoC4/Step_Counter.c **** 
+ 447:Generated_Source\PSoC4/Step_Counter.c **** 
+ 448:Generated_Source\PSoC4/Step_Counter.c **** #if (!Step_Counter_UsingFixedFunction)
+ 449:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 450:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_WriteCompare
+ 451:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 452:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 453:Generated_Source\PSoC4/Step_Counter.c **** * Changes the compare value.  The compare output will 
+ 454:Generated_Source\PSoC4/Step_Counter.c **** * reflect the new value on the next UDB clock.  The compare output will be 
+ 455:Generated_Source\PSoC4/Step_Counter.c **** * driven high when the present counter value compares true based on the 
+ 456:Generated_Source\PSoC4/Step_Counter.c **** * configured compare mode setting. 
+ 457:Generated_Source\PSoC4/Step_Counter.c **** *
+ 458:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 459:Generated_Source\PSoC4/Step_Counter.c **** *  Compare:  New compare value. 
+ 460:Generated_Source\PSoC4/Step_Counter.c **** *
+ 461:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 462:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 463:Generated_Source\PSoC4/Step_Counter.c **** *
+ 464:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 465:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_WriteCompare(uint32 compare) \
+ 466:Generated_Source\PSoC4/Step_Counter.c ****                                    
+ 467:Generated_Source\PSoC4/Step_Counter.c **** {
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 15
+
+
+ 332              		.loc 1 467 0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		@ link register save eliminated.
+ 337              	.LVL4:
+ 468:Generated_Source\PSoC4/Step_Counter.c ****     #if(Step_Counter_UsingFixedFunction)
+ 469:Generated_Source\PSoC4/Step_Counter.c ****         CY_SET_REG16(Step_Counter_COMPARE_LSB_PTR, (uint16)compare);
+ 470:Generated_Source\PSoC4/Step_Counter.c ****     #else
+ 471:Generated_Source\PSoC4/Step_Counter.c ****         CY_SET_REG32(Step_Counter_COMPARE_LSB_PTR, compare);
+ 338              		.loc 1 471 0
+ 339 0000 014B     		ldr	r3, .L35
+ 340 0002 1860     		str	r0, [r3]
+ 472:Generated_Source\PSoC4/Step_Counter.c ****     #endif /* (Step_Counter_UsingFixedFunction) */
+ 473:Generated_Source\PSoC4/Step_Counter.c **** }
+ 341              		.loc 1 473 0
+ 342              		@ sp needed
+ 343 0004 7047     		bx	lr
+ 344              	.L36:
+ 345 0006 C046     		.align	2
+ 346              	.L35:
+ 347 0008 D0200F40 		.word	1074733264
+ 348              		.cfi_endproc
+ 349              	.LFE14:
+ 350              		.size	Step_Counter_WriteCompare, .-Step_Counter_WriteCompare
+ 351              		.section	.text.Step_Counter_ReadCompare,"ax",%progbits
+ 352              		.align	2
+ 353              		.global	Step_Counter_ReadCompare
+ 354              		.code	16
+ 355              		.thumb_func
+ 356              		.type	Step_Counter_ReadCompare, %function
+ 357              	Step_Counter_ReadCompare:
+ 358              	.LFB15:
+ 474:Generated_Source\PSoC4/Step_Counter.c **** 
+ 475:Generated_Source\PSoC4/Step_Counter.c **** 
+ 476:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 477:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_ReadCompare
+ 478:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 479:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 480:Generated_Source\PSoC4/Step_Counter.c **** * Returns the compare value.
+ 481:Generated_Source\PSoC4/Step_Counter.c **** *
+ 482:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 483:Generated_Source\PSoC4/Step_Counter.c **** *  void:
+ 484:Generated_Source\PSoC4/Step_Counter.c **** *
+ 485:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 486:Generated_Source\PSoC4/Step_Counter.c **** *  (uint32) Present compare value.
+ 487:Generated_Source\PSoC4/Step_Counter.c **** *
+ 488:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 489:Generated_Source\PSoC4/Step_Counter.c **** uint32 Step_Counter_ReadCompare(void) 
+ 490:Generated_Source\PSoC4/Step_Counter.c **** {
+ 359              		.loc 1 490 0
+ 360              		.cfi_startproc
+ 361              		@ args = 0, pretend = 0, frame = 0
+ 362              		@ frame_needed = 0, uses_anonymous_args = 0
+ 363              		@ link register save eliminated.
+ 491:Generated_Source\PSoC4/Step_Counter.c ****     return (CY_GET_REG32(Step_Counter_COMPARE_LSB_PTR));
+ 364              		.loc 1 491 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 16
+
+
+ 365 0000 014B     		ldr	r3, .L38
+ 366 0002 1868     		ldr	r0, [r3]
+ 492:Generated_Source\PSoC4/Step_Counter.c **** }
+ 367              		.loc 1 492 0
+ 368              		@ sp needed
+ 369 0004 7047     		bx	lr
+ 370              	.L39:
+ 371 0006 C046     		.align	2
+ 372              	.L38:
+ 373 0008 D0200F40 		.word	1074733264
+ 374              		.cfi_endproc
+ 375              	.LFE15:
+ 376              		.size	Step_Counter_ReadCompare, .-Step_Counter_ReadCompare
+ 377              		.section	.text.Step_Counter_ClearFIFO,"ax",%progbits
+ 378              		.align	2
+ 379              		.global	Step_Counter_ClearFIFO
+ 380              		.code	16
+ 381              		.thumb_func
+ 382              		.type	Step_Counter_ClearFIFO, %function
+ 383              	Step_Counter_ClearFIFO:
+ 384              	.LFB16:
+ 493:Generated_Source\PSoC4/Step_Counter.c **** 
+ 494:Generated_Source\PSoC4/Step_Counter.c **** 
+ 495:Generated_Source\PSoC4/Step_Counter.c **** #if (Step_Counter_COMPARE_MODE_SOFTWARE)
+ 496:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 497:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_SetCompareMode
+ 498:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 499:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 500:Generated_Source\PSoC4/Step_Counter.c **** *  Sets the software controlled Compare Mode.
+ 501:Generated_Source\PSoC4/Step_Counter.c **** *
+ 502:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:
+ 503:Generated_Source\PSoC4/Step_Counter.c **** *  compareMode:  Compare Mode Enumerated Type.
+ 504:Generated_Source\PSoC4/Step_Counter.c **** *
+ 505:Generated_Source\PSoC4/Step_Counter.c **** * Return:
+ 506:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 507:Generated_Source\PSoC4/Step_Counter.c **** *
+ 508:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 509:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_SetCompareMode(uint8 compareMode) 
+ 510:Generated_Source\PSoC4/Step_Counter.c **** {
+ 511:Generated_Source\PSoC4/Step_Counter.c ****     /* Clear the compare mode bits in the control register */
+ 512:Generated_Source\PSoC4/Step_Counter.c ****     Step_Counter_CONTROL &= ((uint8)(~Step_Counter_CTRL_CMPMODE_MASK));
+ 513:Generated_Source\PSoC4/Step_Counter.c ****     
+ 514:Generated_Source\PSoC4/Step_Counter.c ****     /* Write the new setting */
+ 515:Generated_Source\PSoC4/Step_Counter.c ****     Step_Counter_CONTROL |= compareMode;
+ 516:Generated_Source\PSoC4/Step_Counter.c **** }
+ 517:Generated_Source\PSoC4/Step_Counter.c **** #endif  /* (Step_Counter_COMPARE_MODE_SOFTWARE) */
+ 518:Generated_Source\PSoC4/Step_Counter.c **** 
+ 519:Generated_Source\PSoC4/Step_Counter.c **** 
+ 520:Generated_Source\PSoC4/Step_Counter.c **** #if (Step_Counter_CAPTURE_MODE_SOFTWARE)
+ 521:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 522:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_SetCaptureMode
+ 523:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 524:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 525:Generated_Source\PSoC4/Step_Counter.c **** *  Sets the software controlled Capture Mode.
+ 526:Generated_Source\PSoC4/Step_Counter.c **** *
+ 527:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:
+ 528:Generated_Source\PSoC4/Step_Counter.c **** *  captureMode:  Capture Mode Enumerated Type.
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 17
+
+
+ 529:Generated_Source\PSoC4/Step_Counter.c **** *
+ 530:Generated_Source\PSoC4/Step_Counter.c **** * Return:
+ 531:Generated_Source\PSoC4/Step_Counter.c **** *  void
+ 532:Generated_Source\PSoC4/Step_Counter.c **** *
+ 533:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 534:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_SetCaptureMode(uint8 captureMode) 
+ 535:Generated_Source\PSoC4/Step_Counter.c **** {
+ 536:Generated_Source\PSoC4/Step_Counter.c ****     /* Clear the capture mode bits in the control register */
+ 537:Generated_Source\PSoC4/Step_Counter.c ****     Step_Counter_CONTROL &= ((uint8)(~Step_Counter_CTRL_CAPMODE_MASK));
+ 538:Generated_Source\PSoC4/Step_Counter.c ****     
+ 539:Generated_Source\PSoC4/Step_Counter.c ****     /* Write the new setting */
+ 540:Generated_Source\PSoC4/Step_Counter.c ****     Step_Counter_CONTROL |= ((uint8)((uint8)captureMode << Step_Counter_CTRL_CAPMODE0_SHIFT));
+ 541:Generated_Source\PSoC4/Step_Counter.c **** }
+ 542:Generated_Source\PSoC4/Step_Counter.c **** #endif  /* (Step_Counter_CAPTURE_MODE_SOFTWARE) */
+ 543:Generated_Source\PSoC4/Step_Counter.c **** 
+ 544:Generated_Source\PSoC4/Step_Counter.c **** 
+ 545:Generated_Source\PSoC4/Step_Counter.c **** /*******************************************************************************
+ 546:Generated_Source\PSoC4/Step_Counter.c **** * Function Name: Step_Counter_ClearFIFO
+ 547:Generated_Source\PSoC4/Step_Counter.c **** ********************************************************************************
+ 548:Generated_Source\PSoC4/Step_Counter.c **** * Summary:
+ 549:Generated_Source\PSoC4/Step_Counter.c **** *   This function clears all capture data from the capture FIFO
+ 550:Generated_Source\PSoC4/Step_Counter.c **** *
+ 551:Generated_Source\PSoC4/Step_Counter.c **** * Parameters:  
+ 552:Generated_Source\PSoC4/Step_Counter.c **** *  void:
+ 553:Generated_Source\PSoC4/Step_Counter.c **** *
+ 554:Generated_Source\PSoC4/Step_Counter.c **** * Return: 
+ 555:Generated_Source\PSoC4/Step_Counter.c **** *  None
+ 556:Generated_Source\PSoC4/Step_Counter.c **** *
+ 557:Generated_Source\PSoC4/Step_Counter.c **** *******************************************************************************/
+ 558:Generated_Source\PSoC4/Step_Counter.c **** void Step_Counter_ClearFIFO(void) 
+ 559:Generated_Source\PSoC4/Step_Counter.c **** {
+ 385              		.loc 1 559 0
+ 386              		.cfi_startproc
+ 387              		@ args = 0, pretend = 0, frame = 0
+ 388              		@ frame_needed = 0, uses_anonymous_args = 0
+ 389 0000 10B5     		push	{r4, lr}
+ 390              		.cfi_def_cfa_offset 8
+ 391              		.cfi_offset 4, -8
+ 392              		.cfi_offset 14, -4
+ 560:Generated_Source\PSoC4/Step_Counter.c **** 
+ 561:Generated_Source\PSoC4/Step_Counter.c ****     while(0u != (Step_Counter_ReadStatusRegister() & Step_Counter_STATUS_FIFONEMP))
+ 393              		.loc 1 561 0
+ 394 0002 01E0     		b	.L41
+ 395              	.L42:
+ 562:Generated_Source\PSoC4/Step_Counter.c ****     {
+ 563:Generated_Source\PSoC4/Step_Counter.c ****         (void)Step_Counter_ReadCapture();
+ 396              		.loc 1 563 0
+ 397 0004 FFF7FEFF 		bl	Step_Counter_ReadCapture
+ 398              	.LVL5:
+ 399              	.L41:
+ 561:Generated_Source\PSoC4/Step_Counter.c ****     {
+ 400              		.loc 1 561 0
+ 401 0008 FFF7FEFF 		bl	Step_Counter_ReadStatusRegister
+ 402              	.LVL6:
+ 403 000c 4306     		lsls	r3, r0, #25
+ 404 000e F9D4     		bmi	.L42
+ 564:Generated_Source\PSoC4/Step_Counter.c ****     }
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 18
+
+
+ 565:Generated_Source\PSoC4/Step_Counter.c **** 
+ 566:Generated_Source\PSoC4/Step_Counter.c **** }
+ 405              		.loc 1 566 0
+ 406              		@ sp needed
+ 407 0010 10BD     		pop	{r4, pc}
+ 408              		.cfi_endproc
+ 409              	.LFE16:
+ 410              		.size	Step_Counter_ClearFIFO, .-Step_Counter_ClearFIFO
+ 411 0012 C046     		.section	.text.Step_Counter_Init,"ax",%progbits
+ 412              		.align	2
+ 413              		.global	Step_Counter_Init
+ 414              		.code	16
+ 415              		.thumb_func
+ 416              		.type	Step_Counter_Init, %function
+ 417              	Step_Counter_Init:
+ 418              	.LFB1:
+  38:Generated_Source\PSoC4/Step_Counter.c ****         #if (!Step_Counter_UsingFixedFunction && !Step_Counter_ControlRegRemoved)
+ 419              		.loc 1 38 0
+ 420              		.cfi_startproc
+ 421              		@ args = 0, pretend = 0, frame = 0
+ 422              		@ frame_needed = 0, uses_anonymous_args = 0
+ 423 0000 10B5     		push	{r4, lr}
+ 424              		.cfi_def_cfa_offset 8
+ 425              		.cfi_offset 4, -8
+ 426              		.cfi_offset 14, -4
+  79:Generated_Source\PSoC4/Step_Counter.c ****             Step_Counter_CONTROL = ctrl | Step_Counter_DEFAULT_COMPARE_MODE;
+ 427              		.loc 1 79 0
+ 428 0002 134B     		ldr	r3, .L44
+ 429 0004 1A78     		ldrb	r2, [r3]
+ 430 0006 0721     		movs	r1, #7
+ 431 0008 8A43     		bics	r2, r1
+ 432              	.LVL7:
+  80:Generated_Source\PSoC4/Step_Counter.c ****             
+ 433              		.loc 1 80 0
+ 434 000a 1A70     		strb	r2, [r3]
+  83:Generated_Source\PSoC4/Step_Counter.c ****             
+ 435              		.loc 1 83 0
+ 436 000c 1A78     		ldrb	r2, [r3]
+ 437              	.LVL8:
+ 438 000e 0439     		subs	r1, r1, #4
+ 439 0010 8A43     		bics	r2, r1
+ 440              	.LVL9:
+  88:Generated_Source\PSoC4/Step_Counter.c ****             #endif /* 0 != Step_Counter_CAPTURE_MODE */ 
+ 441              		.loc 1 88 0
+ 442 0012 1A70     		strb	r2, [r3]
+  96:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (!Step_Counter_UsingFixedFunction) */
+ 443              		.loc 1 96 0
+ 444 0014 FFF7FEFF 		bl	Step_Counter_ClearFIFO
+ 445              	.LVL10:
+ 100:Generated_Source\PSoC4/Step_Counter.c ****         #if (!(Step_Counter_UsingFixedFunction && (CY_PSOC5A)))
+ 446              		.loc 1 100 0
+ 447 0018 0224     		movs	r4, #2
+ 448 001a 6442     		rsbs	r4, r4, #0
+ 449 001c 2000     		movs	r0, r4
+ 450 001e FFF7FEFF 		bl	Step_Counter_WritePeriod
+ 451              	.LVL11:
+ 102:Generated_Source\PSoC4/Step_Counter.c ****         #endif /* (!(Step_Counter_UsingFixedFunction && (CY_PSOC5A))) */
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 19
+
+
+ 452              		.loc 1 102 0
+ 453 0022 2000     		movs	r0, r4
+ 454 0024 FFF7FEFF 		bl	Step_Counter_WriteCounter
+ 455              	.LVL12:
+ 104:Generated_Source\PSoC4/Step_Counter.c ****         
+ 456              		.loc 1 104 0
+ 457 0028 0120     		movs	r0, #1
+ 458 002a FFF7FEFF 		bl	Step_Counter_SetInterruptMode
+ 459              	.LVL13:
+ 108:Generated_Source\PSoC4/Step_Counter.c ****             /* Set the compare value (only available to non-fixed function implementation */
+ 460              		.loc 1 108 0
+ 461 002e FFF7FEFF 		bl	Step_Counter_ReadStatusRegister
+ 462              	.LVL14:
+ 110:Generated_Source\PSoC4/Step_Counter.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 463              		.loc 1 110 0
+ 464 0032 8020     		movs	r0, #128
+ 465 0034 FFF7FEFF 		bl	Step_Counter_WriteCompare
+ 466              	.LVL15:
+ 115:Generated_Source\PSoC4/Step_Counter.c ****             
+ 467              		.loc 1 115 0
+ 468 0038 FFF7FEFF 		bl	CyEnterCriticalSection
+ 469              	.LVL16:
+ 117:Generated_Source\PSoC4/Step_Counter.c ****             
+ 470              		.loc 1 117 0
+ 471 003c 054A     		ldr	r2, .L44+4
+ 472 003e 1178     		ldrb	r1, [r2]
+ 473 0040 1023     		movs	r3, #16
+ 474 0042 0B43     		orrs	r3, r1
+ 475 0044 DBB2     		uxtb	r3, r3
+ 476 0046 1370     		strb	r3, [r2]
+ 120:Generated_Source\PSoC4/Step_Counter.c ****             
+ 477              		.loc 1 120 0
+ 478 0048 FFF7FEFF 		bl	CyExitCriticalSection
+ 479              	.LVL17:
+ 123:Generated_Source\PSoC4/Step_Counter.c **** 
+ 480              		.loc 1 123 0
+ 481              		@ sp needed
+ 482 004c 10BD     		pop	{r4, pc}
+ 483              	.L45:
+ 484 004e C046     		.align	2
+ 485              	.L44:
+ 486 0050 71000F40 		.word	1074724977
+ 487 0054 93000F40 		.word	1074725011
+ 488              		.cfi_endproc
+ 489              	.LFE1:
+ 490              		.size	Step_Counter_Init, .-Step_Counter_Init
+ 491              		.section	.text.Step_Counter_Start,"ax",%progbits
+ 492              		.align	2
+ 493              		.global	Step_Counter_Start
+ 494              		.code	16
+ 495              		.thumb_func
+ 496              		.type	Step_Counter_Start, %function
+ 497              	Step_Counter_Start:
+ 498              	.LFB3:
+ 179:Generated_Source\PSoC4/Step_Counter.c ****     if(Step_Counter_initVar == 0u)
+ 499              		.loc 1 179 0
+ 500              		.cfi_startproc
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 20
+
+
+ 501              		@ args = 0, pretend = 0, frame = 0
+ 502              		@ frame_needed = 0, uses_anonymous_args = 0
+ 503 0000 10B5     		push	{r4, lr}
+ 504              		.cfi_def_cfa_offset 8
+ 505              		.cfi_offset 4, -8
+ 506              		.cfi_offset 14, -4
+ 180:Generated_Source\PSoC4/Step_Counter.c ****     {
+ 507              		.loc 1 180 0
+ 508 0002 064B     		ldr	r3, .L48
+ 509 0004 1B78     		ldrb	r3, [r3]
+ 510 0006 002B     		cmp	r3, #0
+ 511 0008 04D1     		bne	.L47
+ 182:Generated_Source\PSoC4/Step_Counter.c ****         
+ 512              		.loc 1 182 0
+ 513 000a FFF7FEFF 		bl	Step_Counter_Init
+ 514              	.LVL18:
+ 184:Generated_Source\PSoC4/Step_Counter.c ****     }
+ 515              		.loc 1 184 0
+ 516 000e 0122     		movs	r2, #1
+ 517 0010 024B     		ldr	r3, .L48
+ 518 0012 1A70     		strb	r2, [r3]
+ 519              	.L47:
+ 188:Generated_Source\PSoC4/Step_Counter.c **** }
+ 520              		.loc 1 188 0
+ 521 0014 FFF7FEFF 		bl	Step_Counter_Enable
+ 522              	.LVL19:
+ 189:Generated_Source\PSoC4/Step_Counter.c **** 
+ 523              		.loc 1 189 0
+ 524              		@ sp needed
+ 525 0018 10BD     		pop	{r4, pc}
+ 526              	.L49:
+ 527 001a C046     		.align	2
+ 528              	.L48:
+ 529 001c 00000000 		.word	.LANCHOR0
+ 530              		.cfi_endproc
+ 531              	.LFE3:
+ 532              		.size	Step_Counter_Start, .-Step_Counter_Start
+ 533              		.global	Step_Counter_initVar
+ 534              		.bss
+ 535              		.set	.LANCHOR0,. + 0
+ 536              		.type	Step_Counter_initVar, %object
+ 537              		.size	Step_Counter_initVar, 1
+ 538              	Step_Counter_initVar:
+ 539 0000 00       		.space	1
+ 540              		.text
+ 541              	.Letext0:
+ 542              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 543              		.file 3 "Generated_Source\\PSoC4\\CyLib.h"
+ 544              		.section	.debug_info,"",%progbits
+ 545              	.Ldebug_info0:
+ 546 0000 41030000 		.4byte	0x341
+ 547 0004 0400     		.2byte	0x4
+ 548 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 549 000a 04       		.byte	0x4
+ 550 000b 01       		.uleb128 0x1
+ 551 000c B7020000 		.4byte	.LASF43
+ 552 0010 0C       		.byte	0xc
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 21
+
+
+ 553 0011 C4000000 		.4byte	.LASF44
+ 554 0015 1B020000 		.4byte	.LASF45
+ 555 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 556 001d 00000000 		.4byte	0
+ 557 0021 00000000 		.4byte	.Ldebug_line0
+ 558 0025 02       		.uleb128 0x2
+ 559 0026 01       		.byte	0x1
+ 560 0027 06       		.byte	0x6
+ 561 0028 B8030000 		.4byte	.LASF0
+ 562 002c 02       		.uleb128 0x2
+ 563 002d 01       		.byte	0x1
+ 564 002e 08       		.byte	0x8
+ 565 002f 6D010000 		.4byte	.LASF1
+ 566 0033 02       		.uleb128 0x2
+ 567 0034 02       		.byte	0x2
+ 568 0035 05       		.byte	0x5
+ 569 0036 7F030000 		.4byte	.LASF2
+ 570 003a 02       		.uleb128 0x2
+ 571 003b 02       		.byte	0x2
+ 572 003c 07       		.byte	0x7
+ 573 003d B1000000 		.4byte	.LASF3
+ 574 0041 02       		.uleb128 0x2
+ 575 0042 04       		.byte	0x4
+ 576 0043 05       		.byte	0x5
+ 577 0044 A3030000 		.4byte	.LASF4
+ 578 0048 02       		.uleb128 0x2
+ 579 0049 04       		.byte	0x4
+ 580 004a 07       		.byte	0x7
+ 581 004b 80010000 		.4byte	.LASF5
+ 582 004f 02       		.uleb128 0x2
+ 583 0050 08       		.byte	0x8
+ 584 0051 05       		.byte	0x5
+ 585 0052 53030000 		.4byte	.LASF6
+ 586 0056 02       		.uleb128 0x2
+ 587 0057 08       		.byte	0x8
+ 588 0058 07       		.byte	0x7
+ 589 0059 CC030000 		.4byte	.LASF7
+ 590 005d 03       		.uleb128 0x3
+ 591 005e 04       		.byte	0x4
+ 592 005f 05       		.byte	0x5
+ 593 0060 696E7400 		.ascii	"int\000"
+ 594 0064 02       		.uleb128 0x2
+ 595 0065 04       		.byte	0x4
+ 596 0066 07       		.byte	0x7
+ 597 0067 0E020000 		.4byte	.LASF8
+ 598 006b 04       		.uleb128 0x4
+ 599 006c 92010000 		.4byte	.LASF9
+ 600 0070 02       		.byte	0x2
+ 601 0071 FC01     		.2byte	0x1fc
+ 602 0073 2C000000 		.4byte	0x2c
+ 603 0077 04       		.uleb128 0x4
+ 604 0078 F0010000 		.4byte	.LASF10
+ 605 007c 02       		.byte	0x2
+ 606 007d FE01     		.2byte	0x1fe
+ 607 007f 48000000 		.4byte	0x48
+ 608 0083 02       		.uleb128 0x2
+ 609 0084 04       		.byte	0x4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 22
+
+
+ 610 0085 04       		.byte	0x4
+ 611 0086 46010000 		.4byte	.LASF11
+ 612 008a 02       		.uleb128 0x2
+ 613 008b 08       		.byte	0x8
+ 614 008c 04       		.byte	0x4
+ 615 008d E9010000 		.4byte	.LASF12
+ 616 0091 02       		.uleb128 0x2
+ 617 0092 01       		.byte	0x1
+ 618 0093 08       		.byte	0x8
+ 619 0094 61030000 		.4byte	.LASF13
+ 620 0098 04       		.uleb128 0x4
+ 621 0099 7B010000 		.4byte	.LASF14
+ 622 009d 02       		.byte	0x2
+ 623 009e A602     		.2byte	0x2a6
+ 624 00a0 A4000000 		.4byte	0xa4
+ 625 00a4 05       		.uleb128 0x5
+ 626 00a5 6B000000 		.4byte	0x6b
+ 627 00a9 04       		.uleb128 0x4
+ 628 00aa 00000000 		.4byte	.LASF15
+ 629 00ae 02       		.byte	0x2
+ 630 00af A802     		.2byte	0x2a8
+ 631 00b1 B5000000 		.4byte	0xb5
+ 632 00b5 05       		.uleb128 0x5
+ 633 00b6 77000000 		.4byte	0x77
+ 634 00ba 02       		.uleb128 0x2
+ 635 00bb 08       		.byte	0x8
+ 636 00bc 04       		.byte	0x4
+ 637 00bd AC030000 		.4byte	.LASF16
+ 638 00c1 02       		.uleb128 0x2
+ 639 00c2 04       		.byte	0x4
+ 640 00c3 07       		.byte	0x7
+ 641 00c4 4A030000 		.4byte	.LASF17
+ 642 00c8 06       		.uleb128 0x6
+ 643 00c9 9D000000 		.4byte	.LASF18
+ 644 00cd 01       		.byte	0x1
+ 645 00ce 8F       		.byte	0x8f
+ 646 00cf 00000000 		.4byte	.LFB2
+ 647 00d3 14000000 		.4byte	.LFE2-.LFB2
+ 648 00d7 01       		.uleb128 0x1
+ 649 00d8 9C       		.byte	0x9c
+ 650 00d9 06       		.uleb128 0x6
+ 651 00da 76020000 		.4byte	.LASF19
+ 652 00de 01       		.byte	0x1
+ 653 00df D0       		.byte	0xd0
+ 654 00e0 00000000 		.4byte	.LFB4
+ 655 00e4 10000000 		.4byte	.LFE4-.LFB4
+ 656 00e8 01       		.uleb128 0x1
+ 657 00e9 9C       		.byte	0x9c
+ 658 00ea 07       		.uleb128 0x7
+ 659 00eb 37000000 		.4byte	.LASF22
+ 660 00ef 01       		.byte	0x1
+ 661 00f0 ED       		.byte	0xed
+ 662 00f1 00000000 		.4byte	.LFB5
+ 663 00f5 0C000000 		.4byte	.LFE5-.LFB5
+ 664 00f9 01       		.uleb128 0x1
+ 665 00fa 9C       		.byte	0x9c
+ 666 00fb 0D010000 		.4byte	0x10d
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 23
+
+
+ 667 00ff 08       		.uleb128 0x8
+ 668 0100 A0010000 		.4byte	.LASF24
+ 669 0104 01       		.byte	0x1
+ 670 0105 ED       		.byte	0xed
+ 671 0106 6B000000 		.4byte	0x6b
+ 672 010a 01       		.uleb128 0x1
+ 673 010b 50       		.byte	0x50
+ 674 010c 00       		.byte	0
+ 675 010d 09       		.uleb128 0x9
+ 676 010e 7D000000 		.4byte	.LASF20
+ 677 0112 01       		.byte	0x1
+ 678 0113 0501     		.2byte	0x105
+ 679 0115 6B000000 		.4byte	0x6b
+ 680 0119 00000000 		.4byte	.LFB6
+ 681 011d 0C000000 		.4byte	.LFE6-.LFB6
+ 682 0121 01       		.uleb128 0x1
+ 683 0122 9C       		.byte	0x9c
+ 684 0123 09       		.uleb128 0x9
+ 685 0124 55000000 		.4byte	.LASF21
+ 686 0128 01       		.byte	0x1
+ 687 0129 1B01     		.2byte	0x11b
+ 688 012b 6B000000 		.4byte	0x6b
+ 689 012f 00000000 		.4byte	.LFB7
+ 690 0133 0C000000 		.4byte	.LFE7-.LFB7
+ 691 0137 01       		.uleb128 0x1
+ 692 0138 9C       		.byte	0x9c
+ 693 0139 0A       		.uleb128 0xa
+ 694 013a C7010000 		.4byte	.LASF23
+ 695 013e 01       		.byte	0x1
+ 696 013f 3001     		.2byte	0x130
+ 697 0141 00000000 		.4byte	.LFB8
+ 698 0145 0C000000 		.4byte	.LFE8-.LFB8
+ 699 0149 01       		.uleb128 0x1
+ 700 014a 9C       		.byte	0x9c
+ 701 014b 5E010000 		.4byte	0x15e
+ 702 014f 0B       		.uleb128 0xb
+ 703 0150 98010000 		.4byte	.LASF25
+ 704 0154 01       		.byte	0x1
+ 705 0155 3001     		.2byte	0x130
+ 706 0157 6B000000 		.4byte	0x6b
+ 707 015b 01       		.uleb128 0x1
+ 708 015c 50       		.byte	0x50
+ 709 015d 00       		.byte	0
+ 710 015e 0A       		.uleb128 0xa
+ 711 015f EA000000 		.4byte	.LASF26
+ 712 0163 01       		.byte	0x1
+ 713 0164 4601     		.2byte	0x146
+ 714 0166 00000000 		.4byte	.LFB9
+ 715 016a 0C000000 		.4byte	.LFE9-.LFB9
+ 716 016e 01       		.uleb128 0x1
+ 717 016f 9C       		.byte	0x9c
+ 718 0170 83010000 		.4byte	0x183
+ 719 0174 0B       		.uleb128 0xb
+ 720 0175 4C010000 		.4byte	.LASF27
+ 721 0179 01       		.byte	0x1
+ 722 017a 4601     		.2byte	0x146
+ 723 017c 77000000 		.4byte	0x77
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 24
+
+
+ 724 0180 01       		.uleb128 0x1
+ 725 0181 50       		.byte	0x50
+ 726 0182 00       		.byte	0
+ 727 0183 09       		.uleb128 0x9
+ 728 0184 1B010000 		.4byte	.LASF28
+ 729 0188 01       		.byte	0x1
+ 730 0189 6501     		.2byte	0x165
+ 731 018b 77000000 		.4byte	0x77
+ 732 018f 00000000 		.4byte	.LFB10
+ 733 0193 14000000 		.4byte	.LFE10-.LFB10
+ 734 0197 01       		.uleb128 0x1
+ 735 0198 9C       		.byte	0x9c
+ 736 0199 09       		.uleb128 0x9
+ 737 019a 66030000 		.4byte	.LASF29
+ 738 019e 01       		.byte	0x1
+ 739 019f 8601     		.2byte	0x186
+ 740 01a1 77000000 		.4byte	0x77
+ 741 01a5 00000000 		.4byte	.LFB11
+ 742 01a9 0C000000 		.4byte	.LFE11-.LFB11
+ 743 01ad 01       		.uleb128 0x1
+ 744 01ae 9C       		.byte	0x9c
+ 745 01af 0A       		.uleb128 0xa
+ 746 01b0 54010000 		.4byte	.LASF30
+ 747 01b4 01       		.byte	0x1
+ 748 01b5 9F01     		.2byte	0x19f
+ 749 01b7 00000000 		.4byte	.LFB12
+ 750 01bb 0C000000 		.4byte	.LFE12-.LFB12
+ 751 01bf 01       		.uleb128 0x1
+ 752 01c0 9C       		.byte	0x9c
+ 753 01c1 D4010000 		.4byte	0x1d4
+ 754 01c5 0B       		.uleb128 0xb
+ 755 01c6 76000000 		.4byte	.LASF31
+ 756 01ca 01       		.byte	0x1
+ 757 01cb 9F01     		.2byte	0x19f
+ 758 01cd 77000000 		.4byte	0x77
+ 759 01d1 01       		.uleb128 0x1
+ 760 01d2 50       		.byte	0x50
+ 761 01d3 00       		.byte	0
+ 762 01d4 09       		.uleb128 0x9
+ 763 01d5 AF010000 		.4byte	.LASF32
+ 764 01d9 01       		.byte	0x1
+ 765 01da B601     		.2byte	0x1b6
+ 766 01dc 77000000 		.4byte	0x77
+ 767 01e0 00000000 		.4byte	.LFB13
+ 768 01e4 0C000000 		.4byte	.LFE13-.LFB13
+ 769 01e8 01       		.uleb128 0x1
+ 770 01e9 9C       		.byte	0x9c
+ 771 01ea 0A       		.uleb128 0xa
+ 772 01eb 89030000 		.4byte	.LASF33
+ 773 01ef 01       		.byte	0x1
+ 774 01f0 D101     		.2byte	0x1d1
+ 775 01f2 00000000 		.4byte	.LFB14
+ 776 01f6 0C000000 		.4byte	.LFE14-.LFB14
+ 777 01fa 01       		.uleb128 0x1
+ 778 01fb 9C       		.byte	0x9c
+ 779 01fc 0F020000 		.4byte	0x20f
+ 780 0200 0B       		.uleb128 0xb
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 25
+
+
+ 781 0201 C4030000 		.4byte	.LASF34
+ 782 0205 01       		.byte	0x1
+ 783 0206 D101     		.2byte	0x1d1
+ 784 0208 77000000 		.4byte	0x77
+ 785 020c 01       		.uleb128 0x1
+ 786 020d 50       		.byte	0x50
+ 787 020e 00       		.byte	0
+ 788 020f 09       		.uleb128 0x9
+ 789 0210 9E020000 		.4byte	.LASF35
+ 790 0214 01       		.byte	0x1
+ 791 0215 E901     		.2byte	0x1e9
+ 792 0217 77000000 		.4byte	0x77
+ 793 021b 00000000 		.4byte	.LFB15
+ 794 021f 0C000000 		.4byte	.LFE15-.LFB15
+ 795 0223 01       		.uleb128 0x1
+ 796 0224 9C       		.byte	0x9c
+ 797 0225 0A       		.uleb128 0xa
+ 798 0226 04010000 		.4byte	.LASF36
+ 799 022a 01       		.byte	0x1
+ 800 022b 2E02     		.2byte	0x22e
+ 801 022d 00000000 		.4byte	.LFB16
+ 802 0231 12000000 		.4byte	.LFE16-.LFB16
+ 803 0235 01       		.uleb128 0x1
+ 804 0236 9C       		.byte	0x9c
+ 805 0237 4E020000 		.4byte	0x24e
+ 806 023b 0C       		.uleb128 0xc
+ 807 023c 08000000 		.4byte	.LVL5
+ 808 0240 99010000 		.4byte	0x199
+ 809 0244 0C       		.uleb128 0xc
+ 810 0245 0C000000 		.4byte	.LVL6
+ 811 0249 0D010000 		.4byte	0x10d
+ 812 024d 00       		.byte	0
+ 813 024e 07       		.uleb128 0x7
+ 814 024f 34010000 		.4byte	.LASF37
+ 815 0253 01       		.byte	0x1
+ 816 0254 25       		.byte	0x25
+ 817 0255 00000000 		.4byte	.LFB1
+ 818 0259 58000000 		.4byte	.LFE1-.LFB1
+ 819 025d 01       		.uleb128 0x1
+ 820 025e 9C       		.byte	0x9c
+ 821 025f F5020000 		.4byte	0x2f5
+ 822 0263 0D       		.uleb128 0xd
+ 823 0264 45030000 		.4byte	.LASF38
+ 824 0268 01       		.byte	0x1
+ 825 0269 28       		.byte	0x28
+ 826 026a 6B000000 		.4byte	0x6b
+ 827 026e 00000000 		.4byte	.LLST0
+ 828 0272 0D       		.uleb128 0xd
+ 829 0273 06000000 		.4byte	.LASF39
+ 830 0277 01       		.byte	0x1
+ 831 0278 2D       		.byte	0x2d
+ 832 0279 6B000000 		.4byte	0x6b
+ 833 027d 2A000000 		.4byte	.LLST1
+ 834 0281 0C       		.uleb128 0xc
+ 835 0282 18000000 		.4byte	.LVL10
+ 836 0286 25020000 		.4byte	0x225
+ 837 028a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 26
+
+
+ 838 028b 22000000 		.4byte	.LVL11
+ 839 028f AF010000 		.4byte	0x1af
+ 840 0293 9E020000 		.4byte	0x29e
+ 841 0297 0F       		.uleb128 0xf
+ 842 0298 01       		.uleb128 0x1
+ 843 0299 50       		.byte	0x50
+ 844 029a 02       		.uleb128 0x2
+ 845 029b 74       		.byte	0x74
+ 846 029c 00       		.sleb128 0
+ 847 029d 00       		.byte	0
+ 848 029e 0E       		.uleb128 0xe
+ 849 029f 28000000 		.4byte	.LVL12
+ 850 02a3 5E010000 		.4byte	0x15e
+ 851 02a7 B2020000 		.4byte	0x2b2
+ 852 02ab 0F       		.uleb128 0xf
+ 853 02ac 01       		.uleb128 0x1
+ 854 02ad 50       		.byte	0x50
+ 855 02ae 02       		.uleb128 0x2
+ 856 02af 74       		.byte	0x74
+ 857 02b0 00       		.sleb128 0
+ 858 02b1 00       		.byte	0
+ 859 02b2 0E       		.uleb128 0xe
+ 860 02b3 2E000000 		.4byte	.LVL13
+ 861 02b7 EA000000 		.4byte	0xea
+ 862 02bb C5020000 		.4byte	0x2c5
+ 863 02bf 0F       		.uleb128 0xf
+ 864 02c0 01       		.uleb128 0x1
+ 865 02c1 50       		.byte	0x50
+ 866 02c2 01       		.uleb128 0x1
+ 867 02c3 31       		.byte	0x31
+ 868 02c4 00       		.byte	0
+ 869 02c5 0C       		.uleb128 0xc
+ 870 02c6 32000000 		.4byte	.LVL14
+ 871 02ca 0D010000 		.4byte	0x10d
+ 872 02ce 0E       		.uleb128 0xe
+ 873 02cf 38000000 		.4byte	.LVL15
+ 874 02d3 EA010000 		.4byte	0x1ea
+ 875 02d7 E2020000 		.4byte	0x2e2
+ 876 02db 0F       		.uleb128 0xf
+ 877 02dc 01       		.uleb128 0x1
+ 878 02dd 50       		.byte	0x50
+ 879 02de 02       		.uleb128 0x2
+ 880 02df 08       		.byte	0x8
+ 881 02e0 80       		.byte	0x80
+ 882 02e1 00       		.byte	0
+ 883 02e2 0C       		.uleb128 0xc
+ 884 02e3 3C000000 		.4byte	.LVL16
+ 885 02e7 2E030000 		.4byte	0x32e
+ 886 02eb 0C       		.uleb128 0xc
+ 887 02ec 4C000000 		.4byte	.LVL17
+ 888 02f0 39030000 		.4byte	0x339
+ 889 02f4 00       		.byte	0
+ 890 02f5 07       		.uleb128 0x7
+ 891 02f6 E3030000 		.4byte	.LASF40
+ 892 02fa 01       		.byte	0x1
+ 893 02fb B2       		.byte	0xb2
+ 894 02fc 00000000 		.4byte	.LFB3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 27
+
+
+ 895 0300 20000000 		.4byte	.LFE3-.LFB3
+ 896 0304 01       		.uleb128 0x1
+ 897 0305 9C       		.byte	0x9c
+ 898 0306 1D030000 		.4byte	0x31d
+ 899 030a 0C       		.uleb128 0xc
+ 900 030b 0E000000 		.4byte	.LVL18
+ 901 030f 4E020000 		.4byte	0x24e
+ 902 0313 0C       		.uleb128 0xc
+ 903 0314 18000000 		.4byte	.LVL19
+ 904 0318 C8000000 		.4byte	0xc8
+ 905 031c 00       		.byte	0
+ 906 031d 10       		.uleb128 0x10
+ 907 031e 22000000 		.4byte	.LASF46
+ 908 0322 01       		.byte	0x1
+ 909 0323 15       		.byte	0x15
+ 910 0324 6B000000 		.4byte	0x6b
+ 911 0328 05       		.uleb128 0x5
+ 912 0329 03       		.byte	0x3
+ 913 032a 00000000 		.4byte	Step_Counter_initVar
+ 914 032e 11       		.uleb128 0x11
+ 915 032f F7010000 		.4byte	.LASF41
+ 916 0333 F7010000 		.4byte	.LASF41
+ 917 0337 03       		.byte	0x3
+ 918 0338 F8       		.byte	0xf8
+ 919 0339 11       		.uleb128 0x11
+ 920 033a 88020000 		.4byte	.LASF42
+ 921 033e 88020000 		.4byte	.LASF42
+ 922 0342 03       		.byte	0x3
+ 923 0343 F9       		.byte	0xf9
+ 924 0344 00       		.byte	0
+ 925              		.section	.debug_abbrev,"",%progbits
+ 926              	.Ldebug_abbrev0:
+ 927 0000 01       		.uleb128 0x1
+ 928 0001 11       		.uleb128 0x11
+ 929 0002 01       		.byte	0x1
+ 930 0003 25       		.uleb128 0x25
+ 931 0004 0E       		.uleb128 0xe
+ 932 0005 13       		.uleb128 0x13
+ 933 0006 0B       		.uleb128 0xb
+ 934 0007 03       		.uleb128 0x3
+ 935 0008 0E       		.uleb128 0xe
+ 936 0009 1B       		.uleb128 0x1b
+ 937 000a 0E       		.uleb128 0xe
+ 938 000b 55       		.uleb128 0x55
+ 939 000c 17       		.uleb128 0x17
+ 940 000d 11       		.uleb128 0x11
+ 941 000e 01       		.uleb128 0x1
+ 942 000f 10       		.uleb128 0x10
+ 943 0010 17       		.uleb128 0x17
+ 944 0011 00       		.byte	0
+ 945 0012 00       		.byte	0
+ 946 0013 02       		.uleb128 0x2
+ 947 0014 24       		.uleb128 0x24
+ 948 0015 00       		.byte	0
+ 949 0016 0B       		.uleb128 0xb
+ 950 0017 0B       		.uleb128 0xb
+ 951 0018 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 28
+
+
+ 952 0019 0B       		.uleb128 0xb
+ 953 001a 03       		.uleb128 0x3
+ 954 001b 0E       		.uleb128 0xe
+ 955 001c 00       		.byte	0
+ 956 001d 00       		.byte	0
+ 957 001e 03       		.uleb128 0x3
+ 958 001f 24       		.uleb128 0x24
+ 959 0020 00       		.byte	0
+ 960 0021 0B       		.uleb128 0xb
+ 961 0022 0B       		.uleb128 0xb
+ 962 0023 3E       		.uleb128 0x3e
+ 963 0024 0B       		.uleb128 0xb
+ 964 0025 03       		.uleb128 0x3
+ 965 0026 08       		.uleb128 0x8
+ 966 0027 00       		.byte	0
+ 967 0028 00       		.byte	0
+ 968 0029 04       		.uleb128 0x4
+ 969 002a 16       		.uleb128 0x16
+ 970 002b 00       		.byte	0
+ 971 002c 03       		.uleb128 0x3
+ 972 002d 0E       		.uleb128 0xe
+ 973 002e 3A       		.uleb128 0x3a
+ 974 002f 0B       		.uleb128 0xb
+ 975 0030 3B       		.uleb128 0x3b
+ 976 0031 05       		.uleb128 0x5
+ 977 0032 49       		.uleb128 0x49
+ 978 0033 13       		.uleb128 0x13
+ 979 0034 00       		.byte	0
+ 980 0035 00       		.byte	0
+ 981 0036 05       		.uleb128 0x5
+ 982 0037 35       		.uleb128 0x35
+ 983 0038 00       		.byte	0
+ 984 0039 49       		.uleb128 0x49
+ 985 003a 13       		.uleb128 0x13
+ 986 003b 00       		.byte	0
+ 987 003c 00       		.byte	0
+ 988 003d 06       		.uleb128 0x6
+ 989 003e 2E       		.uleb128 0x2e
+ 990 003f 00       		.byte	0
+ 991 0040 3F       		.uleb128 0x3f
+ 992 0041 19       		.uleb128 0x19
+ 993 0042 03       		.uleb128 0x3
+ 994 0043 0E       		.uleb128 0xe
+ 995 0044 3A       		.uleb128 0x3a
+ 996 0045 0B       		.uleb128 0xb
+ 997 0046 3B       		.uleb128 0x3b
+ 998 0047 0B       		.uleb128 0xb
+ 999 0048 27       		.uleb128 0x27
+ 1000 0049 19       		.uleb128 0x19
+ 1001 004a 11       		.uleb128 0x11
+ 1002 004b 01       		.uleb128 0x1
+ 1003 004c 12       		.uleb128 0x12
+ 1004 004d 06       		.uleb128 0x6
+ 1005 004e 40       		.uleb128 0x40
+ 1006 004f 18       		.uleb128 0x18
+ 1007 0050 9742     		.uleb128 0x2117
+ 1008 0052 19       		.uleb128 0x19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 29
+
+
+ 1009 0053 00       		.byte	0
+ 1010 0054 00       		.byte	0
+ 1011 0055 07       		.uleb128 0x7
+ 1012 0056 2E       		.uleb128 0x2e
+ 1013 0057 01       		.byte	0x1
+ 1014 0058 3F       		.uleb128 0x3f
+ 1015 0059 19       		.uleb128 0x19
+ 1016 005a 03       		.uleb128 0x3
+ 1017 005b 0E       		.uleb128 0xe
+ 1018 005c 3A       		.uleb128 0x3a
+ 1019 005d 0B       		.uleb128 0xb
+ 1020 005e 3B       		.uleb128 0x3b
+ 1021 005f 0B       		.uleb128 0xb
+ 1022 0060 27       		.uleb128 0x27
+ 1023 0061 19       		.uleb128 0x19
+ 1024 0062 11       		.uleb128 0x11
+ 1025 0063 01       		.uleb128 0x1
+ 1026 0064 12       		.uleb128 0x12
+ 1027 0065 06       		.uleb128 0x6
+ 1028 0066 40       		.uleb128 0x40
+ 1029 0067 18       		.uleb128 0x18
+ 1030 0068 9742     		.uleb128 0x2117
+ 1031 006a 19       		.uleb128 0x19
+ 1032 006b 01       		.uleb128 0x1
+ 1033 006c 13       		.uleb128 0x13
+ 1034 006d 00       		.byte	0
+ 1035 006e 00       		.byte	0
+ 1036 006f 08       		.uleb128 0x8
+ 1037 0070 05       		.uleb128 0x5
+ 1038 0071 00       		.byte	0
+ 1039 0072 03       		.uleb128 0x3
+ 1040 0073 0E       		.uleb128 0xe
+ 1041 0074 3A       		.uleb128 0x3a
+ 1042 0075 0B       		.uleb128 0xb
+ 1043 0076 3B       		.uleb128 0x3b
+ 1044 0077 0B       		.uleb128 0xb
+ 1045 0078 49       		.uleb128 0x49
+ 1046 0079 13       		.uleb128 0x13
+ 1047 007a 02       		.uleb128 0x2
+ 1048 007b 18       		.uleb128 0x18
+ 1049 007c 00       		.byte	0
+ 1050 007d 00       		.byte	0
+ 1051 007e 09       		.uleb128 0x9
+ 1052 007f 2E       		.uleb128 0x2e
+ 1053 0080 00       		.byte	0
+ 1054 0081 3F       		.uleb128 0x3f
+ 1055 0082 19       		.uleb128 0x19
+ 1056 0083 03       		.uleb128 0x3
+ 1057 0084 0E       		.uleb128 0xe
+ 1058 0085 3A       		.uleb128 0x3a
+ 1059 0086 0B       		.uleb128 0xb
+ 1060 0087 3B       		.uleb128 0x3b
+ 1061 0088 05       		.uleb128 0x5
+ 1062 0089 27       		.uleb128 0x27
+ 1063 008a 19       		.uleb128 0x19
+ 1064 008b 49       		.uleb128 0x49
+ 1065 008c 13       		.uleb128 0x13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 30
+
+
+ 1066 008d 11       		.uleb128 0x11
+ 1067 008e 01       		.uleb128 0x1
+ 1068 008f 12       		.uleb128 0x12
+ 1069 0090 06       		.uleb128 0x6
+ 1070 0091 40       		.uleb128 0x40
+ 1071 0092 18       		.uleb128 0x18
+ 1072 0093 9742     		.uleb128 0x2117
+ 1073 0095 19       		.uleb128 0x19
+ 1074 0096 00       		.byte	0
+ 1075 0097 00       		.byte	0
+ 1076 0098 0A       		.uleb128 0xa
+ 1077 0099 2E       		.uleb128 0x2e
+ 1078 009a 01       		.byte	0x1
+ 1079 009b 3F       		.uleb128 0x3f
+ 1080 009c 19       		.uleb128 0x19
+ 1081 009d 03       		.uleb128 0x3
+ 1082 009e 0E       		.uleb128 0xe
+ 1083 009f 3A       		.uleb128 0x3a
+ 1084 00a0 0B       		.uleb128 0xb
+ 1085 00a1 3B       		.uleb128 0x3b
+ 1086 00a2 05       		.uleb128 0x5
+ 1087 00a3 27       		.uleb128 0x27
+ 1088 00a4 19       		.uleb128 0x19
+ 1089 00a5 11       		.uleb128 0x11
+ 1090 00a6 01       		.uleb128 0x1
+ 1091 00a7 12       		.uleb128 0x12
+ 1092 00a8 06       		.uleb128 0x6
+ 1093 00a9 40       		.uleb128 0x40
+ 1094 00aa 18       		.uleb128 0x18
+ 1095 00ab 9742     		.uleb128 0x2117
+ 1096 00ad 19       		.uleb128 0x19
+ 1097 00ae 01       		.uleb128 0x1
+ 1098 00af 13       		.uleb128 0x13
+ 1099 00b0 00       		.byte	0
+ 1100 00b1 00       		.byte	0
+ 1101 00b2 0B       		.uleb128 0xb
+ 1102 00b3 05       		.uleb128 0x5
+ 1103 00b4 00       		.byte	0
+ 1104 00b5 03       		.uleb128 0x3
+ 1105 00b6 0E       		.uleb128 0xe
+ 1106 00b7 3A       		.uleb128 0x3a
+ 1107 00b8 0B       		.uleb128 0xb
+ 1108 00b9 3B       		.uleb128 0x3b
+ 1109 00ba 05       		.uleb128 0x5
+ 1110 00bb 49       		.uleb128 0x49
+ 1111 00bc 13       		.uleb128 0x13
+ 1112 00bd 02       		.uleb128 0x2
+ 1113 00be 18       		.uleb128 0x18
+ 1114 00bf 00       		.byte	0
+ 1115 00c0 00       		.byte	0
+ 1116 00c1 0C       		.uleb128 0xc
+ 1117 00c2 898201   		.uleb128 0x4109
+ 1118 00c5 00       		.byte	0
+ 1119 00c6 11       		.uleb128 0x11
+ 1120 00c7 01       		.uleb128 0x1
+ 1121 00c8 31       		.uleb128 0x31
+ 1122 00c9 13       		.uleb128 0x13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 31
+
+
+ 1123 00ca 00       		.byte	0
+ 1124 00cb 00       		.byte	0
+ 1125 00cc 0D       		.uleb128 0xd
+ 1126 00cd 34       		.uleb128 0x34
+ 1127 00ce 00       		.byte	0
+ 1128 00cf 03       		.uleb128 0x3
+ 1129 00d0 0E       		.uleb128 0xe
+ 1130 00d1 3A       		.uleb128 0x3a
+ 1131 00d2 0B       		.uleb128 0xb
+ 1132 00d3 3B       		.uleb128 0x3b
+ 1133 00d4 0B       		.uleb128 0xb
+ 1134 00d5 49       		.uleb128 0x49
+ 1135 00d6 13       		.uleb128 0x13
+ 1136 00d7 02       		.uleb128 0x2
+ 1137 00d8 17       		.uleb128 0x17
+ 1138 00d9 00       		.byte	0
+ 1139 00da 00       		.byte	0
+ 1140 00db 0E       		.uleb128 0xe
+ 1141 00dc 898201   		.uleb128 0x4109
+ 1142 00df 01       		.byte	0x1
+ 1143 00e0 11       		.uleb128 0x11
+ 1144 00e1 01       		.uleb128 0x1
+ 1145 00e2 31       		.uleb128 0x31
+ 1146 00e3 13       		.uleb128 0x13
+ 1147 00e4 01       		.uleb128 0x1
+ 1148 00e5 13       		.uleb128 0x13
+ 1149 00e6 00       		.byte	0
+ 1150 00e7 00       		.byte	0
+ 1151 00e8 0F       		.uleb128 0xf
+ 1152 00e9 8A8201   		.uleb128 0x410a
+ 1153 00ec 00       		.byte	0
+ 1154 00ed 02       		.uleb128 0x2
+ 1155 00ee 18       		.uleb128 0x18
+ 1156 00ef 9142     		.uleb128 0x2111
+ 1157 00f1 18       		.uleb128 0x18
+ 1158 00f2 00       		.byte	0
+ 1159 00f3 00       		.byte	0
+ 1160 00f4 10       		.uleb128 0x10
+ 1161 00f5 34       		.uleb128 0x34
+ 1162 00f6 00       		.byte	0
+ 1163 00f7 03       		.uleb128 0x3
+ 1164 00f8 0E       		.uleb128 0xe
+ 1165 00f9 3A       		.uleb128 0x3a
+ 1166 00fa 0B       		.uleb128 0xb
+ 1167 00fb 3B       		.uleb128 0x3b
+ 1168 00fc 0B       		.uleb128 0xb
+ 1169 00fd 49       		.uleb128 0x49
+ 1170 00fe 13       		.uleb128 0x13
+ 1171 00ff 3F       		.uleb128 0x3f
+ 1172 0100 19       		.uleb128 0x19
+ 1173 0101 02       		.uleb128 0x2
+ 1174 0102 18       		.uleb128 0x18
+ 1175 0103 00       		.byte	0
+ 1176 0104 00       		.byte	0
+ 1177 0105 11       		.uleb128 0x11
+ 1178 0106 2E       		.uleb128 0x2e
+ 1179 0107 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 32
+
+
+ 1180 0108 3F       		.uleb128 0x3f
+ 1181 0109 19       		.uleb128 0x19
+ 1182 010a 3C       		.uleb128 0x3c
+ 1183 010b 19       		.uleb128 0x19
+ 1184 010c 6E       		.uleb128 0x6e
+ 1185 010d 0E       		.uleb128 0xe
+ 1186 010e 03       		.uleb128 0x3
+ 1187 010f 0E       		.uleb128 0xe
+ 1188 0110 3A       		.uleb128 0x3a
+ 1189 0111 0B       		.uleb128 0xb
+ 1190 0112 3B       		.uleb128 0x3b
+ 1191 0113 0B       		.uleb128 0xb
+ 1192 0114 00       		.byte	0
+ 1193 0115 00       		.byte	0
+ 1194 0116 00       		.byte	0
+ 1195              		.section	.debug_loc,"",%progbits
+ 1196              	.Ldebug_loc0:
+ 1197              	.LLST0:
+ 1198 0000 0A000000 		.4byte	.LVL7
+ 1199 0004 0E000000 		.4byte	.LVL8
+ 1200 0008 0100     		.2byte	0x1
+ 1201 000a 52       		.byte	0x52
+ 1202 000b 0E000000 		.4byte	.LVL8
+ 1203 000f 12000000 		.4byte	.LVL9
+ 1204 0013 0200     		.2byte	0x2
+ 1205 0015 73       		.byte	0x73
+ 1206 0016 00       		.sleb128 0
+ 1207 0017 12000000 		.4byte	.LVL9
+ 1208 001b 17000000 		.4byte	.LVL10-1
+ 1209 001f 0100     		.2byte	0x1
+ 1210 0021 52       		.byte	0x52
+ 1211 0022 00000000 		.4byte	0
+ 1212 0026 00000000 		.4byte	0
+ 1213              	.LLST1:
+ 1214 002a 3C000000 		.4byte	.LVL16
+ 1215 002e 4B000000 		.4byte	.LVL17-1
+ 1216 0032 0100     		.2byte	0x1
+ 1217 0034 50       		.byte	0x50
+ 1218 0035 00000000 		.4byte	0
+ 1219 0039 00000000 		.4byte	0
+ 1220              		.section	.debug_aranges,"",%progbits
+ 1221 0000 94000000 		.4byte	0x94
+ 1222 0004 0200     		.2byte	0x2
+ 1223 0006 00000000 		.4byte	.Ldebug_info0
+ 1224 000a 04       		.byte	0x4
+ 1225 000b 00       		.byte	0
+ 1226 000c 0000     		.2byte	0
+ 1227 000e 0000     		.2byte	0
+ 1228 0010 00000000 		.4byte	.LFB2
+ 1229 0014 14000000 		.4byte	.LFE2-.LFB2
+ 1230 0018 00000000 		.4byte	.LFB4
+ 1231 001c 10000000 		.4byte	.LFE4-.LFB4
+ 1232 0020 00000000 		.4byte	.LFB5
+ 1233 0024 0C000000 		.4byte	.LFE5-.LFB5
+ 1234 0028 00000000 		.4byte	.LFB6
+ 1235 002c 0C000000 		.4byte	.LFE6-.LFB6
+ 1236 0030 00000000 		.4byte	.LFB7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 33
+
+
+ 1237 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1238 0038 00000000 		.4byte	.LFB8
+ 1239 003c 0C000000 		.4byte	.LFE8-.LFB8
+ 1240 0040 00000000 		.4byte	.LFB9
+ 1241 0044 0C000000 		.4byte	.LFE9-.LFB9
+ 1242 0048 00000000 		.4byte	.LFB10
+ 1243 004c 14000000 		.4byte	.LFE10-.LFB10
+ 1244 0050 00000000 		.4byte	.LFB11
+ 1245 0054 0C000000 		.4byte	.LFE11-.LFB11
+ 1246 0058 00000000 		.4byte	.LFB12
+ 1247 005c 0C000000 		.4byte	.LFE12-.LFB12
+ 1248 0060 00000000 		.4byte	.LFB13
+ 1249 0064 0C000000 		.4byte	.LFE13-.LFB13
+ 1250 0068 00000000 		.4byte	.LFB14
+ 1251 006c 0C000000 		.4byte	.LFE14-.LFB14
+ 1252 0070 00000000 		.4byte	.LFB15
+ 1253 0074 0C000000 		.4byte	.LFE15-.LFB15
+ 1254 0078 00000000 		.4byte	.LFB16
+ 1255 007c 12000000 		.4byte	.LFE16-.LFB16
+ 1256 0080 00000000 		.4byte	.LFB1
+ 1257 0084 58000000 		.4byte	.LFE1-.LFB1
+ 1258 0088 00000000 		.4byte	.LFB3
+ 1259 008c 20000000 		.4byte	.LFE3-.LFB3
+ 1260 0090 00000000 		.4byte	0
+ 1261 0094 00000000 		.4byte	0
+ 1262              		.section	.debug_ranges,"",%progbits
+ 1263              	.Ldebug_ranges0:
+ 1264 0000 00000000 		.4byte	.LFB2
+ 1265 0004 14000000 		.4byte	.LFE2
+ 1266 0008 00000000 		.4byte	.LFB4
+ 1267 000c 10000000 		.4byte	.LFE4
+ 1268 0010 00000000 		.4byte	.LFB5
+ 1269 0014 0C000000 		.4byte	.LFE5
+ 1270 0018 00000000 		.4byte	.LFB6
+ 1271 001c 0C000000 		.4byte	.LFE6
+ 1272 0020 00000000 		.4byte	.LFB7
+ 1273 0024 0C000000 		.4byte	.LFE7
+ 1274 0028 00000000 		.4byte	.LFB8
+ 1275 002c 0C000000 		.4byte	.LFE8
+ 1276 0030 00000000 		.4byte	.LFB9
+ 1277 0034 0C000000 		.4byte	.LFE9
+ 1278 0038 00000000 		.4byte	.LFB10
+ 1279 003c 14000000 		.4byte	.LFE10
+ 1280 0040 00000000 		.4byte	.LFB11
+ 1281 0044 0C000000 		.4byte	.LFE11
+ 1282 0048 00000000 		.4byte	.LFB12
+ 1283 004c 0C000000 		.4byte	.LFE12
+ 1284 0050 00000000 		.4byte	.LFB13
+ 1285 0054 0C000000 		.4byte	.LFE13
+ 1286 0058 00000000 		.4byte	.LFB14
+ 1287 005c 0C000000 		.4byte	.LFE14
+ 1288 0060 00000000 		.4byte	.LFB15
+ 1289 0064 0C000000 		.4byte	.LFE15
+ 1290 0068 00000000 		.4byte	.LFB16
+ 1291 006c 12000000 		.4byte	.LFE16
+ 1292 0070 00000000 		.4byte	.LFB1
+ 1293 0074 58000000 		.4byte	.LFE1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 34
+
+
+ 1294 0078 00000000 		.4byte	.LFB3
+ 1295 007c 20000000 		.4byte	.LFE3
+ 1296 0080 00000000 		.4byte	0
+ 1297 0084 00000000 		.4byte	0
+ 1298              		.section	.debug_line,"",%progbits
+ 1299              	.Ldebug_line0:
+ 1300 0000 91010000 		.section	.debug_str,"MS",%progbits,1
+ 1300      02005400 
+ 1300      00000201 
+ 1300      FB0E0D00 
+ 1300      01010101 
+ 1301              	.LASF15:
+ 1302 0000 72656733 		.ascii	"reg32\000"
+ 1302      3200
+ 1303              	.LASF39:
+ 1304 0006 53746570 		.ascii	"Step_Counter_interruptState\000"
+ 1304      5F436F75 
+ 1304      6E746572 
+ 1304      5F696E74 
+ 1304      65727275 
+ 1305              	.LASF46:
+ 1306 0022 53746570 		.ascii	"Step_Counter_initVar\000"
+ 1306      5F436F75 
+ 1306      6E746572 
+ 1306      5F696E69 
+ 1306      74566172 
+ 1307              	.LASF22:
+ 1308 0037 53746570 		.ascii	"Step_Counter_SetInterruptMode\000"
+ 1308      5F436F75 
+ 1308      6E746572 
+ 1308      5F536574 
+ 1308      496E7465 
+ 1309              	.LASF21:
+ 1310 0055 53746570 		.ascii	"Step_Counter_ReadControlRegister\000"
+ 1310      5F436F75 
+ 1310      6E746572 
+ 1310      5F526561 
+ 1310      64436F6E 
+ 1311              	.LASF31:
+ 1312 0076 70657269 		.ascii	"period\000"
+ 1312      6F6400
+ 1313              	.LASF20:
+ 1314 007d 53746570 		.ascii	"Step_Counter_ReadStatusRegister\000"
+ 1314      5F436F75 
+ 1314      6E746572 
+ 1314      5F526561 
+ 1314      64537461 
+ 1315              	.LASF18:
+ 1316 009d 53746570 		.ascii	"Step_Counter_Enable\000"
+ 1316      5F436F75 
+ 1316      6E746572 
+ 1316      5F456E61 
+ 1316      626C6500 
+ 1317              	.LASF3:
+ 1318 00b1 73686F72 		.ascii	"short unsigned int\000"
+ 1318      7420756E 
+ 1318      7369676E 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 35
+
+
+ 1318      65642069 
+ 1318      6E7400
+ 1319              	.LASF44:
+ 1320 00c4 47656E65 		.ascii	"Generated_Source\\PSoC4\\Step_Counter.c\000"
+ 1320      72617465 
+ 1320      645F536F 
+ 1320      75726365 
+ 1320      5C50536F 
+ 1321              	.LASF26:
+ 1322 00ea 53746570 		.ascii	"Step_Counter_WriteCounter\000"
+ 1322      5F436F75 
+ 1322      6E746572 
+ 1322      5F577269 
+ 1322      7465436F 
+ 1323              	.LASF36:
+ 1324 0104 53746570 		.ascii	"Step_Counter_ClearFIFO\000"
+ 1324      5F436F75 
+ 1324      6E746572 
+ 1324      5F436C65 
+ 1324      61724649 
+ 1325              	.LASF28:
+ 1326 011b 53746570 		.ascii	"Step_Counter_ReadCounter\000"
+ 1326      5F436F75 
+ 1326      6E746572 
+ 1326      5F526561 
+ 1326      64436F75 
+ 1327              	.LASF37:
+ 1328 0134 53746570 		.ascii	"Step_Counter_Init\000"
+ 1328      5F436F75 
+ 1328      6E746572 
+ 1328      5F496E69 
+ 1328      7400
+ 1329              	.LASF11:
+ 1330 0146 666C6F61 		.ascii	"float\000"
+ 1330      7400
+ 1331              	.LASF27:
+ 1332 014c 636F756E 		.ascii	"counter\000"
+ 1332      74657200 
+ 1333              	.LASF30:
+ 1334 0154 53746570 		.ascii	"Step_Counter_WritePeriod\000"
+ 1334      5F436F75 
+ 1334      6E746572 
+ 1334      5F577269 
+ 1334      74655065 
+ 1335              	.LASF1:
+ 1336 016d 756E7369 		.ascii	"unsigned char\000"
+ 1336      676E6564 
+ 1336      20636861 
+ 1336      7200
+ 1337              	.LASF14:
+ 1338 017b 72656738 		.ascii	"reg8\000"
+ 1338      00
+ 1339              	.LASF5:
+ 1340 0180 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1340      20756E73 
+ 1340      69676E65 
+ 1340      6420696E 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 36
+
+
+ 1340      7400
+ 1341              	.LASF9:
+ 1342 0192 75696E74 		.ascii	"uint8\000"
+ 1342      3800
+ 1343              	.LASF25:
+ 1344 0198 636F6E74 		.ascii	"control\000"
+ 1344      726F6C00 
+ 1345              	.LASF24:
+ 1346 01a0 696E7465 		.ascii	"interruptsMask\000"
+ 1346      72727570 
+ 1346      74734D61 
+ 1346      736B00
+ 1347              	.LASF32:
+ 1348 01af 53746570 		.ascii	"Step_Counter_ReadPeriod\000"
+ 1348      5F436F75 
+ 1348      6E746572 
+ 1348      5F526561 
+ 1348      64506572 
+ 1349              	.LASF23:
+ 1350 01c7 53746570 		.ascii	"Step_Counter_WriteControlRegister\000"
+ 1350      5F436F75 
+ 1350      6E746572 
+ 1350      5F577269 
+ 1350      7465436F 
+ 1351              	.LASF12:
+ 1352 01e9 646F7562 		.ascii	"double\000"
+ 1352      6C6500
+ 1353              	.LASF10:
+ 1354 01f0 75696E74 		.ascii	"uint32\000"
+ 1354      333200
+ 1355              	.LASF41:
+ 1356 01f7 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1356      74657243 
+ 1356      72697469 
+ 1356      63616C53 
+ 1356      65637469 
+ 1357              	.LASF8:
+ 1358 020e 756E7369 		.ascii	"unsigned int\000"
+ 1358      676E6564 
+ 1358      20696E74 
+ 1358      00
+ 1359              	.LASF45:
+ 1360 021b 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 1360      73657273 
+ 1360      5C636173 
+ 1360      65795C44 
+ 1360      65736B74 
+ 1361 0249 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepDirection.cydsn\000"
+ 1361      53746570 
+ 1361      7065725F 
+ 1361      4D6F746F 
+ 1361      725F4472 
+ 1362              	.LASF19:
+ 1363 0276 53746570 		.ascii	"Step_Counter_Stop\000"
+ 1363      5F436F75 
+ 1363      6E746572 
+ 1363      5F53746F 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 37
+
+
+ 1363      7000
+ 1364              	.LASF42:
+ 1365 0288 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1365      69744372 
+ 1365      69746963 
+ 1365      616C5365 
+ 1365      6374696F 
+ 1366              	.LASF35:
+ 1367 029e 53746570 		.ascii	"Step_Counter_ReadCompare\000"
+ 1367      5F436F75 
+ 1367      6E746572 
+ 1367      5F526561 
+ 1367      64436F6D 
+ 1368              	.LASF43:
+ 1369 02b7 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1369      43313120 
+ 1369      352E342E 
+ 1369      31203230 
+ 1369      31363036 
+ 1370 02ea 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1370      20726576 
+ 1370      6973696F 
+ 1370      6E203233 
+ 1370      37373135 
+ 1371 031d 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1371      66756E63 
+ 1371      74696F6E 
+ 1371      2D736563 
+ 1371      74696F6E 
+ 1372              	.LASF38:
+ 1373 0345 6374726C 		.ascii	"ctrl\000"
+ 1373      00
+ 1374              	.LASF17:
+ 1375 034a 73697A65 		.ascii	"sizetype\000"
+ 1375      74797065 
+ 1375      00
+ 1376              	.LASF6:
+ 1377 0353 6C6F6E67 		.ascii	"long long int\000"
+ 1377      206C6F6E 
+ 1377      6720696E 
+ 1377      7400
+ 1378              	.LASF13:
+ 1379 0361 63686172 		.ascii	"char\000"
+ 1379      00
+ 1380              	.LASF29:
+ 1381 0366 53746570 		.ascii	"Step_Counter_ReadCapture\000"
+ 1381      5F436F75 
+ 1381      6E746572 
+ 1381      5F526561 
+ 1381      64436170 
+ 1382              	.LASF2:
+ 1383 037f 73686F72 		.ascii	"short int\000"
+ 1383      7420696E 
+ 1383      7400
+ 1384              	.LASF33:
+ 1385 0389 53746570 		.ascii	"Step_Counter_WriteCompare\000"
+ 1385      5F436F75 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIBylkU.s 			page 38
+
+
+ 1385      6E746572 
+ 1385      5F577269 
+ 1385      7465436F 
+ 1386              	.LASF4:
+ 1387 03a3 6C6F6E67 		.ascii	"long int\000"
+ 1387      20696E74 
+ 1387      00
+ 1388              	.LASF16:
+ 1389 03ac 6C6F6E67 		.ascii	"long double\000"
+ 1389      20646F75 
+ 1389      626C6500 
+ 1390              	.LASF0:
+ 1391 03b8 7369676E 		.ascii	"signed char\000"
+ 1391      65642063 
+ 1391      68617200 
+ 1392              	.LASF34:
+ 1393 03c4 636F6D70 		.ascii	"compare\000"
+ 1393      61726500 
+ 1394              	.LASF7:
+ 1395 03cc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1395      206C6F6E 
+ 1395      6720756E 
+ 1395      7369676E 
+ 1395      65642069 
+ 1396              	.LASF40:
+ 1397 03e3 53746570 		.ascii	"Step_Counter_Start\000"
+ 1397      5F436F75 
+ 1397      6E746572 
+ 1397      5F537461 
+ 1397      727400
+ 1398              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

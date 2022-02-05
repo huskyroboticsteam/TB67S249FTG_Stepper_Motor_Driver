@@ -1,0 +1,7 @@
+C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepDirection.cydsn\StepDirection.cyprj|8a60671f-ad04-457d-9129-671e4c6088a8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6249f8d6-e344-49c5-9483-72ee3de8c256
+C:\Users\casey\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|bf0e7936-c4e6-47f6-97ba-2096abc2ebec
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1c4f0551-37b7-4492-80a3-15b265893f4e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|473aa50e-0782-4566-b90c-16ff69be00a3
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|0345b134-02bc-4c74-b04c-3d49a59d65aa
+C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\Design01.cydsn\Design01.cyprj|5866f1e3-983f-472d-b022-7a471c4da879

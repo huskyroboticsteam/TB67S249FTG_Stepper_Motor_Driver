@@ -1,0 +1,54 @@
+--------------- Rebuild Started: 02/01/2022 19:07:16 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM0\ARM_GCC_541\Debug\main.o
+main.c:22:19: error: initializer element is not constant
+ double maxAccel = 360.0 / stepSize;//steps / s^2
+                   ^
+main.c:23:22: error: initializer element is not constant
+ double maxVelocity = 1440.0 / stepSize;//steps / s
+                      ^
+main.c: In function 'UpdateMove':
+main.c:47:73: error: 'maxStepPeriod' undeclared (first use in this function)
+         step_period = min(round(STEP_CLOCK_FREQUENCY / targetVelocity), maxStepPeriod);
+                                                                         ^
+main.c:17:23: note: in definition of macro 'min'
+ #define min(a,b) (a < b) ? a : b
+                       ^
+main.c:47:73: note: each undeclared identifier is reported only once for each function it appears in
+         step_period = min(round(STEP_CLOCK_FREQUENCY / targetVelocity), maxStepPeriod);
+                                                                         ^
+main.c:17:23: note: in definition of macro 'min'
+ #define min(a,b) (a < b) ? a : b
+                       ^
+main.c:41:12: warning: unused variable 'currentPosition' [-Wunused-variable]
+     double currentPosition = Step_Counter_ReadCounter();
+            ^
+main.c: In function 'StartMove':
+main.c:60:5: error: 'currentPosition' undeclared (first use in this function)
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+     currentPosition = Step_Counter_ReadCounter();
+     ^
+main.c:63:55: error: 'targetVelocity' undeclared (first use in this function)
+     uint32 step_period = round(STEP_CLOCK_FREQUENCY / targetVelocity);
+                                                       ^
+main.c:65:5: warning: implicit declaration of function 'Step_Timer_WritePeriod' [-Wimplicit-function-declaration]
+     Step_Timer_WritePeriod(step_period);
+     ^
+main.c:66:5: warning: implicit declaration of function 'Step_Timer_WriteCompare' [-Wimplicit-function-declaration]
+     Step_Timer_WriteCompare(step_period / 2);
+     ^
+In file included from main.c:15:0:
+main.c: In function 'On_Done':
+main.h:12:24: warning: implicit declaration of function 'DBG_UART_UartPutString' [-Wimplicit-function-declaration]
+ #define Print(message) DBG_UART_UartPutString(message)
+                        ^
+main.c:81:5: note: in expansion of macro 'Print'
+     Print("Done moving to ");
+     ^
+main.c: In function 'main':
+main.c:105:5: warning: implicit declaration of function 'Step_Timer_Start' [-Wimplicit-function-declaration]
+     Step_Timer_Start();
+     ^
+main.c:116:9: warning: implicit declaration of function 'DBG_UART_UartReadByte' [-Wimplicit-function-declaration]
+         DBG_UART_UartReadByte();
+         ^
+--------------- Rebuild Failed: 02/01/2022 19:07:16 ---------------
