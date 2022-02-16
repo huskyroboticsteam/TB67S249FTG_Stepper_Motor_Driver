@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
   28:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** * Summary:
   29:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** *  Starts the clock, aligned to the specified running clock.
   30:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 2
 
 
   31:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** * Parameters:
@@ -110,7 +110,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
   52              		.align	2
   53              	.L3:
   54 0014 00000140 		.word	1073807360
-  55 0018 41000080 		.word	-2147483583
+  55 0018 42000080 		.word	-2147483582
   56              		.cfi_endproc
   57              	.LFE0:
   58              		.size	DBG_UART_SCBCLK_StartEx, .-DBG_UART_SCBCLK_StartEx
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
   60              		.align	2
   61              		.global	DBG_UART_SCBCLK_Stop
   62              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 3
 
 
   63              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
   72              	.L6:
   97:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
   98:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 4
 
 
   99:Generated_Source\PSoC4/DBG_UART_SCBCLK.c ****     /* Make sure any previous start command has finished. */
@@ -214,7 +214,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
   86              		.align	2
   87              	.L7:
   88 0010 00000140 		.word	1073807360
-  89 0014 41000040 		.word	1073741889
+  89 0014 42000040 		.word	1073741890
   90              		.cfi_endproc
   91              	.LFE1:
   92              		.size	DBG_UART_SCBCLK_Stop, .-DBG_UART_SCBCLK_Stop
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  125:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** * Parameters:
  126:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
  127:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 5
 
 
  128:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  151:Generated_Source\PSoC4/DBG_UART_SCBCLK.c ****     maskVal = DBG_UART_SCBCLK_DIV_REG & (uint32)(~(uint32)DBG_UART_SCBCLK__DIVIDER_MASK);
  152:Generated_Source\PSoC4/DBG_UART_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
  153:Generated_Source\PSoC4/DBG_UART_SCBCLK.c ****     regVal = clkDivider | maskVal;
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 6
 
 
  154:Generated_Source\PSoC4/DBG_UART_SCBCLK.c ****     
@@ -314,7 +314,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  135              	.L11:
  136 001a C046     		.align	2
  137              	.L10:
- 138 001c 04030140 		.word	1073808132
+ 138 001c 08030140 		.word	1073808136
  139              		.cfi_endproc
  140              	.LFE2:
  141              		.size	DBG_UART_SCBCLK_SetFractionalDividerRegister, .-DBG_UART_SCBCLK_SetFractionalDividerRegister
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  159 0006 80B2     		uxth	r0, r0
  179:Generated_Source\PSoC4/DBG_UART_SCBCLK.c ****         >> DBG_UART_SCBCLK_DIV_INT_SHIFT);
  180:Generated_Source\PSoC4/DBG_UART_SCBCLK.c **** }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 7
 
 
  160              		.loc 1 180 0
@@ -367,7 +367,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  163              	.L14:
  164 000a C046     		.align	2
  165              	.L13:
- 166 000c 04030140 		.word	1073808132
+ 166 000c 08030140 		.word	1073808136
  167              		.cfi_endproc
  168              	.LFE3:
  169              		.size	DBG_UART_SCBCLK_GetDividerRegister, .-DBG_UART_SCBCLK_GetDividerRegister
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  187              		.cfi_endproc
  188              	.LFE4:
  189              		.size	DBG_UART_SCBCLK_GetFractionalDividerRegister, .-DBG_UART_SCBCLK_GetFractionalDividerRegister
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 8
 
 
  190              		.text
@@ -433,8 +433,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  199 000b 01       		.uleb128 0x1
  200 000c C5010000 		.4byte	.LASF25
  201 0010 0C       		.byte	0xc
- 202 0011 4F000000 		.4byte	.LASF26
- 203 0015 26010000 		.4byte	.LASF27
+ 202 0011 AA000000 		.4byte	.LASF26
+ 203 0015 31000000 		.4byte	.LASF27
  204 0019 00000000 		.4byte	.Ldebug_ranges0+0
  205 001d 00000000 		.4byte	0
  206 0021 00000000 		.4byte	.Ldebug_line0
@@ -445,7 +445,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  211 002c 02       		.uleb128 0x2
  212 002d 01       		.byte	0x1
  213 002e 08       		.byte	0x8
- 214 002f 78000000 		.4byte	.LASF1
+ 214 002f D3000000 		.4byte	.LASF1
  215 0033 02       		.uleb128 0x2
  216 0034 02       		.byte	0x2
  217 0035 05       		.byte	0x5
@@ -453,7 +453,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  219 003a 02       		.uleb128 0x2
  220 003b 02       		.byte	0x2
  221 003c 07       		.byte	0x7
- 222 003d 98000000 		.4byte	.LASF3
+ 222 003d F3000000 		.4byte	.LASF3
  223 0041 02       		.uleb128 0x2
  224 0042 04       		.byte	0x4
  225 0043 05       		.byte	0x5
@@ -461,7 +461,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  227 0048 02       		.uleb128 0x2
  228 0049 04       		.byte	0x4
  229 004a 07       		.byte	0x7
- 230 004b 86000000 		.4byte	.LASF5
+ 230 004b E1000000 		.4byte	.LASF5
  231 004f 02       		.uleb128 0x2
  232 0050 08       		.byte	0x8
  233 0051 05       		.byte	0x5
@@ -477,8 +477,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  243 0064 02       		.uleb128 0x2
  244 0065 04       		.byte	0x4
  245 0066 07       		.byte	0x7
- 246 0067 19010000 		.4byte	.LASF8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 9
+ 246 0067 74010000 		.4byte	.LASF8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 9
 
 
  247 006b 04       		.uleb128 0x4
@@ -487,23 +487,23 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  250 0071 FC01     		.2byte	0x1fc
  251 0073 2C000000 		.4byte	0x2c
  252 0077 04       		.uleb128 0x4
- 253 0078 0B010000 		.4byte	.LASF10
+ 253 0078 66010000 		.4byte	.LASF10
  254 007c 02       		.byte	0x2
  255 007d FD01     		.2byte	0x1fd
  256 007f 3A000000 		.4byte	0x3a
  257 0083 04       		.uleb128 0x4
- 258 0084 12010000 		.4byte	.LASF11
+ 258 0084 6D010000 		.4byte	.LASF11
  259 0088 02       		.byte	0x2
  260 0089 FE01     		.2byte	0x1fe
  261 008b 48000000 		.4byte	0x48
  262 008f 02       		.uleb128 0x2
  263 0090 04       		.byte	0x4
  264 0091 04       		.byte	0x4
- 265 0092 49000000 		.4byte	.LASF12
+ 265 0092 A4000000 		.4byte	.LASF12
  266 0096 02       		.uleb128 0x2
  267 0097 08       		.byte	0x8
  268 0098 04       		.byte	0x4
- 269 0099 E3000000 		.4byte	.LASF13
+ 269 0099 3E010000 		.4byte	.LASF13
  270 009d 02       		.uleb128 0x2
  271 009e 01       		.byte	0x1
  272 009f 08       		.byte	0x8
@@ -516,7 +516,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  279 00b0 05       		.uleb128 0x5
  280 00b1 83000000 		.4byte	0x83
  281 00b5 06       		.uleb128 0x6
- 282 00b6 31000000 		.4byte	.LASF16
+ 282 00b6 8C000000 		.4byte	.LASF16
  283 00ba 01       		.byte	0x1
  284 00bb 27       		.byte	0x27
  285 00bc 00000000 		.4byte	.LFB0
@@ -525,7 +525,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  288 00c5 9C       		.byte	0x9c
  289 00c6 DA000000 		.4byte	0xda
  290 00ca 07       		.uleb128 0x7
- 291 00cb F1000000 		.4byte	.LASF18
+ 291 00cb 4C010000 		.4byte	.LASF18
  292 00cf 01       		.byte	0x1
  293 00d0 27       		.byte	0x27
  294 00d1 83000000 		.4byte	0x83
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  301 00e1 00000000 		.4byte	.LFB1
  302 00e5 18000000 		.4byte	.LFE1-.LFB1
  303 00e9 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 10
 
 
  304 00ea 9C       		.byte	0x9c
@@ -552,13 +552,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  312 00fb 9C       		.byte	0x9c
  313 00fc 3B010000 		.4byte	0x13b
  314 0100 07       		.uleb128 0x7
- 315 0101 D8000000 		.4byte	.LASF19
+ 315 0101 33010000 		.4byte	.LASF19
  316 0105 01       		.byte	0x1
  317 0106 86       		.byte	0x86
  318 0107 77000000 		.4byte	0x77
  319 010b 21000000 		.4byte	.LLST1
  320 010f 07       		.uleb128 0x7
- 321 0110 FD000000 		.4byte	.LASF20
+ 321 0110 58010000 		.4byte	.LASF20
  322 0114 01       		.byte	0x1
  323 0115 86       		.byte	0x86
  324 0116 6B000000 		.4byte	0x6b
@@ -570,7 +570,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  330 0125 83000000 		.4byte	0x83
  331 0129 63000000 		.4byte	.LLST3
  332 012d 0A       		.uleb128 0xa
- 333 012e EA000000 		.4byte	.LASF22
+ 333 012e 45010000 		.4byte	.LASF22
  334 0132 01       		.byte	0x1
  335 0133 89       		.byte	0x89
  336 0134 83000000 		.4byte	0x83
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  347 014e 01       		.uleb128 0x1
  348 014f 9C       		.byte	0x9c
  349 0150 0B       		.uleb128 0xb
- 350 0151 AB000000 		.4byte	.LASF24
+ 350 0151 06010000 		.4byte	.LASF24
  351 0155 01       		.byte	0x1
  352 0156 C6       		.byte	0xc6
  353 0157 6B000000 		.4byte	0x6b
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  358 0165 00       		.byte	0
  359              		.section	.debug_abbrev,"",%progbits
  360              	.Ldebug_abbrev0:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 11
 
 
  361 0000 01       		.uleb128 0x1
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  415 0036 05       		.uleb128 0x5
  416 0037 35       		.uleb128 0x35
  417 0038 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 12
 
 
  418 0039 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  472 0070 0B       		.uleb128 0xb
  473 0071 27       		.uleb128 0x27
  474 0072 19       		.uleb128 0x19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 13
 
 
  475 0073 11       		.uleb128 0x11
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  529 00aa 13       		.uleb128 0x13
  530 00ab 11       		.uleb128 0x11
  531 00ac 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 14
 
 
  532 00ad 12       		.uleb128 0x12
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  586 0063 0A000000 		.4byte	.LVL3
  587 0067 10000000 		.4byte	.LVL5
  588 006b 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 15
 
 
  589 006d 53       		.byte	0x53
@@ -897,91 +897,91 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  634      5F534342 
  634      434C4B5F 
  634      47657444 
- 635              	.LASF16:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 16
+ 635              	.LASF27:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 16
 
 
- 636 0031 4442475F 		.ascii	"DBG_UART_SCBCLK_StartEx\000"
- 636      55415254 
- 636      5F534342 
- 636      434C4B5F 
- 636      53746172 
- 637              	.LASF12:
- 638 0049 666C6F61 		.ascii	"float\000"
- 638      7400
- 639              	.LASF26:
- 640 004f 47656E65 		.ascii	"Generated_Source\\PSoC4\\DBG_UART_SCBCLK.c\000"
- 640      72617465 
- 640      645F536F 
- 640      75726365 
- 640      5C50536F 
- 641              	.LASF1:
- 642 0078 756E7369 		.ascii	"unsigned char\000"
- 642      676E6564 
- 642      20636861 
- 642      7200
- 643              	.LASF5:
- 644 0086 6C6F6E67 		.ascii	"long unsigned int\000"
- 644      20756E73 
- 644      69676E65 
- 644      6420696E 
- 644      7400
- 645              	.LASF3:
- 646 0098 73686F72 		.ascii	"short unsigned int\000"
- 646      7420756E 
- 646      7369676E 
- 646      65642069 
- 646      6E7400
- 647              	.LASF24:
- 648 00ab 4442475F 		.ascii	"DBG_UART_SCBCLK_GetFractionalDividerRegister\000"
- 648      55415254 
- 648      5F534342 
- 648      434C4B5F 
- 648      47657446 
- 649              	.LASF19:
- 650 00d8 636C6B44 		.ascii	"clkDivider\000"
- 650      69766964 
- 650      657200
- 651              	.LASF13:
- 652 00e3 646F7562 		.ascii	"double\000"
- 652      6C6500
- 653              	.LASF22:
- 654 00ea 72656756 		.ascii	"regVal\000"
- 654      616C00
- 655              	.LASF18:
- 656 00f1 616C6967 		.ascii	"alignClkDiv\000"
- 656      6E436C6B 
- 656      44697600 
- 657              	.LASF20:
- 658 00fd 636C6B46 		.ascii	"clkFractional\000"
- 658      72616374 
- 658      696F6E61 
- 658      6C00
- 659              	.LASF10:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 17
+ 636 0031 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 636      73657273 
+ 636      5C636173 
+ 636      65795C44 
+ 636      65736B74 
+ 637 005f 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 637      53746570 
+ 637      7065725F 
+ 637      4D6F746F 
+ 637      725F4472 
+ 638              	.LASF16:
+ 639 008c 4442475F 		.ascii	"DBG_UART_SCBCLK_StartEx\000"
+ 639      55415254 
+ 639      5F534342 
+ 639      434C4B5F 
+ 639      53746172 
+ 640              	.LASF12:
+ 641 00a4 666C6F61 		.ascii	"float\000"
+ 641      7400
+ 642              	.LASF26:
+ 643 00aa 47656E65 		.ascii	"Generated_Source\\PSoC4\\DBG_UART_SCBCLK.c\000"
+ 643      72617465 
+ 643      645F536F 
+ 643      75726365 
+ 643      5C50536F 
+ 644              	.LASF1:
+ 645 00d3 756E7369 		.ascii	"unsigned char\000"
+ 645      676E6564 
+ 645      20636861 
+ 645      7200
+ 646              	.LASF5:
+ 647 00e1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 647      20756E73 
+ 647      69676E65 
+ 647      6420696E 
+ 647      7400
+ 648              	.LASF3:
+ 649 00f3 73686F72 		.ascii	"short unsigned int\000"
+ 649      7420756E 
+ 649      7369676E 
+ 649      65642069 
+ 649      6E7400
+ 650              	.LASF24:
+ 651 0106 4442475F 		.ascii	"DBG_UART_SCBCLK_GetFractionalDividerRegister\000"
+ 651      55415254 
+ 651      5F534342 
+ 651      434C4B5F 
+ 651      47657446 
+ 652              	.LASF19:
+ 653 0133 636C6B44 		.ascii	"clkDivider\000"
+ 653      69766964 
+ 653      657200
+ 654              	.LASF13:
+ 655 013e 646F7562 		.ascii	"double\000"
+ 655      6C6500
+ 656              	.LASF22:
+ 657 0145 72656756 		.ascii	"regVal\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 17
 
 
- 660 010b 75696E74 		.ascii	"uint16\000"
- 660      313600
- 661              	.LASF11:
- 662 0112 75696E74 		.ascii	"uint32\000"
- 662      333200
- 663              	.LASF8:
- 664 0119 756E7369 		.ascii	"unsigned int\000"
- 664      676E6564 
- 664      20696E74 
- 664      00
- 665              	.LASF27:
- 666 0126 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
- 666      73657273 
- 666      5C636173 
- 666      65795C44 
- 666      65736B74 
- 667 0154 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepDirection.cydsn\000"
- 667      53746570 
- 667      7065725F 
- 667      4D6F746F 
- 667      725F4472 
+ 657      616C00
+ 658              	.LASF18:
+ 659 014c 616C6967 		.ascii	"alignClkDiv\000"
+ 659      6E436C6B 
+ 659      44697600 
+ 660              	.LASF20:
+ 661 0158 636C6B46 		.ascii	"clkFractional\000"
+ 661      72616374 
+ 661      696F6E61 
+ 661      6C00
+ 662              	.LASF10:
+ 663 0166 75696E74 		.ascii	"uint16\000"
+ 663      313600
+ 664              	.LASF11:
+ 665 016d 75696E74 		.ascii	"uint32\000"
+ 665      333200
+ 666              	.LASF8:
+ 667 0174 756E7369 		.ascii	"unsigned int\000"
+ 667      676E6564 
+ 667      20696E74 
+ 667      00
  668              	.LASF17:
  669 0181 4442475F 		.ascii	"DBG_UART_SCBCLK_SetFractionalDividerRegister\000"
  669      55415254 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 1
  678              	.LASF14:
  679 0261 63686172 		.ascii	"char\000"
  679      00
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccMn8jUy.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccTXqPAf.s 			page 18
 
 
  680              	.LASF2:

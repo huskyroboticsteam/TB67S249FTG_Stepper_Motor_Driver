@@ -3,11 +3,12 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="StepperDriver" persistent="StepperDriver.cywrk" platform="NOT_USED">
-<current_project name=".\StepperDriver.cydsn\StepperDriver.cyprj" />
+<current_project name=".\Design01.cydsn\Design01.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
 <v>.\StepperDriver.cydsn\StepperDriver.cyprj</v>
+<v>.\Design01.cydsn\Design01.cyprj</v>
 </projects>
 <workspace_id v="c8127e0f-b1a2-46db-90b9-580dc68ba149" />
 <WriteAppVersionLastSavedWith v="4.4.0.80" />

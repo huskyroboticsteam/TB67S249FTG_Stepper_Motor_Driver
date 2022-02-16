@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Feb 5 2022 14:16:02
+#File Generated:     Feb 15 2022 19:36:23
 
 #Purpose:            
 
@@ -14,7 +14,7 @@
 
 #***************************************************************************
 
-Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjplacer.exe --proj-name StepDirection --netlist-vh2 StepDirection_p.vh2 --arch p4_udb2x4 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/triggerconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/dsiconn.cydata --pins-file pins_124-VFBGA.xml --lib-file StepDirection_p.lib --sdc-file StepDirection.sdc --io-pcf StepDirection.pci --outdir .
+Executing : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjplacer.exe --proj-name StepperDriver --netlist-vh2 StepperDriver_p.vh2 --arch p4_udb2x4 --arch-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata --ip-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/ip_blocks.cydata --rrg-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/route_arch-rrg.cydata --irq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/irqconn.cydata --drq-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/triggerconn.cydata --dsi-conn-file C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc4/2/dsiconn.cydata --pins-file pins_124-VFBGA.xml --lib-file StepperDriver_p.lib --sdc-file StepperDriver.sdc --io-pcf StepperDriver.pci --outdir .
 
 		Softjin Techologies Placer, Version 1.1
 
@@ -22,18 +22,18 @@ Build Date : Sep  9 2019	11:45:12
 
 D2004: Option and Settings Summary
 =============================================================
-Netlist vh2 file          - StepDirection_p.vh2
+Netlist vh2 file          - StepperDriver_p.vh2
 Architecture file         - C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata
 Package                   - 
 Defparam file             - 
-SDC file                  - StepDirection.sdc
+SDC file                  - StepperDriver.sdc
 Output directory          - .
-Timing library            - StepDirection_p.lib
-IO Placement file         - StepDirection.pci
+Timing library            - StepperDriver_p.lib
+IO Placement file         - StepperDriver.pci
 
 D2050: Starting reading inputs for placer
 =============================================================
-D2065: Reading netlist file : "StepDirection_p.vh2"
+D2065: Reading netlist file : "StepperDriver_p.vh2"
 D2065: Reading arch file : "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\arch/udbdsi_2x4_08.cydata"
 D2051: Reading of inputs for placer completed successfully
 
@@ -44,16 +44,16 @@ Phase 2
 Phase 3
 
 Design Statistics after Packing
-    Number of Combinational MCs 	:	22
-    Number of Sequential MCs    	:	21
-    Number of DPs               	:	4
+    Number of Combinational MCs 	:	8
+    Number of Sequential MCs    	:	12
+    Number of DPs               	:	7
     Number of Controls          	:	3
-    Number of Status            	:	2
+    Number of Status            	:	3
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
-    Macrocells                  :	43/64
+    Macrocells                  :	20/64
     UDBS                        :	8/8
     IOs                         :	17/99
 
@@ -77,8 +77,7 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 9
-Clock: BUS_CLK_1            | Frequency:  29.9 MHz | Target:   1.0 MHz
-Clock: CyHFClk              | Frequency:  35.8 MHz | Target:  48.0 MHz
+Clock: CyHFClk              | Frequency:  29.9 MHz | Target:  48.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
@@ -86,20 +85,20 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: StepClk              | Frequency:  34.7 MHz | Target:   2.0 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
 
-D2088: Phase 6, elapsed time : 0.1 (sec)
+D2088: Phase 6, elapsed time : 0.0 (sec)
 
 Phase 7
 ######################################################################
                      Clock Summary 
 ======================================================================
 Number of clocks: 9
-Clock: BUS_CLK_1            | Frequency:  29.8 MHz | Target:   1.0 MHz
-Clock: CyHFClk              | Frequency:  35.8 MHz | Target:  48.0 MHz
+Clock: CyHFClk              | Frequency:  29.9 MHz | Target:  48.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
@@ -107,24 +106,25 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: StepClk              | Frequency:  34.7 MHz | Target:   2.0 MHz
 
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 1.0 (sec)
+D2088: Phase 7, elapsed time : 0.2 (sec)
 
 Final Design Statistics
-    Number of Combinational MCs 	:	22
-    Number of Sequential MCs    	:	21
-    Number of DPs               	:	4
+    Number of Combinational MCs 	:	8
+    Number of Sequential MCs    	:	12
+    Number of DPs               	:	7
     Number of Controls          	:	3
-    Number of Status            	:	2
+    Number of Status            	:	3
     Number of SyncCells         	:	0
     Number of count7cells       	:	0
     Number of IOs       	:	17
 
 Device Utilization Summary
-    Macrocells                  :	43/64
+    Macrocells                  :	20/64
     IOs                         :	17/99
 
 
@@ -142,8 +142,7 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 9
-Clock: BUS_CLK_1            | Frequency:  28.1 MHz | Target:   1.0 MHz
-Clock: CyHFClk              | Frequency:  35.8 MHz | Target:  48.0 MHz
+Clock: CyHFClk              | Frequency:  29.9 MHz | Target:  48.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
@@ -151,6 +150,7 @@ Clock: CyRouted1            | Frequency: N/A       | Target:  48.0 MHz
 Clock: CySysClk             | Frequency: N/A       | Target:  48.0 MHz
 Clock: DBG_UART_SCBCLK      | Frequency: N/A       | Target:   1.4 MHz
 Clock: DBG_UART_SCBCLK(FFB) | Frequency: N/A       | Target:   1.4 MHz
+Clock: StepClk              | Frequency:  34.7 MHz | Target:   2.0 MHz
 
 ======================================================================
                      End of Clock Summary
@@ -161,5 +161,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 1.5 sec.
+I2076: Total run-time: 1.0 sec.
 

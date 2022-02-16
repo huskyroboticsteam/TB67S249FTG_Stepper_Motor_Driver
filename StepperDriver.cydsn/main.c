@@ -10,51 +10,96 @@
  * ========================================
 */
 #include "project.h"
-#include <math.h>
 #include <stdlib.h>
 #include "main.h"
 
 const int CLOCK_FREQUENCY = 1000000;
 
-const int stepMode = 1; // microstep
-double stepSize = 360.0 / 200.0 / 1;//Converts steps to units that we want to use (in this case: 360 degrees of rotation per 200 steps)
-double maxAccel = 360.0*10;// deg/s^2
-double maxVelocity = 360.0*20;// deg/s
-double targetPosition = 0;
-double currentVelocity = 0;
+double maxVelocity = 1440; // deg/s
+double maxAcceleration = 360; // deg/s/s
+double stepSize;// deg/step
+int stepMode = 1; // microstep setting, 0 for full step
 
+int targetPosition = 0;
+int dbg_step = 1;
+int E = 0;
+int E_max;
+int dir = 1;
 
 double getCurrentPosition()
 {
     return Step_Counter_ReadCounter();
 }
 
-void StartMove(double target)
+void StartMove(int target)
 {
-    int targetPosition = target / stepSize;
-    int currentPosition = Step_Counter_ReadCounter();
-    // int period = CLOCK_FREQUENCY*stepSize/maxVelocity;
-    
-    Step_Counter_WriteCompare(targetPosition);
-    Direction_Write(targetPosition >= currentPosition);
-    Enable_Write(1);
+    targetPosition = target;
+    PrintInt(targetPosition);
+    Println("");
+    Step_Counter_Enable();
+}
+
+void GotoAngle(double angle) {
+    StartMove(round(angle / stepSize));
+}
+
+void Step(int steps) {
+    StartMove(targetPosition + steps);
 }
 
 CY_ISR(On_Lim_1) {
-    Enable_Write(0);
+    Println("Hit limit switch 1");
+    Step_Timer_Stop();
     Step_Counter_WriteCounter(0);
     isr_lim_1_ClearPending();
 }
 
 CY_ISR(On_Lim_2) {
-    Enable_Write(0);
+    Println("Hit limit switch 2");
+    Step_Timer_Stop();
     isr_lim_2_ClearPending();
 }
 
 CY_ISR(On_Fault) {
-    Enable_Write(0);
+    Println("Driver fault");
+    Step_Timer_Stop();
     isr_fault_ClearPending();
 }
+
+CY_ISR(On_Step) {
+    int pos = Step_Counter_ReadCounter();
+    
+    if (E == 0) {
+        if (pos == targetPosition) {
+            Step_Timer_Stop();
+        }
+        else {
+            if (targetPosition >= pos) {   
+                Direction_Write(1);
+                dir = 1;
+            } else {
+                Direction_Write(0);
+                dir = -1;
+            }
+        }
+    }
+    if (E > targetPosition - pos) {
+        E -= dir;
+    } else if (E < E_max) {
+        E += dir;
+    }
+    
+    int new_period = CLOCK_FREQUENCY/sqrt(abs(E)*maxAcceleration/stepSize);
+    
+    if (CLOCK_FREQUENCY/new_period < 5000) {
+        
+        Step_Timer_WritePeriod(new_period);
+    } else {
+        Println("Step frequency capped at 5kHz, you fucked up");
+    }
+    isr_step_ClearPending();
+}
+
 
 int main(void)
 {
@@ -63,16 +108,52 @@ int main(void)
     isr_lim_1_StartEx(On_Lim_1);
     isr_lim_2_StartEx(On_Lim_2);
     isr_fault_StartEx(On_Fault);
+    isr_step_StartEx(On_Step);
     Step_Counter_Start();
+    Step_Timer_Init(); // Init but don't start the counter
     
     DBG_UART_Start();
     
-    StartMove(270);
-
+    Println("Restart");
+    
+    if (stepMode == 1) {
+        stepSize = 360.0/200;
+    }
+    E_max = (int) maxVelocity*maxVelocity/stepSize/2/maxAcceleration;
+    Print("E_max is ");
+    PrintInt(E_max);
+    Println("");
+    
     for(;;)
     {
-        // DBG_UART_UartReadByte();
         
+        int currentPosition = Step_Counter_ReadCounter();
+        
+        int data = DBG_UART_UartGetByte();
+        if (data == RIGHT) {
+            Step(dbg_step);
+        } else if (data == LEFT) {
+            Step(-dbg_step);
+        } else if (data == UP) {
+            if (dbg_step < 200) {
+                dbg_step *= 2;
+            } else {
+                dbg_step = 200;
+            }
+            Print("Step is ");
+            PrintInt(dbg_step);
+            Println("");
+        } else if (data == DOWN) {
+            if (dbg_step > 1) {
+                dbg_step /= 2;
+            } else {
+                dbg_step = 1;
+            }
+            Print("Step is ");
+
+            PrintInt(dbg_step);
+            Println("");
+        }
     }
 }
 

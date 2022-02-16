@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
   28:Generated_Source\PSoC4/CAN.c **** *
   29:Generated_Source\PSoC4/CAN.c **** * Summary:
   30:Generated_Source\PSoC4/CAN.c **** *  Inits/Restores default CAN Rx and Tx Buffers control registers configuration
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 2
 
 
   31:Generated_Source\PSoC4/CAN.c **** *  provided by the customizer.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
   85:Generated_Source\PSoC4/CAN.c ****     /* Initialize TX mailboxes */
   86:Generated_Source\PSoC4/CAN.c ****     for (i = 0u; i < CAN_NUMBER_OF_TX_MAILBOXES; i++)
   87:Generated_Source\PSoC4/CAN.c ****     {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 3
 
 
   88:Generated_Source\PSoC4/CAN.c ****         if (CAN_TxBufConfig((const CAN_TX_CFG *)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  142:Generated_Source\PSoC4/CAN.c **** 
  143:Generated_Source\PSoC4/CAN.c ****     #if (CY_PSOC3 || CY_PSOC5)
  144:Generated_Source\PSoC4/CAN.c ****         uint8 enableInterrupts;
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 4
 
 
  145:Generated_Source\PSoC4/CAN.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  199:Generated_Source\PSoC4/CAN.c ****                                     if (CAN_SetEdgeMode(CAN_SYNC_EDGE) == CYRET_SUCCESS)
  200:Generated_Source\PSoC4/CAN.c ****                                     {
  201:Generated_Source\PSoC4/CAN.c ****                                         localResult = CYRET_SUCCESS;
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 5
 
 
  202:Generated_Source\PSoC4/CAN.c ****                                     }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  256:Generated_Source\PSoC4/CAN.c ****     uint32 timeout = CAN_MODE_STATE_RUN_TIMEOUT;
  257:Generated_Source\PSoC4/CAN.c ****     uint8 result = CAN_FAIL;
  258:Generated_Source\PSoC4/CAN.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 6
 
 
  259:Generated_Source\PSoC4/CAN.c ****     #if (CY_PSOC3 || CY_PSOC5)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  313:Generated_Source\PSoC4/CAN.c **** *    CAN_FAIL              The function failed
  314:Generated_Source\PSoC4/CAN.c **** *
  315:Generated_Source\PSoC4/CAN.c **** * Global variables:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 7
 
 
  316:Generated_Source\PSoC4/CAN.c **** *  CAN_initVar - used to check the initial configuration, modified
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32 0000 10B5     		push	{r4, lr}
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 8
 
 
   33              		.cfi_def_cfa_offset 8
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
   65 0022 04D0     		beq	.L6
   66              	.LVL3:
  387:Generated_Source\PSoC4/CAN.c ****     {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 9
 
 
  388:Generated_Source\PSoC4/CAN.c ****         result = CYRET_SUCCESS;
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  409:Generated_Source\PSoC4/CAN.c **** 
  410:Generated_Source\PSoC4/CAN.c **** /*******************************************************************************
  411:Generated_Source\PSoC4/CAN.c **** * FUNCTION NAME:   CAN_GlobalIntEnable
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 10
 
 
  412:Generated_Source\PSoC4/CAN.c **** ********************************************************************************
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  118              		.loc 1 444 0
  119 0014 0020     		movs	r0, #0
  120              	.L10:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 11
 
 
  121              	.LVL8:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  165 001a 1360     		str	r3, [r2]
  256:Generated_Source\PSoC4/CAN.c ****     uint8 result = CAN_FAIL;
  166              		.loc 1 256 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 12
 
 
  167 001c C023     		movs	r3, #192
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  213              		.type	CAN_GlobalIntDisable, %function
  214              	CAN_GlobalIntDisable:
  215              	.LFB7:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 13
 
 
  450:Generated_Source\PSoC4/CAN.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  233 0010 0120     		movs	r0, #1
  234 0012 00E0     		b	.L23
  235              	.L24:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 14
 
 
  486:Generated_Source\PSoC4/CAN.c ****         {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  518:Generated_Source\PSoC4/CAN.c **** *******************************************************************************/
  519:Generated_Source\PSoC4/CAN.c **** uint8 CAN_SetPreScaler(uint16 bitrate) 
  520:Generated_Source\PSoC4/CAN.c **** {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 15
 
 
  258              		.loc 1 520 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  288 0020 02E0     		b	.L28
  289              	.LVL20:
  290              	.L29:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 16
 
 
  521:Generated_Source\PSoC4/CAN.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  566:Generated_Source\PSoC4/CAN.c **** *    CAN_FIXED_PRIORITY    The Fixed Priority arbitration.
  567:Generated_Source\PSoC4/CAN.c **** *
  568:Generated_Source\PSoC4/CAN.c **** * Return:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 17
 
 
  569:Generated_Source\PSoC4/CAN.c **** *  The indication whether the register is written and verified.
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  337 000e 1B68     		ldr	r3, [r3]
  338 0010 DB04     		lsls	r3, r3, #19
  339 0012 0CD5     		bpl	.L36
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 18
 
 
  577:Generated_Source\PSoC4/CAN.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  373              		.loc 1 624 0
  374              		@ sp needed
  375 0034 7047     		bx	lr
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 19
 
 
  376              	.L39:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  400              		.cfi_offset 5, -12
  401              		.cfi_offset 6, -8
  402              		.cfi_offset 14, -4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 20
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 20
 
 
  403              	.LVL33:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  681:Generated_Source\PSoC4/CAN.c ****                         /* Set appropriate bits */
  682:Generated_Source\PSoC4/CAN.c ****                         if (sm != CAN_ONE_SAMPLE_POINT)
  683:Generated_Source\PSoC4/CAN.c ****                         {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 21
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 21
 
 
  684:Generated_Source\PSoC4/CAN.c ****                             cfgTemp = CAN_SAMPLE_MODE_MASK;
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  456 0040 2C68     		ldr	r4, [r5]
  711:Generated_Source\PSoC4/CAN.c ****                        CAN_CFG_REG_TSEG1_SHIFT)) == (uint32) ((uint32) ((uint32) cfgTemp &
  457              		.loc 1 711 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 22
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 22
 
 
  458 0042 6040     		eors	r0, r4
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  728:Generated_Source\PSoC4/CAN.c ****                         /* Verify 1st byte of CAN_CFG_REG register */
  729:Generated_Source\PSoC4/CAN.c ****                         if ((CAN_CFG_REG & (CAN_CFG_REG_TSEG2_MASK |
  493              		.loc 1 729 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 23
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 23
 
 
  494 006a 1368     		ldr	r3, [r2]
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  542              	.L41:
  733:Generated_Source\PSoC4/CAN.c ****                         }
  734:Generated_Source\PSoC4/CAN.c ****                     }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 24
 
 
  735:Generated_Source\PSoC4/CAN.c ****                 #endif /* CY_PSOC3 || CY_PSOC5 */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  770:Generated_Source\PSoC4/CAN.c **** {
  562              		.loc 1 770 0
  563              		.cfi_startproc
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 25
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 25
 
 
  564              		@ args = 0, pretend = 0, frame = 0
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  801:Generated_Source\PSoC4/CAN.c ****             {
  802:Generated_Source\PSoC4/CAN.c ****                 result = CYRET_SUCCESS;
  803:Generated_Source\PSoC4/CAN.c ****             }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 26
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 26
 
 
  804:Generated_Source\PSoC4/CAN.c ****         }
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  624              		.align	2
  625              		.global	CAN_SetEdgeMode
  626              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 27
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 27
 
 
  627              		.thumb_func
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  863:Generated_Source\PSoC4/CAN.c **** 
  864:Generated_Source\PSoC4/CAN.c ****             /* Verify that bit is set */
  865:Generated_Source\PSoC4/CAN.c ****             if ((CAN_CFG_REG.byte[0u] & CAN_EDGE_MODE_MASK) != 0u)
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 28
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 28
 
 
  866:Generated_Source\PSoC4/CAN.c ****             {
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  666              		.loc 1 845 0
  667 0028 0120     		movs	r0, #1
  668              	.LVL70:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 29
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 29
 
 
  669 002a 02E0     		b	.L64
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  911:Generated_Source\PSoC4/CAN.c **** *                                        mode
  912:Generated_Source\PSoC4/CAN.c **** *    CAN_LISTEN_ONLY_MODE   The CAN controller is in the Listen
  913:Generated_Source\PSoC4/CAN.c **** *                                        Only mode: The output is held at the
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 30
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 30
 
 
  914:Generated_Source\PSoC4/CAN.c **** *                                        'R' level.
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  968:Generated_Source\PSoC4/CAN.c ****         if ((result == CYRET_SUCCESS) && (opMode != CAN_STOP_MODE))
  969:Generated_Source\PSoC4/CAN.c ****         {
  970:Generated_Source\PSoC4/CAN.c ****             if (opMode == CAN_LISTEN_ONLY_MODE)
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 31
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 31
 
 
  971:Generated_Source\PSoC4/CAN.c ****             {
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1025:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
 1026:Generated_Source\PSoC4/CAN.c **** 
 1027:Generated_Source\PSoC4/CAN.c ****     return (result);
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 32
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 32
 
 
 1028:Generated_Source\PSoC4/CAN.c **** }
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  724              	.LVL77:
 1057:Generated_Source\PSoC4/CAN.c ****         ((((uint32) regAddr & CAN_REG_ADDR_MASK)) <=
 1058:Generated_Source\PSoC4/CAN.c ****         ((uint32) CAN_RX_LAST_REGISTER_PTR & CAN_REG_ADDR_MASK)))
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 33
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 33
 
 
 1059:Generated_Source\PSoC4/CAN.c ****     {
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1082:Generated_Source\PSoC4/CAN.c ****         /* All registers except RX CMD*/
 1083:Generated_Source\PSoC4/CAN.c ****         else
 1084:Generated_Source\PSoC4/CAN.c ****         {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 34
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 34
 
 
 1085:Generated_Source\PSoC4/CAN.c ****     /* Disable isr */
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1101:Generated_Source\PSoC4/CAN.c **** 
 1102:Generated_Source\PSoC4/CAN.c ****     return (result);
 1103:Generated_Source\PSoC4/CAN.c **** }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 35
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 35
 
 
  790              		.loc 1 1103 0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1138:Generated_Source\PSoC4/CAN.c **** *    CYRET_SUCCESS                      The function passed successfully
 1139:Generated_Source\PSoC4/CAN.c **** *    CAN_FAIL              The function failed
 1140:Generated_Source\PSoC4/CAN.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 36
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 36
 
 
 1141:Generated_Source\PSoC4/CAN.c **** *******************************************************************************/
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  836              		@ sp needed
  837 0014 7047     		bx	lr
  838              	.L81:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 37
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 37
 
 
  839 0016 C046     		.align	2
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  867              	.L83:
 1194:Generated_Source\PSoC4/CAN.c ****                   CAN_TX_ERROR_FLAG_MASK) ? 1u : 0u);
 1195:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 38
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 38
 
 
 1196:Generated_Source\PSoC4/CAN.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  894 0004 1B03     		lsls	r3, r3, #12
  895 0006 01D5     		bpl	.L89
  896 0008 0120     		movs	r0, #1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 39
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 39
 
 
  897 000a 00E0     		b	.L88
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1251:Generated_Source\PSoC4/CAN.c ****         return ((uint8) CAN_ERR_SR_REG);    /* bits 7-0 */
  924              		.loc 1 1251 0
  925 0000 014B     		ldr	r3, .L93
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 40
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 40
 
 
  926 0002 1868     		ldr	r0, [r3]
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  954 0004 000A     		lsrs	r0, r0, #8
  955 0006 C0B2     		uxtb	r0, r0
 1278:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 41
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 41
 
 
 1279:Generated_Source\PSoC4/CAN.c **** 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  984 0008 1840     		ands	r0, r3
 1305:Generated_Source\PSoC4/CAN.c ****                 CAN_ERROR_STATE_MASK));
 1306:Generated_Source\PSoC4/CAN.c ****     #endif /* CY_PSOC3 || CY_PSOC5 */
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 42
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 42
 
 
 1307:Generated_Source\PSoC4/CAN.c **** }
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1333:Generated_Source\PSoC4/CAN.c ****     /* Write RX CMD Register */
 1334:Generated_Source\PSoC4/CAN.c ****     CY_SET_REG32((reg32 *) (&CAN_RX[rxConfig->rxmailbox].rxcmd), (rxConfig->rxcmd |
  1013              		.loc 1 1334 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 43
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 43
 
 
  1014 0002 0378     		ldrb	r3, [r0]
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1056 0048 C168     		ldr	r1, [r0, #12]
  1057 004a 8A42     		cmp	r2, r1
  1058 004c 16D1     		bne	.L105
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 44
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 44
 
 
 1346:Generated_Source\PSoC4/CAN.c ****             {
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1104              	.LVL108:
  1105              	.L107:
 1354:Generated_Source\PSoC4/CAN.c ****                     {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 45
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 45
 
 
 1355:Generated_Source\PSoC4/CAN.c ****                         result = CYRET_SUCCESS;
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1384:Generated_Source\PSoC4/CAN.c **** *******************************************************************************/
 1385:Generated_Source\PSoC4/CAN.c **** uint8 CAN_TxBufConfig(const CAN_TX_CFG *txConfig)
 1386:Generated_Source\PSoC4/CAN.c ****                                    
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 46
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 46
 
 
 1387:Generated_Source\PSoC4/CAN.c **** {
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1173 0036 8368     		ldr	r3, [r0, #8]
  1174 0038 9A42     		cmp	r2, r3
  1175 003a 03D0     		beq	.L113
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 47
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 47
 
 
 1388:Generated_Source\PSoC4/CAN.c **** 
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1221              		.cfi_offset 14, -4
  1222              	.LVL117:
   86:Generated_Source\PSoC4/CAN.c ****     {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 48
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 48
 
 
  1223              		.loc 1 86 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1269              		.loc 1 99 0 discriminator 2
  1270 003c 0134     		adds	r4, r4, #1
  1271              	.LVL124:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 49
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 49
 
 
  1272 003e E4B2     		uxtb	r4, r4
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1419:Generated_Source\PSoC4/CAN.c **** * Parameters:
 1420:Generated_Source\PSoC4/CAN.c **** *  swap: Swap Enable/Disable setting.
 1421:Generated_Source\PSoC4/CAN.c **** *   Define                                   Description
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 50
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 50
 
 
 1422:Generated_Source\PSoC4/CAN.c **** *   CAN_SWAP_ENDIANNESS_ENABLE   The endianness of transmitted/
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1450:Generated_Source\PSoC4/CAN.c ****         }
 1451:Generated_Source\PSoC4/CAN.c ****     }
 1452:Generated_Source\PSoC4/CAN.c ****     else    /* Little endian */
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 51
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 51
 
 
 1453:Generated_Source\PSoC4/CAN.c ****     {
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1374              		.global	CAN_Init
  1375              		.code	16
  1376              		.thumb_func
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 52
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 52
 
 
  1377              		.type	CAN_Init, %function
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1422 002a 49D0     		beq	.L141
  177:Generated_Source\PSoC4/CAN.c **** 
  1423              		.loc 1 177 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 53
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 53
 
 
  1424 002c 1D20     		movs	r0, #29
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1470 0078 0028     		cmp	r0, #0
  1471 007a 0BD0     		beq	.L147
  141:Generated_Source\PSoC4/CAN.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 54
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 54
 
 
  1472              		.loc 1 141 0
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1519              		.loc 1 140 0
  1520 00bc 0130     		adds	r0, r0, #1
  1521 00be 08E0     		b	.L139
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 55
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 55
 
 
  1522              	.LVL153:
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1572              		.loc 1 327 0
  1573 0002 084B     		ldr	r3, .L158
  1574 0004 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 56
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 56
 
 
  1575 0006 002B     		cmp	r3, #0
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1622              		.cfi_def_cfa_offset 16
  1623              		.cfi_offset 4, -16
  1624              		.cfi_offset 5, -12
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 57
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 57
 
 
  1625              		.cfi_offset 6, -8
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1012:Generated_Source\PSoC4/CAN.c ****                 {
  1669              		.loc 1 1012 0 is_stmt 1
  1670 0038 012C     		cmp	r4, #1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 58
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 58
 
 
  1671 003a 03D0     		beq	.L163
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1473:Generated_Source\PSoC4/CAN.c **** *  possible: Free Running and Error Capture.
 1474:Generated_Source\PSoC4/CAN.c **** *
 1475:Generated_Source\PSoC4/CAN.c **** * Parameters:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 59
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 59
 
 
 1476:Generated_Source\PSoC4/CAN.c **** *  ecrMode: The Error Capture register mode setting.
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1504:Generated_Source\PSoC4/CAN.c ****             result = CYRET_SUCCESS;
 1505:Generated_Source\PSoC4/CAN.c ****         }
 1506:Generated_Source\PSoC4/CAN.c ****     }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 60
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 60
 
 
 1507:Generated_Source\PSoC4/CAN.c ****     else    /* Capture mode */
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1776              		.align	2
  1777              		.global	CAN_ReadErrorCaptureRegister
  1778              		.code	16
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 61
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 61
 
 
  1779              		.thumb_func
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
 1570:Generated_Source\PSoC4/CAN.c **** uint32 CAN_ReadErrorCaptureRegister(void)
 1571:Generated_Source\PSoC4/CAN.c **** {
  1783              		.loc 1 1571 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 62
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 62
 
 
  1784              		.cfi_startproc
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1814              	.LVL179:
 1596:Generated_Source\PSoC4/CAN.c ****     uint8 result = CAN_FAIL;
 1597:Generated_Source\PSoC4/CAN.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 63
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 63
 
 
 1598:Generated_Source\PSoC4/CAN.c ****     CAN_ECR_REG |= CAN_ECR_STATUS_ARM;
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1858 0018 02       		.byte	2
  1859 0019 000000   		.space	3
  1860 001c 08008800 		.word	8912904
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 64
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 64
 
 
  1861 0020 00000000 		.word	0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1915 00c0 06       		.byte	6
  1916 00c1 000000   		.space	3
  1917 00c4 00000000 		.word	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 65
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 65
 
 
  1918 00c8 00000000 		.word	0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1972              	.Letext0:
  1973              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
  1974              		.file 3 "Generated_Source\\PSoC4\\CAN.h"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 66
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 66
 
 
  1975              		.file 4 "Generated_Source\\PSoC4\\CyLib.h"
@@ -3912,7 +3912,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1983 000c 4F000000 		.4byte	.LASF89
  1984 0010 0C       		.byte	0xc
  1985 0011 4D010000 		.4byte	.LASF90
- 1986 0015 8D010000 		.4byte	.LASF91
+ 1986 0015 85020000 		.4byte	.LASF91
  1987 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1988 001d 00000000 		.4byte	0
  1989 0021 00000000 		.4byte	.Ldebug_line0
@@ -3923,15 +3923,15 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  1994 002c 02       		.uleb128 0x2
  1995 002d 01       		.byte	0x1
  1996 002e 08       		.byte	0x8
- 1997 002f E8030000 		.4byte	.LASF1
+ 1997 002f D9030000 		.4byte	.LASF1
  1998 0033 02       		.uleb128 0x2
  1999 0034 02       		.byte	0x2
  2000 0035 05       		.byte	0x5
- 2001 0036 F6030000 		.4byte	.LASF2
+ 2001 0036 E7030000 		.4byte	.LASF2
  2002 003a 02       		.uleb128 0x2
  2003 003b 02       		.byte	0x2
  2004 003c 07       		.byte	0x7
- 2005 003d 77020000 		.4byte	.LASF3
+ 2005 003d 1C020000 		.4byte	.LASF3
  2006 0041 02       		.uleb128 0x2
  2007 0042 04       		.byte	0x4
  2008 0043 05       		.byte	0x5
@@ -3939,7 +3939,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2010 0048 02       		.uleb128 0x2
  2011 0049 04       		.byte	0x4
  2012 004a 07       		.byte	0x7
- 2013 004b 4F020000 		.4byte	.LASF5
+ 2013 004b F4010000 		.4byte	.LASF5
  2014 004f 02       		.uleb128 0x2
  2015 0050 08       		.byte	0x8
  2016 0051 05       		.byte	0x5
@@ -3955,10 +3955,10 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2026 0064 02       		.uleb128 0x2
  2027 0065 04       		.byte	0x4
  2028 0066 07       		.byte	0x7
- 2029 0067 42020000 		.4byte	.LASF8
+ 2029 0067 E7010000 		.4byte	.LASF8
  2030 006b 04       		.uleb128 0x4
  2031 006c 87010000 		.4byte	.LASF9
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 67
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 67
 
 
  2032 0070 02       		.byte	0x2
@@ -3970,31 +3970,31 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2038 007d FD01     		.2byte	0x1fd
  2039 007f 3A000000 		.4byte	0x3a
  2040 0083 04       		.uleb128 0x4
- 2041 0084 F5010000 		.4byte	.LASF11
+ 2041 0084 9A010000 		.4byte	.LASF11
  2042 0088 02       		.byte	0x2
  2043 0089 FE01     		.2byte	0x1fe
  2044 008b 48000000 		.4byte	0x48
  2045 008f 02       		.uleb128 0x2
  2046 0090 04       		.byte	0x4
  2047 0091 04       		.byte	0x4
- 2048 0092 C0030000 		.4byte	.LASF12
+ 2048 0092 B1030000 		.4byte	.LASF12
  2049 0096 02       		.uleb128 0x2
  2050 0097 08       		.byte	0x8
  2051 0098 04       		.byte	0x4
- 2052 0099 EE010000 		.4byte	.LASF13
+ 2052 0099 93010000 		.4byte	.LASF13
  2053 009d 02       		.uleb128 0x2
  2054 009e 01       		.byte	0x1
  2055 009f 08       		.byte	0x8
- 2056 00a0 69040000 		.4byte	.LASF14
+ 2056 00a0 5A040000 		.4byte	.LASF14
  2057 00a4 04       		.uleb128 0x4
- 2058 00a5 E3030000 		.4byte	.LASF15
+ 2058 00a5 D4030000 		.4byte	.LASF15
  2059 00a9 02       		.byte	0x2
  2060 00aa A602     		.2byte	0x2a6
  2061 00ac B0000000 		.4byte	0xb0
  2062 00b0 05       		.uleb128 0x5
  2063 00b1 6B000000 		.4byte	0x6b
  2064 00b5 04       		.uleb128 0x4
- 2065 00b6 13030000 		.4byte	.LASF16
+ 2065 00b6 04030000 		.4byte	.LASF16
  2066 00ba 02       		.byte	0x2
  2067 00bb A802     		.2byte	0x2a8
  2068 00bd C1000000 		.4byte	0xc1
@@ -4003,22 +4003,22 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2071 00c6 02       		.uleb128 0x2
  2072 00c7 08       		.byte	0x8
  2073 00c8 04       		.byte	0x4
- 2074 00c9 50030000 		.4byte	.LASF17
+ 2074 00c9 41030000 		.4byte	.LASF17
  2075 00cd 02       		.uleb128 0x2
  2076 00ce 04       		.byte	0x4
  2077 00cf 07       		.byte	0x7
- 2078 00d0 47030000 		.4byte	.LASF18
+ 2078 00d0 38030000 		.4byte	.LASF18
  2079 00d4 06       		.uleb128 0x6
  2080 00d5 08       		.byte	0x8
  2081 00d6 03       		.byte	0x3
  2082 00d7 75       		.byte	0x75
  2083 00d8 E9000000 		.4byte	0xe9
  2084 00dc 07       		.uleb128 0x7
- 2085 00dd FC010000 		.4byte	.LASF20
+ 2085 00dd A1010000 		.4byte	.LASF20
  2086 00e1 03       		.byte	0x3
  2087 00e2 77       		.byte	0x77
  2088 00e3 F9000000 		.4byte	0xf9
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 68
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 68
 
 
  2089 00e7 00       		.byte	0
@@ -4033,7 +4033,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2098 00f9 05       		.uleb128 0x5
  2099 00fa E9000000 		.4byte	0xe9
  2100 00fe 0A       		.uleb128 0xa
- 2101 00ff B4040000 		.4byte	.LASF19
+ 2101 00ff A5040000 		.4byte	.LASF19
  2102 0103 03       		.byte	0x3
  2103 0104 78       		.byte	0x78
  2104 0105 D4000000 		.4byte	0xd4
@@ -4043,7 +4043,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2108 010c 7B       		.byte	0x7b
  2109 010d 1E010000 		.4byte	0x11e
  2110 0111 07       		.uleb128 0x7
- 2111 0112 FC010000 		.4byte	.LASF20
+ 2111 0112 A1010000 		.4byte	.LASF20
  2112 0116 03       		.byte	0x3
  2113 0117 7D       		.byte	0x7d
  2114 0118 2E010000 		.4byte	0x12e
@@ -4059,7 +4059,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2124 012e 05       		.uleb128 0x5
  2125 012f 1E010000 		.4byte	0x11e
  2126 0133 0A       		.uleb128 0xa
- 2127 0134 3C030000 		.4byte	.LASF21
+ 2127 0134 2D030000 		.4byte	.LASF21
  2128 0138 03       		.byte	0x3
  2129 0139 7E       		.byte	0x7e
  2130 013a 09010000 		.4byte	0x109
@@ -4069,35 +4069,35 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2134 0141 8F       		.byte	0x8f
  2135 0142 77010000 		.4byte	0x177
  2136 0146 07       		.uleb128 0x7
- 2137 0147 32030000 		.4byte	.LASF22
+ 2137 0147 23030000 		.4byte	.LASF22
  2138 014b 03       		.byte	0x3
  2139 014c 91       		.byte	0x91
  2140 014d 6B000000 		.4byte	0x6b
  2141 0151 00       		.byte	0
  2142 0152 07       		.uleb128 0x7
- 2143 0153 F1040000 		.4byte	.LASF23
+ 2143 0153 E2040000 		.4byte	.LASF23
  2144 0157 03       		.byte	0x3
  2145 0158 92       		.byte	0x92
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 69
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 69
 
 
  2146 0159 83000000 		.4byte	0x83
  2147 015d 04       		.byte	0x4
  2148 015e 07       		.uleb128 0x7
- 2149 015f E8010000 		.4byte	.LASF24
+ 2149 015f 8D010000 		.4byte	.LASF24
  2150 0163 03       		.byte	0x3
  2151 0164 93       		.byte	0x93
  2152 0165 83000000 		.4byte	0x83
  2153 0169 08       		.byte	0x8
  2154 016a 07       		.uleb128 0x7
- 2155 016b 15050000 		.4byte	.LASF25
+ 2155 016b 06050000 		.4byte	.LASF25
  2156 016f 03       		.byte	0x3
  2157 0170 94       		.byte	0x94
  2158 0171 83000000 		.4byte	0x83
  2159 0175 0C       		.byte	0xc
  2160 0176 00       		.byte	0
  2161 0177 0A       		.uleb128 0xa
- 2162 0178 CE020000 		.4byte	.LASF26
+ 2162 0178 73020000 		.4byte	.LASF26
  2163 017c 03       		.byte	0x3
  2164 017d 95       		.byte	0x95
  2165 017e 3E010000 		.4byte	0x13e
@@ -4107,7 +4107,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2169 0185 98       		.byte	0x98
  2170 0186 AF010000 		.4byte	0x1af
  2171 018a 07       		.uleb128 0x7
- 2172 018b C3040000 		.4byte	.LASF27
+ 2172 018b B4040000 		.4byte	.LASF27
  2173 018f 03       		.byte	0x3
  2174 0190 9A       		.byte	0x9a
  2175 0191 6B000000 		.4byte	0x6b
@@ -4119,7 +4119,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2181 019d 83000000 		.4byte	0x83
  2182 01a1 04       		.byte	0x4
  2183 01a2 07       		.uleb128 0x7
- 2184 01a3 10050000 		.4byte	.LASF29
+ 2184 01a3 01050000 		.4byte	.LASF29
  2185 01a7 03       		.byte	0x3
  2186 01a8 9C       		.byte	0x9c
  2187 01a9 83000000 		.4byte	0x83
@@ -4136,16 +4136,16 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2198 01bd A0       		.byte	0xa0
  2199 01be 17020000 		.4byte	0x217
  2200 01c2 07       		.uleb128 0x7
- 2201 01c3 F1040000 		.4byte	.LASF23
+ 2201 01c3 E2040000 		.4byte	.LASF23
  2202 01c7 03       		.byte	0x3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 70
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 70
 
 
  2203 01c8 A2       		.byte	0xa2
  2204 01c9 33010000 		.4byte	0x133
  2205 01cd 00       		.byte	0
  2206 01ce 07       		.uleb128 0x7
- 2207 01cf 76030000 		.4byte	.LASF31
+ 2207 01cf 67030000 		.4byte	.LASF31
  2208 01d3 03       		.byte	0x3
  2209 01d4 A3       		.byte	0xa3
  2210 01d5 33010000 		.4byte	0x133
@@ -4157,13 +4157,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2216 01e1 FE000000 		.4byte	0xfe
  2217 01e5 08       		.byte	0x8
  2218 01e6 07       		.uleb128 0x7
- 2219 01e7 E8010000 		.4byte	.LASF24
+ 2219 01e7 8D010000 		.4byte	.LASF24
  2220 01eb 03       		.byte	0x3
  2221 01ec A5       		.byte	0xa5
  2222 01ed 33010000 		.4byte	0x133
  2223 01f1 10       		.byte	0x10
  2224 01f2 07       		.uleb128 0x7
- 2225 01f3 15050000 		.4byte	.LASF25
+ 2225 01f3 06050000 		.4byte	.LASF25
  2226 01f7 03       		.byte	0x3
  2227 01f8 A6       		.byte	0xa6
  2228 01f9 33010000 		.4byte	0x133
@@ -4175,14 +4175,14 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2234 0205 33010000 		.4byte	0x133
  2235 0209 18       		.byte	0x18
  2236 020a 07       		.uleb128 0x7
- 2237 020b 23050000 		.4byte	.LASF34
+ 2237 020b 14050000 		.4byte	.LASF34
  2238 020f 03       		.byte	0x3
  2239 0210 A8       		.byte	0xa8
  2240 0211 33010000 		.4byte	0x133
  2241 0215 1C       		.byte	0x1c
  2242 0216 00       		.byte	0
  2243 0217 0A       		.uleb128 0xa
- 2244 0218 8A020000 		.4byte	.LASF35
+ 2244 0218 2F020000 		.4byte	.LASF35
  2245 021c 03       		.byte	0x3
  2246 021d A9       		.byte	0xa9
  2247 021e BA010000 		.4byte	0x1ba
@@ -4198,23 +4198,23 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2257 0231 33010000 		.4byte	0x133
  2258 0235 00       		.byte	0
  2259 0236 07       		.uleb128 0x7
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 71
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 71
 
 
- 2260 0237 10050000 		.4byte	.LASF29
+ 2260 0237 01050000 		.4byte	.LASF29
  2261 023b 03       		.byte	0x3
  2262 023c AF       		.byte	0xaf
  2263 023d 33010000 		.4byte	0x133
  2264 0241 04       		.byte	0x4
  2265 0242 07       		.uleb128 0x7
- 2266 0243 0C030000 		.4byte	.LASF36
+ 2266 0243 FD020000 		.4byte	.LASF36
  2267 0247 03       		.byte	0x3
  2268 0248 B0       		.byte	0xb0
  2269 0249 FE000000 		.4byte	0xfe
  2270 024d 08       		.byte	0x8
  2271 024e 00       		.byte	0
  2272 024f 0A       		.uleb128 0xa
- 2273 0250 2A040000 		.4byte	.LASF37
+ 2273 0250 1B040000 		.4byte	.LASF37
  2274 0254 03       		.byte	0x3
  2275 0255 B1       		.byte	0xb1
  2276 0256 22020000 		.4byte	0x222
@@ -4229,7 +4229,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2285 026f 9C       		.byte	0x9c
  2286 0270 A4020000 		.4byte	0x2a4
  2287 0274 0C       		.uleb128 0xc
- 2288 0275 61020000 		.4byte	.LASF38
+ 2288 0275 06020000 		.4byte	.LASF38
  2289 0279 01       		.byte	0x1
  2290 027a 7001     		.2byte	0x170
  2291 027c 83000000 		.4byte	0x83
@@ -4251,14 +4251,14 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2307 02a2 00       		.byte	0
  2308 02a3 00       		.byte	0
  2309 02a4 0B       		.uleb128 0xb
- 2310 02a5 AB020000 		.4byte	.LASF41
+ 2310 02a5 50020000 		.4byte	.LASF41
  2311 02a9 01       		.byte	0x1
  2312 02aa AB01     		.2byte	0x1ab
  2313 02ac 6B000000 		.4byte	0x6b
  2314 02b0 00000000 		.4byte	.LFB6
  2315 02b4 1C000000 		.4byte	.LFE6-.LFB6
  2316 02b8 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 72
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 72
 
 
  2317 02b9 9C       		.byte	0x9c
@@ -4271,7 +4271,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2324 02ca 63000000 		.4byte	.LLST2
  2325 02ce 00       		.byte	0
  2326 02cf 0F       		.uleb128 0xf
- 2327 02d0 1F040000 		.4byte	.LASF42
+ 2327 02d0 10040000 		.4byte	.LASF42
  2328 02d4 01       		.byte	0x1
  2329 02d5 FE       		.byte	0xfe
  2330 02d6 6B000000 		.4byte	0x6b
@@ -4281,7 +4281,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2334 02e3 9C       		.byte	0x9c
  2335 02e4 21030000 		.4byte	0x321
  2336 02e8 0C       		.uleb128 0xc
- 2337 02e9 61020000 		.4byte	.LASF38
+ 2337 02e9 06020000 		.4byte	.LASF38
  2338 02ed 01       		.byte	0x1
  2339 02ee 0001     		.2byte	0x100
  2340 02f0 83000000 		.4byte	0x83
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2371 033b 0C       		.uleb128 0xc
  2372 033c 35050000 		.4byte	.LASF39
  2373 0340 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 73
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 73
 
 
  2374 0341 D701     		.2byte	0x1d7
@@ -4326,7 +4326,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2376 0347 C1000000 		.4byte	.LLST5
  2377 034b 00       		.byte	0
  2378 034c 0B       		.uleb128 0xb
- 2379 034d 58040000 		.4byte	.LASF44
+ 2379 034d 49040000 		.4byte	.LASF44
  2380 0351 01       		.byte	0x1
  2381 0352 0702     		.2byte	0x207
  2382 0354 6B000000 		.4byte	0x6b
@@ -4349,7 +4349,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2399 0382 25010000 		.4byte	.LLST7
  2400 0386 00       		.byte	0
  2401 0387 0B       		.uleb128 0xb
- 2402 0388 E0020000 		.4byte	.LASF45
+ 2402 0388 1B050000 		.4byte	.LASF45
  2403 038c 01       		.byte	0x1
  2404 038d 3F02     		.2byte	0x23f
  2405 038f 6B000000 		.4byte	0x6b
@@ -4359,7 +4359,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2409 039c 9C       		.byte	0x9c
  2410 039d C2030000 		.4byte	0x3c2
  2411 03a1 11       		.uleb128 0x11
- 2412 03a2 1B050000 		.4byte	.LASF47
+ 2412 03a2 0C050000 		.4byte	.LASF47
  2413 03a6 01       		.byte	0x1
  2414 03a7 3F02     		.2byte	0x23f
  2415 03a9 6B000000 		.4byte	0x6b
@@ -4372,26 +4372,26 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2422 03bd D4010000 		.4byte	.LLST9
  2423 03c1 00       		.byte	0
  2424 03c2 0B       		.uleb128 0xb
- 2425 03c3 DF040000 		.4byte	.LASF48
+ 2425 03c3 D0040000 		.4byte	.LASF48
  2426 03c7 01       		.byte	0x1
  2427 03c8 8C02     		.2byte	0x28c
  2428 03ca 6B000000 		.4byte	0x6b
  2429 03ce 00000000 		.4byte	.LFB10
  2430 03d2 A0000000 		.4byte	.LFE10-.LFB10
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 74
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 74
 
 
  2431 03d6 01       		.uleb128 0x1
  2432 03d7 9C       		.byte	0x9c
  2433 03d8 3C040000 		.4byte	0x43c
  2434 03dc 11       		.uleb128 0x11
- 2435 03dd CD040000 		.4byte	.LASF49
+ 2435 03dd BE040000 		.4byte	.LASF49
  2436 03e1 01       		.byte	0x1
  2437 03e2 8C02     		.2byte	0x28c
  2438 03e4 6B000000 		.4byte	0x6b
  2439 03e8 F3010000 		.4byte	.LLST10
  2440 03ec 11       		.uleb128 0x11
- 2441 03ed D6040000 		.4byte	.LASF50
+ 2441 03ed C7040000 		.4byte	.LASF50
  2442 03f1 01       		.byte	0x1
  2443 03f2 8C02     		.2byte	0x28c
  2444 03f4 6B000000 		.4byte	0x6b
@@ -4415,7 +4415,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2462 0423 6B000000 		.4byte	0x6b
  2463 0427 58030000 		.4byte	.LLST14
  2464 042b 0C       		.uleb128 0xc
- 2465 042c 2A030000 		.4byte	.LASF51
+ 2465 042c 1B030000 		.4byte	.LASF51
  2466 0430 01       		.byte	0x1
  2467 0431 9002     		.2byte	0x290
  2468 0433 6B000000 		.4byte	0x6b
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2485 045e 6B000000 		.4byte	0x6b
  2486 0462 E6030000 		.4byte	.LLST16
  2487 0466 0C       		.uleb128 0xc
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 75
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 75
 
 
  2488 0467 35050000 		.4byte	.LASF39
@@ -4448,7 +4448,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2492 0472 52040000 		.4byte	.LLST17
  2493 0476 00       		.byte	0
  2494 0477 0B       		.uleb128 0xb
- 2495 0478 6E040000 		.4byte	.LASF54
+ 2495 0478 5F040000 		.4byte	.LASF54
  2496 047c 01       		.byte	0x1
  2497 047d 4B03     		.2byte	0x34b
  2498 047f 6B000000 		.4byte	0x6b
@@ -4471,7 +4471,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2515 04ad DD040000 		.4byte	.LLST19
  2516 04b1 00       		.byte	0
  2517 04b2 0B       		.uleb128 0xb
- 2518 04b3 AD030000 		.4byte	.LASF56
+ 2518 04b3 9E030000 		.4byte	.LASF56
  2519 04b7 01       		.byte	0x1
  2520 04b8 1A04     		.2byte	0x41a
  2521 04ba 6B000000 		.4byte	0x6b
@@ -4481,13 +4481,13 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2525 04c7 9C       		.byte	0x9c
  2526 04c8 45050000 		.4byte	0x545
  2527 04cc 11       		.uleb128 0x11
- 2528 04cd 22030000 		.4byte	.LASF57
+ 2528 04cd 13030000 		.4byte	.LASF57
  2529 04d1 01       		.byte	0x1
  2530 04d2 1A04     		.2byte	0x41a
  2531 04d4 45050000 		.4byte	0x545
  2532 04d8 FC040000 		.4byte	.LLST20
  2533 04dc 11       		.uleb128 0x11
- 2534 04dd 7E040000 		.4byte	.LASF58
+ 2534 04dd 6F040000 		.4byte	.LASF58
  2535 04e1 01       		.byte	0x1
  2536 04e2 1A04     		.2byte	0x41a
  2537 04e4 83000000 		.4byte	0x83
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2542 04f2 1D04     		.2byte	0x41d
  2543 04f4 6B000000 		.4byte	0x6b
  2544 04f8 C6050000 		.4byte	.LLST22
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 76
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 76
 
 
  2545 04fc 13       		.uleb128 0x13
@@ -4545,7 +4545,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2586 0546 04       		.byte	0x4
  2587 0547 B5000000 		.4byte	0xb5
  2588 054b 0B       		.uleb128 0xb
- 2589 054c 33020000 		.4byte	.LASF59
+ 2589 054c D8010000 		.4byte	.LASF59
  2590 0550 01       		.byte	0x1
  2591 0551 7604     		.2byte	0x476
  2592 0553 6B000000 		.4byte	0x6b
@@ -4555,10 +4555,10 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2596 0560 9C       		.byte	0x9c
  2597 0561 86050000 		.4byte	0x586
  2598 0565 11       		.uleb128 0x11
- 2599 0566 01020000 		.4byte	.LASF60
+ 2599 0566 A6010000 		.4byte	.LASF60
  2600 056a 01       		.byte	0x1
  2601 056b 7604     		.2byte	0x476
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 77
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 77
 
 
  2602 056d 77000000 		.4byte	0x77
@@ -4571,7 +4571,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2609 0581 43060000 		.4byte	.LLST24
  2610 0585 00       		.byte	0
  2611 0586 15       		.uleb128 0x15
- 2612 0587 00040000 		.4byte	.LASF61
+ 2612 0587 F1030000 		.4byte	.LASF61
  2613 058b 01       		.byte	0x1
  2614 058c A104     		.2byte	0x4a1
  2615 058e 6B000000 		.4byte	0x6b
@@ -4580,7 +4580,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2618 059a 01       		.uleb128 0x1
  2619 059b 9C       		.byte	0x9c
  2620 059c 15       		.uleb128 0x15
- 2621 059d 06020000 		.4byte	.LASF62
+ 2621 059d AB010000 		.4byte	.LASF62
  2622 05a1 01       		.byte	0x1
  2623 05a2 BF04     		.2byte	0x4bf
  2624 05a4 6B000000 		.4byte	0x6b
@@ -4589,7 +4589,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2627 05b0 01       		.uleb128 0x1
  2628 05b1 9C       		.byte	0x9c
  2629 05b2 15       		.uleb128 0x15
- 2630 05b3 EF020000 		.4byte	.LASF63
+ 2630 05b3 E0020000 		.4byte	.LASF63
  2631 05b7 01       		.byte	0x1
  2632 05b8 DC04     		.2byte	0x4dc
  2633 05ba 6B000000 		.4byte	0x6b
@@ -4607,7 +4607,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2645 05dc 01       		.uleb128 0x1
  2646 05dd 9C       		.byte	0x9c
  2647 05de 15       		.uleb128 0x15
- 2648 05df 64030000 		.4byte	.LASF65
+ 2648 05df 55030000 		.4byte	.LASF65
  2649 05e3 01       		.byte	0x1
  2650 05e4 1105     		.2byte	0x511
  2651 05e6 6B000000 		.4byte	0x6b
@@ -4616,9 +4616,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2654 05f2 01       		.uleb128 0x1
  2655 05f3 9C       		.byte	0x9c
  2656 05f4 0B       		.uleb128 0xb
- 2657 05f5 00050000 		.4byte	.LASF66
+ 2657 05f5 F1040000 		.4byte	.LASF66
  2658 05f9 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 78
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 78
 
 
  2659 05fa 3005     		.2byte	0x530
@@ -4629,7 +4629,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2664 0609 9C       		.byte	0x9c
  2665 060a 2F060000 		.4byte	0x62f
  2666 060e 11       		.uleb128 0x11
- 2667 060f 03030000 		.4byte	.LASF67
+ 2667 060f F4020000 		.4byte	.LASF67
  2668 0613 01       		.byte	0x1
  2669 0614 3005     		.2byte	0x530
  2670 0616 2F060000 		.4byte	0x62f
@@ -4647,7 +4647,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2682 0635 16       		.uleb128 0x16
  2683 0636 77010000 		.4byte	0x177
  2684 063a 0B       		.uleb128 0xb
- 2685 063b 85040000 		.4byte	.LASF68
+ 2685 063b 76040000 		.4byte	.LASF68
  2686 063f 01       		.byte	0x1
  2687 0640 6905     		.2byte	0x569
  2688 0642 6B000000 		.4byte	0x6b
@@ -4657,7 +4657,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2692 064f 9C       		.byte	0x9c
  2693 0650 75060000 		.4byte	0x675
  2694 0654 11       		.uleb128 0x11
- 2695 0655 F7040000 		.4byte	.LASF69
+ 2695 0655 E8040000 		.4byte	.LASF69
  2696 0659 01       		.byte	0x1
  2697 065a 6905     		.2byte	0x569
  2698 065c 75060000 		.4byte	0x675
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2713 0681 30000000 		.4byte	.LASF70
  2714 0685 01       		.byte	0x1
  2715 0686 2F       		.byte	0x2f
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 79
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 79
 
 
  2716 0687 6B000000 		.4byte	0x6b
@@ -4688,7 +4688,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2720 0694 9C       		.byte	0x9c
  2721 0695 11070000 		.4byte	0x711
  2722 0699 17       		.uleb128 0x17
- 2723 069a 98020000 		.4byte	.LASF71
+ 2723 069a 3D020000 		.4byte	.LASF71
  2724 069e 01       		.byte	0x1
  2725 069f 32       		.byte	0x32
  2726 06a0 21070000 		.4byte	0x721
@@ -4696,7 +4696,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2728 06a5 03       		.byte	0x3
  2729 06a6 60000000 		.4byte	CAN_RXConfigStruct.5029
  2730 06aa 17       		.uleb128 0x17
- 2731 06ab A1040000 		.4byte	.LASF72
+ 2731 06ab 92040000 		.4byte	.LASF72
  2732 06af 01       		.byte	0x1
  2733 06b0 46       		.byte	0x46
  2734 06b1 36070000 		.4byte	0x736
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2770 06f7 00       		.byte	0
  2771 06f8 0D       		.uleb128 0xd
  2772 06f9 38000000 		.4byte	.LVL123
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 80
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 80
 
 
  2773 06fd F4050000 		.4byte	0x5f4
@@ -4774,7 +4774,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2803 0736 16       		.uleb128 0x16
  2804 0737 26070000 		.4byte	0x726
  2805 073b 0B       		.uleb128 0xb
- 2806 073c 19020000 		.4byte	.LASF73
+ 2806 073c BE010000 		.4byte	.LASF73
  2807 0740 01       		.byte	0x1
  2808 0741 9E05     		.2byte	0x59e
  2809 0743 6B000000 		.4byte	0x6b
@@ -4784,7 +4784,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2813 0750 9C       		.byte	0x9c
  2814 0751 76070000 		.4byte	0x776
  2815 0755 11       		.uleb128 0x11
- 2816 0756 A8030000 		.4byte	.LASF74
+ 2816 0756 99030000 		.4byte	.LASF74
  2817 075a 01       		.byte	0x1
  2818 075b 9E05     		.2byte	0x59e
  2819 075d 6B000000 		.4byte	0x6b
@@ -4797,8 +4797,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2826 0771 51080000 		.4byte	.LLST32
  2827 0775 00       		.byte	0
  2828 0776 0F       		.uleb128 0xf
- 2829 0777 19030000 		.4byte	.LASF75
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 81
+ 2829 0777 0A030000 		.4byte	.LASF75
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 81
 
 
  2830 077b 01       		.byte	0x1
@@ -4810,7 +4810,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2836 078a 9C       		.byte	0x9c
  2837 078b 69080000 		.4byte	0x869
  2838 078f 18       		.uleb128 0x18
- 2839 0790 61020000 		.4byte	.LASF38
+ 2839 0790 06020000 		.4byte	.LASF38
  2840 0794 01       		.byte	0x1
  2841 0795 8B       		.byte	0x8b
  2842 0796 83000000 		.4byte	0x83
@@ -4822,7 +4822,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2848 07a5 6B000000 		.4byte	0x6b
  2849 07a9 9C080000 		.4byte	.LLST34
  2850 07ad 18       		.uleb128 0x18
- 2851 07ae 95040000 		.4byte	.LASF76
+ 2851 07ae 86040000 		.4byte	.LASF76
  2852 07b2 01       		.byte	0x1
  2853 07b3 8D       		.byte	0x8d
  2854 07b4 6B000000 		.4byte	0x6b
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2884 07f3 4D       		.byte	0x4d
  2885 07f4 0E       		.uleb128 0xe
  2886 07f5 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 82
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 82
 
 
  2887 07f6 51       		.byte	0x51
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2941 0862 50       		.byte	0x50
  2942 0863 03       		.uleb128 0x3
  2943 0864 0A       		.byte	0xa
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 83
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 83
 
 
  2944 0865 0110     		.2byte	0x1001
@@ -4948,7 +4948,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2968 08a1 CF020000 		.4byte	0x2cf
  2969 08a5 00       		.byte	0
  2970 08a6 0B       		.uleb128 0xb
- 2971 08a7 69020000 		.4byte	.LASF78
+ 2971 08a7 0E020000 		.4byte	.LASF78
  2972 08ab 01       		.byte	0x1
  2973 08ac AA03     		.2byte	0x3aa
  2974 08ae 6B000000 		.4byte	0x6b
@@ -4958,7 +4958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2978 08bb 9C       		.byte	0x9c
  2979 08bc 0C090000 		.4byte	0x90c
  2980 08c0 11       		.uleb128 0x11
- 2981 08c1 D9020000 		.4byte	.LASF79
+ 2981 08c1 7E020000 		.4byte	.LASF79
  2982 08c5 01       		.byte	0x1
  2983 08c6 AA03     		.2byte	0x3aa
  2984 08c8 6B000000 		.4byte	0x6b
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  2998 08f0 10       		.uleb128 0x10
  2999 08f1 1E000000 		.4byte	.LVL165
  3000 08f5 5A020000 		.4byte	0x25a
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 84
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 84
 
 
  3001 08f9 10       		.uleb128 0x10
@@ -4989,7 +4989,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3006 0907 CF020000 		.4byte	0x2cf
  3007 090b 00       		.byte	0
  3008 090c 0B       		.uleb128 0xb
- 3009 090d 38040000 		.4byte	.LASF81
+ 3009 090d 29040000 		.4byte	.LASF81
  3010 0911 01       		.byte	0x1
  3011 0912 D505     		.2byte	0x5d5
  3012 0914 6B000000 		.4byte	0x6b
@@ -4999,7 +4999,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3016 0921 9C       		.byte	0x9c
  3017 0922 47090000 		.4byte	0x947
  3018 0926 11       		.uleb128 0x11
- 3019 0927 5C030000 		.4byte	.LASF82
+ 3019 0927 4D030000 		.4byte	.LASF82
  3020 092b 01       		.byte	0x1
  3021 092c D505     		.2byte	0x5d5
  3022 092e 6B000000 		.4byte	0x6b
@@ -5012,7 +5012,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3029 0942 1F0A0000 		.4byte	.LLST41
  3030 0946 00       		.byte	0
  3031 0947 15       		.uleb128 0x15
- 3032 0948 C6030000 		.4byte	.LASF83
+ 3032 0948 B7030000 		.4byte	.LASF83
  3033 094c 01       		.byte	0x1
  3034 094d 2206     		.2byte	0x622
  3035 094f 83000000 		.4byte	0x83
@@ -5021,7 +5021,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3038 095b 01       		.uleb128 0x1
  3039 095c 9C       		.byte	0x9c
  3040 095d 0B       		.uleb128 0xb
- 3041 095e 7B030000 		.4byte	.LASF84
+ 3041 095e 6C030000 		.4byte	.LASF84
  3042 0962 01       		.byte	0x1
  3043 0963 3A06     		.2byte	0x63a
  3044 0965 6B000000 		.4byte	0x6b
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3055 0983 3E0A0000 		.4byte	.LLST42
  3056 0987 00       		.byte	0
  3057 0988 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 85
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 85
 
 
  3058 0989 01010000 		.4byte	.LASF92
@@ -5054,18 +5054,18 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3068 09a2 04       		.byte	0x4
  3069 09a3 D8       		.byte	0xd8
  3070 09a4 1B       		.uleb128 0x1b
- 3071 09a5 13040000 		.4byte	.LASF86
- 3072 09a9 13040000 		.4byte	.LASF86
+ 3071 09a5 04040000 		.4byte	.LASF86
+ 3072 09a9 04040000 		.4byte	.LASF86
  3073 09ad 04       		.byte	0x4
  3074 09ae D6       		.byte	0xd6
  3075 09af 1B       		.uleb128 0x1b
- 3076 09b0 BF020000 		.4byte	.LASF87
- 3077 09b4 BF020000 		.4byte	.LASF87
+ 3076 09b0 64020000 		.4byte	.LASF87
+ 3077 09b4 64020000 		.4byte	.LASF87
  3078 09b8 04       		.byte	0x4
  3079 09b9 D0       		.byte	0xd0
  3080 09ba 1B       		.uleb128 0x1b
- 3081 09bb 97030000 		.4byte	.LASF88
- 3082 09bf 97030000 		.4byte	.LASF88
+ 3081 09bb 88030000 		.4byte	.LASF88
+ 3082 09bf 88030000 		.4byte	.LASF88
  3083 09c3 04       		.byte	0x4
  3084 09c4 D3       		.byte	0xd3
  3085 09c5 00       		.byte	0
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3112 0018 3E       		.uleb128 0x3e
  3113 0019 0B       		.uleb128 0xb
  3114 001a 03       		.uleb128 0x3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 86
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 86
 
 
  3115 001b 0E       		.uleb128 0xe
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3169 0051 3B       		.uleb128 0x3b
  3170 0052 0B       		.uleb128 0xb
  3171 0053 49       		.uleb128 0x49
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 87
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 87
 
 
  3172 0054 13       		.uleb128 0x13
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3226 008a 06       		.uleb128 0x6
  3227 008b 40       		.uleb128 0x40
  3228 008c 18       		.uleb128 0x18
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 88
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 88
 
 
  3229 008d 9742     		.uleb128 0x2117
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3283 00c9 11       		.uleb128 0x11
  3284 00ca 01       		.uleb128 0x1
  3285 00cb 12       		.uleb128 0x12
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 89
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 89
 
 
  3286 00cc 06       		.uleb128 0x6
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3340 0107 13       		.uleb128 0x13
  3341 0108 01       		.uleb128 0x1
  3342 0109 13       		.uleb128 0x13
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 90
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 90
 
 
  3343 010a 00       		.byte	0
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3397 0141 02       		.uleb128 0x2
  3398 0142 18       		.uleb128 0x18
  3399 0143 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 91
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 91
 
 
  3400 0144 00       		.byte	0
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3454 017a 19       		.uleb128 0x19
  3455 017b 6E       		.uleb128 0x6e
  3456 017c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 92
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 92
 
 
  3457 017d 03       		.uleb128 0x3
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3511 006d 31       		.byte	0x31
  3512 006e 9F       		.byte	0x9f
  3513 006f 16000000 		.4byte	.LVL8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 93
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 93
 
 
  3514 0073 1C000000 		.4byte	.LFE6
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3568 00f9 22000000 		.4byte	.LVL20
  3569 00fd 24000000 		.4byte	.LVL21
  3570 0101 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 94
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 94
 
 
  3571 0103 50       		.byte	0x50
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3625 0185 2C000000 		.4byte	.LVL27
  3626 0189 0100     		.2byte	0x1
  3627 018b 50       		.byte	0x50
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 95
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 95
 
 
  3628 018c 2C000000 		.4byte	.LVL27
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3682 020b 9F       		.byte	0x9f
  3683 020c 76000000 		.4byte	.LVL44
  3684 0210 78000000 		.4byte	.LVL45
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 96
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 96
 
 
  3685 0214 0100     		.2byte	0x1
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3739 028d 8C000000 		.4byte	.LVL55
  3740 0291 0100     		.2byte	0x1
  3741 0293 50       		.byte	0x50
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 97
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 97
 
 
  3742 0294 8C000000 		.4byte	.LVL55
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3796 0313 01       		.uleb128 0x1
  3797 0314 52       		.byte	0x52
  3798 0315 9F       		.byte	0x9f
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 98
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 98
 
 
  3799 0316 00000000 		.4byte	0
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3853              	.LLST15:
  3854 039b 2E000000 		.4byte	.LVL35
  3855 039f 34000000 		.4byte	.LVL37
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 99
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 99
 
 
  3856 03a3 0100     		.2byte	0x1
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3910 042b 0400     		.2byte	0x4
  3911 042d F3       		.byte	0xf3
  3912 042e 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 100
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 100
 
 
  3913 042f 50       		.byte	0x50
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  3967 04ae 2E000000 		.4byte	.LVL72
  3968 04b2 30000000 		.4byte	.LVL73
  3969 04b6 0400     		.2byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 101
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 101
 
 
  3970 04b8 F3       		.byte	0xf3
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4024 053e 5A000000 		.4byte	.LVL92
  4025 0542 64000000 		.4byte	.LFE14
  4026 0546 0400     		.2byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 102
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 102
 
 
  4027 0548 F3       		.byte	0xf3
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4081 05c6 06000000 		.4byte	.LVL76
  4082 05ca 14000000 		.4byte	.LVL77
  4083 05ce 0200     		.2byte	0x2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 103
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 103
 
 
  4084 05d0 32       		.byte	0x32
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4138 064f 14000000 		.4byte	.LVL96
  4139 0653 1C000000 		.4byte	.LFE15
  4140 0657 0100     		.2byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 104
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 104
 
 
  4141 0659 50       		.byte	0x50
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4195 06d9 0400     		.2byte	0x4
  4196 06db F3       		.byte	0xf3
  4197 06dc 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 105
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 105
 
 
  4198 06dd 50       		.byte	0x50
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4252 075c 46000000 		.4byte	.LVL116
  4253 0760 58000000 		.4byte	.LFE22
  4254 0764 0400     		.2byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 106
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 106
 
 
  4255 0766 F3       		.byte	0xf3
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4309 07ef 50       		.byte	0x50
  4310 07f0 16000000 		.4byte	.LVL131
  4311 07f4 18000000 		.4byte	.LVL132
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 107
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 107
 
 
  4312 07f8 0400     		.2byte	0x4
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4366 0874 1A000000 		.4byte	.LVL139
  4367 0878 0400     		.2byte	0x4
  4368 087a 0A       		.byte	0xa
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 108
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 108
 
 
  4369 087b 000A     		.2byte	0xa00
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4423 0907 50       		.byte	0x50
  4424 0908 10000000 		.4byte	.LVL159
  4425 090c 12000000 		.4byte	.LVL160
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 109
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 109
 
 
  4426 0910 0200     		.2byte	0x2
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4480 0998 1A000000 		.4byte	.LVL164
  4481 099c 0200     		.2byte	0x2
  4482 099e 30       		.byte	0x30
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 110
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 110
 
 
  4483 099f 9F       		.byte	0x9f
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4537              	.LLST41:
  4538 0a1f 00000000 		.4byte	.LVL171
  4539 0a23 34000000 		.4byte	.LVL178
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 111
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 111
 
 
  4540 0a27 0200     		.2byte	0x2
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4594 0074 14000000 		.4byte	.LFE17-.LFB17
  4595 0078 00000000 		.4byte	.LFB18
  4596 007c 0C000000 		.4byte	.LFE18-.LFB18
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 112
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 112
 
 
  4597 0080 00000000 		.4byte	.LFB19
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4651 0068 00000000 		.4byte	.LFB18
  4652 006c 0C000000 		.4byte	.LFE18
  4653 0070 00000000 		.4byte	.LFB19
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 113
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 113
 
 
  4654 0074 10000000 		.4byte	.LFE19
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4693      42756666 
  4693      65727343 
  4693      6F6E6669 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 114
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 114
 
 
  4694              	.LASF40:
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4716              	.LASF80:
  4717 0144 72756E53 		.ascii	"runState\000"
  4717      74617465 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 115
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 115
 
 
  4717      00
@@ -6863,323 +6863,323 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 1
  4726              	.LASF9:
  4727 0187 75696E74 		.ascii	"uint8\000"
  4727      3800
- 4728              	.LASF91:
- 4729 018d 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
- 4729      73657273 
- 4729      5C636173 
- 4729      65795C44 
- 4729      65736B74 
- 4730 01bb 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepDirection.cydsn\000"
- 4730      53746570 
- 4730      7065725F 
- 4730      4D6F746F 
- 4730      725F4472 
- 4731              	.LASF24:
- 4732 01e8 7278616D 		.ascii	"rxamr\000"
- 4732      7200
- 4733              	.LASF13:
- 4734 01ee 646F7562 		.ascii	"double\000"
- 4734      6C6500
- 4735              	.LASF11:
- 4736 01f5 75696E74 		.ascii	"uint32\000"
- 4736      333200
- 4737              	.LASF20:
- 4738 01fc 62797465 		.ascii	"byte\000"
- 4738      00
- 4739              	.LASF60:
- 4740 0201 6D61736B 		.ascii	"mask\000"
- 4740      00
- 4741              	.LASF62:
- 4742 0206 43414E5F 		.ascii	"CAN_GetRXErrorFlag\000"
- 4742      47657452 
- 4742      58457272 
- 4742      6F72466C 
- 4742      616700
- 4743              	.LASF73:
- 4744 0219 43414E5F 		.ascii	"CAN_SetSwapDataEndianness\000"
- 4744      53657453 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 116
+ 4728              	.LASF24:
+ 4729 018d 7278616D 		.ascii	"rxamr\000"
+ 4729      7200
+ 4730              	.LASF13:
+ 4731 0193 646F7562 		.ascii	"double\000"
+ 4731      6C6500
+ 4732              	.LASF11:
+ 4733 019a 75696E74 		.ascii	"uint32\000"
+ 4733      333200
+ 4734              	.LASF20:
+ 4735 01a1 62797465 		.ascii	"byte\000"
+ 4735      00
+ 4736              	.LASF60:
+ 4737 01a6 6D61736B 		.ascii	"mask\000"
+ 4737      00
+ 4738              	.LASF62:
+ 4739 01ab 43414E5F 		.ascii	"CAN_GetRXErrorFlag\000"
+ 4739      47657452 
+ 4739      58457272 
+ 4739      6F72466C 
+ 4739      616700
+ 4740              	.LASF73:
+ 4741 01be 43414E5F 		.ascii	"CAN_SetSwapDataEndianness\000"
+ 4741      53657453 
+ 4741      77617044 
+ 4741      61746145 
+ 4741      6E646961 
+ 4742              	.LASF59:
+ 4743 01d8 43414E5F 		.ascii	"CAN_SetIrqMask\000"
+ 4743      53657449 
+ 4743      72714D61 
+ 4743      736B00
+ 4744              	.LASF8:
+ 4745 01e7 756E7369 		.ascii	"unsigned int\000"
+ 4745      676E6564 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 116
 
 
- 4744      77617044 
- 4744      61746145 
- 4744      6E646961 
- 4745              	.LASF59:
- 4746 0233 43414E5F 		.ascii	"CAN_SetIrqMask\000"
- 4746      53657449 
- 4746      72714D61 
- 4746      736B00
- 4747              	.LASF8:
- 4748 0242 756E7369 		.ascii	"unsigned int\000"
- 4748      676E6564 
- 4748      20696E74 
- 4748      00
- 4749              	.LASF5:
- 4750 024f 6C6F6E67 		.ascii	"long unsigned int\000"
- 4750      20756E73 
- 4750      69676E65 
- 4750      6420696E 
- 4750      7400
- 4751              	.LASF38:
- 4752 0261 74696D65 		.ascii	"timeout\000"
- 4752      6F757400 
- 4753              	.LASF78:
- 4754 0269 43414E5F 		.ascii	"CAN_SetOpMode\000"
- 4754      5365744F 
- 4754      704D6F64 
- 4754      6500
- 4755              	.LASF3:
- 4756 0277 73686F72 		.ascii	"short unsigned int\000"
- 4756      7420756E 
- 4756      7369676E 
- 4756      65642069 
- 4756      6E7400
- 4757              	.LASF35:
- 4758 028a 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
- 4758      52585F53 
- 4758      54525543 
- 4758      5400
- 4759              	.LASF71:
- 4760 0298 43414E5F 		.ascii	"CAN_RXConfigStruct\000"
- 4760      5258436F 
- 4760      6E666967 
- 4760      53747275 
- 4760      637400
- 4761              	.LASF41:
- 4762 02ab 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
- 4762      476C6F62 
- 4762      616C496E 
- 4762      74456E61 
- 4762      626C6500 
- 4763              	.LASF87:
- 4764 02bf 4379496E 		.ascii	"CyIntSetVector\000"
- 4764      74536574 
- 4764      56656374 
- 4764      6F7200
- 4765              	.LASF26:
- 4766 02ce 43414E5F 		.ascii	"CAN_RX_CFG\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 117
+ 4745      20696E74 
+ 4745      00
+ 4746              	.LASF5:
+ 4747 01f4 6C6F6E67 		.ascii	"long unsigned int\000"
+ 4747      20756E73 
+ 4747      69676E65 
+ 4747      6420696E 
+ 4747      7400
+ 4748              	.LASF38:
+ 4749 0206 74696D65 		.ascii	"timeout\000"
+ 4749      6F757400 
+ 4750              	.LASF78:
+ 4751 020e 43414E5F 		.ascii	"CAN_SetOpMode\000"
+ 4751      5365744F 
+ 4751      704D6F64 
+ 4751      6500
+ 4752              	.LASF3:
+ 4753 021c 73686F72 		.ascii	"short unsigned int\000"
+ 4753      7420756E 
+ 4753      7369676E 
+ 4753      65642069 
+ 4753      6E7400
+ 4754              	.LASF35:
+ 4755 022f 43414E5F 		.ascii	"CAN_RX_STRUCT\000"
+ 4755      52585F53 
+ 4755      54525543 
+ 4755      5400
+ 4756              	.LASF71:
+ 4757 023d 43414E5F 		.ascii	"CAN_RXConfigStruct\000"
+ 4757      5258436F 
+ 4757      6E666967 
+ 4757      53747275 
+ 4757      637400
+ 4758              	.LASF41:
+ 4759 0250 43414E5F 		.ascii	"CAN_GlobalIntEnable\000"
+ 4759      476C6F62 
+ 4759      616C496E 
+ 4759      74456E61 
+ 4759      626C6500 
+ 4760              	.LASF87:
+ 4761 0264 4379496E 		.ascii	"CyIntSetVector\000"
+ 4761      74536574 
+ 4761      56656374 
+ 4761      6F7200
+ 4762              	.LASF26:
+ 4763 0273 43414E5F 		.ascii	"CAN_RX_CFG\000"
+ 4763      52585F43 
+ 4763      464700
+ 4764              	.LASF79:
+ 4765 027e 6F704D6F 		.ascii	"opMode\000"
+ 4765      646500
+ 4766              	.LASF91:
+ 4767 0285 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 4767      73657273 
+ 4767      5C636173 
+ 4767      65795C44 
+ 4767      65736B74 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 117
 
 
- 4766      52585F43 
- 4766      464700
- 4767              	.LASF79:
- 4768 02d9 6F704D6F 		.ascii	"opMode\000"
- 4768      646500
- 4769              	.LASF45:
- 4770 02e0 43414E5F 		.ascii	"CAN_SetArbiter\000"
- 4770      53657441 
- 4770      72626974 
- 4770      657200
- 4771              	.LASF63:
- 4772 02ef 43414E5F 		.ascii	"CAN_GetTXErrorCount\000"
- 4772      47657454 
- 4772      58457272 
- 4772      6F72436F 
- 4772      756E7400 
- 4773              	.LASF67:
- 4774 0303 7278436F 		.ascii	"rxConfig\000"
- 4774      6E666967 
- 4774      00
- 4775              	.LASF36:
- 4776 030c 74786461 		.ascii	"txdata\000"
- 4776      746100
- 4777              	.LASF16:
- 4778 0313 72656733 		.ascii	"reg32\000"
- 4778      3200
- 4779              	.LASF75:
- 4780 0319 43414E5F 		.ascii	"CAN_Init\000"
- 4780      496E6974 
- 4780      00
- 4781              	.LASF57:
- 4782 0322 72656741 		.ascii	"regAddr\000"
- 4782      64647200 
- 4783              	.LASF51:
- 4784 032a 63666754 		.ascii	"cfgTemp\000"
- 4784      656D7000 
- 4785              	.LASF22:
- 4786 0332 72786D61 		.ascii	"rxmailbox\000"
- 4786      696C626F 
- 4786      7800
- 4787              	.LASF21:
- 4788 033c 43414E5F 		.ascii	"CAN_REG_32\000"
- 4788      5245475F 
- 4788      333200
- 4789              	.LASF18:
- 4790 0347 73697A65 		.ascii	"sizetype\000"
- 4790      74797065 
- 4790      00
- 4791              	.LASF17:
- 4792 0350 6C6F6E67 		.ascii	"long double\000"
- 4792      20646F75 
- 4792      626C6500 
- 4793              	.LASF82:
- 4794 035c 6563724D 		.ascii	"ecrMode\000"
- 4794      6F646500 
- 4795              	.LASF65:
- 4796 0364 43414E5F 		.ascii	"CAN_GetErrorState\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 118
+ 4768 02b3 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 4768      53746570 
+ 4768      7065725F 
+ 4768      4D6F746F 
+ 4768      725F4472 
+ 4769              	.LASF63:
+ 4770 02e0 43414E5F 		.ascii	"CAN_GetTXErrorCount\000"
+ 4770      47657454 
+ 4770      58457272 
+ 4770      6F72436F 
+ 4770      756E7400 
+ 4771              	.LASF67:
+ 4772 02f4 7278436F 		.ascii	"rxConfig\000"
+ 4772      6E666967 
+ 4772      00
+ 4773              	.LASF36:
+ 4774 02fd 74786461 		.ascii	"txdata\000"
+ 4774      746100
+ 4775              	.LASF16:
+ 4776 0304 72656733 		.ascii	"reg32\000"
+ 4776      3200
+ 4777              	.LASF75:
+ 4778 030a 43414E5F 		.ascii	"CAN_Init\000"
+ 4778      496E6974 
+ 4778      00
+ 4779              	.LASF57:
+ 4780 0313 72656741 		.ascii	"regAddr\000"
+ 4780      64647200 
+ 4781              	.LASF51:
+ 4782 031b 63666754 		.ascii	"cfgTemp\000"
+ 4782      656D7000 
+ 4783              	.LASF22:
+ 4784 0323 72786D61 		.ascii	"rxmailbox\000"
+ 4784      696C626F 
+ 4784      7800
+ 4785              	.LASF21:
+ 4786 032d 43414E5F 		.ascii	"CAN_REG_32\000"
+ 4786      5245475F 
+ 4786      333200
+ 4787              	.LASF18:
+ 4788 0338 73697A65 		.ascii	"sizetype\000"
+ 4788      74797065 
+ 4788      00
+ 4789              	.LASF17:
+ 4790 0341 6C6F6E67 		.ascii	"long double\000"
+ 4790      20646F75 
+ 4790      626C6500 
+ 4791              	.LASF82:
+ 4792 034d 6563724D 		.ascii	"ecrMode\000"
+ 4792      6F646500 
+ 4793              	.LASF65:
+ 4794 0355 43414E5F 		.ascii	"CAN_GetErrorState\000"
+ 4794      47657445 
+ 4794      72726F72 
+ 4794      53746174 
+ 4794      6500
+ 4795              	.LASF31:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 118
 
 
- 4796      47657445 
- 4796      72726F72 
- 4796      53746174 
- 4796      6500
- 4797              	.LASF31:
- 4798 0376 72786964 		.ascii	"rxid\000"
- 4798      00
- 4799              	.LASF84:
- 4800 037b 43414E5F 		.ascii	"CAN_ArmErrorCaptureRegister\000"
- 4800      41726D45 
- 4800      72726F72 
- 4800      43617074 
- 4800      75726552 
- 4801              	.LASF88:
- 4802 0397 4379496E 		.ascii	"CyIntSetPriority\000"
- 4802      74536574 
- 4802      5072696F 
- 4802      72697479 
+ 4796 0367 72786964 		.ascii	"rxid\000"
+ 4796      00
+ 4797              	.LASF84:
+ 4798 036c 43414E5F 		.ascii	"CAN_ArmErrorCaptureRegister\000"
+ 4798      41726D45 
+ 4798      72726F72 
+ 4798      43617074 
+ 4798      75726552 
+ 4799              	.LASF88:
+ 4800 0388 4379496E 		.ascii	"CyIntSetPriority\000"
+ 4800      74536574 
+ 4800      5072696F 
+ 4800      72697479 
+ 4800      00
+ 4801              	.LASF74:
+ 4802 0399 73776170 		.ascii	"swap\000"
  4802      00
- 4803              	.LASF74:
- 4804 03a8 73776170 		.ascii	"swap\000"
- 4804      00
- 4805              	.LASF56:
- 4806 03ad 43414E5F 		.ascii	"CAN_RXRegisterInit\000"
- 4806      52585265 
- 4806      67697374 
- 4806      6572496E 
- 4806      697400
- 4807              	.LASF12:
- 4808 03c0 666C6F61 		.ascii	"float\000"
- 4808      7400
- 4809              	.LASF83:
- 4810 03c6 43414E5F 		.ascii	"CAN_ReadErrorCaptureRegister\000"
- 4810      52656164 
- 4810      4572726F 
- 4810      72436170 
- 4810      74757265 
- 4811              	.LASF15:
- 4812 03e3 72656738 		.ascii	"reg8\000"
- 4812      00
- 4813              	.LASF1:
- 4814 03e8 756E7369 		.ascii	"unsigned char\000"
- 4814      676E6564 
- 4814      20636861 
- 4814      7200
- 4815              	.LASF2:
- 4816 03f6 73686F72 		.ascii	"short int\000"
- 4816      7420696E 
- 4816      7400
- 4817              	.LASF61:
- 4818 0400 43414E5F 		.ascii	"CAN_GetTXErrorFlag\000"
- 4818      47657454 
- 4818      58457272 
- 4818      6F72466C 
- 4818      616700
- 4819              	.LASF86:
- 4820 0413 4379496E 		.ascii	"CyIntEnable\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 119
+ 4803              	.LASF56:
+ 4804 039e 43414E5F 		.ascii	"CAN_RXRegisterInit\000"
+ 4804      52585265 
+ 4804      67697374 
+ 4804      6572496E 
+ 4804      697400
+ 4805              	.LASF12:
+ 4806 03b1 666C6F61 		.ascii	"float\000"
+ 4806      7400
+ 4807              	.LASF83:
+ 4808 03b7 43414E5F 		.ascii	"CAN_ReadErrorCaptureRegister\000"
+ 4808      52656164 
+ 4808      4572726F 
+ 4808      72436170 
+ 4808      74757265 
+ 4809              	.LASF15:
+ 4810 03d4 72656738 		.ascii	"reg8\000"
+ 4810      00
+ 4811              	.LASF1:
+ 4812 03d9 756E7369 		.ascii	"unsigned char\000"
+ 4812      676E6564 
+ 4812      20636861 
+ 4812      7200
+ 4813              	.LASF2:
+ 4814 03e7 73686F72 		.ascii	"short int\000"
+ 4814      7420696E 
+ 4814      7400
+ 4815              	.LASF61:
+ 4816 03f1 43414E5F 		.ascii	"CAN_GetTXErrorFlag\000"
+ 4816      47657454 
+ 4816      58457272 
+ 4816      6F72466C 
+ 4816      616700
+ 4817              	.LASF86:
+ 4818 0404 4379496E 		.ascii	"CyIntEnable\000"
+ 4818      74456E61 
+ 4818      626C6500 
+ 4819              	.LASF42:
+ 4820 0410 43414E5F 		.ascii	"CAN_Enable\000"
+ 4820      456E6162 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 119
 
 
- 4820      74456E61 
- 4820      626C6500 
- 4821              	.LASF42:
- 4822 041f 43414E5F 		.ascii	"CAN_Enable\000"
- 4822      456E6162 
- 4822      6C6500
- 4823              	.LASF37:
- 4824 042a 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
- 4824      54585F53 
- 4824      54525543 
- 4824      5400
- 4825              	.LASF81:
- 4826 0438 43414E5F 		.ascii	"CAN_SetErrorCaptureRegisterMode\000"
- 4826      53657445 
- 4826      72726F72 
- 4826      43617074 
- 4826      75726552 
- 4827              	.LASF44:
- 4828 0458 43414E5F 		.ascii	"CAN_SetPreScaler\000"
- 4828      53657450 
- 4828      72655363 
- 4828      616C6572 
+ 4820      6C6500
+ 4821              	.LASF37:
+ 4822 041b 43414E5F 		.ascii	"CAN_TX_STRUCT\000"
+ 4822      54585F53 
+ 4822      54525543 
+ 4822      5400
+ 4823              	.LASF81:
+ 4824 0429 43414E5F 		.ascii	"CAN_SetErrorCaptureRegisterMode\000"
+ 4824      53657445 
+ 4824      72726F72 
+ 4824      43617074 
+ 4824      75726552 
+ 4825              	.LASF44:
+ 4826 0449 43414E5F 		.ascii	"CAN_SetPreScaler\000"
+ 4826      53657450 
+ 4826      72655363 
+ 4826      616C6572 
+ 4826      00
+ 4827              	.LASF14:
+ 4828 045a 63686172 		.ascii	"char\000"
  4828      00
- 4829              	.LASF14:
- 4830 0469 63686172 		.ascii	"char\000"
- 4830      00
- 4831              	.LASF54:
- 4832 046e 43414E5F 		.ascii	"CAN_SetEdgeMode\000"
- 4832      53657445 
- 4832      6467654D 
- 4832      6F646500 
- 4833              	.LASF58:
- 4834 047e 636F6E66 		.ascii	"config\000"
- 4834      696700
- 4835              	.LASF68:
- 4836 0485 43414E5F 		.ascii	"CAN_TxBufConfig\000"
- 4836      54784275 
- 4836      66436F6E 
- 4836      66696700 
- 4837              	.LASF76:
- 4838 0495 6C6F6361 		.ascii	"localResult\000"
- 4838      6C526573 
- 4838      756C7400 
- 4839              	.LASF72:
- 4840 04a1 43414E5F 		.ascii	"CAN_TXConfigStruct\000"
- 4840      5458436F 
- 4840      6E666967 
- 4840      53747275 
- 4840      637400
- 4841              	.LASF19:
- 4842 04b4 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
- 4842      44415441 
- 4842      5F425954 
- 4842      455300
- 4843              	.LASF27:
- 4844 04c3 74786D61 		.ascii	"txmailbox\000"
- 4844      696C626F 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccZ6gYNC.s 			page 120
+ 4829              	.LASF54:
+ 4830 045f 43414E5F 		.ascii	"CAN_SetEdgeMode\000"
+ 4830      53657445 
+ 4830      6467654D 
+ 4830      6F646500 
+ 4831              	.LASF58:
+ 4832 046f 636F6E66 		.ascii	"config\000"
+ 4832      696700
+ 4833              	.LASF68:
+ 4834 0476 43414E5F 		.ascii	"CAN_TxBufConfig\000"
+ 4834      54784275 
+ 4834      66436F6E 
+ 4834      66696700 
+ 4835              	.LASF76:
+ 4836 0486 6C6F6361 		.ascii	"localResult\000"
+ 4836      6C526573 
+ 4836      756C7400 
+ 4837              	.LASF72:
+ 4838 0492 43414E5F 		.ascii	"CAN_TXConfigStruct\000"
+ 4838      5458436F 
+ 4838      6E666967 
+ 4838      53747275 
+ 4838      637400
+ 4839              	.LASF19:
+ 4840 04a5 43414E5F 		.ascii	"CAN_DATA_BYTES\000"
+ 4840      44415441 
+ 4840      5F425954 
+ 4840      455300
+ 4841              	.LASF27:
+ 4842 04b4 74786D61 		.ascii	"txmailbox\000"
+ 4842      696C626F 
+ 4842      7800
+ 4843              	.LASF49:
+ 4844 04be 63666754 		.ascii	"cfgTseg1\000"
+ 4844      73656731 
+ 4844      00
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc9rcxYo.s 			page 120
 
 
- 4844      7800
- 4845              	.LASF49:
- 4846 04cd 63666754 		.ascii	"cfgTseg1\000"
- 4846      73656731 
+ 4845              	.LASF50:
+ 4846 04c7 63666754 		.ascii	"cfgTseg2\000"
+ 4846      73656732 
  4846      00
- 4847              	.LASF50:
- 4848 04d6 63666754 		.ascii	"cfgTseg2\000"
- 4848      73656732 
- 4848      00
- 4849              	.LASF48:
- 4850 04df 43414E5F 		.ascii	"CAN_SetTsegSample\000"
- 4850      53657454 
- 4850      73656753 
- 4850      616D706C 
- 4850      6500
- 4851              	.LASF23:
- 4852 04f1 7278636D 		.ascii	"rxcmd\000"
- 4852      6400
- 4853              	.LASF69:
- 4854 04f7 7478436F 		.ascii	"txConfig\000"
- 4854      6E666967 
- 4854      00
- 4855              	.LASF66:
- 4856 0500 43414E5F 		.ascii	"CAN_RxBufConfig\000"
- 4856      52784275 
- 4856      66436F6E 
- 4856      66696700 
- 4857              	.LASF29:
- 4858 0510 74786964 		.ascii	"txid\000"
- 4858      00
- 4859              	.LASF25:
- 4860 0515 72786163 		.ascii	"rxacr\000"
- 4860      7200
- 4861              	.LASF47:
- 4862 051b 61726269 		.ascii	"arbiter\000"
- 4862      74657200 
- 4863              	.LASF34:
- 4864 0523 72786163 		.ascii	"rxacrd\000"
- 4864      726400
+ 4847              	.LASF48:
+ 4848 04d0 43414E5F 		.ascii	"CAN_SetTsegSample\000"
+ 4848      53657454 
+ 4848      73656753 
+ 4848      616D706C 
+ 4848      6500
+ 4849              	.LASF23:
+ 4850 04e2 7278636D 		.ascii	"rxcmd\000"
+ 4850      6400
+ 4851              	.LASF69:
+ 4852 04e8 7478436F 		.ascii	"txConfig\000"
+ 4852      6E666967 
+ 4852      00
+ 4853              	.LASF66:
+ 4854 04f1 43414E5F 		.ascii	"CAN_RxBufConfig\000"
+ 4854      52784275 
+ 4854      66436F6E 
+ 4854      66696700 
+ 4855              	.LASF29:
+ 4856 0501 74786964 		.ascii	"txid\000"
+ 4856      00
+ 4857              	.LASF25:
+ 4858 0506 72786163 		.ascii	"rxacr\000"
+ 4858      7200
+ 4859              	.LASF47:
+ 4860 050c 61726269 		.ascii	"arbiter\000"
+ 4860      74657200 
+ 4861              	.LASF34:
+ 4862 0514 72786163 		.ascii	"rxacrd\000"
+ 4862      726400
+ 4863              	.LASF45:
+ 4864 051b 43414E5F 		.ascii	"CAN_SetArbiter\000"
+ 4864      53657441 
+ 4864      72626974 
+ 4864      657200
  4865              	.LASF30:
  4866 052a 43414E5F 		.ascii	"CAN_TX_CFG\000"
  4866      54585F43 

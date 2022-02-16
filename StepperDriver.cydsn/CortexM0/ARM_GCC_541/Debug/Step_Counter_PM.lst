@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
   28:Generated_Source\PSoC4/Step_Counter_PM.c **** *     Save the current user configuration
   29:Generated_Source\PSoC4/Step_Counter_PM.c **** *
   30:Generated_Source\PSoC4/Step_Counter_PM.c **** * Parameters:  
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 2
 
 
   31:Generated_Source\PSoC4/Step_Counter_PM.c **** *  void
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
   59              		.thumb_func
   60              		.type	Step_Counter_RestoreConfig, %function
   61              	Step_Counter_RestoreConfig:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 3
 
 
   62              	.LFB2:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
   84 0012 C046     		.align	2
   85              	.L5:
   86 0014 00000000 		.word	.LANCHOR0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 4
 
 
   87              		.cfi_endproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  114 000e 064B     		ldr	r3, .L10+4
  115 0010 1A70     		strb	r2, [r3]
  116 0012 02E0     		b	.L9
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 5
 
 
  117              	.L8:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  136:Generated_Source\PSoC4/Step_Counter_PM.c **** * Summary:
  137:Generated_Source\PSoC4/Step_Counter_PM.c **** *  Restores and enables the user configuration
  138:Generated_Source\PSoC4/Step_Counter_PM.c **** *  
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 6
 
 
  139:Generated_Source\PSoC4/Step_Counter_PM.c **** * Parameters:  
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  179              		.align	2
  180              		.set	.LANCHOR0,. + 0
  181              		.type	Step_Counter_backup, %object
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 7
 
 
  182              		.size	Step_Counter_backup, 12
@@ -379,8 +379,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  195 000b 01       		.uleb128 0x1
  196 000c F2010000 		.4byte	.LASF31
  197 0010 0C       		.byte	0xc
- 198 0011 FC000000 		.4byte	.LASF32
- 199 0015 54010000 		.4byte	.LASF33
+ 198 0011 57010000 		.4byte	.LASF32
+ 199 0015 48000000 		.4byte	.LASF33
  200 0019 00000000 		.4byte	.Ldebug_ranges0+0
  201 001d 00000000 		.4byte	0
  202 0021 00000000 		.4byte	.Ldebug_line0
@@ -391,7 +391,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  207 002c 02       		.uleb128 0x2
  208 002d 01       		.byte	0x1
  209 002e 08       		.byte	0x8
- 210 002f A2000000 		.4byte	.LASF1
+ 210 002f FD000000 		.4byte	.LASF1
  211 0033 02       		.uleb128 0x2
  212 0034 02       		.byte	0x2
  213 0035 05       		.byte	0x5
@@ -407,7 +407,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  223 0048 02       		.uleb128 0x2
  224 0049 04       		.byte	0x4
  225 004a 07       		.byte	0x7
- 226 004b D0000000 		.4byte	.LASF5
+ 226 004b 2B010000 		.4byte	.LASF5
  227 004f 02       		.uleb128 0x2
  228 0050 08       		.byte	0x8
  229 0051 05       		.byte	0x5
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  234 0059 C1010000 		.4byte	.LASF7
  235 005d 03       		.uleb128 0x3
  236 005e 04       		.byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 8
 
 
  237 005f 05       		.byte	0x5
@@ -426,31 +426,31 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  239 0064 02       		.uleb128 0x2
  240 0065 04       		.byte	0x4
  241 0066 07       		.byte	0x7
- 242 0067 47010000 		.4byte	.LASF8
+ 242 0067 A2010000 		.4byte	.LASF8
  243 006b 04       		.uleb128 0x4
- 244 006c E2000000 		.4byte	.LASF9
+ 244 006c 3D010000 		.4byte	.LASF9
  245 0070 02       		.byte	0x2
  246 0071 FC01     		.2byte	0x1fc
  247 0073 2C000000 		.4byte	0x2c
  248 0077 04       		.uleb128 0x4
- 249 0078 40010000 		.4byte	.LASF10
+ 249 0078 9B010000 		.4byte	.LASF10
  250 007c 02       		.byte	0x2
  251 007d FE01     		.2byte	0x1fe
  252 007f 48000000 		.4byte	0x48
  253 0083 02       		.uleb128 0x2
  254 0084 04       		.byte	0x4
  255 0085 04       		.byte	0x4
- 256 0086 9C000000 		.4byte	.LASF11
+ 256 0086 F7000000 		.4byte	.LASF11
  257 008a 02       		.uleb128 0x2
  258 008b 08       		.byte	0x8
  259 008c 04       		.byte	0x4
- 260 008d 25010000 		.4byte	.LASF12
+ 260 008d 80010000 		.4byte	.LASF12
  261 0091 02       		.uleb128 0x2
  262 0092 01       		.byte	0x1
  263 0093 08       		.byte	0x8
  264 0094 AA020000 		.4byte	.LASF13
  265 0098 04       		.uleb128 0x4
- 266 0099 CB000000 		.4byte	.LASF14
+ 266 0099 26010000 		.4byte	.LASF14
  267 009d 02       		.byte	0x2
  268 009e A602     		.2byte	0x2a6
  269 00a0 A4000000 		.4byte	0xa4
@@ -476,16 +476,16 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  289 00c6 6B000000 		.4byte	0x6b
  290 00ca 00       		.byte	0
  291 00cb 07       		.uleb128 0x7
- 292 00cc 48000000 		.4byte	.LASF18
+ 292 00cc A3000000 		.4byte	.LASF18
  293 00d0 03       		.byte	0x3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 9
 
 
  294 00d1 43       		.byte	0x43
  295 00d2 77000000 		.4byte	0x77
  296 00d6 04       		.byte	0x4
  297 00d7 07       		.uleb128 0x7
- 298 00d8 6D000000 		.4byte	.LASF19
+ 298 00d8 C8000000 		.4byte	.LASF19
  299 00dc 03       		.byte	0x3
  300 00dd 46       		.byte	0x46
  301 00de 6B000000 		.4byte	0x6b
@@ -497,7 +497,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  307 00ea 49       		.byte	0x49
  308 00eb B7000000 		.4byte	0xb7
  309 00ef 09       		.uleb128 0x9
- 310 00f0 84000000 		.4byte	.LASF21
+ 310 00f0 DF000000 		.4byte	.LASF21
  311 00f4 01       		.byte	0x1
  312 00f5 2A       		.byte	0x2a
  313 00f6 00000000 		.4byte	.LFB1
@@ -513,7 +513,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  323 0112 AB010000 		.4byte	0x1ab
  324 0116 00       		.byte	0
  325 0117 09       		.uleb128 0x9
- 326 0118 B0000000 		.4byte	.LASF22
+ 326 0118 0B010000 		.4byte	.LASF22
  327 011c 01       		.byte	0x1
  328 011d 4A       		.byte	0x4a
  329 011e 00000000 		.4byte	.LFB2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  348 014f 9C       		.byte	0x9c
  349 0150 67010000 		.4byte	0x167
  350 0154 0A       		.uleb128 0xa
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 10
 
 
  351 0155 1E000000 		.4byte	.LVL4
@@ -548,7 +548,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  355 0162 EF000000 		.4byte	0xef
  356 0166 00       		.byte	0
  357 0167 09       		.uleb128 0x9
- 358 0168 E8000000 		.4byte	.LASF24
+ 358 0168 43010000 		.4byte	.LASF24
  359 016c 01       		.byte	0x1
  360 016d 96       		.byte	0x96
  361 016e 00000000 		.4byte	.LFB4
@@ -564,7 +564,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  371 018a D7010000 		.4byte	0x1d7
  372 018e 00       		.byte	0
  373 018f 0B       		.uleb128 0xb
- 374 0190 2C010000 		.4byte	.LASF34
+ 374 0190 87010000 		.4byte	.LASF34
  375 0194 01       		.byte	0x1
  376 0195 15       		.byte	0x15
  377 0196 E4000000 		.4byte	0xe4
@@ -582,8 +582,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  389 01b4 03       		.byte	0x3
  390 01b5 55       		.byte	0x55
  391 01b6 0C       		.uleb128 0xc
- 392 01b7 53000000 		.4byte	.LASF27
- 393 01bb 53000000 		.4byte	.LASF27
+ 392 01b7 AE000000 		.4byte	.LASF27
+ 393 01bb AE000000 		.4byte	.LASF27
  394 01bf 03       		.byte	0x3
  395 01c0 5A       		.byte	0x5a
  396 01c1 0C       		.uleb128 0xc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  405 01d6 50       		.byte	0x50
  406 01d7 0C       		.uleb128 0xc
  407 01d8 21000000 		.4byte	.LASF30
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 11
 
 
  408 01dc 21000000 		.4byte	.LASF30
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  462 0030 3B       		.uleb128 0x3b
  463 0031 05       		.uleb128 0x5
  464 0032 49       		.uleb128 0x49
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 12
 
 
  465 0033 13       		.uleb128 0x13
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  519 0069 3F       		.uleb128 0x3f
  520 006a 19       		.uleb128 0x19
  521 006b 03       		.uleb128 0x3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 13
 
 
  522 006c 0E       		.uleb128 0xe
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  576 00a5 3A       		.uleb128 0x3a
  577 00a6 0B       		.uleb128 0xb
  578 00a7 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 14
 
 
  579 00a8 0B       		.uleb128 0xb
@@ -838,102 +838,102 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  621 0035 73686F72 		.ascii	"short unsigned int\000"
  621      7420756E 
  621      7369676E 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 15
 
 
  621      65642069 
  621      6E7400
- 622              	.LASF18:
- 623 0048 436F756E 		.ascii	"CounterUdb\000"
- 623      74657255 
- 623      646200
- 624              	.LASF27:
- 625 0053 53746570 		.ascii	"Step_Counter_WriteCounter\000"
- 625      5F436F75 
- 625      6E746572 
- 625      5F577269 
- 625      7465436F 
- 626              	.LASF19:
- 627 006d 436F756E 		.ascii	"CounterControlRegister\000"
- 627      74657243 
- 627      6F6E7472 
- 627      6F6C5265 
- 627      67697374 
- 628              	.LASF21:
- 629 0084 53746570 		.ascii	"Step_Counter_SaveConfig\000"
- 629      5F436F75 
- 629      6E746572 
- 629      5F536176 
- 629      65436F6E 
- 630              	.LASF11:
- 631 009c 666C6F61 		.ascii	"float\000"
- 631      7400
- 632              	.LASF1:
- 633 00a2 756E7369 		.ascii	"unsigned char\000"
- 633      676E6564 
- 633      20636861 
- 633      7200
- 634              	.LASF22:
- 635 00b0 53746570 		.ascii	"Step_Counter_RestoreConfig\000"
- 635      5F436F75 
- 635      6E746572 
- 635      5F526573 
- 635      746F7265 
- 636              	.LASF14:
- 637 00cb 72656738 		.ascii	"reg8\000"
- 637      00
- 638              	.LASF5:
- 639 00d0 6C6F6E67 		.ascii	"long unsigned int\000"
- 639      20756E73 
- 639      69676E65 
- 639      6420696E 
- 639      7400
- 640              	.LASF9:
- 641 00e2 75696E74 		.ascii	"uint8\000"
- 641      3800
- 642              	.LASF24:
- 643 00e8 53746570 		.ascii	"Step_Counter_Wakeup\000"
- 643      5F436F75 
- 643      6E746572 
- 643      5F57616B 
- 643      65757000 
- 644              	.LASF32:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 16
+ 622              	.LASF33:
+ 623 0048 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 623      73657273 
+ 623      5C636173 
+ 623      65795C44 
+ 623      65736B74 
+ 624 0076 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 624      53746570 
+ 624      7065725F 
+ 624      4D6F746F 
+ 624      725F4472 
+ 625              	.LASF18:
+ 626 00a3 436F756E 		.ascii	"CounterUdb\000"
+ 626      74657255 
+ 626      646200
+ 627              	.LASF27:
+ 628 00ae 53746570 		.ascii	"Step_Counter_WriteCounter\000"
+ 628      5F436F75 
+ 628      6E746572 
+ 628      5F577269 
+ 628      7465436F 
+ 629              	.LASF19:
+ 630 00c8 436F756E 		.ascii	"CounterControlRegister\000"
+ 630      74657243 
+ 630      6F6E7472 
+ 630      6F6C5265 
+ 630      67697374 
+ 631              	.LASF21:
+ 632 00df 53746570 		.ascii	"Step_Counter_SaveConfig\000"
+ 632      5F436F75 
+ 632      6E746572 
+ 632      5F536176 
+ 632      65436F6E 
+ 633              	.LASF11:
+ 634 00f7 666C6F61 		.ascii	"float\000"
+ 634      7400
+ 635              	.LASF1:
+ 636 00fd 756E7369 		.ascii	"unsigned char\000"
+ 636      676E6564 
+ 636      20636861 
+ 636      7200
+ 637              	.LASF22:
+ 638 010b 53746570 		.ascii	"Step_Counter_RestoreConfig\000"
+ 638      5F436F75 
+ 638      6E746572 
+ 638      5F526573 
+ 638      746F7265 
+ 639              	.LASF14:
+ 640 0126 72656738 		.ascii	"reg8\000"
+ 640      00
+ 641              	.LASF5:
+ 642 012b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 642      20756E73 
+ 642      69676E65 
+ 642      6420696E 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 16
 
 
- 645 00fc 47656E65 		.ascii	"Generated_Source\\PSoC4\\Step_Counter_PM.c\000"
- 645      72617465 
- 645      645F536F 
- 645      75726365 
- 645      5C50536F 
- 646              	.LASF12:
- 647 0125 646F7562 		.ascii	"double\000"
- 647      6C6500
- 648              	.LASF34:
- 649 012c 53746570 		.ascii	"Step_Counter_backup\000"
- 649      5F436F75 
- 649      6E746572 
- 649      5F626163 
- 649      6B757000 
- 650              	.LASF10:
- 651 0140 75696E74 		.ascii	"uint32\000"
- 651      333200
- 652              	.LASF8:
- 653 0147 756E7369 		.ascii	"unsigned int\000"
- 653      676E6564 
- 653      20696E74 
- 653      00
- 654              	.LASF33:
- 655 0154 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
- 655      73657273 
- 655      5C636173 
- 655      65795C44 
- 655      65736B74 
- 656 0182 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepDirection.cydsn\000"
- 656      53746570 
- 656      7065725F 
- 656      4D6F746F 
- 656      725F4472 
+ 642      7400
+ 643              	.LASF9:
+ 644 013d 75696E74 		.ascii	"uint8\000"
+ 644      3800
+ 645              	.LASF24:
+ 646 0143 53746570 		.ascii	"Step_Counter_Wakeup\000"
+ 646      5F436F75 
+ 646      6E746572 
+ 646      5F57616B 
+ 646      65757000 
+ 647              	.LASF32:
+ 648 0157 47656E65 		.ascii	"Generated_Source\\PSoC4\\Step_Counter_PM.c\000"
+ 648      72617465 
+ 648      645F536F 
+ 648      75726365 
+ 648      5C50536F 
+ 649              	.LASF12:
+ 650 0180 646F7562 		.ascii	"double\000"
+ 650      6C6500
+ 651              	.LASF34:
+ 652 0187 53746570 		.ascii	"Step_Counter_backup\000"
+ 652      5F436F75 
+ 652      6E746572 
+ 652      5F626163 
+ 652      6B757000 
+ 653              	.LASF10:
+ 654 019b 75696E74 		.ascii	"uint32\000"
+ 654      333200
+ 655              	.LASF8:
+ 656 01a2 756E7369 		.ascii	"unsigned int\000"
+ 656      676E6564 
+ 656      20696E74 
+ 656      00
  657              	.LASF29:
  658 01af 53746570 		.ascii	"Step_Counter_Stop\000"
  658      5F436F75 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  664      352E342E 
  664      31203230 
  664      31363036 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 17
 
 
  665 0225 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 1
  686      65642063 
  686      68617200 
  687              	.LASF25:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc86Dc66.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccboCpsJ.s 			page 18
 
 
  688 030f 53746570 		.ascii	"Step_Counter_ReadCounter\000"

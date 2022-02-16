@@ -10,15 +10,22 @@
  * ========================================
 */
 
+#include "math.h"
+
 #define min(a,b) (a < b) ? a : b
 
 #define Print(message) DBG_UART_UartPutString(message)
+#define Println(message) Print(message);Print("\n\r")
 #define PrintChar(character) DBG_UART_UartPutChar(character)
 #define PrintInt(integer) DBG_UART_UartPutString(itoa(integer, debugOutput, 10))
 #define PrintIntBin(integer) DBG_UART_UartPutString(itoa(integer, debugOutput, 2))
 #define BlinkDBG() DBG_Write( ! DBG_Read() )
-#define PrintNewLine() DBG_UART_UartPutString("\n\r")
 
 char debugOutput[32];
+
+#define LEFT 97
+#define UP 119
+#define RIGHT 100
+#define DOWN 115
 
 /* [] END OF FILE */

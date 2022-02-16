@@ -1,0 +1,25 @@
+# StepperDriver
+# 2022-02-16 03:36:23Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "Step_Pin(0)" iocell 1 7
+set_io "Direction_Pin(0)" iocell 1 6
+set_io "LED_Pin(0)" iocell 5 2
+set_io "Lim_1(0)" iocell 2 1
+set_io "Lim_2(0)" iocell 2 2
+set_io "\DBG_UART:tx(0)\" iocell 4 1
+set_io "\DBG_UART:rx(0)\" iocell 4 0
+set_io "D2(0)" iocell 11 4
+set_io "D1(0)" iocell 11 2
+set_io "D0(0)" iocell 11 0
+set_io "CAN_RX(0)" iocell 0 0
+set_io "CAN_TX(0)" iocell 0 1
+set_io "Dip_1(0)" iocell 11 1
+set_io "Dip_2(0)" iocell 11 3
+set_io "Dip_3(0)" iocell 11 5
+set_io "Dip_4(0)" iocell 11 7
+set_io "Fault(0)" iocell 11 6

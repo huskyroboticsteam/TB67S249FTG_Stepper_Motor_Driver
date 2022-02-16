@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
   28:Generated_Source\PSoC4/DBG_UART_rx_PM.c **** *  deep-sleep/hibernate modes. This function applies only to SIO and USBIO pins.
   29:Generated_Source\PSoC4/DBG_UART_rx_PM.c **** *  It should not be called for GPIO or GPIO_OVT pins.
   30:Generated_Source\PSoC4/DBG_UART_rx_PM.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 2
 
 
   31:Generated_Source\PSoC4/DBG_UART_rx_PM.c **** * <b>Note</b> This function is available in PSoC 4 only.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
   51              		.global	DBG_UART_rx_Wakeup
   52              		.code	16
   53              		.thumb_func
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 3
 
 
   54              		.type	DBG_UART_rx_Wakeup, %function
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
   72              	.L5:
   73 000c 00000000 		.word	.LANCHOR0
   74 0010 08040440 		.word	1074005000
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 4
 
 
   75              		.cfi_endproc
@@ -207,7 +207,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
   96 000c 3C010000 		.4byte	.LASF20
   97 0010 0C       		.byte	0xc
   98 0011 02010000 		.4byte	.LASF21
-  99 0015 90000000 		.4byte	.LASF22
+  99 0015 22000000 		.4byte	.LASF22
  100 0019 00000000 		.4byte	.Ldebug_ranges0+0
  101 001d 00000000 		.4byte	0
  102 0021 00000000 		.4byte	.Ldebug_line0
@@ -218,7 +218,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  107 002c 02       		.uleb128 0x2
  108 002d 01       		.byte	0x1
  109 002e 08       		.byte	0x8
- 110 002f 42000000 		.4byte	.LASF1
+ 110 002f 9D000000 		.4byte	.LASF1
  111 0033 02       		.uleb128 0x2
  112 0034 02       		.byte	0x2
  113 0035 05       		.byte	0x5
@@ -226,7 +226,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  115 003a 02       		.uleb128 0x2
  116 003b 02       		.byte	0x2
  117 003c 07       		.byte	0x7
- 118 003d 62000000 		.4byte	.LASF3
+ 118 003d BD000000 		.4byte	.LASF3
  119 0041 02       		.uleb128 0x2
  120 0042 04       		.byte	0x4
  121 0043 05       		.byte	0x5
@@ -234,11 +234,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  123 0048 02       		.uleb128 0x2
  124 0049 04       		.byte	0x4
  125 004a 07       		.byte	0x7
- 126 004b 50000000 		.4byte	.LASF5
+ 126 004b AB000000 		.4byte	.LASF5
  127 004f 02       		.uleb128 0x2
  128 0050 08       		.byte	0x8
  129 0051 05       		.byte	0x5
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 5
 
 
  130 0052 D3010000 		.4byte	.LASF6
@@ -253,20 +253,20 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  139 0064 02       		.uleb128 0x2
  140 0065 04       		.byte	0x4
  141 0066 07       		.byte	0x7
- 142 0067 83000000 		.4byte	.LASF8
+ 142 0067 DE000000 		.4byte	.LASF8
  143 006b 04       		.uleb128 0x4
- 144 006c 7C000000 		.4byte	.LASF12
+ 144 006c D7000000 		.4byte	.LASF12
  145 0070 02       		.byte	0x2
  146 0071 FE01     		.2byte	0x1fe
  147 0073 48000000 		.4byte	0x48
  148 0077 02       		.uleb128 0x2
  149 0078 04       		.byte	0x4
  150 0079 04       		.byte	0x4
- 151 007a 22000000 		.4byte	.LASF9
+ 151 007a 7D000000 		.4byte	.LASF9
  152 007e 02       		.uleb128 0x2
  153 007f 08       		.byte	0x8
  154 0080 04       		.byte	0x4
- 155 0081 75000000 		.4byte	.LASF10
+ 155 0081 D0000000 		.4byte	.LASF10
  156 0085 02       		.uleb128 0x2
  157 0086 01       		.byte	0x1
  158 0087 08       		.byte	0x8
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  184 00bd 07       		.uleb128 0x7
  185 00be 19000000 		.4byte	.LASF16
  186 00c2 03       		.byte	0x3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 6
 
 
  187 00c3 25       		.byte	0x25
@@ -306,7 +306,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  189 00c8 08       		.byte	0x8
  190 00c9 00       		.byte	0
  191 00ca 08       		.uleb128 0x8
- 192 00cb 28000000 		.4byte	.LASF17
+ 192 00cb 83000000 		.4byte	.LASF17
  193 00cf 03       		.byte	0x3
  194 00d0 26       		.byte	0x26
  195 00d1 9D000000 		.4byte	0x9d
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  241 0012 00       		.byte	0
  242 0013 02       		.uleb128 0x2
  243 0014 24       		.uleb128 0x24
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 7
 
 
  244 0015 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  298 004b 0D       		.uleb128 0xd
  299 004c 00       		.byte	0
  300 004d 03       		.uleb128 0x3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 8
 
 
  301 004e 0E       		.uleb128 0xe
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  355 0085 3B       		.uleb128 0x3b
  356 0086 0B       		.uleb128 0xb
  357 0087 49       		.uleb128 0x49
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 9
 
 
  358 0088 13       		.uleb128 0x13
@@ -529,57 +529,57 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  394 0019 75736253 		.ascii	"usbState\000"
  394      74617465 
  394      00
- 395              	.LASF9:
- 396 0022 666C6F61 		.ascii	"float\000"
- 396      7400
- 397              	.LASF17:
- 398 0028 4442475F 		.ascii	"DBG_UART_rx_BACKUP_STRUCT\000"
- 398      55415254 
- 398      5F72785F 
- 398      4241434B 
- 398      55505F53 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 10
+ 395              	.LASF22:
+ 396 0022 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 396      73657273 
+ 396      5C636173 
+ 396      65795C44 
+ 396      65736B74 
+ 397 0050 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 397      53746570 
+ 397      7065725F 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 10
 
 
- 399              	.LASF1:
- 400 0042 756E7369 		.ascii	"unsigned char\000"
- 400      676E6564 
- 400      20636861 
- 400      7200
- 401              	.LASF5:
- 402 0050 6C6F6E67 		.ascii	"long unsigned int\000"
- 402      20756E73 
- 402      69676E65 
- 402      6420696E 
- 402      7400
- 403              	.LASF3:
- 404 0062 73686F72 		.ascii	"short unsigned int\000"
- 404      7420756E 
- 404      7369676E 
- 404      65642069 
- 404      6E7400
- 405              	.LASF10:
- 406 0075 646F7562 		.ascii	"double\000"
- 406      6C6500
- 407              	.LASF12:
- 408 007c 75696E74 		.ascii	"uint32\000"
- 408      333200
- 409              	.LASF8:
- 410 0083 756E7369 		.ascii	"unsigned int\000"
- 410      676E6564 
- 410      20696E74 
- 410      00
- 411              	.LASF22:
- 412 0090 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
- 412      73657273 
- 412      5C636173 
- 412      65795C44 
- 412      65736B74 
- 413 00be 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepDirection.cydsn\000"
- 413      53746570 
- 413      7065725F 
- 413      4D6F746F 
- 413      725F4472 
+ 397      4D6F746F 
+ 397      725F4472 
+ 398              	.LASF9:
+ 399 007d 666C6F61 		.ascii	"float\000"
+ 399      7400
+ 400              	.LASF17:
+ 401 0083 4442475F 		.ascii	"DBG_UART_rx_BACKUP_STRUCT\000"
+ 401      55415254 
+ 401      5F72785F 
+ 401      4241434B 
+ 401      55505F53 
+ 402              	.LASF1:
+ 403 009d 756E7369 		.ascii	"unsigned char\000"
+ 403      676E6564 
+ 403      20636861 
+ 403      7200
+ 404              	.LASF5:
+ 405 00ab 6C6F6E67 		.ascii	"long unsigned int\000"
+ 405      20756E73 
+ 405      69676E65 
+ 405      6420696E 
+ 405      7400
+ 406              	.LASF3:
+ 407 00bd 73686F72 		.ascii	"short unsigned int\000"
+ 407      7420756E 
+ 407      7369676E 
+ 407      65642069 
+ 407      6E7400
+ 408              	.LASF10:
+ 409 00d0 646F7562 		.ascii	"double\000"
+ 409      6C6500
+ 410              	.LASF12:
+ 411 00d7 75696E74 		.ascii	"uint32\000"
+ 411      333200
+ 412              	.LASF8:
+ 413 00de 756E7369 		.ascii	"unsigned int\000"
+ 413      676E6564 
+ 413      20696E74 
+ 413      00
  414              	.LASF7:
  415 00eb 6C6F6E67 		.ascii	"long long unsigned int\000"
  415      206C6F6E 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 1
  419      5F72785F 
  419      536C6565 
  419      7000
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccIjGPxd.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccqsBPAF.s 			page 11
 
 
  420              	.LASF20:

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
   28:Generated_Source\PSoC4/Direction.c **** *  Write a byte to the Control Register.
   29:Generated_Source\PSoC4/Direction.c **** *
   30:Generated_Source\PSoC4/Direction.c **** * Parameters:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 2
 
 
   31:Generated_Source\PSoC4/Direction.c **** *  control:  The value to be assigned to the Control Register.
@@ -86,7 +86,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
   40              	.L3:
   41 0006 C046     		.align	2
   42              	.L2:
-  43 0008 72000F40 		.word	1074724978
+  43 0008 70000F40 		.word	1074724976
   44              		.cfi_endproc
   45              	.LFE0:
   46              		.size	Direction_Write, .-Direction_Write
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
   58:Generated_Source\PSoC4/Direction.c **** {
   55              		.loc 1 58 0
   56              		.cfi_startproc
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 3
 
 
   57              		@ args = 0, pretend = 0, frame = 0
@@ -136,7 +136,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
   67              	.L6:
   68              		.align	2
   69              	.L5:
-  70 0008 72000F40 		.word	1074724978
+  70 0008 70000F40 		.word	1074724976
   71              		.cfi_endproc
   72              	.LFE1:
   73              		.size	Direction_Read, .-Direction_Read
@@ -153,7 +153,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
   84 000c CC000000 		.4byte	.LASF14
   85 0010 0C       		.byte	0xc
   86 0011 7D010000 		.4byte	.LASF15
-  87 0015 5A000000 		.4byte	.LASF16
+  87 0015 00000000 		.4byte	.LASF16
   88 0019 00000000 		.4byte	.Ldebug_ranges0+0
   89 001d 00000000 		.4byte	0
   90 0021 00000000 		.4byte	.Ldebug_line0
@@ -164,7 +164,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
   95 002c 02       		.uleb128 0x2
   96 002d 01       		.byte	0x1
   97 002e 08       		.byte	0x8
-  98 002f 06000000 		.4byte	.LASF1
+  98 002f 61000000 		.4byte	.LASF1
   99 0033 02       		.uleb128 0x2
  100 0034 02       		.byte	0x2
  101 0035 05       		.byte	0x5
@@ -172,18 +172,18 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  103 003a 02       		.uleb128 0x2
  104 003b 02       		.byte	0x2
  105 003c 07       		.byte	0x7
- 106 003d 2B000000 		.4byte	.LASF3
+ 106 003d 86000000 		.4byte	.LASF3
  107 0041 02       		.uleb128 0x2
  108 0042 04       		.byte	0x4
  109 0043 05       		.byte	0x5
  110 0044 B0010000 		.4byte	.LASF4
  111 0048 02       		.uleb128 0x2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 4
 
 
  112 0049 04       		.byte	0x4
  113 004a 07       		.byte	0x7
- 114 004b 19000000 		.4byte	.LASF5
+ 114 004b 74000000 		.4byte	.LASF5
  115 004f 02       		.uleb128 0x2
  116 0050 08       		.byte	0x8
  117 0051 05       		.byte	0x5
@@ -199,7 +199,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  127 0064 02       		.uleb128 0x2
  128 0065 04       		.byte	0x4
  129 0066 07       		.byte	0x7
- 130 0067 4D000000 		.4byte	.LASF8
+ 130 0067 A8000000 		.4byte	.LASF8
  131 006b 04       		.uleb128 0x4
  132 006c AA010000 		.4byte	.LASF12
  133 0070 02       		.byte	0x2
@@ -208,17 +208,17 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  136 0077 02       		.uleb128 0x2
  137 0078 04       		.byte	0x4
  138 0079 04       		.byte	0x4
- 139 007a 00000000 		.4byte	.LASF9
+ 139 007a 5B000000 		.4byte	.LASF9
  140 007e 02       		.uleb128 0x2
  141 007f 08       		.byte	0x8
  142 0080 04       		.byte	0x4
- 143 0081 46000000 		.4byte	.LASF10
+ 143 0081 A1000000 		.4byte	.LASF10
  144 0085 02       		.uleb128 0x2
  145 0086 01       		.byte	0x1
  146 0087 08       		.byte	0x8
  147 0088 68010000 		.4byte	.LASF11
  148 008c 04       		.uleb128 0x4
- 149 008d 14000000 		.4byte	.LASF13
+ 149 008d 6F000000 		.4byte	.LASF13
  150 0091 02       		.byte	0x2
  151 0092 A602     		.2byte	0x2a6
  152 0094 98000000 		.4byte	0x98
@@ -234,11 +234,11 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  162 00ad 9C       		.byte	0x9c
  163 00ae C0000000 		.4byte	0xc0
  164 00b2 07       		.uleb128 0x7
- 165 00b3 3E000000 		.4byte	.LASF18
+ 165 00b3 99000000 		.4byte	.LASF18
  166 00b7 01       		.byte	0x1
  167 00b8 25       		.byte	0x25
  168 00b9 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 5
 
 
  169 00bd 01       		.uleb128 0x1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  223 0027 00       		.byte	0
  224 0028 00       		.byte	0
  225 0029 04       		.uleb128 0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 6
 
 
  226 002a 16       		.uleb128 0x16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  280 0061 13       		.uleb128 0x13
  281 0062 02       		.uleb128 0x2
  282 0063 18       		.uleb128 0x18
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 7
 
 
  283 0064 00       		.byte	0
@@ -418,54 +418,54 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  335      00000201 
  335      FB0E0D00 
  335      01010101 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 8
 
 
- 336              	.LASF9:
- 337 0000 666C6F61 		.ascii	"float\000"
- 337      7400
- 338              	.LASF1:
- 339 0006 756E7369 		.ascii	"unsigned char\000"
- 339      676E6564 
- 339      20636861 
- 339      7200
- 340              	.LASF13:
- 341 0014 72656738 		.ascii	"reg8\000"
- 341      00
- 342              	.LASF5:
- 343 0019 6C6F6E67 		.ascii	"long unsigned int\000"
- 343      20756E73 
- 343      69676E65 
- 343      6420696E 
- 343      7400
- 344              	.LASF3:
- 345 002b 73686F72 		.ascii	"short unsigned int\000"
- 345      7420756E 
- 345      7369676E 
- 345      65642069 
- 345      6E7400
- 346              	.LASF18:
- 347 003e 636F6E74 		.ascii	"control\000"
- 347      726F6C00 
- 348              	.LASF10:
- 349 0046 646F7562 		.ascii	"double\000"
- 349      6C6500
- 350              	.LASF8:
- 351 004d 756E7369 		.ascii	"unsigned int\000"
- 351      676E6564 
- 351      20696E74 
- 351      00
- 352              	.LASF16:
- 353 005a 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
- 353      73657273 
- 353      5C636173 
- 353      65795C44 
- 353      65736B74 
- 354 0088 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepDirection.cydsn\000"
- 354      53746570 
- 354      7065725F 
- 354      4D6F746F 
- 354      725F4472 
+ 336              	.LASF16:
+ 337 0000 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 337      73657273 
+ 337      5C636173 
+ 337      65795C44 
+ 337      65736B74 
+ 338 002e 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 338      53746570 
+ 338      7065725F 
+ 338      4D6F746F 
+ 338      725F4472 
+ 339              	.LASF9:
+ 340 005b 666C6F61 		.ascii	"float\000"
+ 340      7400
+ 341              	.LASF1:
+ 342 0061 756E7369 		.ascii	"unsigned char\000"
+ 342      676E6564 
+ 342      20636861 
+ 342      7200
+ 343              	.LASF13:
+ 344 006f 72656738 		.ascii	"reg8\000"
+ 344      00
+ 345              	.LASF5:
+ 346 0074 6C6F6E67 		.ascii	"long unsigned int\000"
+ 346      20756E73 
+ 346      69676E65 
+ 346      6420696E 
+ 346      7400
+ 347              	.LASF3:
+ 348 0086 73686F72 		.ascii	"short unsigned int\000"
+ 348      7420756E 
+ 348      7369676E 
+ 348      65642069 
+ 348      6E7400
+ 349              	.LASF18:
+ 350 0099 636F6E74 		.ascii	"control\000"
+ 350      726F6C00 
+ 351              	.LASF10:
+ 352 00a1 646F7562 		.ascii	"double\000"
+ 352      6C6500
+ 353              	.LASF8:
+ 354 00a8 756E7369 		.ascii	"unsigned int\000"
+ 354      676E6564 
+ 354      20696E74 
+ 354      00
  355              	.LASF7:
  356 00b5 6C6F6E67 		.ascii	"long long unsigned int\000"
  356      206C6F6E 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 1
  358      352E342E 
  358      31203230 
  358      31363036 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cca4sk9j.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cch3mfQT.s 			page 9
 
 
  359 00ff 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"

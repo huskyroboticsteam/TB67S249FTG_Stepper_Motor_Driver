@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
   29:Generated_Source\PSoC4/DBG_UART.c ****     #include "DBG_UART_SPI_UART_PVT.h"
   30:Generated_Source\PSoC4/DBG_UART.c **** #endif /* (DBG_UART_SCB_MODE_SPI_INC || DBG_UART_SCB_MODE_UART_INC) */
   31:Generated_Source\PSoC4/DBG_UART.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 2
 
 
   32:Generated_Source\PSoC4/DBG_UART.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
   86:Generated_Source\PSoC4/DBG_UART.c ****     /** This global variable stores TX interrupt sources after 
   87:Generated_Source\PSoC4/DBG_UART.c ****     * DBG_UART_Stop() is called. Only these TX interrupt sources 
   88:Generated_Source\PSoC4/DBG_UART.c ****     * will be restored on a subsequent DBG_UART_Enable() call.
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 3
 
 
   89:Generated_Source\PSoC4/DBG_UART.c ****     */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  143:Generated_Source\PSoC4/DBG_UART.c **** 
  144:Generated_Source\PSoC4/DBG_UART.c **** #elif (DBG_UART_SCB_MODE_EZI2C_CONST_CFG)
  145:Generated_Source\PSoC4/DBG_UART.c ****     DBG_UART_EzI2CInit();
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 4
 
 
  146:Generated_Source\PSoC4/DBG_UART.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  200:Generated_Source\PSoC4/DBG_UART.c **** *  After this function call, the component is enabled and ready for operation.
  201:Generated_Source\PSoC4/DBG_UART.c **** *  When configuration is set to "Unconfigured SCB", the component must first be
  202:Generated_Source\PSoC4/DBG_UART.c **** *  initialized to operate in one of the following configurations: I2C, SPI, UART
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 5
 
 
  203:Generated_Source\PSoC4/DBG_UART.c **** *  or EZI2C. Otherwise this function does not enable the component.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  257:Generated_Source\PSoC4/DBG_UART.c ****     * is disabled.
  258:Generated_Source\PSoC4/DBG_UART.c ****     */
  259:Generated_Source\PSoC4/DBG_UART.c ****     DBG_UART_SetTxInterruptMode(DBG_UART_NO_INTR_SOURCES);
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 6
 
 
  260:Generated_Source\PSoC4/DBG_UART.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  314:Generated_Source\PSoC4/DBG_UART.c **** }
  315:Generated_Source\PSoC4/DBG_UART.c **** 
  316:Generated_Source\PSoC4/DBG_UART.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 7
 
 
  317:Generated_Source\PSoC4/DBG_UART.c **** #if (DBG_UART_SCB_IRQ_INTERNAL)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  371:Generated_Source\PSoC4/DBG_UART.c **** }
  372:Generated_Source\PSoC4/DBG_UART.c **** 
  373:Generated_Source\PSoC4/DBG_UART.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 8
 
 
  374:Generated_Source\PSoC4/DBG_UART.c **** /*******************************************************************************
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
   46              		.code	16
   47              		.thumb_func
   48              		.type	DBG_UART_ScbModeStop, %function
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 9
 
 
   49              	DBG_UART_ScbModeStop:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  453:Generated_Source\PSoC4/DBG_UART.c ****     DBG_UART_UartStop();
   59              		.loc 1 453 0
   60 0002 FFF7FEFF 		bl	DBG_UART_UartStop
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 10
 
 
   61              	.LVL1:
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  106              		.cfi_def_cfa_offset 8
  107              		.cfi_offset 4, -8
  108              		.cfi_offset 14, -4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 11
 
 
  185:Generated_Source\PSoC4/DBG_UART.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  156 0012 1A70     		strb	r2, [r3]
  157              	.L8:
  218:Generated_Source\PSoC4/DBG_UART.c **** }
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 12
 
 
  158              		.loc 1 218 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  206 0018 00002440 		.word	1076101120
  207 001c 880F2440 		.word	1076105096
  208              		.cfi_endproc
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 13
 
 
  209              	.LFE4:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  257              	.LFB6:
  305:Generated_Source\PSoC4/DBG_UART.c ****     uint32 txFifoCtrl;
  258              		.loc 1 305 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 14
 
 
  259              		.cfi_startproc
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  308              	.Ldebug_info0:
  309 0000 36020000 		.4byte	0x236
  310 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 15
 
 
  311 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -847,7 +847,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  314 000c B1010000 		.4byte	.LASF34
  315 0010 0C       		.byte	0xc
  316 0011 00000000 		.4byte	.LASF35
- 317 0015 08010000 		.4byte	.LASF36
+ 317 0015 64000000 		.4byte	.LASF36
  318 0019 00000000 		.4byte	.Ldebug_ranges0+0
  319 001d 00000000 		.4byte	0
  320 0021 00000000 		.4byte	.Ldebug_line0
@@ -858,7 +858,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  325 002c 02       		.uleb128 0x2
  326 002d 01       		.byte	0x1
  327 002e 08       		.byte	0x8
- 328 002f 8D000000 		.4byte	.LASF1
+ 328 002f E8000000 		.4byte	.LASF1
  329 0033 02       		.uleb128 0x2
  330 0034 02       		.byte	0x2
  331 0035 05       		.byte	0x5
@@ -874,7 +874,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  341 0048 02       		.uleb128 0x2
  342 0049 04       		.byte	0x4
  343 004a 07       		.byte	0x7
- 344 004b B3000000 		.4byte	.LASF5
+ 344 004b 0E010000 		.4byte	.LASF5
  345 004f 02       		.uleb128 0x2
  346 0050 08       		.byte	0x8
  347 0051 05       		.byte	0x5
@@ -890,33 +890,33 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  357 0064 02       		.uleb128 0x2
  358 0065 04       		.byte	0x4
  359 0066 07       		.byte	0x7
- 360 0067 FB000000 		.4byte	.LASF8
+ 360 0067 56010000 		.4byte	.LASF8
  361 006b 04       		.uleb128 0x4
- 362 006c C5000000 		.4byte	.LASF9
+ 362 006c 20010000 		.4byte	.LASF9
  363 0070 02       		.byte	0x2
  364 0071 FC01     		.2byte	0x1fc
  365 0073 2C000000 		.4byte	0x2c
  366 0077 04       		.uleb128 0x4
- 367 0078 D2000000 		.4byte	.LASF10
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 16
+ 367 0078 2D010000 		.4byte	.LASF10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 16
 
 
  368 007c 02       		.byte	0x2
  369 007d FD01     		.2byte	0x1fd
  370 007f 3A000000 		.4byte	0x3a
  371 0083 04       		.uleb128 0x4
- 372 0084 F4000000 		.4byte	.LASF11
+ 372 0084 4F010000 		.4byte	.LASF11
  373 0088 02       		.byte	0x2
  374 0089 FE01     		.2byte	0x1fe
  375 008b 48000000 		.4byte	0x48
  376 008f 02       		.uleb128 0x2
  377 0090 04       		.byte	0x4
  378 0091 04       		.byte	0x4
- 379 0092 87000000 		.4byte	.LASF12
+ 379 0092 E2000000 		.4byte	.LASF12
  380 0096 02       		.uleb128 0x2
  381 0097 08       		.byte	0x8
  382 0098 04       		.byte	0x4
- 383 0099 CB000000 		.4byte	.LASF13
+ 383 0099 26010000 		.4byte	.LASF13
  384 009d 02       		.uleb128 0x2
  385 009e 01       		.byte	0x1
  386 009f 08       		.byte	0x8
@@ -937,7 +937,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  401 00be 07       		.byte	0x7
  402 00bf 3F020000 		.4byte	.LASF17
  403 00c3 06       		.uleb128 0x6
- 404 00c4 D9000000 		.4byte	.LASF18
+ 404 00c4 34010000 		.4byte	.LASF18
  405 00c8 01       		.byte	0x1
  406 00c9 7D01     		.2byte	0x17d
  407 00cb 00000000 		.4byte	.LFB8
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  422 00f3 01       		.uleb128 0x1
  423 00f4 9C       		.byte	0x9c
  424 00f5 03010000 		.4byte	0x103
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 17
 
 
  425 00f9 07       		.uleb128 0x7
@@ -992,7 +992,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  453 013c C3000000 		.4byte	0xc3
  454 0140 00       		.byte	0
  455 0141 08       		.uleb128 0x8
- 456 0142 64000000 		.4byte	.LASF22
+ 456 0142 BF000000 		.4byte	.LASF22
  457 0146 01       		.byte	0x1
  458 0147 D2       		.byte	0xd2
  459 0148 00000000 		.4byte	.LFB3
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  479 017a 88010000 		.4byte	0x188
  480 017e 07       		.uleb128 0x7
  481 017f 06000000 		.4byte	.LVL6
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 18
 
 
  482 0183 E3000000 		.4byte	0xe3
@@ -1076,9 +1076,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  534 0202 03       		.byte	0x3
  535 0203 00000000 		.4byte	DBG_UART_initVar
  536 0207 0C       		.uleb128 0xc
- 537 0208 73000000 		.4byte	.LASF30
+ 537 0208 CE000000 		.4byte	.LASF30
  538 020c 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 19
 
 
  539 020d 5A       		.byte	0x5a
@@ -1087,8 +1087,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  542 0213 03       		.byte	0x3
  543 0214 00000000 		.4byte	DBG_UART_IntrTxMask
  544 0218 0D       		.uleb128 0xd
- 545 0219 9B000000 		.4byte	.LASF31
- 546 021d 9B000000 		.4byte	.LASF31
+ 545 0219 F6000000 		.4byte	.LASF31
+ 546 021d F6000000 		.4byte	.LASF31
  547 0221 03       		.byte	0x3
  548 0222 4C       		.byte	0x4c
  549 0223 0D       		.uleb128 0xd
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  593 001f 24       		.uleb128 0x24
  594 0020 00       		.byte	0
  595 0021 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 20
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 20
 
 
  596 0022 0B       		.uleb128 0xb
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  650 005b 01       		.uleb128 0x1
  651 005c 31       		.uleb128 0x31
  652 005d 13       		.uleb128 0x13
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 21
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 21
 
 
  653 005e 00       		.byte	0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  707 0096 00       		.byte	0
  708 0097 03       		.uleb128 0x3
  709 0098 0E       		.uleb128 0xe
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 22
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 22
 
 
  710 0099 3A       		.uleb128 0x3a
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  764 00cf 0B       		.uleb128 0xb
  765 00d0 3B       		.uleb128 0x3b
  766 00d1 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 23
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 23
 
 
  767 00d2 00       		.byte	0
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  821 007a 00000000 		.4byte	0
  822              		.section	.debug_aranges,"",%progbits
  823 0000 54000000 		.4byte	0x54
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 24
 
 
  824 0004 0200     		.2byte	0x2
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  872      645F536F 
  872      75726365 
  872      5C50536F 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 25
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 25
 
 
  873              	.LASF15:
@@ -1463,74 +1463,74 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  882      7369676E 
  882      65642069 
  882      6E7400
- 883              	.LASF22:
- 884 0064 4442475F 		.ascii	"DBG_UART_Start\000"
- 884      55415254 
- 884      5F537461 
- 884      727400
- 885              	.LASF30:
- 886 0073 4442475F 		.ascii	"DBG_UART_IntrTxMask\000"
- 886      55415254 
- 886      5F496E74 
- 886      7254784D 
- 886      61736B00 
- 887              	.LASF12:
- 888 0087 666C6F61 		.ascii	"float\000"
- 888      7400
- 889              	.LASF1:
- 890 008d 756E7369 		.ascii	"unsigned char\000"
- 890      676E6564 
- 890      20636861 
- 890      7200
- 891              	.LASF31:
- 892 009b 4442475F 		.ascii	"DBG_UART_UartPostEnable\000"
- 892      55415254 
- 892      5F556172 
- 892      74506F73 
- 892      74456E61 
- 893              	.LASF5:
- 894 00b3 6C6F6E67 		.ascii	"long unsigned int\000"
- 894      20756E73 
- 894      69676E65 
- 894      6420696E 
- 894      7400
- 895              	.LASF9:
- 896 00c5 75696E74 		.ascii	"uint8\000"
- 896      3800
- 897              	.LASF13:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 26
+ 883              	.LASF36:
+ 884 0064 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 884      73657273 
+ 884      5C636173 
+ 884      65795C44 
+ 884      65736B74 
+ 885 0092 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 885      53746570 
+ 885      7065725F 
+ 885      4D6F746F 
+ 885      725F4472 
+ 886              	.LASF22:
+ 887 00bf 4442475F 		.ascii	"DBG_UART_Start\000"
+ 887      55415254 
+ 887      5F537461 
+ 887      727400
+ 888              	.LASF30:
+ 889 00ce 4442475F 		.ascii	"DBG_UART_IntrTxMask\000"
+ 889      55415254 
+ 889      5F496E74 
+ 889      7254784D 
+ 889      61736B00 
+ 890              	.LASF12:
+ 891 00e2 666C6F61 		.ascii	"float\000"
+ 891      7400
+ 892              	.LASF1:
+ 893 00e8 756E7369 		.ascii	"unsigned char\000"
+ 893      676E6564 
+ 893      20636861 
+ 893      7200
+ 894              	.LASF31:
+ 895 00f6 4442475F 		.ascii	"DBG_UART_UartPostEnable\000"
+ 895      55415254 
+ 895      5F556172 
+ 895      74506F73 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 26
 
 
- 898 00cb 646F7562 		.ascii	"double\000"
- 898      6C6500
- 899              	.LASF10:
- 900 00d2 75696E74 		.ascii	"uint16\000"
- 900      313600
- 901              	.LASF18:
- 902 00d9 4442475F 		.ascii	"DBG_UART_ScbModePostEnable\000"
- 902      55415254 
- 902      5F536362 
- 902      4D6F6465 
- 902      506F7374 
- 903              	.LASF11:
- 904 00f4 75696E74 		.ascii	"uint32\000"
- 904      333200
- 905              	.LASF8:
- 906 00fb 756E7369 		.ascii	"unsigned int\000"
- 906      676E6564 
- 906      20696E74 
- 906      00
- 907              	.LASF36:
- 908 0108 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
- 908      73657273 
- 908      5C636173 
- 908      65795C44 
- 908      65736B74 
- 909 0136 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepDirection.cydsn\000"
- 909      53746570 
- 909      7065725F 
- 909      4D6F746F 
- 909      725F4472 
+ 895      74456E61 
+ 896              	.LASF5:
+ 897 010e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 897      20756E73 
+ 897      69676E65 
+ 897      6420696E 
+ 897      7400
+ 898              	.LASF9:
+ 899 0120 75696E74 		.ascii	"uint8\000"
+ 899      3800
+ 900              	.LASF13:
+ 901 0126 646F7562 		.ascii	"double\000"
+ 901      6C6500
+ 902              	.LASF10:
+ 903 012d 75696E74 		.ascii	"uint16\000"
+ 903      313600
+ 904              	.LASF18:
+ 905 0134 4442475F 		.ascii	"DBG_UART_ScbModePostEnable\000"
+ 905      55415254 
+ 905      5F536362 
+ 905      4D6F6465 
+ 905      506F7374 
+ 906              	.LASF11:
+ 907 014f 75696E74 		.ascii	"uint32\000"
+ 907      333200
+ 908              	.LASF8:
+ 909 0156 756E7369 		.ascii	"unsigned int\000"
+ 909      676E6564 
+ 909      20696E74 
+ 909      00
  910              	.LASF24:
  911 0163 4442475F 		.ascii	"DBG_UART_SetRxFifoLevel\000"
  911      55415254 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  919 01b1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  919      43313120 
  919      352E342E 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 27
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 27
 
 
  919      31203230 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 1
  941      68617200 
  942              	.LASF21:
  943 02b4 4442475F 		.ascii	"DBG_UART_Enable\000"
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccOCH7W8.s 			page 28
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccaKBrog.s 			page 28
 
 
  943      55415254 
