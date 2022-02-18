@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
   28:Generated_Source\PSoC4/Step_Timer.c **** *     Initialize to the schematic state
   29:Generated_Source\PSoC4/Step_Timer.c **** * 
   30:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 2
 
 
   31:Generated_Source\PSoC4/Step_Timer.c **** *  void  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
   85:Generated_Source\PSoC4/Step_Timer.c ****             #if( 0 != Step_Timer_CAPTURE_MODE_CONF)
   86:Generated_Source\PSoC4/Step_Timer.c ****                 Step_Timer_CONTROL = ctrl | Step_Timer_DEFAULT_CAPTURE_MODE;
   87:Generated_Source\PSoC4/Step_Timer.c ****             #else
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 3
 
 
   88:Generated_Source\PSoC4/Step_Timer.c ****                 Step_Timer_CONTROL = ctrl;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  142:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  143:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_Enable(void) 
  144:Generated_Source\PSoC4/Step_Timer.c **** {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 4
 
 
   28              		.loc 1 144 0
@@ -197,35 +197,23 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  153:Generated_Source\PSoC4/Step_Timer.c ****     /* else make sure reset is clear */
  154:Generated_Source\PSoC4/Step_Timer.c ****     #if(!Step_Timer_ControlRegRemoved || Step_Timer_UsingFixedFunction)
  155:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_CONTROL |= Step_Timer_CTRL_ENABLE;                
-  33              		.loc 1 155 0
-  34 0000 034A     		ldr	r2, .L2
-  35 0002 1178     		ldrb	r1, [r2]
-  36 0004 8023     		movs	r3, #128
-  37 0006 5B42     		rsbs	r3, r3, #0
-  38 0008 0B43     		orrs	r3, r1
-  39 000a DBB2     		uxtb	r3, r3
-  40 000c 1370     		strb	r3, [r2]
  156:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (!Step_Timer_ControlRegRemoved || Step_Timer_UsingFixedFunction) */
  157:Generated_Source\PSoC4/Step_Timer.c ****     
  158:Generated_Source\PSoC4/Step_Timer.c **** }
-  41              		.loc 1 158 0
-  42              		@ sp needed
-  43 000e 7047     		bx	lr
-  44              	.L3:
-  45              		.align	2
-  46              	.L2:
-  47 0010 74000F40 		.word	1074724980
-  48              		.cfi_endproc
-  49              	.LFE2:
-  50              		.size	Step_Timer_Enable, .-Step_Timer_Enable
-  51              		.section	.text.Step_Timer_Stop,"ax",%progbits
-  52              		.align	2
-  53              		.global	Step_Timer_Stop
-  54              		.code	16
-  55              		.thumb_func
-  56              		.type	Step_Timer_Stop, %function
-  57              	Step_Timer_Stop:
-  58              	.LFB4:
+  33              		.loc 1 158 0
+  34              		@ sp needed
+  35 0000 7047     		bx	lr
+  36              		.cfi_endproc
+  37              	.LFE2:
+  38              		.size	Step_Timer_Enable, .-Step_Timer_Enable
+  39 0002 C046     		.section	.text.Step_Timer_Stop,"ax",%progbits
+  40              		.align	2
+  41              		.global	Step_Timer_Stop
+  42              		.code	16
+  43              		.thumb_func
+  44              		.type	Step_Timer_Stop, %function
+  45              	Step_Timer_Stop:
+  46              	.LFB4:
  159:Generated_Source\PSoC4/Step_Timer.c **** 
  160:Generated_Source\PSoC4/Step_Timer.c **** 
  161:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
@@ -238,9 +226,6 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  168:Generated_Source\PSoC4/Step_Timer.c **** *  void  
  169:Generated_Source\PSoC4/Step_Timer.c **** *
  170:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 5
-
-
  171:Generated_Source\PSoC4/Step_Timer.c **** *  void
  172:Generated_Source\PSoC4/Step_Timer.c **** *
  173:Generated_Source\PSoC4/Step_Timer.c **** * Global variables:
@@ -253,6 +238,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  180:Generated_Source\PSoC4/Step_Timer.c ****     if(Step_Timer_initVar == 0u)
  181:Generated_Source\PSoC4/Step_Timer.c ****     {
  182:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_Init();
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 5
+
+
  183:Generated_Source\PSoC4/Step_Timer.c ****         
  184:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_initVar = 1u; /* Clear this bit for Initialization */        
  185:Generated_Source\PSoC4/Step_Timer.c ****     }
@@ -280,49 +268,39 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  207:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  208:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_Stop(void) 
  209:Generated_Source\PSoC4/Step_Timer.c **** {
-  59              		.loc 1 209 0
-  60              		.cfi_startproc
-  61              		@ args = 0, pretend = 0, frame = 0
-  62              		@ frame_needed = 0, uses_anonymous_args = 0
-  63              		@ link register save eliminated.
+  47              		.loc 1 209 0
+  48              		.cfi_startproc
+  49              		@ args = 0, pretend = 0, frame = 0
+  50              		@ frame_needed = 0, uses_anonymous_args = 0
+  51              		@ link register save eliminated.
  210:Generated_Source\PSoC4/Step_Timer.c ****     /* Disable Counter */
  211:Generated_Source\PSoC4/Step_Timer.c ****     #if(!Step_Timer_ControlRegRemoved || Step_Timer_UsingFixedFunction)
  212:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_CONTROL &= ((uint8)(~Step_Timer_CTRL_ENABLE));        
-  64              		.loc 1 212 0
-  65 0000 024A     		ldr	r2, .L5
-  66 0002 1178     		ldrb	r1, [r2]
-  67 0004 7F23     		movs	r3, #127
-  68 0006 0B40     		ands	r3, r1
-  69 0008 1370     		strb	r3, [r2]
  213:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (!Step_Timer_ControlRegRemoved || Step_Timer_UsingFixedFunction) */
  214:Generated_Source\PSoC4/Step_Timer.c ****     
  215:Generated_Source\PSoC4/Step_Timer.c ****     /* Globally disable the Fixed Function Block chosen */
  216:Generated_Source\PSoC4/Step_Timer.c ****     #if (Step_Timer_UsingFixedFunction)
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 6
-
-
  217:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_GLOBAL_ENABLE &= ((uint8)(~Step_Timer_BLOCK_EN_MASK));
  218:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_GLOBAL_STBY_ENABLE &= ((uint8)(~Step_Timer_BLOCK_STBY_EN_MASK));
  219:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (Step_Timer_UsingFixedFunction) */
  220:Generated_Source\PSoC4/Step_Timer.c **** }
-  70              		.loc 1 220 0
-  71              		@ sp needed
-  72 000a 7047     		bx	lr
-  73              	.L6:
-  74              		.align	2
-  75              	.L5:
-  76 000c 74000F40 		.word	1074724980
-  77              		.cfi_endproc
-  78              	.LFE4:
-  79              		.size	Step_Timer_Stop, .-Step_Timer_Stop
-  80              		.section	.text.Step_Timer_SetInterruptMode,"ax",%progbits
-  81              		.align	2
-  82              		.global	Step_Timer_SetInterruptMode
-  83              		.code	16
-  84              		.thumb_func
-  85              		.type	Step_Timer_SetInterruptMode, %function
-  86              	Step_Timer_SetInterruptMode:
-  87              	.LFB5:
+  52              		.loc 1 220 0
+  53              		@ sp needed
+  54 0000 7047     		bx	lr
+  55              		.cfi_endproc
+  56              	.LFE4:
+  57              		.size	Step_Timer_Stop, .-Step_Timer_Stop
+  58 0002 C046     		.section	.text.Step_Timer_SetInterruptMode,"ax",%progbits
+  59              		.align	2
+  60              		.global	Step_Timer_SetInterruptMode
+  61              		.code	16
+  62              		.thumb_func
+  63              		.type	Step_Timer_SetInterruptMode, %function
+  64              	Step_Timer_SetInterruptMode:
+  65              	.LFB5:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 6
+
+
  221:Generated_Source\PSoC4/Step_Timer.c **** 
  222:Generated_Source\PSoC4/Step_Timer.c **** 
  223:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
@@ -341,38 +319,35 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  236:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  237:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_SetInterruptMode(uint8 interruptsMask) 
  238:Generated_Source\PSoC4/Step_Timer.c **** {
-  88              		.loc 1 238 0
-  89              		.cfi_startproc
-  90              		@ args = 0, pretend = 0, frame = 0
-  91              		@ frame_needed = 0, uses_anonymous_args = 0
-  92              		@ link register save eliminated.
-  93              	.LVL0:
+  66              		.loc 1 238 0
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 0
+  69              		@ frame_needed = 0, uses_anonymous_args = 0
+  70              		@ link register save eliminated.
+  71              	.LVL0:
  239:Generated_Source\PSoC4/Step_Timer.c ****     Step_Timer_STATUS_MASK = interruptsMask;
-  94              		.loc 1 239 0
-  95 0000 014B     		ldr	r3, .L8
-  96 0002 1870     		strb	r0, [r3]
+  72              		.loc 1 239 0
+  73 0000 014B     		ldr	r3, .L4
+  74 0002 1870     		strb	r0, [r3]
  240:Generated_Source\PSoC4/Step_Timer.c **** }
-  97              		.loc 1 240 0
-  98              		@ sp needed
-  99 0004 7047     		bx	lr
- 100              	.L9:
- 101 0006 C046     		.align	2
- 102              	.L8:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 7
-
-
- 103 0008 86000F40 		.word	1074724998
- 104              		.cfi_endproc
- 105              	.LFE5:
- 106              		.size	Step_Timer_SetInterruptMode, .-Step_Timer_SetInterruptMode
- 107              		.section	.text.Step_Timer_ReadStatusRegister,"ax",%progbits
- 108              		.align	2
- 109              		.global	Step_Timer_ReadStatusRegister
- 110              		.code	16
- 111              		.thumb_func
- 112              		.type	Step_Timer_ReadStatusRegister, %function
- 113              	Step_Timer_ReadStatusRegister:
- 114              	.LFB6:
+  75              		.loc 1 240 0
+  76              		@ sp needed
+  77 0004 7047     		bx	lr
+  78              	.L5:
+  79 0006 C046     		.align	2
+  80              	.L4:
+  81 0008 86000F40 		.word	1074724998
+  82              		.cfi_endproc
+  83              	.LFE5:
+  84              		.size	Step_Timer_SetInterruptMode, .-Step_Timer_SetInterruptMode
+  85              		.section	.text.Step_Timer_ReadStatusRegister,"ax",%progbits
+  86              		.align	2
+  87              		.global	Step_Timer_ReadStatusRegister
+  88              		.code	16
+  89              		.thumb_func
+  90              		.type	Step_Timer_ReadStatusRegister, %function
+  91              	Step_Timer_ReadStatusRegister:
+  92              	.LFB6:
  241:Generated_Source\PSoC4/Step_Timer.c **** 
  242:Generated_Source\PSoC4/Step_Timer.c **** 
  243:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
@@ -383,6 +358,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  248:Generated_Source\PSoC4/Step_Timer.c **** *       defined types for the bit-field information as the bits in this
  249:Generated_Source\PSoC4/Step_Timer.c **** *       register may be permuteable.
  250:Generated_Source\PSoC4/Step_Timer.c **** *
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 7
+
+
  251:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
  252:Generated_Source\PSoC4/Step_Timer.c **** *  void
  253:Generated_Source\PSoC4/Step_Timer.c **** *
@@ -395,38 +373,35 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  260:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  261:Generated_Source\PSoC4/Step_Timer.c **** uint8   Step_Timer_ReadStatusRegister(void) 
  262:Generated_Source\PSoC4/Step_Timer.c **** {
- 115              		.loc 1 262 0
- 116              		.cfi_startproc
- 117              		@ args = 0, pretend = 0, frame = 0
- 118              		@ frame_needed = 0, uses_anonymous_args = 0
- 119              		@ link register save eliminated.
+  93              		.loc 1 262 0
+  94              		.cfi_startproc
+  95              		@ args = 0, pretend = 0, frame = 0
+  96              		@ frame_needed = 0, uses_anonymous_args = 0
+  97              		@ link register save eliminated.
  263:Generated_Source\PSoC4/Step_Timer.c ****     return Step_Timer_STATUS;
- 120              		.loc 1 263 0
- 121 0000 014B     		ldr	r3, .L11
- 122 0002 1878     		ldrb	r0, [r3]
- 123 0004 C0B2     		uxtb	r0, r0
+  98              		.loc 1 263 0
+  99 0000 014B     		ldr	r3, .L7
+ 100 0002 1878     		ldrb	r0, [r3]
+ 101 0004 C0B2     		uxtb	r0, r0
  264:Generated_Source\PSoC4/Step_Timer.c **** }
- 124              		.loc 1 264 0
- 125              		@ sp needed
- 126 0006 7047     		bx	lr
- 127              	.L12:
- 128              		.align	2
- 129              	.L11:
- 130 0008 66000F40 		.word	1074724966
- 131              		.cfi_endproc
- 132              	.LFE6:
- 133              		.size	Step_Timer_ReadStatusRegister, .-Step_Timer_ReadStatusRegister
- 134              		.section	.text.Step_Timer_ReadControlRegister,"ax",%progbits
- 135              		.align	2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 8
-
-
- 136              		.global	Step_Timer_ReadControlRegister
- 137              		.code	16
- 138              		.thumb_func
- 139              		.type	Step_Timer_ReadControlRegister, %function
- 140              	Step_Timer_ReadControlRegister:
- 141              	.LFB7:
+ 102              		.loc 1 264 0
+ 103              		@ sp needed
+ 104 0006 7047     		bx	lr
+ 105              	.L8:
+ 106              		.align	2
+ 107              	.L7:
+ 108 0008 66000F40 		.word	1074724966
+ 109              		.cfi_endproc
+ 110              	.LFE6:
+ 111              		.size	Step_Timer_ReadStatusRegister, .-Step_Timer_ReadStatusRegister
+ 112              		.section	.text.Step_Timer_WriteCounter,"ax",%progbits
+ 113              		.align	2
+ 114              		.global	Step_Timer_WriteCounter
+ 115              		.code	16
+ 116              		.thumb_func
+ 117              		.type	Step_Timer_WriteCounter, %function
+ 118              	Step_Timer_WriteCounter:
+ 119              	.LFB7:
  265:Generated_Source\PSoC4/Step_Timer.c **** 
  266:Generated_Source\PSoC4/Step_Timer.c **** 
  267:Generated_Source\PSoC4/Step_Timer.c **** #if(!Step_Timer_ControlRegRemoved)
@@ -443,44 +418,17 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  278:Generated_Source\PSoC4/Step_Timer.c **** *
  279:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  280:Generated_Source\PSoC4/Step_Timer.c **** *  (uint8) The contents of the control register
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 8
+
+
  281:Generated_Source\PSoC4/Step_Timer.c **** *
  282:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  283:Generated_Source\PSoC4/Step_Timer.c **** uint8   Step_Timer_ReadControlRegister(void) 
  284:Generated_Source\PSoC4/Step_Timer.c **** {
- 142              		.loc 1 284 0
- 143              		.cfi_startproc
- 144              		@ args = 0, pretend = 0, frame = 0
- 145              		@ frame_needed = 0, uses_anonymous_args = 0
- 146              		@ link register save eliminated.
  285:Generated_Source\PSoC4/Step_Timer.c ****     return Step_Timer_CONTROL;
- 147              		.loc 1 285 0
- 148 0000 014B     		ldr	r3, .L14
- 149 0002 1878     		ldrb	r0, [r3]
- 150 0004 C0B2     		uxtb	r0, r0
  286:Generated_Source\PSoC4/Step_Timer.c **** }
- 151              		.loc 1 286 0
- 152              		@ sp needed
- 153 0006 7047     		bx	lr
- 154              	.L15:
- 155              		.align	2
- 156              	.L14:
- 157 0008 74000F40 		.word	1074724980
- 158              		.cfi_endproc
- 159              	.LFE7:
- 160              		.size	Step_Timer_ReadControlRegister, .-Step_Timer_ReadControlRegister
- 161              		.section	.text.Step_Timer_WriteControlRegister,"ax",%progbits
- 162              		.align	2
- 163              		.global	Step_Timer_WriteControlRegister
- 164              		.code	16
- 165              		.thumb_func
- 166              		.type	Step_Timer_WriteControlRegister, %function
- 167              	Step_Timer_WriteControlRegister:
- 168              	.LFB8:
  287:Generated_Source\PSoC4/Step_Timer.c **** 
  288:Generated_Source\PSoC4/Step_Timer.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 9
-
-
  289:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
  290:Generated_Source\PSoC4/Step_Timer.c **** * Function Name: Step_Timer_WriteControlRegister
  291:Generated_Source\PSoC4/Step_Timer.c **** ********************************************************************************
@@ -498,35 +446,8 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  303:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  304:Generated_Source\PSoC4/Step_Timer.c **** void    Step_Timer_WriteControlRegister(uint8 control) 
  305:Generated_Source\PSoC4/Step_Timer.c **** {
- 169              		.loc 1 305 0
- 170              		.cfi_startproc
- 171              		@ args = 0, pretend = 0, frame = 0
- 172              		@ frame_needed = 0, uses_anonymous_args = 0
- 173              		@ link register save eliminated.
- 174              	.LVL1:
  306:Generated_Source\PSoC4/Step_Timer.c ****     Step_Timer_CONTROL = control;
- 175              		.loc 1 306 0
- 176 0000 014B     		ldr	r3, .L17
- 177 0002 1870     		strb	r0, [r3]
  307:Generated_Source\PSoC4/Step_Timer.c **** }
- 178              		.loc 1 307 0
- 179              		@ sp needed
- 180 0004 7047     		bx	lr
- 181              	.L18:
- 182 0006 C046     		.align	2
- 183              	.L17:
- 184 0008 74000F40 		.word	1074724980
- 185              		.cfi_endproc
- 186              	.LFE8:
- 187              		.size	Step_Timer_WriteControlRegister, .-Step_Timer_WriteControlRegister
- 188              		.section	.text.Step_Timer_WriteCounter,"ax",%progbits
- 189              		.align	2
- 190              		.global	Step_Timer_WriteCounter
- 191              		.code	16
- 192              		.thumb_func
- 193              		.type	Step_Timer_WriteCounter, %function
- 194              	Step_Timer_WriteCounter:
- 195              	.LFB9:
  308:Generated_Source\PSoC4/Step_Timer.c **** 
  309:Generated_Source\PSoC4/Step_Timer.c **** #endif  /* (!Step_Timer_ControlRegRemoved) */
  310:Generated_Source\PSoC4/Step_Timer.c **** 
@@ -538,9 +459,6 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  316:Generated_Source\PSoC4/Step_Timer.c **** * Summary:
  317:Generated_Source\PSoC4/Step_Timer.c **** *   This funtion is used to set the counter to a specific value
  318:Generated_Source\PSoC4/Step_Timer.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 10
-
-
  319:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
  320:Generated_Source\PSoC4/Step_Timer.c **** *  counter:  New counter value. 
  321:Generated_Source\PSoC4/Step_Timer.c **** *
@@ -551,16 +469,19 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  326:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_WriteCounter(uint32 counter) \
  327:Generated_Source\PSoC4/Step_Timer.c ****                                    
  328:Generated_Source\PSoC4/Step_Timer.c **** {
- 196              		.loc 1 328 0
- 197              		.cfi_startproc
- 198              		@ args = 0, pretend = 0, frame = 0
- 199              		@ frame_needed = 0, uses_anonymous_args = 0
- 200              	.LVL2:
- 201 0000 10B5     		push	{r4, lr}
- 202              		.cfi_def_cfa_offset 8
- 203              		.cfi_offset 4, -8
- 204              		.cfi_offset 14, -4
- 205 0002 0100     		movs	r1, r0
+ 120              		.loc 1 328 0
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 0
+ 123              		@ frame_needed = 0, uses_anonymous_args = 0
+ 124              	.LVL1:
+ 125 0000 10B5     		push	{r4, lr}
+ 126              		.cfi_def_cfa_offset 8
+ 127              		.cfi_offset 4, -8
+ 128              		.cfi_offset 14, -4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 9
+
+
+ 129 0002 0100     		movs	r1, r0
  329:Generated_Source\PSoC4/Step_Timer.c ****     #if(Step_Timer_UsingFixedFunction)
  330:Generated_Source\PSoC4/Step_Timer.c ****         /* assert if block is already enabled */
  331:Generated_Source\PSoC4/Step_Timer.c ****         CYASSERT (0u == (Step_Timer_GLOBAL_ENABLE & Step_Timer_BLOCK_EN_MASK));
@@ -570,37 +491,34 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  335:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_GLOBAL_ENABLE &= ((uint8)(~Step_Timer_BLOCK_EN_MASK));
  336:Generated_Source\PSoC4/Step_Timer.c ****     #else
  337:Generated_Source\PSoC4/Step_Timer.c ****         CY_SET_REG24(Step_Timer_COUNTER_LSB_PTR, counter);
- 206              		.loc 1 337 0
- 207 0004 0148     		ldr	r0, .L20
- 208              	.LVL3:
- 209 0006 FFF7FEFF 		bl	CySetReg24
- 210              	.LVL4:
+ 130              		.loc 1 337 0
+ 131 0004 0148     		ldr	r0, .L10
+ 132              	.LVL2:
+ 133 0006 FFF7FEFF 		bl	CySetReg24
+ 134              	.LVL3:
  338:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (Step_Timer_UsingFixedFunction) */
  339:Generated_Source\PSoC4/Step_Timer.c **** }
- 211              		.loc 1 339 0
- 212              		@ sp needed
- 213 000a 10BD     		pop	{r4, pc}
- 214              	.L21:
- 215              		.align	2
- 216              	.L20:
- 217 000c 04000F40 		.word	1074724868
- 218              		.cfi_endproc
- 219              	.LFE9:
- 220              		.size	Step_Timer_WriteCounter, .-Step_Timer_WriteCounter
- 221              		.section	.text.Step_Timer_ReadCounter,"ax",%progbits
- 222              		.align	2
- 223              		.global	Step_Timer_ReadCounter
- 224              		.code	16
- 225              		.thumb_func
- 226              		.type	Step_Timer_ReadCounter, %function
- 227              	Step_Timer_ReadCounter:
- 228              	.LFB10:
+ 135              		.loc 1 339 0
+ 136              		@ sp needed
+ 137 000a 10BD     		pop	{r4, pc}
+ 138              	.L11:
+ 139              		.align	2
+ 140              	.L10:
+ 141 000c 04000F40 		.word	1074724868
+ 142              		.cfi_endproc
+ 143              	.LFE7:
+ 144              		.size	Step_Timer_WriteCounter, .-Step_Timer_WriteCounter
+ 145              		.section	.text.Step_Timer_ReadCounter,"ax",%progbits
+ 146              		.align	2
+ 147              		.global	Step_Timer_ReadCounter
+ 148              		.code	16
+ 149              		.thumb_func
+ 150              		.type	Step_Timer_ReadCounter, %function
+ 151              	Step_Timer_ReadCounter:
+ 152              	.LFB8:
  340:Generated_Source\PSoC4/Step_Timer.c **** #endif /* (!(Step_Timer_UsingFixedFunction && (CY_PSOC5A))) */
  341:Generated_Source\PSoC4/Step_Timer.c **** 
  342:Generated_Source\PSoC4/Step_Timer.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 11
-
-
  343:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
  344:Generated_Source\PSoC4/Step_Timer.c **** * Function Name: Step_Timer_ReadCounter
  345:Generated_Source\PSoC4/Step_Timer.c **** ********************************************************************************
@@ -617,14 +535,17 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  356:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  357:Generated_Source\PSoC4/Step_Timer.c **** uint32 Step_Timer_ReadCounter(void) 
  358:Generated_Source\PSoC4/Step_Timer.c **** {
- 229              		.loc 1 358 0
- 230              		.cfi_startproc
- 231              		@ args = 0, pretend = 0, frame = 0
- 232              		@ frame_needed = 0, uses_anonymous_args = 0
- 233 0000 10B5     		push	{r4, lr}
- 234              		.cfi_def_cfa_offset 8
- 235              		.cfi_offset 4, -8
- 236              		.cfi_offset 14, -4
+ 153              		.loc 1 358 0
+ 154              		.cfi_startproc
+ 155              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 10
+
+
+ 156              		@ frame_needed = 0, uses_anonymous_args = 0
+ 157 0000 10B5     		push	{r4, lr}
+ 158              		.cfi_def_cfa_offset 8
+ 159              		.cfi_offset 4, -8
+ 160              		.cfi_offset 14, -4
  359:Generated_Source\PSoC4/Step_Timer.c ****     /* Force capture by reading Accumulator */
  360:Generated_Source\PSoC4/Step_Timer.c ****     /* Must first do a software capture to be able to read the counter */
  361:Generated_Source\PSoC4/Step_Timer.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
@@ -632,9 +553,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  363:Generated_Source\PSoC4/Step_Timer.c **** 		(void)CY_GET_REG16(Step_Timer_COUNTER_LSB_PTR);
  364:Generated_Source\PSoC4/Step_Timer.c **** 	#else
  365:Generated_Source\PSoC4/Step_Timer.c **** 		(void)CY_GET_REG8(Step_Timer_COUNTER_LSB_PTR_8BIT);
- 237              		.loc 1 365 0
- 238 0002 034B     		ldr	r3, .L23
- 239 0004 1B78     		ldrb	r3, [r3]
+ 161              		.loc 1 365 0
+ 162 0002 034B     		ldr	r3, .L13
+ 163 0004 1B78     		ldrb	r3, [r3]
  366:Generated_Source\PSoC4/Step_Timer.c **** 	#endif/* (Step_Timer_UsingFixedFunction) */
  367:Generated_Source\PSoC4/Step_Timer.c ****     
  368:Generated_Source\PSoC4/Step_Timer.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
@@ -642,34 +563,31 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  370:Generated_Source\PSoC4/Step_Timer.c ****         return ((uint32)CY_GET_REG16(Step_Timer_STATICCOUNT_LSB_PTR));
  371:Generated_Source\PSoC4/Step_Timer.c ****     #else
  372:Generated_Source\PSoC4/Step_Timer.c ****         return (CY_GET_REG24(Step_Timer_STATICCOUNT_LSB_PTR));
- 240              		.loc 1 372 0
- 241 0006 0348     		ldr	r0, .L23+4
- 242 0008 FFF7FEFF 		bl	CyGetReg24
- 243              	.LVL5:
+ 164              		.loc 1 372 0
+ 165 0006 0348     		ldr	r0, .L13+4
+ 166 0008 FFF7FEFF 		bl	CyGetReg24
+ 167              	.LVL4:
  373:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (Step_Timer_UsingFixedFunction) */
  374:Generated_Source\PSoC4/Step_Timer.c **** }
- 244              		.loc 1 374 0
- 245              		@ sp needed
- 246 000c 10BD     		pop	{r4, pc}
- 247              	.L24:
- 248 000e C046     		.align	2
- 249              	.L23:
- 250 0010 04000F40 		.word	1074724868
- 251 0014 44000F40 		.word	1074724932
- 252              		.cfi_endproc
- 253              	.LFE10:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 12
-
-
- 254              		.size	Step_Timer_ReadCounter, .-Step_Timer_ReadCounter
- 255              		.section	.text.Step_Timer_ReadCapture,"ax",%progbits
- 256              		.align	2
- 257              		.global	Step_Timer_ReadCapture
- 258              		.code	16
- 259              		.thumb_func
- 260              		.type	Step_Timer_ReadCapture, %function
- 261              	Step_Timer_ReadCapture:
- 262              	.LFB11:
+ 168              		.loc 1 374 0
+ 169              		@ sp needed
+ 170 000c 10BD     		pop	{r4, pc}
+ 171              	.L14:
+ 172 000e C046     		.align	2
+ 173              	.L13:
+ 174 0010 04000F40 		.word	1074724868
+ 175 0014 44000F40 		.word	1074724932
+ 176              		.cfi_endproc
+ 177              	.LFE8:
+ 178              		.size	Step_Timer_ReadCounter, .-Step_Timer_ReadCounter
+ 179              		.section	.text.Step_Timer_ReadCapture,"ax",%progbits
+ 180              		.align	2
+ 181              		.global	Step_Timer_ReadCapture
+ 182              		.code	16
+ 183              		.thumb_func
+ 184              		.type	Step_Timer_ReadCapture, %function
+ 185              	Step_Timer_ReadCapture:
+ 186              	.LFB9:
  375:Generated_Source\PSoC4/Step_Timer.c **** 
  376:Generated_Source\PSoC4/Step_Timer.c **** 
  377:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
@@ -680,6 +598,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  382:Generated_Source\PSoC4/Step_Timer.c **** *
  383:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
  384:Generated_Source\PSoC4/Step_Timer.c **** *  void
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 11
+
+
  385:Generated_Source\PSoC4/Step_Timer.c **** *
  386:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  387:Generated_Source\PSoC4/Step_Timer.c **** *  (uint32) Present Capture value.
@@ -687,45 +608,42 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  389:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  390:Generated_Source\PSoC4/Step_Timer.c **** uint32 Step_Timer_ReadCapture(void) 
  391:Generated_Source\PSoC4/Step_Timer.c **** {
- 263              		.loc 1 391 0
- 264              		.cfi_startproc
- 265              		@ args = 0, pretend = 0, frame = 0
- 266              		@ frame_needed = 0, uses_anonymous_args = 0
- 267 0000 10B5     		push	{r4, lr}
- 268              		.cfi_def_cfa_offset 8
- 269              		.cfi_offset 4, -8
- 270              		.cfi_offset 14, -4
+ 187              		.loc 1 391 0
+ 188              		.cfi_startproc
+ 189              		@ args = 0, pretend = 0, frame = 0
+ 190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 191 0000 10B5     		push	{r4, lr}
+ 192              		.cfi_def_cfa_offset 8
+ 193              		.cfi_offset 4, -8
+ 194              		.cfi_offset 14, -4
  392:Generated_Source\PSoC4/Step_Timer.c ****     #if(Step_Timer_UsingFixedFunction)
  393:Generated_Source\PSoC4/Step_Timer.c ****         return ((uint32)CY_GET_REG16(Step_Timer_STATICCOUNT_LSB_PTR));
  394:Generated_Source\PSoC4/Step_Timer.c ****     #else
  395:Generated_Source\PSoC4/Step_Timer.c ****         return (CY_GET_REG24(Step_Timer_STATICCOUNT_LSB_PTR));
- 271              		.loc 1 395 0
- 272 0002 0248     		ldr	r0, .L26
- 273 0004 FFF7FEFF 		bl	CyGetReg24
- 274              	.LVL6:
+ 195              		.loc 1 395 0
+ 196 0002 0248     		ldr	r0, .L16
+ 197 0004 FFF7FEFF 		bl	CyGetReg24
+ 198              	.LVL5:
  396:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (Step_Timer_UsingFixedFunction) */
  397:Generated_Source\PSoC4/Step_Timer.c **** }
- 275              		.loc 1 397 0
- 276              		@ sp needed
- 277 0008 10BD     		pop	{r4, pc}
- 278              	.L27:
- 279 000a C046     		.align	2
- 280              	.L26:
- 281 000c 44000F40 		.word	1074724932
- 282              		.cfi_endproc
- 283              	.LFE11:
- 284              		.size	Step_Timer_ReadCapture, .-Step_Timer_ReadCapture
- 285              		.section	.text.Step_Timer_WritePeriod,"ax",%progbits
- 286              		.align	2
- 287              		.global	Step_Timer_WritePeriod
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 13
-
-
- 288              		.code	16
- 289              		.thumb_func
- 290              		.type	Step_Timer_WritePeriod, %function
- 291              	Step_Timer_WritePeriod:
- 292              	.LFB12:
+ 199              		.loc 1 397 0
+ 200              		@ sp needed
+ 201 0008 10BD     		pop	{r4, pc}
+ 202              	.L17:
+ 203 000a C046     		.align	2
+ 204              	.L16:
+ 205 000c 44000F40 		.word	1074724932
+ 206              		.cfi_endproc
+ 207              	.LFE9:
+ 208              		.size	Step_Timer_ReadCapture, .-Step_Timer_ReadCapture
+ 209              		.section	.text.Step_Timer_WritePeriod,"ax",%progbits
+ 210              		.align	2
+ 211              		.global	Step_Timer_WritePeriod
+ 212              		.code	16
+ 213              		.thumb_func
+ 214              		.type	Step_Timer_WritePeriod, %function
+ 215              	Step_Timer_WritePeriod:
+ 216              	.LFB10:
  398:Generated_Source\PSoC4/Step_Timer.c **** 
  399:Generated_Source\PSoC4/Step_Timer.c **** 
  400:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
@@ -740,53 +658,53 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  409:Generated_Source\PSoC4/Step_Timer.c **** *         the counter remaining at zero.  
  410:Generated_Source\PSoC4/Step_Timer.c **** *
  411:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 12
+
+
  412:Generated_Source\PSoC4/Step_Timer.c **** *  void
  413:Generated_Source\PSoC4/Step_Timer.c **** *
  414:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  415:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_WritePeriod(uint32 period) 
  416:Generated_Source\PSoC4/Step_Timer.c **** {
- 293              		.loc 1 416 0
- 294              		.cfi_startproc
- 295              		@ args = 0, pretend = 0, frame = 0
- 296              		@ frame_needed = 0, uses_anonymous_args = 0
- 297              	.LVL7:
- 298 0000 10B5     		push	{r4, lr}
- 299              		.cfi_def_cfa_offset 8
- 300              		.cfi_offset 4, -8
- 301              		.cfi_offset 14, -4
- 302 0002 0100     		movs	r1, r0
+ 217              		.loc 1 416 0
+ 218              		.cfi_startproc
+ 219              		@ args = 0, pretend = 0, frame = 0
+ 220              		@ frame_needed = 0, uses_anonymous_args = 0
+ 221              	.LVL6:
+ 222 0000 10B5     		push	{r4, lr}
+ 223              		.cfi_def_cfa_offset 8
+ 224              		.cfi_offset 4, -8
+ 225              		.cfi_offset 14, -4
+ 226 0002 0100     		movs	r1, r0
  417:Generated_Source\PSoC4/Step_Timer.c ****     #if(Step_Timer_UsingFixedFunction)
  418:Generated_Source\PSoC4/Step_Timer.c ****         CY_SET_REG16(Step_Timer_PERIOD_LSB_PTR,(uint16)period);
  419:Generated_Source\PSoC4/Step_Timer.c ****     #else
  420:Generated_Source\PSoC4/Step_Timer.c ****         CY_SET_REG24(Step_Timer_PERIOD_LSB_PTR, period);
- 303              		.loc 1 420 0
- 304 0004 0148     		ldr	r0, .L29
- 305              	.LVL8:
- 306 0006 FFF7FEFF 		bl	CySetReg24
- 307              	.LVL9:
+ 227              		.loc 1 420 0
+ 228 0004 0148     		ldr	r0, .L19
+ 229              	.LVL7:
+ 230 0006 FFF7FEFF 		bl	CySetReg24
+ 231              	.LVL8:
  421:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (Step_Timer_UsingFixedFunction) */
  422:Generated_Source\PSoC4/Step_Timer.c **** }
- 308              		.loc 1 422 0
- 309              		@ sp needed
- 310 000a 10BD     		pop	{r4, pc}
- 311              	.L30:
- 312              		.align	2
- 313              	.L29:
- 314 000c 24000F40 		.word	1074724900
- 315              		.cfi_endproc
- 316              	.LFE12:
- 317              		.size	Step_Timer_WritePeriod, .-Step_Timer_WritePeriod
- 318              		.section	.text.Step_Timer_ReadPeriod,"ax",%progbits
- 319              		.align	2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 14
-
-
- 320              		.global	Step_Timer_ReadPeriod
- 321              		.code	16
- 322              		.thumb_func
- 323              		.type	Step_Timer_ReadPeriod, %function
- 324              	Step_Timer_ReadPeriod:
- 325              	.LFB13:
+ 232              		.loc 1 422 0
+ 233              		@ sp needed
+ 234 000a 10BD     		pop	{r4, pc}
+ 235              	.L20:
+ 236              		.align	2
+ 237              	.L19:
+ 238 000c 24000F40 		.word	1074724900
+ 239              		.cfi_endproc
+ 240              	.LFE10:
+ 241              		.size	Step_Timer_WritePeriod, .-Step_Timer_WritePeriod
+ 242              		.section	.text.Step_Timer_ReadPeriod,"ax",%progbits
+ 243              		.align	2
+ 244              		.global	Step_Timer_ReadPeriod
+ 245              		.code	16
+ 246              		.thumb_func
+ 247              		.type	Step_Timer_ReadPeriod, %function
+ 248              	Step_Timer_ReadPeriod:
+ 249              	.LFB11:
  423:Generated_Source\PSoC4/Step_Timer.c **** 
  424:Generated_Source\PSoC4/Step_Timer.c **** 
  425:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
@@ -800,49 +718,49 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  433:Generated_Source\PSoC4/Step_Timer.c **** *
  434:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  435:Generated_Source\PSoC4/Step_Timer.c **** *  (uint32) Present period value.
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 13
+
+
  436:Generated_Source\PSoC4/Step_Timer.c **** *
  437:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  438:Generated_Source\PSoC4/Step_Timer.c **** uint32 Step_Timer_ReadPeriod(void) 
  439:Generated_Source\PSoC4/Step_Timer.c **** {
- 326              		.loc 1 439 0
- 327              		.cfi_startproc
- 328              		@ args = 0, pretend = 0, frame = 0
- 329              		@ frame_needed = 0, uses_anonymous_args = 0
- 330 0000 10B5     		push	{r4, lr}
- 331              		.cfi_def_cfa_offset 8
- 332              		.cfi_offset 4, -8
- 333              		.cfi_offset 14, -4
+ 250              		.loc 1 439 0
+ 251              		.cfi_startproc
+ 252              		@ args = 0, pretend = 0, frame = 0
+ 253              		@ frame_needed = 0, uses_anonymous_args = 0
+ 254 0000 10B5     		push	{r4, lr}
+ 255              		.cfi_def_cfa_offset 8
+ 256              		.cfi_offset 4, -8
+ 257              		.cfi_offset 14, -4
  440:Generated_Source\PSoC4/Step_Timer.c ****     #if(Step_Timer_UsingFixedFunction)
  441:Generated_Source\PSoC4/Step_Timer.c ****         return ((uint32)CY_GET_REG16(Step_Timer_PERIOD_LSB_PTR));
  442:Generated_Source\PSoC4/Step_Timer.c ****     #else
  443:Generated_Source\PSoC4/Step_Timer.c ****         return (CY_GET_REG24(Step_Timer_PERIOD_LSB_PTR));
- 334              		.loc 1 443 0
- 335 0002 0248     		ldr	r0, .L32
- 336 0004 FFF7FEFF 		bl	CyGetReg24
- 337              	.LVL10:
+ 258              		.loc 1 443 0
+ 259 0002 0248     		ldr	r0, .L22
+ 260 0004 FFF7FEFF 		bl	CyGetReg24
+ 261              	.LVL9:
  444:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (Step_Timer_UsingFixedFunction) */
  445:Generated_Source\PSoC4/Step_Timer.c **** }
- 338              		.loc 1 445 0
- 339              		@ sp needed
- 340 0008 10BD     		pop	{r4, pc}
- 341              	.L33:
- 342 000a C046     		.align	2
- 343              	.L32:
- 344 000c 24000F40 		.word	1074724900
- 345              		.cfi_endproc
- 346              	.LFE13:
- 347              		.size	Step_Timer_ReadPeriod, .-Step_Timer_ReadPeriod
- 348              		.section	.text.Step_Timer_WriteCompare,"ax",%progbits
- 349              		.align	2
- 350              		.global	Step_Timer_WriteCompare
- 351              		.code	16
- 352              		.thumb_func
- 353              		.type	Step_Timer_WriteCompare, %function
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 15
-
-
- 354              	Step_Timer_WriteCompare:
- 355              	.LFB14:
+ 262              		.loc 1 445 0
+ 263              		@ sp needed
+ 264 0008 10BD     		pop	{r4, pc}
+ 265              	.L23:
+ 266 000a C046     		.align	2
+ 267              	.L22:
+ 268 000c 24000F40 		.word	1074724900
+ 269              		.cfi_endproc
+ 270              	.LFE11:
+ 271              		.size	Step_Timer_ReadPeriod, .-Step_Timer_ReadPeriod
+ 272              		.section	.text.Step_Timer_WriteCompare,"ax",%progbits
+ 273              		.align	2
+ 274              		.global	Step_Timer_WriteCompare
+ 275              		.code	16
+ 276              		.thumb_func
+ 277              		.type	Step_Timer_WriteCompare, %function
+ 278              	Step_Timer_WriteCompare:
+ 279              	.LFB12:
  446:Generated_Source\PSoC4/Step_Timer.c **** 
  447:Generated_Source\PSoC4/Step_Timer.c **** 
  448:Generated_Source\PSoC4/Step_Timer.c **** #if (!Step_Timer_UsingFixedFunction)
@@ -860,53 +778,53 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  460:Generated_Source\PSoC4/Step_Timer.c **** *
  461:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  462:Generated_Source\PSoC4/Step_Timer.c **** *  void
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 14
+
+
  463:Generated_Source\PSoC4/Step_Timer.c **** *
  464:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  465:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_WriteCompare(uint32 compare) \
  466:Generated_Source\PSoC4/Step_Timer.c ****                                    
  467:Generated_Source\PSoC4/Step_Timer.c **** {
- 356              		.loc 1 467 0
- 357              		.cfi_startproc
- 358              		@ args = 0, pretend = 0, frame = 0
- 359              		@ frame_needed = 0, uses_anonymous_args = 0
- 360              	.LVL11:
- 361 0000 10B5     		push	{r4, lr}
- 362              		.cfi_def_cfa_offset 8
- 363              		.cfi_offset 4, -8
- 364              		.cfi_offset 14, -4
- 365 0002 0100     		movs	r1, r0
+ 280              		.loc 1 467 0
+ 281              		.cfi_startproc
+ 282              		@ args = 0, pretend = 0, frame = 0
+ 283              		@ frame_needed = 0, uses_anonymous_args = 0
+ 284              	.LVL10:
+ 285 0000 10B5     		push	{r4, lr}
+ 286              		.cfi_def_cfa_offset 8
+ 287              		.cfi_offset 4, -8
+ 288              		.cfi_offset 14, -4
+ 289 0002 0100     		movs	r1, r0
  468:Generated_Source\PSoC4/Step_Timer.c ****     #if(Step_Timer_UsingFixedFunction)
  469:Generated_Source\PSoC4/Step_Timer.c ****         CY_SET_REG16(Step_Timer_COMPARE_LSB_PTR, (uint16)compare);
  470:Generated_Source\PSoC4/Step_Timer.c ****     #else
  471:Generated_Source\PSoC4/Step_Timer.c ****         CY_SET_REG24(Step_Timer_COMPARE_LSB_PTR, compare);
- 366              		.loc 1 471 0
- 367 0004 0148     		ldr	r0, .L35
- 368              	.LVL12:
- 369 0006 FFF7FEFF 		bl	CySetReg24
- 370              	.LVL13:
+ 290              		.loc 1 471 0
+ 291 0004 0148     		ldr	r0, .L25
+ 292              	.LVL11:
+ 293 0006 FFF7FEFF 		bl	CySetReg24
+ 294              	.LVL12:
  472:Generated_Source\PSoC4/Step_Timer.c ****     #endif /* (Step_Timer_UsingFixedFunction) */
  473:Generated_Source\PSoC4/Step_Timer.c **** }
- 371              		.loc 1 473 0
- 372              		@ sp needed
- 373 000a 10BD     		pop	{r4, pc}
- 374              	.L36:
- 375              		.align	2
- 376              	.L35:
- 377 000c 34000F40 		.word	1074724916
- 378              		.cfi_endproc
- 379              	.LFE14:
- 380              		.size	Step_Timer_WriteCompare, .-Step_Timer_WriteCompare
- 381              		.section	.text.Step_Timer_ReadCompare,"ax",%progbits
- 382              		.align	2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 16
-
-
- 383              		.global	Step_Timer_ReadCompare
- 384              		.code	16
- 385              		.thumb_func
- 386              		.type	Step_Timer_ReadCompare, %function
- 387              	Step_Timer_ReadCompare:
- 388              	.LFB15:
+ 295              		.loc 1 473 0
+ 296              		@ sp needed
+ 297 000a 10BD     		pop	{r4, pc}
+ 298              	.L26:
+ 299              		.align	2
+ 300              	.L25:
+ 301 000c 34000F40 		.word	1074724916
+ 302              		.cfi_endproc
+ 303              	.LFE12:
+ 304              		.size	Step_Timer_WriteCompare, .-Step_Timer_WriteCompare
+ 305              		.section	.text.Step_Timer_ReadCompare,"ax",%progbits
+ 306              		.align	2
+ 307              		.global	Step_Timer_ReadCompare
+ 308              		.code	16
+ 309              		.thumb_func
+ 310              		.type	Step_Timer_ReadCompare, %function
+ 311              	Step_Timer_ReadCompare:
+ 312              	.LFB13:
  474:Generated_Source\PSoC4/Step_Timer.c **** 
  475:Generated_Source\PSoC4/Step_Timer.c **** 
  476:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
@@ -920,47 +838,47 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  484:Generated_Source\PSoC4/Step_Timer.c **** *
  485:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  486:Generated_Source\PSoC4/Step_Timer.c **** *  (uint32) Present compare value.
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 15
+
+
  487:Generated_Source\PSoC4/Step_Timer.c **** *
  488:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  489:Generated_Source\PSoC4/Step_Timer.c **** uint32 Step_Timer_ReadCompare(void) 
  490:Generated_Source\PSoC4/Step_Timer.c **** {
- 389              		.loc 1 490 0
- 390              		.cfi_startproc
- 391              		@ args = 0, pretend = 0, frame = 0
- 392              		@ frame_needed = 0, uses_anonymous_args = 0
- 393 0000 10B5     		push	{r4, lr}
- 394              		.cfi_def_cfa_offset 8
- 395              		.cfi_offset 4, -8
- 396              		.cfi_offset 14, -4
+ 313              		.loc 1 490 0
+ 314              		.cfi_startproc
+ 315              		@ args = 0, pretend = 0, frame = 0
+ 316              		@ frame_needed = 0, uses_anonymous_args = 0
+ 317 0000 10B5     		push	{r4, lr}
+ 318              		.cfi_def_cfa_offset 8
+ 319              		.cfi_offset 4, -8
+ 320              		.cfi_offset 14, -4
  491:Generated_Source\PSoC4/Step_Timer.c ****     return (CY_GET_REG24(Step_Timer_COMPARE_LSB_PTR));
- 397              		.loc 1 491 0
- 398 0002 0248     		ldr	r0, .L38
- 399 0004 FFF7FEFF 		bl	CyGetReg24
- 400              	.LVL14:
+ 321              		.loc 1 491 0
+ 322 0002 0248     		ldr	r0, .L28
+ 323 0004 FFF7FEFF 		bl	CyGetReg24
+ 324              	.LVL13:
  492:Generated_Source\PSoC4/Step_Timer.c **** }
- 401              		.loc 1 492 0
- 402              		@ sp needed
- 403 0008 10BD     		pop	{r4, pc}
- 404              	.L39:
- 405 000a C046     		.align	2
- 406              	.L38:
- 407 000c 34000F40 		.word	1074724916
- 408              		.cfi_endproc
- 409              	.LFE15:
- 410              		.size	Step_Timer_ReadCompare, .-Step_Timer_ReadCompare
- 411              		.section	.text.Step_Timer_ClearFIFO,"ax",%progbits
- 412              		.align	2
- 413              		.global	Step_Timer_ClearFIFO
- 414              		.code	16
- 415              		.thumb_func
- 416              		.type	Step_Timer_ClearFIFO, %function
- 417              	Step_Timer_ClearFIFO:
- 418              	.LFB16:
+ 325              		.loc 1 492 0
+ 326              		@ sp needed
+ 327 0008 10BD     		pop	{r4, pc}
+ 328              	.L29:
+ 329 000a C046     		.align	2
+ 330              	.L28:
+ 331 000c 34000F40 		.word	1074724916
+ 332              		.cfi_endproc
+ 333              	.LFE13:
+ 334              		.size	Step_Timer_ReadCompare, .-Step_Timer_ReadCompare
+ 335              		.section	.text.Step_Timer_ClearFIFO,"ax",%progbits
+ 336              		.align	2
+ 337              		.global	Step_Timer_ClearFIFO
+ 338              		.code	16
+ 339              		.thumb_func
+ 340              		.type	Step_Timer_ClearFIFO, %function
+ 341              	Step_Timer_ClearFIFO:
+ 342              	.LFB14:
  493:Generated_Source\PSoC4/Step_Timer.c **** 
  494:Generated_Source\PSoC4/Step_Timer.c **** 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 17
-
-
  495:Generated_Source\PSoC4/Step_Timer.c **** #if (Step_Timer_COMPARE_MODE_SOFTWARE)
  496:Generated_Source\PSoC4/Step_Timer.c **** /*******************************************************************************
  497:Generated_Source\PSoC4/Step_Timer.c **** * Function Name: Step_Timer_SetCompareMode
@@ -980,6 +898,9 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  511:Generated_Source\PSoC4/Step_Timer.c ****     /* Clear the compare mode bits in the control register */
  512:Generated_Source\PSoC4/Step_Timer.c ****     Step_Timer_CONTROL &= ((uint8)(~Step_Timer_CTRL_CMPMODE_MASK));
  513:Generated_Source\PSoC4/Step_Timer.c ****     
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 16
+
+
  514:Generated_Source\PSoC4/Step_Timer.c ****     /* Write the new setting */
  515:Generated_Source\PSoC4/Step_Timer.c ****     Step_Timer_CONTROL |= compareMode;
  516:Generated_Source\PSoC4/Step_Timer.c **** }
@@ -1018,9 +939,6 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  549:Generated_Source\PSoC4/Step_Timer.c **** *   This function clears all capture data from the capture FIFO
  550:Generated_Source\PSoC4/Step_Timer.c **** *
  551:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 18
-
-
  552:Generated_Source\PSoC4/Step_Timer.c **** *  void:
  553:Generated_Source\PSoC4/Step_Timer.c **** *
  554:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
@@ -1029,1505 +947,1383 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 1
  557:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  558:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_ClearFIFO(void) 
  559:Generated_Source\PSoC4/Step_Timer.c **** {
- 419              		.loc 1 559 0
- 420              		.cfi_startproc
- 421              		@ args = 0, pretend = 0, frame = 0
- 422              		@ frame_needed = 0, uses_anonymous_args = 0
- 423 0000 10B5     		push	{r4, lr}
- 424              		.cfi_def_cfa_offset 8
- 425              		.cfi_offset 4, -8
- 426              		.cfi_offset 14, -4
+ 343              		.loc 1 559 0
+ 344              		.cfi_startproc
+ 345              		@ args = 0, pretend = 0, frame = 0
+ 346              		@ frame_needed = 0, uses_anonymous_args = 0
+ 347 0000 10B5     		push	{r4, lr}
+ 348              		.cfi_def_cfa_offset 8
+ 349              		.cfi_offset 4, -8
+ 350              		.cfi_offset 14, -4
  560:Generated_Source\PSoC4/Step_Timer.c **** 
  561:Generated_Source\PSoC4/Step_Timer.c ****     while(0u != (Step_Timer_ReadStatusRegister() & Step_Timer_STATUS_FIFONEMP))
- 427              		.loc 1 561 0
- 428 0002 01E0     		b	.L41
- 429              	.L42:
+ 351              		.loc 1 561 0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 17
+
+
+ 352 0002 01E0     		b	.L31
+ 353              	.L32:
  562:Generated_Source\PSoC4/Step_Timer.c ****     {
  563:Generated_Source\PSoC4/Step_Timer.c ****         (void)Step_Timer_ReadCapture();
- 430              		.loc 1 563 0
- 431 0004 FFF7FEFF 		bl	Step_Timer_ReadCapture
- 432              	.LVL15:
- 433              	.L41:
+ 354              		.loc 1 563 0
+ 355 0004 FFF7FEFF 		bl	Step_Timer_ReadCapture
+ 356              	.LVL14:
+ 357              	.L31:
  561:Generated_Source\PSoC4/Step_Timer.c ****     {
- 434              		.loc 1 561 0
- 435 0008 FFF7FEFF 		bl	Step_Timer_ReadStatusRegister
- 436              	.LVL16:
- 437 000c 4306     		lsls	r3, r0, #25
- 438 000e F9D4     		bmi	.L42
+ 358              		.loc 1 561 0
+ 359 0008 FFF7FEFF 		bl	Step_Timer_ReadStatusRegister
+ 360              	.LVL15:
+ 361 000c 4306     		lsls	r3, r0, #25
+ 362 000e F9D4     		bmi	.L32
  564:Generated_Source\PSoC4/Step_Timer.c ****     }
  565:Generated_Source\PSoC4/Step_Timer.c **** 
  566:Generated_Source\PSoC4/Step_Timer.c **** }
- 439              		.loc 1 566 0
- 440              		@ sp needed
- 441 0010 10BD     		pop	{r4, pc}
- 442              		.cfi_endproc
- 443              	.LFE16:
- 444              		.size	Step_Timer_ClearFIFO, .-Step_Timer_ClearFIFO
- 445 0012 C046     		.section	.text.Step_Timer_Init,"ax",%progbits
- 446              		.align	2
- 447              		.global	Step_Timer_Init
- 448              		.code	16
- 449              		.thumb_func
- 450              		.type	Step_Timer_Init, %function
- 451              	Step_Timer_Init:
- 452              	.LFB1:
+ 363              		.loc 1 566 0
+ 364              		@ sp needed
+ 365 0010 10BD     		pop	{r4, pc}
+ 366              		.cfi_endproc
+ 367              	.LFE14:
+ 368              		.size	Step_Timer_ClearFIFO, .-Step_Timer_ClearFIFO
+ 369 0012 C046     		.section	.text.Step_Timer_Init,"ax",%progbits
+ 370              		.align	2
+ 371              		.global	Step_Timer_Init
+ 372              		.code	16
+ 373              		.thumb_func
+ 374              		.type	Step_Timer_Init, %function
+ 375              	Step_Timer_Init:
+ 376              	.LFB1:
   38:Generated_Source\PSoC4/Step_Timer.c ****         #if (!Step_Timer_UsingFixedFunction && !Step_Timer_ControlRegRemoved)
- 453              		.loc 1 38 0
- 454              		.cfi_startproc
- 455              		@ args = 0, pretend = 0, frame = 0
- 456              		@ frame_needed = 0, uses_anonymous_args = 0
- 457 0000 10B5     		push	{r4, lr}
- 458              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 19
-
-
- 459              		.cfi_offset 4, -8
- 460              		.cfi_offset 14, -4
-  79:Generated_Source\PSoC4/Step_Timer.c ****             Step_Timer_CONTROL = ctrl | Step_Timer_DEFAULT_COMPARE_MODE;
- 461              		.loc 1 79 0
- 462 0002 1349     		ldr	r1, .L44
- 463 0004 0B78     		ldrb	r3, [r1]
- 464 0006 0722     		movs	r2, #7
- 465 0008 9343     		bics	r3, r2
- 466              	.LVL17:
-  80:Generated_Source\PSoC4/Step_Timer.c ****             
- 467              		.loc 1 80 0
- 468 000a 0122     		movs	r2, #1
- 469 000c 1343     		orrs	r3, r2
- 470              	.LVL18:
- 471 000e DBB2     		uxtb	r3, r3
- 472 0010 0B70     		strb	r3, [r1]
-  83:Generated_Source\PSoC4/Step_Timer.c ****             
- 473              		.loc 1 83 0
- 474 0012 0B78     		ldrb	r3, [r1]
- 475 0014 0322     		movs	r2, #3
- 476 0016 9343     		bics	r3, r2
- 477              	.LVL19:
-  88:Generated_Source\PSoC4/Step_Timer.c ****             #endif /* 0 != Step_Timer_CAPTURE_MODE */ 
- 478              		.loc 1 88 0
- 479 0018 0B70     		strb	r3, [r1]
+ 377              		.loc 1 38 0
+ 378              		.cfi_startproc
+ 379              		@ args = 0, pretend = 0, frame = 0
+ 380              		@ frame_needed = 0, uses_anonymous_args = 0
+ 381 0000 10B5     		push	{r4, lr}
+ 382              		.cfi_def_cfa_offset 8
+ 383              		.cfi_offset 4, -8
+ 384              		.cfi_offset 14, -4
   96:Generated_Source\PSoC4/Step_Timer.c ****         #endif /* (!Step_Timer_UsingFixedFunction) */
- 480              		.loc 1 96 0
- 481 001a FFF7FEFF 		bl	Step_Timer_ClearFIFO
- 482              	.LVL20:
+ 385              		.loc 1 96 0
+ 386 0002 FFF7FEFF 		bl	Step_Timer_ClearFIFO
+ 387              	.LVL16:
  100:Generated_Source\PSoC4/Step_Timer.c ****         #if (!(Step_Timer_UsingFixedFunction && (CY_PSOC5A)))
- 483              		.loc 1 100 0
- 484 001e 0D48     		ldr	r0, .L44+4
- 485 0020 FFF7FEFF 		bl	Step_Timer_WritePeriod
- 486              	.LVL21:
+ 388              		.loc 1 100 0
+ 389 0006 0C48     		ldr	r0, .L34
+ 390 0008 FFF7FEFF 		bl	Step_Timer_WritePeriod
+ 391              	.LVL17:
  102:Generated_Source\PSoC4/Step_Timer.c ****         #endif /* (!(Step_Timer_UsingFixedFunction && (CY_PSOC5A))) */
- 487              		.loc 1 102 0
- 488 0024 0020     		movs	r0, #0
- 489 0026 FFF7FEFF 		bl	Step_Timer_WriteCounter
- 490              	.LVL22:
+ 392              		.loc 1 102 0
+ 393 000c 0020     		movs	r0, #0
+ 394 000e FFF7FEFF 		bl	Step_Timer_WriteCounter
+ 395              	.LVL18:
  104:Generated_Source\PSoC4/Step_Timer.c ****         
- 491              		.loc 1 104 0
- 492 002a 0020     		movs	r0, #0
- 493 002c FFF7FEFF 		bl	Step_Timer_SetInterruptMode
- 494              	.LVL23:
+ 396              		.loc 1 104 0
+ 397 0012 0020     		movs	r0, #0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 18
+
+
+ 398 0014 FFF7FEFF 		bl	Step_Timer_SetInterruptMode
+ 399              	.LVL19:
  108:Generated_Source\PSoC4/Step_Timer.c ****             /* Set the compare value (only available to non-fixed function implementation */
- 495              		.loc 1 108 0
- 496 0030 FFF7FEFF 		bl	Step_Timer_ReadStatusRegister
- 497              	.LVL24:
+ 400              		.loc 1 108 0
+ 401 0018 FFF7FEFF 		bl	Step_Timer_ReadStatusRegister
+ 402              	.LVL20:
  110:Generated_Source\PSoC4/Step_Timer.c ****             /* Use the interrupt output of the status register for IRQ output */
- 498              		.loc 1 110 0
- 499 0034 6420     		movs	r0, #100
- 500 0036 FFF7FEFF 		bl	Step_Timer_WriteCompare
- 501              	.LVL25:
+ 403              		.loc 1 110 0
+ 404 001c 0020     		movs	r0, #0
+ 405 001e FFF7FEFF 		bl	Step_Timer_WriteCompare
+ 406              	.LVL21:
  115:Generated_Source\PSoC4/Step_Timer.c ****             
- 502              		.loc 1 115 0
- 503 003a FFF7FEFF 		bl	CyEnterCriticalSection
- 504              	.LVL26:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 20
-
-
+ 407              		.loc 1 115 0
+ 408 0022 FFF7FEFF 		bl	CyEnterCriticalSection
+ 409              	.LVL22:
  117:Generated_Source\PSoC4/Step_Timer.c ****             
- 505              		.loc 1 117 0
- 506 003e 064A     		ldr	r2, .L44+8
- 507 0040 1178     		ldrb	r1, [r2]
- 508 0042 1023     		movs	r3, #16
- 509 0044 0B43     		orrs	r3, r1
- 510 0046 DBB2     		uxtb	r3, r3
- 511 0048 1370     		strb	r3, [r2]
+ 410              		.loc 1 117 0
+ 411 0026 054A     		ldr	r2, .L34+4
+ 412 0028 1178     		ldrb	r1, [r2]
+ 413 002a 1023     		movs	r3, #16
+ 414 002c 0B43     		orrs	r3, r1
+ 415 002e DBB2     		uxtb	r3, r3
+ 416 0030 1370     		strb	r3, [r2]
  120:Generated_Source\PSoC4/Step_Timer.c ****             
- 512              		.loc 1 120 0
- 513 004a FFF7FEFF 		bl	CyExitCriticalSection
- 514              	.LVL27:
+ 417              		.loc 1 120 0
+ 418 0032 FFF7FEFF 		bl	CyExitCriticalSection
+ 419              	.LVL23:
  123:Generated_Source\PSoC4/Step_Timer.c **** 
- 515              		.loc 1 123 0
- 516              		@ sp needed
- 517 004e 10BD     		pop	{r4, pc}
- 518              	.L45:
- 519              		.align	2
- 520              	.L44:
- 521 0050 74000F40 		.word	1074724980
- 522 0054 FEFFFF00 		.word	16777214
- 523 0058 96000F40 		.word	1074725014
- 524              		.cfi_endproc
- 525              	.LFE1:
- 526              		.size	Step_Timer_Init, .-Step_Timer_Init
- 527              		.section	.text.Step_Timer_Start,"ax",%progbits
- 528              		.align	2
- 529              		.global	Step_Timer_Start
- 530              		.code	16
- 531              		.thumb_func
- 532              		.type	Step_Timer_Start, %function
- 533              	Step_Timer_Start:
- 534              	.LFB3:
+ 420              		.loc 1 123 0
+ 421              		@ sp needed
+ 422 0036 10BD     		pop	{r4, pc}
+ 423              	.L35:
+ 424              		.align	2
+ 425              	.L34:
+ 426 0038 FEFFFF00 		.word	16777214
+ 427 003c 96000F40 		.word	1074725014
+ 428              		.cfi_endproc
+ 429              	.LFE1:
+ 430              		.size	Step_Timer_Init, .-Step_Timer_Init
+ 431              		.section	.text.Step_Timer_Start,"ax",%progbits
+ 432              		.align	2
+ 433              		.global	Step_Timer_Start
+ 434              		.code	16
+ 435              		.thumb_func
+ 436              		.type	Step_Timer_Start, %function
+ 437              	Step_Timer_Start:
+ 438              	.LFB3:
  179:Generated_Source\PSoC4/Step_Timer.c ****     if(Step_Timer_initVar == 0u)
- 535              		.loc 1 179 0
- 536              		.cfi_startproc
- 537              		@ args = 0, pretend = 0, frame = 0
- 538              		@ frame_needed = 0, uses_anonymous_args = 0
- 539 0000 10B5     		push	{r4, lr}
- 540              		.cfi_def_cfa_offset 8
- 541              		.cfi_offset 4, -8
- 542              		.cfi_offset 14, -4
+ 439              		.loc 1 179 0
+ 440              		.cfi_startproc
+ 441              		@ args = 0, pretend = 0, frame = 0
+ 442              		@ frame_needed = 0, uses_anonymous_args = 0
+ 443 0000 10B5     		push	{r4, lr}
+ 444              		.cfi_def_cfa_offset 8
+ 445              		.cfi_offset 4, -8
+ 446              		.cfi_offset 14, -4
  180:Generated_Source\PSoC4/Step_Timer.c ****     {
- 543              		.loc 1 180 0
- 544 0002 064B     		ldr	r3, .L48
- 545 0004 1B78     		ldrb	r3, [r3]
- 546 0006 002B     		cmp	r3, #0
- 547 0008 04D1     		bne	.L47
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 19
+
+
+ 447              		.loc 1 180 0
+ 448 0002 054B     		ldr	r3, .L38
+ 449 0004 1B78     		ldrb	r3, [r3]
+ 450 0006 002B     		cmp	r3, #0
+ 451 0008 04D1     		bne	.L36
  182:Generated_Source\PSoC4/Step_Timer.c ****         
- 548              		.loc 1 182 0
- 549 000a FFF7FEFF 		bl	Step_Timer_Init
- 550              	.LVL28:
+ 452              		.loc 1 182 0
+ 453 000a FFF7FEFF 		bl	Step_Timer_Init
+ 454              	.LVL24:
  184:Generated_Source\PSoC4/Step_Timer.c ****     }
- 551              		.loc 1 184 0
- 552 000e 0122     		movs	r2, #1
- 553 0010 024B     		ldr	r3, .L48
- 554 0012 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 21
-
-
- 555              	.L47:
- 188:Generated_Source\PSoC4/Step_Timer.c **** }
- 556              		.loc 1 188 0
- 557 0014 FFF7FEFF 		bl	Step_Timer_Enable
- 558              	.LVL29:
+ 455              		.loc 1 184 0
+ 456 000e 0122     		movs	r2, #1
+ 457 0010 014B     		ldr	r3, .L38
+ 458 0012 1A70     		strb	r2, [r3]
+ 459              	.L36:
  189:Generated_Source\PSoC4/Step_Timer.c **** 
- 559              		.loc 1 189 0
- 560              		@ sp needed
- 561 0018 10BD     		pop	{r4, pc}
- 562              	.L49:
- 563 001a C046     		.align	2
- 564              	.L48:
- 565 001c 00000000 		.word	.LANCHOR0
- 566              		.cfi_endproc
- 567              	.LFE3:
- 568              		.size	Step_Timer_Start, .-Step_Timer_Start
- 569              		.global	Step_Timer_initVar
- 570              		.bss
- 571              		.set	.LANCHOR0,. + 0
- 572              		.type	Step_Timer_initVar, %object
- 573              		.size	Step_Timer_initVar, 1
- 574              	Step_Timer_initVar:
- 575 0000 00       		.space	1
- 576              		.text
- 577              	.Letext0:
- 578              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
- 579              		.file 3 "Generated_Source\\PSoC4\\CyLib.h"
- 580              		.section	.debug_info,"",%progbits
- 581              	.Ldebug_info0:
- 582 0000 0F040000 		.4byte	0x40f
- 583 0004 0400     		.2byte	0x4
- 584 0006 00000000 		.4byte	.Ldebug_abbrev0
- 585 000a 04       		.byte	0x4
- 586 000b 01       		.uleb128 0x1
- 587 000c A1020000 		.4byte	.LASF45
- 588 0010 0C       		.byte	0xc
- 589 0011 06020000 		.4byte	.LASF46
- 590 0015 4B000000 		.4byte	.LASF47
- 591 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 592 001d 00000000 		.4byte	0
- 593 0021 00000000 		.4byte	.Ldebug_line0
- 594 0025 02       		.uleb128 0x2
- 595 0026 01       		.byte	0x1
- 596 0027 06       		.byte	0x6
- 597 0028 B6030000 		.4byte	.LASF0
- 598 002c 02       		.uleb128 0x2
- 599 002d 01       		.byte	0x1
- 600 002e 08       		.byte	0x8
- 601 002f 30010000 		.4byte	.LASF1
- 602 0033 02       		.uleb128 0x2
- 603 0034 02       		.byte	0x2
- 604 0035 05       		.byte	0x5
- 605 0036 82030000 		.4byte	.LASF2
- 606 003a 02       		.uleb128 0x2
- 607 003b 02       		.byte	0x2
- 608 003c 07       		.byte	0x7
- 609 003d 38000000 		.4byte	.LASF3
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 22
+ 460              		.loc 1 189 0
+ 461              		@ sp needed
+ 462 0014 10BD     		pop	{r4, pc}
+ 463              	.L39:
+ 464 0016 C046     		.align	2
+ 465              	.L38:
+ 466 0018 00000000 		.word	.LANCHOR0
+ 467              		.cfi_endproc
+ 468              	.LFE3:
+ 469              		.size	Step_Timer_Start, .-Step_Timer_Start
+ 470              		.global	Step_Timer_initVar
+ 471              		.bss
+ 472              		.set	.LANCHOR0,. + 0
+ 473              		.type	Step_Timer_initVar, %object
+ 474              		.size	Step_Timer_initVar, 1
+ 475              	Step_Timer_initVar:
+ 476 0000 00       		.space	1
+ 477              		.text
+ 478              	.Letext0:
+ 479              		.file 2 "Generated_Source\\PSoC4\\cytypes.h"
+ 480              		.file 3 "Generated_Source\\PSoC4\\CyLib.h"
+ 481              		.section	.debug_info,"",%progbits
+ 482              	.Ldebug_info0:
+ 483 0000 BB030000 		.4byte	0x3bb
+ 484 0004 0400     		.2byte	0x4
+ 485 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 486 000a 04       		.byte	0x4
+ 487 000b 01       		.uleb128 0x1
+ 488 000c 6F020000 		.4byte	.LASF39
+ 489 0010 0C       		.byte	0xc
+ 490 0011 D4010000 		.4byte	.LASF40
+ 491 0015 4B000000 		.4byte	.LASF41
+ 492 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 493 001d 00000000 		.4byte	0
+ 494 0021 00000000 		.4byte	.Ldebug_line0
+ 495 0025 02       		.uleb128 0x2
+ 496 0026 01       		.byte	0x1
+ 497 0027 06       		.byte	0x6
+ 498 0028 6A030000 		.4byte	.LASF0
+ 499 002c 02       		.uleb128 0x2
+ 500 002d 01       		.byte	0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 20
 
 
- 610 0041 02       		.uleb128 0x2
- 611 0042 04       		.byte	0x4
- 612 0043 05       		.byte	0x5
- 613 0044 A1030000 		.4byte	.LASF4
- 614 0048 02       		.uleb128 0x2
- 615 0049 04       		.byte	0x4
- 616 004a 07       		.byte	0x7
- 617 004b 81010000 		.4byte	.LASF5
- 618 004f 02       		.uleb128 0x2
- 619 0050 08       		.byte	0x8
- 620 0051 05       		.byte	0x5
- 621 0052 3D030000 		.4byte	.LASF6
- 622 0056 02       		.uleb128 0x2
- 623 0057 08       		.byte	0x8
- 624 0058 07       		.byte	0x7
- 625 0059 19010000 		.4byte	.LASF7
- 626 005d 03       		.uleb128 0x3
- 627 005e 04       		.byte	0x4
- 628 005f 05       		.byte	0x5
- 629 0060 696E7400 		.ascii	"int\000"
- 630 0064 02       		.uleb128 0x2
- 631 0065 04       		.byte	0x4
- 632 0066 07       		.byte	0x7
- 633 0067 A6000000 		.4byte	.LASF8
- 634 006b 04       		.uleb128 0x4
- 635 006c 93010000 		.4byte	.LASF9
- 636 0070 02       		.byte	0x2
- 637 0071 FC01     		.2byte	0x1fc
- 638 0073 2C000000 		.4byte	0x2c
- 639 0077 04       		.uleb128 0x4
- 640 0078 2A020000 		.4byte	.LASF10
- 641 007c 02       		.byte	0x2
- 642 007d FE01     		.2byte	0x1fe
- 643 007f 48000000 		.4byte	0x48
- 644 0083 02       		.uleb128 0x2
- 645 0084 04       		.byte	0x4
- 646 0085 04       		.byte	0x4
- 647 0086 0B010000 		.4byte	.LASF11
- 648 008a 02       		.uleb128 0x2
- 649 008b 08       		.byte	0x8
- 650 008c 04       		.byte	0x4
- 651 008d D8010000 		.4byte	.LASF12
- 652 0091 02       		.uleb128 0x2
- 653 0092 01       		.byte	0x1
- 654 0093 08       		.byte	0x8
- 655 0094 5B030000 		.4byte	.LASF13
- 656 0098 04       		.uleb128 0x4
- 657 0099 5E010000 		.4byte	.LASF14
- 658 009d 02       		.byte	0x2
- 659 009e A602     		.2byte	0x2a6
- 660 00a0 A4000000 		.4byte	0xa4
- 661 00a4 05       		.uleb128 0x5
- 662 00a5 6B000000 		.4byte	0x6b
- 663 00a9 04       		.uleb128 0x4
- 664 00aa 00000000 		.4byte	.LASF15
- 665 00ae 02       		.byte	0x2
- 666 00af A802     		.2byte	0x2a8
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 23
+ 501 002e 08       		.byte	0x8
+ 502 002f 11010000 		.4byte	.LASF1
+ 503 0033 02       		.uleb128 0x2
+ 504 0034 02       		.byte	0x2
+ 505 0035 05       		.byte	0x5
+ 506 0036 4B030000 		.4byte	.LASF2
+ 507 003a 02       		.uleb128 0x2
+ 508 003b 02       		.byte	0x2
+ 509 003c 07       		.byte	0x7
+ 510 003d 38000000 		.4byte	.LASF3
+ 511 0041 02       		.uleb128 0x2
+ 512 0042 04       		.byte	0x4
+ 513 0043 05       		.byte	0x5
+ 514 0044 55030000 		.4byte	.LASF4
+ 515 0048 02       		.uleb128 0x2
+ 516 0049 04       		.byte	0x4
+ 517 004a 07       		.byte	0x7
+ 518 004b 57010000 		.4byte	.LASF5
+ 519 004f 02       		.uleb128 0x2
+ 520 0050 08       		.byte	0x8
+ 521 0051 05       		.byte	0x5
+ 522 0052 06030000 		.4byte	.LASF6
+ 523 0056 02       		.uleb128 0x2
+ 524 0057 08       		.byte	0x8
+ 525 0058 07       		.byte	0x7
+ 526 0059 FA000000 		.4byte	.LASF7
+ 527 005d 03       		.uleb128 0x3
+ 528 005e 04       		.byte	0x4
+ 529 005f 05       		.byte	0x5
+ 530 0060 696E7400 		.ascii	"int\000"
+ 531 0064 02       		.uleb128 0x2
+ 532 0065 04       		.byte	0x4
+ 533 0066 07       		.byte	0x7
+ 534 0067 A6000000 		.4byte	.LASF8
+ 535 006b 04       		.uleb128 0x4
+ 536 006c 69010000 		.4byte	.LASF9
+ 537 0070 02       		.byte	0x2
+ 538 0071 FC01     		.2byte	0x1fc
+ 539 0073 2C000000 		.4byte	0x2c
+ 540 0077 04       		.uleb128 0x4
+ 541 0078 F8010000 		.4byte	.LASF10
+ 542 007c 02       		.byte	0x2
+ 543 007d FE01     		.2byte	0x1fe
+ 544 007f 48000000 		.4byte	0x48
+ 545 0083 02       		.uleb128 0x2
+ 546 0084 04       		.byte	0x4
+ 547 0085 04       		.byte	0x4
+ 548 0086 EC000000 		.4byte	.LASF11
+ 549 008a 02       		.uleb128 0x2
+ 550 008b 08       		.byte	0x8
+ 551 008c 04       		.byte	0x4
+ 552 008d A6010000 		.4byte	.LASF12
+ 553 0091 02       		.uleb128 0x2
+ 554 0092 01       		.byte	0x1
+ 555 0093 08       		.byte	0x8
+ 556 0094 24030000 		.4byte	.LASF13
+ 557 0098 04       		.uleb128 0x4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 21
 
 
- 667 00b1 B5000000 		.4byte	0xb5
- 668 00b5 05       		.uleb128 0x5
- 669 00b6 77000000 		.4byte	0x77
- 670 00ba 02       		.uleb128 0x2
- 671 00bb 08       		.byte	0x8
- 672 00bc 04       		.byte	0x4
- 673 00bd AA030000 		.4byte	.LASF16
- 674 00c1 02       		.uleb128 0x2
- 675 00c2 04       		.byte	0x4
- 676 00c3 07       		.byte	0x7
- 677 00c4 34030000 		.4byte	.LASF17
- 678 00c8 06       		.uleb128 0x6
- 679 00c9 8F020000 		.4byte	.LASF18
- 680 00cd 01       		.byte	0x1
- 681 00ce 8F       		.byte	0x8f
- 682 00cf 00000000 		.4byte	.LFB2
- 683 00d3 14000000 		.4byte	.LFE2-.LFB2
- 684 00d7 01       		.uleb128 0x1
- 685 00d8 9C       		.byte	0x9c
- 686 00d9 06       		.uleb128 0x6
- 687 00da 4B030000 		.4byte	.LASF19
- 688 00de 01       		.byte	0x1
- 689 00df D0       		.byte	0xd0
- 690 00e0 00000000 		.4byte	.LFB4
- 691 00e4 10000000 		.4byte	.LFE4-.LFB4
- 692 00e8 01       		.uleb128 0x1
- 693 00e9 9C       		.byte	0x9c
- 694 00ea 07       		.uleb128 0x7
- 695 00eb CA030000 		.4byte	.LASF22
- 696 00ef 01       		.byte	0x1
- 697 00f0 ED       		.byte	0xed
- 698 00f1 00000000 		.4byte	.LFB5
- 699 00f5 0C000000 		.4byte	.LFE5-.LFB5
- 700 00f9 01       		.uleb128 0x1
- 701 00fa 9C       		.byte	0x9c
- 702 00fb 0D010000 		.4byte	0x10d
- 703 00ff 08       		.uleb128 0x8
- 704 0100 A1010000 		.4byte	.LASF24
- 705 0104 01       		.byte	0x1
- 706 0105 ED       		.byte	0xed
- 707 0106 6B000000 		.4byte	0x6b
- 708 010a 01       		.uleb128 0x1
- 709 010b 50       		.byte	0x50
- 710 010c 00       		.byte	0
- 711 010d 09       		.uleb128 0x9
- 712 010e 63010000 		.4byte	.LASF20
- 713 0112 01       		.byte	0x1
- 714 0113 0501     		.2byte	0x105
- 715 0115 6B000000 		.4byte	0x6b
- 716 0119 00000000 		.4byte	.LFB6
- 717 011d 0C000000 		.4byte	.LFE6-.LFB6
- 718 0121 01       		.uleb128 0x1
- 719 0122 9C       		.byte	0x9c
- 720 0123 09       		.uleb128 0x9
- 721 0124 D5000000 		.4byte	.LASF21
- 722 0128 01       		.byte	0x1
- 723 0129 1B01     		.2byte	0x11b
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 24
+ 558 0099 34010000 		.4byte	.LASF14
+ 559 009d 02       		.byte	0x2
+ 560 009e A602     		.2byte	0x2a6
+ 561 00a0 A4000000 		.4byte	0xa4
+ 562 00a4 05       		.uleb128 0x5
+ 563 00a5 6B000000 		.4byte	0x6b
+ 564 00a9 04       		.uleb128 0x4
+ 565 00aa 00000000 		.4byte	.LASF15
+ 566 00ae 02       		.byte	0x2
+ 567 00af A802     		.2byte	0x2a8
+ 568 00b1 B5000000 		.4byte	0xb5
+ 569 00b5 05       		.uleb128 0x5
+ 570 00b6 77000000 		.4byte	0x77
+ 571 00ba 02       		.uleb128 0x2
+ 572 00bb 08       		.byte	0x8
+ 573 00bc 04       		.byte	0x4
+ 574 00bd 5E030000 		.4byte	.LASF16
+ 575 00c1 02       		.uleb128 0x2
+ 576 00c2 04       		.byte	0x4
+ 577 00c3 07       		.byte	0x7
+ 578 00c4 FD020000 		.4byte	.LASF17
+ 579 00c8 06       		.uleb128 0x6
+ 580 00c9 5D020000 		.4byte	.LASF18
+ 581 00cd 01       		.byte	0x1
+ 582 00ce 8F       		.byte	0x8f
+ 583 00cf 00000000 		.4byte	.LFB2
+ 584 00d3 02000000 		.4byte	.LFE2-.LFB2
+ 585 00d7 01       		.uleb128 0x1
+ 586 00d8 9C       		.byte	0x9c
+ 587 00d9 06       		.uleb128 0x6
+ 588 00da 14030000 		.4byte	.LASF19
+ 589 00de 01       		.byte	0x1
+ 590 00df D0       		.byte	0xd0
+ 591 00e0 00000000 		.4byte	.LFB4
+ 592 00e4 02000000 		.4byte	.LFE4-.LFB4
+ 593 00e8 01       		.uleb128 0x1
+ 594 00e9 9C       		.byte	0x9c
+ 595 00ea 07       		.uleb128 0x7
+ 596 00eb 7E030000 		.4byte	.LASF20
+ 597 00ef 01       		.byte	0x1
+ 598 00f0 ED       		.byte	0xed
+ 599 00f1 00000000 		.4byte	.LFB5
+ 600 00f5 0C000000 		.4byte	.LFE5-.LFB5
+ 601 00f9 01       		.uleb128 0x1
+ 602 00fa 9C       		.byte	0x9c
+ 603 00fb 0D010000 		.4byte	0x10d
+ 604 00ff 08       		.uleb128 0x8
+ 605 0100 6F010000 		.4byte	.LASF22
+ 606 0104 01       		.byte	0x1
+ 607 0105 ED       		.byte	0xed
+ 608 0106 6B000000 		.4byte	0x6b
+ 609 010a 01       		.uleb128 0x1
+ 610 010b 50       		.byte	0x50
+ 611 010c 00       		.byte	0
+ 612 010d 09       		.uleb128 0x9
+ 613 010e 39010000 		.4byte	.LASF42
+ 614 0112 01       		.byte	0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 22
 
 
- 724 012b 6B000000 		.4byte	0x6b
- 725 012f 00000000 		.4byte	.LFB7
- 726 0133 0C000000 		.4byte	.LFE7-.LFB7
- 727 0137 01       		.uleb128 0x1
- 728 0138 9C       		.byte	0x9c
- 729 0139 0A       		.uleb128 0xa
- 730 013a 3E010000 		.4byte	.LASF23
- 731 013e 01       		.byte	0x1
- 732 013f 3001     		.2byte	0x130
- 733 0141 00000000 		.4byte	.LFB8
- 734 0145 0C000000 		.4byte	.LFE8-.LFB8
- 735 0149 01       		.uleb128 0x1
- 736 014a 9C       		.byte	0x9c
- 737 014b 5E010000 		.4byte	0x15e
- 738 014f 0B       		.uleb128 0xb
- 739 0150 99010000 		.4byte	.LASF25
- 740 0154 01       		.byte	0x1
- 741 0155 3001     		.2byte	0x130
- 742 0157 6B000000 		.4byte	0x6b
- 743 015b 01       		.uleb128 0x1
- 744 015c 50       		.byte	0x50
- 745 015d 00       		.byte	0
- 746 015e 0A       		.uleb128 0xa
- 747 015f 19000000 		.4byte	.LASF26
- 748 0163 01       		.byte	0x1
- 749 0164 4601     		.2byte	0x146
- 750 0166 00000000 		.4byte	.LFB9
- 751 016a 10000000 		.4byte	.LFE9-.LFB9
- 752 016e 01       		.uleb128 0x1
- 753 016f 9C       		.byte	0x9c
- 754 0170 9F010000 		.4byte	0x19f
- 755 0174 0C       		.uleb128 0xc
- 756 0175 11010000 		.4byte	.LASF27
- 757 0179 01       		.byte	0x1
- 758 017a 4601     		.2byte	0x146
- 759 017c 77000000 		.4byte	0x77
- 760 0180 00000000 		.4byte	.LLST0
- 761 0184 0D       		.uleb128 0xd
- 762 0185 0A000000 		.4byte	.LVL4
- 763 0189 E4030000 		.4byte	0x3e4
- 764 018d 0E       		.uleb128 0xe
- 765 018e 01       		.uleb128 0x1
- 766 018f 50       		.byte	0x50
- 767 0190 05       		.uleb128 0x5
- 768 0191 0C       		.byte	0xc
- 769 0192 04000F40 		.4byte	0x400f0004
- 770 0196 0E       		.uleb128 0xe
- 771 0197 01       		.uleb128 0x1
- 772 0198 51       		.byte	0x51
- 773 0199 03       		.uleb128 0x3
- 774 019a F3       		.byte	0xf3
- 775 019b 01       		.uleb128 0x1
- 776 019c 50       		.byte	0x50
- 777 019d 00       		.byte	0
- 778 019e 00       		.byte	0
- 779 019f 0F       		.uleb128 0xf
- 780 01a0 48020000 		.4byte	.LASF28
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 25
+ 615 0113 0501     		.2byte	0x105
+ 616 0115 6B000000 		.4byte	0x6b
+ 617 0119 00000000 		.4byte	.LFB6
+ 618 011d 0C000000 		.4byte	.LFE6-.LFB6
+ 619 0121 01       		.uleb128 0x1
+ 620 0122 9C       		.byte	0x9c
+ 621 0123 0A       		.uleb128 0xa
+ 622 0124 19000000 		.4byte	.LASF21
+ 623 0128 01       		.byte	0x1
+ 624 0129 4601     		.2byte	0x146
+ 625 012b 00000000 		.4byte	.LFB7
+ 626 012f 10000000 		.4byte	.LFE7-.LFB7
+ 627 0133 01       		.uleb128 0x1
+ 628 0134 9C       		.byte	0x9c
+ 629 0135 64010000 		.4byte	0x164
+ 630 0139 0B       		.uleb128 0xb
+ 631 013a F2000000 		.4byte	.LASF23
+ 632 013e 01       		.byte	0x1
+ 633 013f 4601     		.2byte	0x146
+ 634 0141 77000000 		.4byte	0x77
+ 635 0145 00000000 		.4byte	.LLST0
+ 636 0149 0C       		.uleb128 0xc
+ 637 014a 0A000000 		.4byte	.LVL3
+ 638 014e 90030000 		.4byte	0x390
+ 639 0152 0D       		.uleb128 0xd
+ 640 0153 01       		.uleb128 0x1
+ 641 0154 50       		.byte	0x50
+ 642 0155 05       		.uleb128 0x5
+ 643 0156 0C       		.byte	0xc
+ 644 0157 04000F40 		.4byte	0x400f0004
+ 645 015b 0D       		.uleb128 0xd
+ 646 015c 01       		.uleb128 0x1
+ 647 015d 51       		.byte	0x51
+ 648 015e 03       		.uleb128 0x3
+ 649 015f F3       		.byte	0xf3
+ 650 0160 01       		.uleb128 0x1
+ 651 0161 50       		.byte	0x50
+ 652 0162 00       		.byte	0
+ 653 0163 00       		.byte	0
+ 654 0164 0E       		.uleb128 0xe
+ 655 0165 16020000 		.4byte	.LASF24
+ 656 0169 01       		.byte	0x1
+ 657 016a 6501     		.2byte	0x165
+ 658 016c 77000000 		.4byte	0x77
+ 659 0170 00000000 		.4byte	.LFB8
+ 660 0174 18000000 		.4byte	.LFE8-.LFB8
+ 661 0178 01       		.uleb128 0x1
+ 662 0179 9C       		.byte	0x9c
+ 663 017a 92010000 		.4byte	0x192
+ 664 017e 0C       		.uleb128 0xc
+ 665 017f 0C000000 		.4byte	.LVL4
+ 666 0183 9C030000 		.4byte	0x39c
+ 667 0187 0D       		.uleb128 0xd
+ 668 0188 01       		.uleb128 0x1
+ 669 0189 50       		.byte	0x50
+ 670 018a 05       		.uleb128 0x5
+ 671 018b 0C       		.byte	0xc
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 23
 
 
- 781 01a4 01       		.byte	0x1
- 782 01a5 6501     		.2byte	0x165
- 783 01a7 77000000 		.4byte	0x77
- 784 01ab 00000000 		.4byte	.LFB10
- 785 01af 18000000 		.4byte	.LFE10-.LFB10
- 786 01b3 01       		.uleb128 0x1
- 787 01b4 9C       		.byte	0x9c
- 788 01b5 CD010000 		.4byte	0x1cd
- 789 01b9 0D       		.uleb128 0xd
- 790 01ba 0C000000 		.4byte	.LVL5
- 791 01be F0030000 		.4byte	0x3f0
- 792 01c2 0E       		.uleb128 0xe
- 793 01c3 01       		.uleb128 0x1
- 794 01c4 50       		.byte	0x50
- 795 01c5 05       		.uleb128 0x5
- 796 01c6 0C       		.byte	0xc
- 797 01c7 44000F40 		.4byte	0x400f0044
- 798 01cb 00       		.byte	0
- 799 01cc 00       		.byte	0
- 800 01cd 0F       		.uleb128 0xf
- 801 01ce F4000000 		.4byte	.LASF29
- 802 01d2 01       		.byte	0x1
- 803 01d3 8601     		.2byte	0x186
- 804 01d5 77000000 		.4byte	0x77
- 805 01d9 00000000 		.4byte	.LFB11
- 806 01dd 10000000 		.4byte	.LFE11-.LFB11
- 807 01e1 01       		.uleb128 0x1
- 808 01e2 9C       		.byte	0x9c
- 809 01e3 FB010000 		.4byte	0x1fb
- 810 01e7 0D       		.uleb128 0xd
- 811 01e8 08000000 		.4byte	.LVL6
- 812 01ec F0030000 		.4byte	0x3f0
- 813 01f0 0E       		.uleb128 0xe
- 814 01f1 01       		.uleb128 0x1
- 815 01f2 50       		.byte	0x50
- 816 01f3 05       		.uleb128 0x5
- 817 01f4 0C       		.byte	0xc
- 818 01f5 44000F40 		.4byte	0x400f0044
- 819 01f9 00       		.byte	0
- 820 01fa 00       		.byte	0
- 821 01fb 0A       		.uleb128 0xa
- 822 01fc 60030000 		.4byte	.LASF30
- 823 0200 01       		.byte	0x1
- 824 0201 9F01     		.2byte	0x19f
- 825 0203 00000000 		.4byte	.LFB12
- 826 0207 10000000 		.4byte	.LFE12-.LFB12
- 827 020b 01       		.uleb128 0x1
- 828 020c 9C       		.byte	0x9c
- 829 020d 3C020000 		.4byte	0x23c
- 830 0211 0C       		.uleb128 0xc
- 831 0212 31000000 		.4byte	.LASF31
- 832 0216 01       		.byte	0x1
- 833 0217 9F01     		.2byte	0x19f
- 834 0219 77000000 		.4byte	0x77
- 835 021d 2C000000 		.4byte	.LLST1
- 836 0221 0D       		.uleb128 0xd
- 837 0222 0A000000 		.4byte	.LVL9
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 26
+ 672 018c 44000F40 		.4byte	0x400f0044
+ 673 0190 00       		.byte	0
+ 674 0191 00       		.byte	0
+ 675 0192 0E       		.uleb128 0xe
+ 676 0193 D5000000 		.4byte	.LASF25
+ 677 0197 01       		.byte	0x1
+ 678 0198 8601     		.2byte	0x186
+ 679 019a 77000000 		.4byte	0x77
+ 680 019e 00000000 		.4byte	.LFB9
+ 681 01a2 10000000 		.4byte	.LFE9-.LFB9
+ 682 01a6 01       		.uleb128 0x1
+ 683 01a7 9C       		.byte	0x9c
+ 684 01a8 C0010000 		.4byte	0x1c0
+ 685 01ac 0C       		.uleb128 0xc
+ 686 01ad 08000000 		.4byte	.LVL5
+ 687 01b1 9C030000 		.4byte	0x39c
+ 688 01b5 0D       		.uleb128 0xd
+ 689 01b6 01       		.uleb128 0x1
+ 690 01b7 50       		.byte	0x50
+ 691 01b8 05       		.uleb128 0x5
+ 692 01b9 0C       		.byte	0xc
+ 693 01ba 44000F40 		.4byte	0x400f0044
+ 694 01be 00       		.byte	0
+ 695 01bf 00       		.byte	0
+ 696 01c0 0A       		.uleb128 0xa
+ 697 01c1 29030000 		.4byte	.LASF26
+ 698 01c5 01       		.byte	0x1
+ 699 01c6 9F01     		.2byte	0x19f
+ 700 01c8 00000000 		.4byte	.LFB10
+ 701 01cc 10000000 		.4byte	.LFE10-.LFB10
+ 702 01d0 01       		.uleb128 0x1
+ 703 01d1 9C       		.byte	0x9c
+ 704 01d2 01020000 		.4byte	0x201
+ 705 01d6 0B       		.uleb128 0xb
+ 706 01d7 31000000 		.4byte	.LASF27
+ 707 01db 01       		.byte	0x1
+ 708 01dc 9F01     		.2byte	0x19f
+ 709 01de 77000000 		.4byte	0x77
+ 710 01e2 2C000000 		.4byte	.LLST1
+ 711 01e6 0C       		.uleb128 0xc
+ 712 01e7 0A000000 		.4byte	.LVL8
+ 713 01eb 90030000 		.4byte	0x390
+ 714 01ef 0D       		.uleb128 0xd
+ 715 01f0 01       		.uleb128 0x1
+ 716 01f1 50       		.byte	0x50
+ 717 01f2 05       		.uleb128 0x5
+ 718 01f3 0C       		.byte	0xc
+ 719 01f4 24000F40 		.4byte	0x400f0024
+ 720 01f8 0D       		.uleb128 0xd
+ 721 01f9 01       		.uleb128 0x1
+ 722 01fa 51       		.byte	0x51
+ 723 01fb 03       		.uleb128 0x3
+ 724 01fc F3       		.byte	0xf3
+ 725 01fd 01       		.uleb128 0x1
+ 726 01fe 50       		.byte	0x50
+ 727 01ff 00       		.byte	0
+ 728 0200 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 24
 
 
- 838 0226 E4030000 		.4byte	0x3e4
- 839 022a 0E       		.uleb128 0xe
- 840 022b 01       		.uleb128 0x1
- 841 022c 50       		.byte	0x50
- 842 022d 05       		.uleb128 0x5
- 843 022e 0C       		.byte	0xc
- 844 022f 24000F40 		.4byte	0x400f0024
- 845 0233 0E       		.uleb128 0xe
- 846 0234 01       		.uleb128 0x1
- 847 0235 51       		.byte	0x51
- 848 0236 03       		.uleb128 0x3
- 849 0237 F3       		.byte	0xf3
- 850 0238 01       		.uleb128 0x1
- 851 0239 50       		.byte	0x50
- 852 023a 00       		.byte	0
- 853 023b 00       		.byte	0
- 854 023c 0F       		.uleb128 0xf
- 855 023d F0010000 		.4byte	.LASF32
- 856 0241 01       		.byte	0x1
- 857 0242 B601     		.2byte	0x1b6
- 858 0244 77000000 		.4byte	0x77
- 859 0248 00000000 		.4byte	.LFB13
- 860 024c 10000000 		.4byte	.LFE13-.LFB13
- 861 0250 01       		.uleb128 0x1
- 862 0251 9C       		.byte	0x9c
- 863 0252 6A020000 		.4byte	0x26a
- 864 0256 0D       		.uleb128 0xd
- 865 0257 08000000 		.4byte	.LVL10
- 866 025b F0030000 		.4byte	0x3f0
- 867 025f 0E       		.uleb128 0xe
- 868 0260 01       		.uleb128 0x1
- 869 0261 50       		.byte	0x50
- 870 0262 05       		.uleb128 0x5
- 871 0263 0C       		.byte	0xc
- 872 0264 24000F40 		.4byte	0x400f0024
- 873 0268 00       		.byte	0
- 874 0269 00       		.byte	0
- 875 026a 0A       		.uleb128 0xa
- 876 026b C0010000 		.4byte	.LASF33
- 877 026f 01       		.byte	0x1
- 878 0270 D101     		.2byte	0x1d1
- 879 0272 00000000 		.4byte	.LFB14
- 880 0276 10000000 		.4byte	.LFE14-.LFB14
- 881 027a 01       		.uleb128 0x1
- 882 027b 9C       		.byte	0x9c
- 883 027c AB020000 		.4byte	0x2ab
- 884 0280 0C       		.uleb128 0xc
- 885 0281 C2030000 		.4byte	.LASF34
- 886 0285 01       		.byte	0x1
- 887 0286 D101     		.2byte	0x1d1
- 888 0288 77000000 		.4byte	0x77
- 889 028c 58000000 		.4byte	.LLST2
- 890 0290 0D       		.uleb128 0xd
- 891 0291 0A000000 		.4byte	.LVL13
- 892 0295 E4030000 		.4byte	0x3e4
- 893 0299 0E       		.uleb128 0xe
- 894 029a 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 27
+ 729 0201 0E       		.uleb128 0xe
+ 730 0202 BE010000 		.4byte	.LASF28
+ 731 0206 01       		.byte	0x1
+ 732 0207 B601     		.2byte	0x1b6
+ 733 0209 77000000 		.4byte	0x77
+ 734 020d 00000000 		.4byte	.LFB11
+ 735 0211 10000000 		.4byte	.LFE11-.LFB11
+ 736 0215 01       		.uleb128 0x1
+ 737 0216 9C       		.byte	0x9c
+ 738 0217 2F020000 		.4byte	0x22f
+ 739 021b 0C       		.uleb128 0xc
+ 740 021c 08000000 		.4byte	.LVL9
+ 741 0220 9C030000 		.4byte	0x39c
+ 742 0224 0D       		.uleb128 0xd
+ 743 0225 01       		.uleb128 0x1
+ 744 0226 50       		.byte	0x50
+ 745 0227 05       		.uleb128 0x5
+ 746 0228 0C       		.byte	0xc
+ 747 0229 24000F40 		.4byte	0x400f0024
+ 748 022d 00       		.byte	0
+ 749 022e 00       		.byte	0
+ 750 022f 0A       		.uleb128 0xa
+ 751 0230 8E010000 		.4byte	.LASF29
+ 752 0234 01       		.byte	0x1
+ 753 0235 D101     		.2byte	0x1d1
+ 754 0237 00000000 		.4byte	.LFB12
+ 755 023b 10000000 		.4byte	.LFE12-.LFB12
+ 756 023f 01       		.uleb128 0x1
+ 757 0240 9C       		.byte	0x9c
+ 758 0241 70020000 		.4byte	0x270
+ 759 0245 0B       		.uleb128 0xb
+ 760 0246 76030000 		.4byte	.LASF30
+ 761 024a 01       		.byte	0x1
+ 762 024b D101     		.2byte	0x1d1
+ 763 024d 77000000 		.4byte	0x77
+ 764 0251 58000000 		.4byte	.LLST2
+ 765 0255 0C       		.uleb128 0xc
+ 766 0256 0A000000 		.4byte	.LVL12
+ 767 025a 90030000 		.4byte	0x390
+ 768 025e 0D       		.uleb128 0xd
+ 769 025f 01       		.uleb128 0x1
+ 770 0260 50       		.byte	0x50
+ 771 0261 05       		.uleb128 0x5
+ 772 0262 0C       		.byte	0xc
+ 773 0263 34000F40 		.4byte	0x400f0034
+ 774 0267 0D       		.uleb128 0xd
+ 775 0268 01       		.uleb128 0x1
+ 776 0269 51       		.byte	0x51
+ 777 026a 03       		.uleb128 0x3
+ 778 026b F3       		.byte	0xf3
+ 779 026c 01       		.uleb128 0x1
+ 780 026d 50       		.byte	0x50
+ 781 026e 00       		.byte	0
+ 782 026f 00       		.byte	0
+ 783 0270 0E       		.uleb128 0xe
+ 784 0271 B3000000 		.4byte	.LASF31
+ 785 0275 01       		.byte	0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 25
 
 
- 895 029b 50       		.byte	0x50
- 896 029c 05       		.uleb128 0x5
- 897 029d 0C       		.byte	0xc
- 898 029e 34000F40 		.4byte	0x400f0034
- 899 02a2 0E       		.uleb128 0xe
- 900 02a3 01       		.uleb128 0x1
- 901 02a4 51       		.byte	0x51
- 902 02a5 03       		.uleb128 0x3
- 903 02a6 F3       		.byte	0xf3
- 904 02a7 01       		.uleb128 0x1
- 905 02a8 50       		.byte	0x50
- 906 02a9 00       		.byte	0
- 907 02aa 00       		.byte	0
- 908 02ab 0F       		.uleb128 0xf
- 909 02ac B3000000 		.4byte	.LASF35
- 910 02b0 01       		.byte	0x1
- 911 02b1 E901     		.2byte	0x1e9
- 912 02b3 77000000 		.4byte	0x77
- 913 02b7 00000000 		.4byte	.LFB15
- 914 02bb 10000000 		.4byte	.LFE15-.LFB15
- 915 02bf 01       		.uleb128 0x1
- 916 02c0 9C       		.byte	0x9c
- 917 02c1 D9020000 		.4byte	0x2d9
- 918 02c5 0D       		.uleb128 0xd
- 919 02c6 08000000 		.4byte	.LVL14
- 920 02ca F0030000 		.4byte	0x3f0
- 921 02ce 0E       		.uleb128 0xe
- 922 02cf 01       		.uleb128 0x1
- 923 02d0 50       		.byte	0x50
- 924 02d1 05       		.uleb128 0x5
- 925 02d2 0C       		.byte	0xc
- 926 02d3 34000F40 		.4byte	0x400f0034
- 927 02d7 00       		.byte	0
- 928 02d8 00       		.byte	0
- 929 02d9 0A       		.uleb128 0xa
- 930 02da 8C030000 		.4byte	.LASF36
- 931 02de 01       		.byte	0x1
- 932 02df 2E02     		.2byte	0x22e
- 933 02e1 00000000 		.4byte	.LFB16
- 934 02e5 12000000 		.4byte	.LFE16-.LFB16
- 935 02e9 01       		.uleb128 0x1
- 936 02ea 9C       		.byte	0x9c
- 937 02eb 02030000 		.4byte	0x302
- 938 02ef 10       		.uleb128 0x10
- 939 02f0 08000000 		.4byte	.LVL15
- 940 02f4 CD010000 		.4byte	0x1cd
- 941 02f8 10       		.uleb128 0x10
- 942 02f9 0C000000 		.4byte	.LVL16
- 943 02fd 0D010000 		.4byte	0x10d
- 944 0301 00       		.byte	0
- 945 0302 07       		.uleb128 0x7
- 946 0303 B0010000 		.4byte	.LASF37
- 947 0307 01       		.byte	0x1
- 948 0308 25       		.byte	0x25
- 949 0309 00000000 		.4byte	.LFB1
- 950 030d 5C000000 		.4byte	.LFE1-.LFB1
- 951 0311 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 28
+ 786 0276 E901     		.2byte	0x1e9
+ 787 0278 77000000 		.4byte	0x77
+ 788 027c 00000000 		.4byte	.LFB13
+ 789 0280 10000000 		.4byte	.LFE13-.LFB13
+ 790 0284 01       		.uleb128 0x1
+ 791 0285 9C       		.byte	0x9c
+ 792 0286 9E020000 		.4byte	0x29e
+ 793 028a 0C       		.uleb128 0xc
+ 794 028b 08000000 		.4byte	.LVL13
+ 795 028f 9C030000 		.4byte	0x39c
+ 796 0293 0D       		.uleb128 0xd
+ 797 0294 01       		.uleb128 0x1
+ 798 0295 50       		.byte	0x50
+ 799 0296 05       		.uleb128 0x5
+ 800 0297 0C       		.byte	0xc
+ 801 0298 34000F40 		.4byte	0x400f0034
+ 802 029c 00       		.byte	0
+ 803 029d 00       		.byte	0
+ 804 029e 0A       		.uleb128 0xa
+ 805 029f 1F010000 		.4byte	.LASF32
+ 806 02a3 01       		.byte	0x1
+ 807 02a4 2E02     		.2byte	0x22e
+ 808 02a6 00000000 		.4byte	.LFB14
+ 809 02aa 12000000 		.4byte	.LFE14-.LFB14
+ 810 02ae 01       		.uleb128 0x1
+ 811 02af 9C       		.byte	0x9c
+ 812 02b0 C7020000 		.4byte	0x2c7
+ 813 02b4 0F       		.uleb128 0xf
+ 814 02b5 08000000 		.4byte	.LVL14
+ 815 02b9 92010000 		.4byte	0x192
+ 816 02bd 0F       		.uleb128 0xf
+ 817 02be 0C000000 		.4byte	.LVL15
+ 818 02c2 0D010000 		.4byte	0x10d
+ 819 02c6 00       		.byte	0
+ 820 02c7 07       		.uleb128 0x7
+ 821 02c8 7E010000 		.4byte	.LASF33
+ 822 02cc 01       		.byte	0x1
+ 823 02cd 25       		.byte	0x25
+ 824 02ce 00000000 		.4byte	.LFB1
+ 825 02d2 40000000 		.4byte	.LFE1-.LFB1
+ 826 02d6 01       		.uleb128 0x1
+ 827 02d7 9C       		.byte	0x9c
+ 828 02d8 60030000 		.4byte	0x360
+ 829 02dc 10       		.uleb128 0x10
+ 830 02dd 2D020000 		.4byte	.LASF43
+ 831 02e1 01       		.byte	0x1
+ 832 02e2 2D       		.byte	0x2d
+ 833 02e3 6B000000 		.4byte	0x6b
+ 834 02e7 84000000 		.4byte	.LLST3
+ 835 02eb 0F       		.uleb128 0xf
+ 836 02ec 06000000 		.4byte	.LVL16
+ 837 02f0 9E020000 		.4byte	0x29e
+ 838 02f4 11       		.uleb128 0x11
+ 839 02f5 0C000000 		.4byte	.LVL17
+ 840 02f9 C0010000 		.4byte	0x1c0
+ 841 02fd 0B030000 		.4byte	0x30b
+ 842 0301 0D       		.uleb128 0xd
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 26
 
 
- 952 0312 9C       		.byte	0x9c
- 953 0313 AB030000 		.4byte	0x3ab
- 954 0317 11       		.uleb128 0x11
- 955 0318 2F030000 		.4byte	.LASF38
- 956 031c 01       		.byte	0x1
- 957 031d 28       		.byte	0x28
- 958 031e 6B000000 		.4byte	0x6b
- 959 0322 84000000 		.4byte	.LLST3
- 960 0326 11       		.uleb128 0x11
- 961 0327 5F020000 		.4byte	.LASF39
- 962 032b 01       		.byte	0x1
- 963 032c 2D       		.byte	0x2d
- 964 032d 6B000000 		.4byte	0x6b
- 965 0331 A2000000 		.4byte	.LLST4
- 966 0335 10       		.uleb128 0x10
- 967 0336 1E000000 		.4byte	.LVL20
- 968 033a D9020000 		.4byte	0x2d9
- 969 033e 12       		.uleb128 0x12
- 970 033f 24000000 		.4byte	.LVL21
- 971 0343 FB010000 		.4byte	0x1fb
- 972 0347 55030000 		.4byte	0x355
- 973 034b 0E       		.uleb128 0xe
- 974 034c 01       		.uleb128 0x1
- 975 034d 50       		.byte	0x50
- 976 034e 05       		.uleb128 0x5
- 977 034f 0C       		.byte	0xc
- 978 0350 FEFFFF00 		.4byte	0xfffffe
- 979 0354 00       		.byte	0
- 980 0355 12       		.uleb128 0x12
- 981 0356 2A000000 		.4byte	.LVL22
- 982 035a 5E010000 		.4byte	0x15e
- 983 035e 68030000 		.4byte	0x368
- 984 0362 0E       		.uleb128 0xe
- 985 0363 01       		.uleb128 0x1
- 986 0364 50       		.byte	0x50
- 987 0365 01       		.uleb128 0x1
- 988 0366 30       		.byte	0x30
- 989 0367 00       		.byte	0
- 990 0368 12       		.uleb128 0x12
- 991 0369 30000000 		.4byte	.LVL23
- 992 036d EA000000 		.4byte	0xea
- 993 0371 7B030000 		.4byte	0x37b
- 994 0375 0E       		.uleb128 0xe
- 995 0376 01       		.uleb128 0x1
- 996 0377 50       		.byte	0x50
- 997 0378 01       		.uleb128 0x1
- 998 0379 30       		.byte	0x30
- 999 037a 00       		.byte	0
- 1000 037b 10       		.uleb128 0x10
- 1001 037c 34000000 		.4byte	.LVL24
- 1002 0380 0D010000 		.4byte	0x10d
- 1003 0384 12       		.uleb128 0x12
- 1004 0385 3A000000 		.4byte	.LVL25
- 1005 0389 6A020000 		.4byte	0x26a
- 1006 038d 98030000 		.4byte	0x398
- 1007 0391 0E       		.uleb128 0xe
- 1008 0392 01       		.uleb128 0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 29
+ 843 0302 01       		.uleb128 0x1
+ 844 0303 50       		.byte	0x50
+ 845 0304 05       		.uleb128 0x5
+ 846 0305 0C       		.byte	0xc
+ 847 0306 FEFFFF00 		.4byte	0xfffffe
+ 848 030a 00       		.byte	0
+ 849 030b 11       		.uleb128 0x11
+ 850 030c 12000000 		.4byte	.LVL18
+ 851 0310 23010000 		.4byte	0x123
+ 852 0314 1E030000 		.4byte	0x31e
+ 853 0318 0D       		.uleb128 0xd
+ 854 0319 01       		.uleb128 0x1
+ 855 031a 50       		.byte	0x50
+ 856 031b 01       		.uleb128 0x1
+ 857 031c 30       		.byte	0x30
+ 858 031d 00       		.byte	0
+ 859 031e 11       		.uleb128 0x11
+ 860 031f 18000000 		.4byte	.LVL19
+ 861 0323 EA000000 		.4byte	0xea
+ 862 0327 31030000 		.4byte	0x331
+ 863 032b 0D       		.uleb128 0xd
+ 864 032c 01       		.uleb128 0x1
+ 865 032d 50       		.byte	0x50
+ 866 032e 01       		.uleb128 0x1
+ 867 032f 30       		.byte	0x30
+ 868 0330 00       		.byte	0
+ 869 0331 0F       		.uleb128 0xf
+ 870 0332 1C000000 		.4byte	.LVL20
+ 871 0336 0D010000 		.4byte	0x10d
+ 872 033a 11       		.uleb128 0x11
+ 873 033b 22000000 		.4byte	.LVL21
+ 874 033f 2F020000 		.4byte	0x22f
+ 875 0343 4D030000 		.4byte	0x34d
+ 876 0347 0D       		.uleb128 0xd
+ 877 0348 01       		.uleb128 0x1
+ 878 0349 50       		.byte	0x50
+ 879 034a 01       		.uleb128 0x1
+ 880 034b 30       		.byte	0x30
+ 881 034c 00       		.byte	0
+ 882 034d 0F       		.uleb128 0xf
+ 883 034e 26000000 		.4byte	.LVL22
+ 884 0352 A8030000 		.4byte	0x3a8
+ 885 0356 0F       		.uleb128 0xf
+ 886 0357 36000000 		.4byte	.LVL23
+ 887 035b B3030000 		.4byte	0x3b3
+ 888 035f 00       		.byte	0
+ 889 0360 07       		.uleb128 0x7
+ 890 0361 AD010000 		.4byte	.LASF34
+ 891 0365 01       		.byte	0x1
+ 892 0366 B2       		.byte	0xb2
+ 893 0367 00000000 		.4byte	.LFB3
+ 894 036b 1C000000 		.4byte	.LFE3-.LFB3
+ 895 036f 01       		.uleb128 0x1
+ 896 0370 9C       		.byte	0x9c
+ 897 0371 7F030000 		.4byte	0x37f
+ 898 0375 0F       		.uleb128 0xf
+ 899 0376 0E000000 		.4byte	.LVL24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 27
 
 
- 1009 0393 50       		.byte	0x50
- 1010 0394 02       		.uleb128 0x2
- 1011 0395 08       		.byte	0x8
- 1012 0396 64       		.byte	0x64
- 1013 0397 00       		.byte	0
- 1014 0398 10       		.uleb128 0x10
- 1015 0399 3E000000 		.4byte	.LVL26
- 1016 039d FC030000 		.4byte	0x3fc
- 1017 03a1 10       		.uleb128 0x10
- 1018 03a2 4E000000 		.4byte	.LVL27
- 1019 03a6 07040000 		.4byte	0x407
- 1020 03aa 00       		.byte	0
- 1021 03ab 07       		.uleb128 0x7
- 1022 03ac DF010000 		.4byte	.LASF40
- 1023 03b0 01       		.byte	0x1
- 1024 03b1 B2       		.byte	0xb2
- 1025 03b2 00000000 		.4byte	.LFB3
- 1026 03b6 20000000 		.4byte	.LFE3-.LFB3
- 1027 03ba 01       		.uleb128 0x1
- 1028 03bb 9C       		.byte	0x9c
- 1029 03bc D3030000 		.4byte	0x3d3
- 1030 03c0 10       		.uleb128 0x10
- 1031 03c1 0E000000 		.4byte	.LVL28
- 1032 03c5 02030000 		.4byte	0x302
- 1033 03c9 10       		.uleb128 0x10
- 1034 03ca 18000000 		.4byte	.LVL29
- 1035 03ce C8000000 		.4byte	0xc8
- 1036 03d2 00       		.byte	0
- 1037 03d3 13       		.uleb128 0x13
- 1038 03d4 06000000 		.4byte	.LASF48
- 1039 03d8 01       		.byte	0x1
- 1040 03d9 15       		.byte	0x15
- 1041 03da 6B000000 		.4byte	0x6b
- 1042 03de 05       		.uleb128 0x5
- 1043 03df 03       		.byte	0x3
- 1044 03e0 00000000 		.4byte	Step_Timer_initVar
- 1045 03e4 14       		.uleb128 0x14
- 1046 03e5 77030000 		.4byte	.LASF41
- 1047 03e9 77030000 		.4byte	.LASF41
- 1048 03ed 02       		.byte	0x2
- 1049 03ee 3F02     		.2byte	0x23f
- 1050 03f0 14       		.uleb128 0x14
- 1051 03f1 CA000000 		.4byte	.LASF42
- 1052 03f5 CA000000 		.4byte	.LASF42
- 1053 03f9 02       		.byte	0x2
- 1054 03fa 4302     		.2byte	0x243
- 1055 03fc 15       		.uleb128 0x15
- 1056 03fd 31020000 		.4byte	.LASF43
- 1057 0401 31020000 		.4byte	.LASF43
- 1058 0405 03       		.byte	0x3
- 1059 0406 F8       		.byte	0xf8
- 1060 0407 15       		.uleb128 0x15
- 1061 0408 79020000 		.4byte	.LASF44
- 1062 040c 79020000 		.4byte	.LASF44
- 1063 0410 03       		.byte	0x3
- 1064 0411 F9       		.byte	0xf9
- 1065 0412 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 30
+ 900 037a C7020000 		.4byte	0x2c7
+ 901 037e 00       		.byte	0
+ 902 037f 12       		.uleb128 0x12
+ 903 0380 06000000 		.4byte	.LASF44
+ 904 0384 01       		.byte	0x1
+ 905 0385 15       		.byte	0x15
+ 906 0386 6B000000 		.4byte	0x6b
+ 907 038a 05       		.uleb128 0x5
+ 908 038b 03       		.byte	0x3
+ 909 038c 00000000 		.4byte	Step_Timer_initVar
+ 910 0390 13       		.uleb128 0x13
+ 911 0391 40030000 		.4byte	.LASF35
+ 912 0395 40030000 		.4byte	.LASF35
+ 913 0399 02       		.byte	0x2
+ 914 039a 3F02     		.2byte	0x23f
+ 915 039c 13       		.uleb128 0x13
+ 916 039d CA000000 		.4byte	.LASF36
+ 917 03a1 CA000000 		.4byte	.LASF36
+ 918 03a5 02       		.byte	0x2
+ 919 03a6 4302     		.2byte	0x243
+ 920 03a8 14       		.uleb128 0x14
+ 921 03a9 FF010000 		.4byte	.LASF37
+ 922 03ad FF010000 		.4byte	.LASF37
+ 923 03b1 03       		.byte	0x3
+ 924 03b2 F8       		.byte	0xf8
+ 925 03b3 14       		.uleb128 0x14
+ 926 03b4 47020000 		.4byte	.LASF38
+ 927 03b8 47020000 		.4byte	.LASF38
+ 928 03bc 03       		.byte	0x3
+ 929 03bd F9       		.byte	0xf9
+ 930 03be 00       		.byte	0
+ 931              		.section	.debug_abbrev,"",%progbits
+ 932              	.Ldebug_abbrev0:
+ 933 0000 01       		.uleb128 0x1
+ 934 0001 11       		.uleb128 0x11
+ 935 0002 01       		.byte	0x1
+ 936 0003 25       		.uleb128 0x25
+ 937 0004 0E       		.uleb128 0xe
+ 938 0005 13       		.uleb128 0x13
+ 939 0006 0B       		.uleb128 0xb
+ 940 0007 03       		.uleb128 0x3
+ 941 0008 0E       		.uleb128 0xe
+ 942 0009 1B       		.uleb128 0x1b
+ 943 000a 0E       		.uleb128 0xe
+ 944 000b 55       		.uleb128 0x55
+ 945 000c 17       		.uleb128 0x17
+ 946 000d 11       		.uleb128 0x11
+ 947 000e 01       		.uleb128 0x1
+ 948 000f 10       		.uleb128 0x10
+ 949 0010 17       		.uleb128 0x17
+ 950 0011 00       		.byte	0
+ 951 0012 00       		.byte	0
+ 952 0013 02       		.uleb128 0x2
+ 953 0014 24       		.uleb128 0x24
+ 954 0015 00       		.byte	0
+ 955 0016 0B       		.uleb128 0xb
+ 956 0017 0B       		.uleb128 0xb
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 28
 
 
- 1066              		.section	.debug_abbrev,"",%progbits
- 1067              	.Ldebug_abbrev0:
- 1068 0000 01       		.uleb128 0x1
- 1069 0001 11       		.uleb128 0x11
- 1070 0002 01       		.byte	0x1
- 1071 0003 25       		.uleb128 0x25
- 1072 0004 0E       		.uleb128 0xe
- 1073 0005 13       		.uleb128 0x13
- 1074 0006 0B       		.uleb128 0xb
- 1075 0007 03       		.uleb128 0x3
- 1076 0008 0E       		.uleb128 0xe
- 1077 0009 1B       		.uleb128 0x1b
- 1078 000a 0E       		.uleb128 0xe
- 1079 000b 55       		.uleb128 0x55
- 1080 000c 17       		.uleb128 0x17
- 1081 000d 11       		.uleb128 0x11
- 1082 000e 01       		.uleb128 0x1
- 1083 000f 10       		.uleb128 0x10
- 1084 0010 17       		.uleb128 0x17
- 1085 0011 00       		.byte	0
- 1086 0012 00       		.byte	0
- 1087 0013 02       		.uleb128 0x2
- 1088 0014 24       		.uleb128 0x24
- 1089 0015 00       		.byte	0
- 1090 0016 0B       		.uleb128 0xb
- 1091 0017 0B       		.uleb128 0xb
- 1092 0018 3E       		.uleb128 0x3e
- 1093 0019 0B       		.uleb128 0xb
- 1094 001a 03       		.uleb128 0x3
- 1095 001b 0E       		.uleb128 0xe
- 1096 001c 00       		.byte	0
- 1097 001d 00       		.byte	0
- 1098 001e 03       		.uleb128 0x3
- 1099 001f 24       		.uleb128 0x24
- 1100 0020 00       		.byte	0
- 1101 0021 0B       		.uleb128 0xb
- 1102 0022 0B       		.uleb128 0xb
- 1103 0023 3E       		.uleb128 0x3e
- 1104 0024 0B       		.uleb128 0xb
- 1105 0025 03       		.uleb128 0x3
- 1106 0026 08       		.uleb128 0x8
- 1107 0027 00       		.byte	0
- 1108 0028 00       		.byte	0
- 1109 0029 04       		.uleb128 0x4
- 1110 002a 16       		.uleb128 0x16
- 1111 002b 00       		.byte	0
- 1112 002c 03       		.uleb128 0x3
- 1113 002d 0E       		.uleb128 0xe
- 1114 002e 3A       		.uleb128 0x3a
- 1115 002f 0B       		.uleb128 0xb
- 1116 0030 3B       		.uleb128 0x3b
- 1117 0031 05       		.uleb128 0x5
- 1118 0032 49       		.uleb128 0x49
- 1119 0033 13       		.uleb128 0x13
- 1120 0034 00       		.byte	0
- 1121 0035 00       		.byte	0
- 1122 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 31
+ 957 0018 3E       		.uleb128 0x3e
+ 958 0019 0B       		.uleb128 0xb
+ 959 001a 03       		.uleb128 0x3
+ 960 001b 0E       		.uleb128 0xe
+ 961 001c 00       		.byte	0
+ 962 001d 00       		.byte	0
+ 963 001e 03       		.uleb128 0x3
+ 964 001f 24       		.uleb128 0x24
+ 965 0020 00       		.byte	0
+ 966 0021 0B       		.uleb128 0xb
+ 967 0022 0B       		.uleb128 0xb
+ 968 0023 3E       		.uleb128 0x3e
+ 969 0024 0B       		.uleb128 0xb
+ 970 0025 03       		.uleb128 0x3
+ 971 0026 08       		.uleb128 0x8
+ 972 0027 00       		.byte	0
+ 973 0028 00       		.byte	0
+ 974 0029 04       		.uleb128 0x4
+ 975 002a 16       		.uleb128 0x16
+ 976 002b 00       		.byte	0
+ 977 002c 03       		.uleb128 0x3
+ 978 002d 0E       		.uleb128 0xe
+ 979 002e 3A       		.uleb128 0x3a
+ 980 002f 0B       		.uleb128 0xb
+ 981 0030 3B       		.uleb128 0x3b
+ 982 0031 05       		.uleb128 0x5
+ 983 0032 49       		.uleb128 0x49
+ 984 0033 13       		.uleb128 0x13
+ 985 0034 00       		.byte	0
+ 986 0035 00       		.byte	0
+ 987 0036 05       		.uleb128 0x5
+ 988 0037 35       		.uleb128 0x35
+ 989 0038 00       		.byte	0
+ 990 0039 49       		.uleb128 0x49
+ 991 003a 13       		.uleb128 0x13
+ 992 003b 00       		.byte	0
+ 993 003c 00       		.byte	0
+ 994 003d 06       		.uleb128 0x6
+ 995 003e 2E       		.uleb128 0x2e
+ 996 003f 00       		.byte	0
+ 997 0040 3F       		.uleb128 0x3f
+ 998 0041 19       		.uleb128 0x19
+ 999 0042 03       		.uleb128 0x3
+ 1000 0043 0E       		.uleb128 0xe
+ 1001 0044 3A       		.uleb128 0x3a
+ 1002 0045 0B       		.uleb128 0xb
+ 1003 0046 3B       		.uleb128 0x3b
+ 1004 0047 0B       		.uleb128 0xb
+ 1005 0048 27       		.uleb128 0x27
+ 1006 0049 19       		.uleb128 0x19
+ 1007 004a 11       		.uleb128 0x11
+ 1008 004b 01       		.uleb128 0x1
+ 1009 004c 12       		.uleb128 0x12
+ 1010 004d 06       		.uleb128 0x6
+ 1011 004e 40       		.uleb128 0x40
+ 1012 004f 18       		.uleb128 0x18
+ 1013 0050 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 29
 
 
- 1123 0037 35       		.uleb128 0x35
- 1124 0038 00       		.byte	0
- 1125 0039 49       		.uleb128 0x49
- 1126 003a 13       		.uleb128 0x13
- 1127 003b 00       		.byte	0
- 1128 003c 00       		.byte	0
- 1129 003d 06       		.uleb128 0x6
- 1130 003e 2E       		.uleb128 0x2e
- 1131 003f 00       		.byte	0
- 1132 0040 3F       		.uleb128 0x3f
- 1133 0041 19       		.uleb128 0x19
- 1134 0042 03       		.uleb128 0x3
- 1135 0043 0E       		.uleb128 0xe
- 1136 0044 3A       		.uleb128 0x3a
- 1137 0045 0B       		.uleb128 0xb
- 1138 0046 3B       		.uleb128 0x3b
- 1139 0047 0B       		.uleb128 0xb
- 1140 0048 27       		.uleb128 0x27
- 1141 0049 19       		.uleb128 0x19
- 1142 004a 11       		.uleb128 0x11
- 1143 004b 01       		.uleb128 0x1
- 1144 004c 12       		.uleb128 0x12
- 1145 004d 06       		.uleb128 0x6
- 1146 004e 40       		.uleb128 0x40
- 1147 004f 18       		.uleb128 0x18
- 1148 0050 9742     		.uleb128 0x2117
- 1149 0052 19       		.uleb128 0x19
- 1150 0053 00       		.byte	0
- 1151 0054 00       		.byte	0
- 1152 0055 07       		.uleb128 0x7
- 1153 0056 2E       		.uleb128 0x2e
- 1154 0057 01       		.byte	0x1
- 1155 0058 3F       		.uleb128 0x3f
- 1156 0059 19       		.uleb128 0x19
- 1157 005a 03       		.uleb128 0x3
- 1158 005b 0E       		.uleb128 0xe
- 1159 005c 3A       		.uleb128 0x3a
- 1160 005d 0B       		.uleb128 0xb
- 1161 005e 3B       		.uleb128 0x3b
- 1162 005f 0B       		.uleb128 0xb
- 1163 0060 27       		.uleb128 0x27
- 1164 0061 19       		.uleb128 0x19
- 1165 0062 11       		.uleb128 0x11
- 1166 0063 01       		.uleb128 0x1
- 1167 0064 12       		.uleb128 0x12
- 1168 0065 06       		.uleb128 0x6
- 1169 0066 40       		.uleb128 0x40
- 1170 0067 18       		.uleb128 0x18
- 1171 0068 9742     		.uleb128 0x2117
- 1172 006a 19       		.uleb128 0x19
- 1173 006b 01       		.uleb128 0x1
- 1174 006c 13       		.uleb128 0x13
- 1175 006d 00       		.byte	0
- 1176 006e 00       		.byte	0
- 1177 006f 08       		.uleb128 0x8
- 1178 0070 05       		.uleb128 0x5
- 1179 0071 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 32
+ 1014 0052 19       		.uleb128 0x19
+ 1015 0053 00       		.byte	0
+ 1016 0054 00       		.byte	0
+ 1017 0055 07       		.uleb128 0x7
+ 1018 0056 2E       		.uleb128 0x2e
+ 1019 0057 01       		.byte	0x1
+ 1020 0058 3F       		.uleb128 0x3f
+ 1021 0059 19       		.uleb128 0x19
+ 1022 005a 03       		.uleb128 0x3
+ 1023 005b 0E       		.uleb128 0xe
+ 1024 005c 3A       		.uleb128 0x3a
+ 1025 005d 0B       		.uleb128 0xb
+ 1026 005e 3B       		.uleb128 0x3b
+ 1027 005f 0B       		.uleb128 0xb
+ 1028 0060 27       		.uleb128 0x27
+ 1029 0061 19       		.uleb128 0x19
+ 1030 0062 11       		.uleb128 0x11
+ 1031 0063 01       		.uleb128 0x1
+ 1032 0064 12       		.uleb128 0x12
+ 1033 0065 06       		.uleb128 0x6
+ 1034 0066 40       		.uleb128 0x40
+ 1035 0067 18       		.uleb128 0x18
+ 1036 0068 9742     		.uleb128 0x2117
+ 1037 006a 19       		.uleb128 0x19
+ 1038 006b 01       		.uleb128 0x1
+ 1039 006c 13       		.uleb128 0x13
+ 1040 006d 00       		.byte	0
+ 1041 006e 00       		.byte	0
+ 1042 006f 08       		.uleb128 0x8
+ 1043 0070 05       		.uleb128 0x5
+ 1044 0071 00       		.byte	0
+ 1045 0072 03       		.uleb128 0x3
+ 1046 0073 0E       		.uleb128 0xe
+ 1047 0074 3A       		.uleb128 0x3a
+ 1048 0075 0B       		.uleb128 0xb
+ 1049 0076 3B       		.uleb128 0x3b
+ 1050 0077 0B       		.uleb128 0xb
+ 1051 0078 49       		.uleb128 0x49
+ 1052 0079 13       		.uleb128 0x13
+ 1053 007a 02       		.uleb128 0x2
+ 1054 007b 18       		.uleb128 0x18
+ 1055 007c 00       		.byte	0
+ 1056 007d 00       		.byte	0
+ 1057 007e 09       		.uleb128 0x9
+ 1058 007f 2E       		.uleb128 0x2e
+ 1059 0080 00       		.byte	0
+ 1060 0081 3F       		.uleb128 0x3f
+ 1061 0082 19       		.uleb128 0x19
+ 1062 0083 03       		.uleb128 0x3
+ 1063 0084 0E       		.uleb128 0xe
+ 1064 0085 3A       		.uleb128 0x3a
+ 1065 0086 0B       		.uleb128 0xb
+ 1066 0087 3B       		.uleb128 0x3b
+ 1067 0088 05       		.uleb128 0x5
+ 1068 0089 27       		.uleb128 0x27
+ 1069 008a 19       		.uleb128 0x19
+ 1070 008b 49       		.uleb128 0x49
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 30
 
 
- 1180 0072 03       		.uleb128 0x3
- 1181 0073 0E       		.uleb128 0xe
- 1182 0074 3A       		.uleb128 0x3a
- 1183 0075 0B       		.uleb128 0xb
- 1184 0076 3B       		.uleb128 0x3b
- 1185 0077 0B       		.uleb128 0xb
- 1186 0078 49       		.uleb128 0x49
- 1187 0079 13       		.uleb128 0x13
- 1188 007a 02       		.uleb128 0x2
- 1189 007b 18       		.uleb128 0x18
- 1190 007c 00       		.byte	0
- 1191 007d 00       		.byte	0
- 1192 007e 09       		.uleb128 0x9
- 1193 007f 2E       		.uleb128 0x2e
- 1194 0080 00       		.byte	0
- 1195 0081 3F       		.uleb128 0x3f
- 1196 0082 19       		.uleb128 0x19
- 1197 0083 03       		.uleb128 0x3
- 1198 0084 0E       		.uleb128 0xe
- 1199 0085 3A       		.uleb128 0x3a
- 1200 0086 0B       		.uleb128 0xb
- 1201 0087 3B       		.uleb128 0x3b
- 1202 0088 05       		.uleb128 0x5
- 1203 0089 27       		.uleb128 0x27
- 1204 008a 19       		.uleb128 0x19
- 1205 008b 49       		.uleb128 0x49
- 1206 008c 13       		.uleb128 0x13
- 1207 008d 11       		.uleb128 0x11
- 1208 008e 01       		.uleb128 0x1
- 1209 008f 12       		.uleb128 0x12
- 1210 0090 06       		.uleb128 0x6
- 1211 0091 40       		.uleb128 0x40
- 1212 0092 18       		.uleb128 0x18
- 1213 0093 9742     		.uleb128 0x2117
- 1214 0095 19       		.uleb128 0x19
- 1215 0096 00       		.byte	0
- 1216 0097 00       		.byte	0
- 1217 0098 0A       		.uleb128 0xa
- 1218 0099 2E       		.uleb128 0x2e
- 1219 009a 01       		.byte	0x1
- 1220 009b 3F       		.uleb128 0x3f
- 1221 009c 19       		.uleb128 0x19
- 1222 009d 03       		.uleb128 0x3
- 1223 009e 0E       		.uleb128 0xe
- 1224 009f 3A       		.uleb128 0x3a
- 1225 00a0 0B       		.uleb128 0xb
- 1226 00a1 3B       		.uleb128 0x3b
- 1227 00a2 05       		.uleb128 0x5
- 1228 00a3 27       		.uleb128 0x27
- 1229 00a4 19       		.uleb128 0x19
- 1230 00a5 11       		.uleb128 0x11
- 1231 00a6 01       		.uleb128 0x1
- 1232 00a7 12       		.uleb128 0x12
- 1233 00a8 06       		.uleb128 0x6
- 1234 00a9 40       		.uleb128 0x40
- 1235 00aa 18       		.uleb128 0x18
- 1236 00ab 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 33
+ 1071 008c 13       		.uleb128 0x13
+ 1072 008d 11       		.uleb128 0x11
+ 1073 008e 01       		.uleb128 0x1
+ 1074 008f 12       		.uleb128 0x12
+ 1075 0090 06       		.uleb128 0x6
+ 1076 0091 40       		.uleb128 0x40
+ 1077 0092 18       		.uleb128 0x18
+ 1078 0093 9742     		.uleb128 0x2117
+ 1079 0095 19       		.uleb128 0x19
+ 1080 0096 00       		.byte	0
+ 1081 0097 00       		.byte	0
+ 1082 0098 0A       		.uleb128 0xa
+ 1083 0099 2E       		.uleb128 0x2e
+ 1084 009a 01       		.byte	0x1
+ 1085 009b 3F       		.uleb128 0x3f
+ 1086 009c 19       		.uleb128 0x19
+ 1087 009d 03       		.uleb128 0x3
+ 1088 009e 0E       		.uleb128 0xe
+ 1089 009f 3A       		.uleb128 0x3a
+ 1090 00a0 0B       		.uleb128 0xb
+ 1091 00a1 3B       		.uleb128 0x3b
+ 1092 00a2 05       		.uleb128 0x5
+ 1093 00a3 27       		.uleb128 0x27
+ 1094 00a4 19       		.uleb128 0x19
+ 1095 00a5 11       		.uleb128 0x11
+ 1096 00a6 01       		.uleb128 0x1
+ 1097 00a7 12       		.uleb128 0x12
+ 1098 00a8 06       		.uleb128 0x6
+ 1099 00a9 40       		.uleb128 0x40
+ 1100 00aa 18       		.uleb128 0x18
+ 1101 00ab 9742     		.uleb128 0x2117
+ 1102 00ad 19       		.uleb128 0x19
+ 1103 00ae 01       		.uleb128 0x1
+ 1104 00af 13       		.uleb128 0x13
+ 1105 00b0 00       		.byte	0
+ 1106 00b1 00       		.byte	0
+ 1107 00b2 0B       		.uleb128 0xb
+ 1108 00b3 05       		.uleb128 0x5
+ 1109 00b4 00       		.byte	0
+ 1110 00b5 03       		.uleb128 0x3
+ 1111 00b6 0E       		.uleb128 0xe
+ 1112 00b7 3A       		.uleb128 0x3a
+ 1113 00b8 0B       		.uleb128 0xb
+ 1114 00b9 3B       		.uleb128 0x3b
+ 1115 00ba 05       		.uleb128 0x5
+ 1116 00bb 49       		.uleb128 0x49
+ 1117 00bc 13       		.uleb128 0x13
+ 1118 00bd 02       		.uleb128 0x2
+ 1119 00be 17       		.uleb128 0x17
+ 1120 00bf 00       		.byte	0
+ 1121 00c0 00       		.byte	0
+ 1122 00c1 0C       		.uleb128 0xc
+ 1123 00c2 898201   		.uleb128 0x4109
+ 1124 00c5 01       		.byte	0x1
+ 1125 00c6 11       		.uleb128 0x11
+ 1126 00c7 01       		.uleb128 0x1
+ 1127 00c8 31       		.uleb128 0x31
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 31
 
 
- 1237 00ad 19       		.uleb128 0x19
- 1238 00ae 01       		.uleb128 0x1
- 1239 00af 13       		.uleb128 0x13
- 1240 00b0 00       		.byte	0
- 1241 00b1 00       		.byte	0
- 1242 00b2 0B       		.uleb128 0xb
- 1243 00b3 05       		.uleb128 0x5
- 1244 00b4 00       		.byte	0
- 1245 00b5 03       		.uleb128 0x3
- 1246 00b6 0E       		.uleb128 0xe
- 1247 00b7 3A       		.uleb128 0x3a
- 1248 00b8 0B       		.uleb128 0xb
- 1249 00b9 3B       		.uleb128 0x3b
- 1250 00ba 05       		.uleb128 0x5
- 1251 00bb 49       		.uleb128 0x49
- 1252 00bc 13       		.uleb128 0x13
- 1253 00bd 02       		.uleb128 0x2
- 1254 00be 18       		.uleb128 0x18
- 1255 00bf 00       		.byte	0
- 1256 00c0 00       		.byte	0
- 1257 00c1 0C       		.uleb128 0xc
- 1258 00c2 05       		.uleb128 0x5
- 1259 00c3 00       		.byte	0
- 1260 00c4 03       		.uleb128 0x3
- 1261 00c5 0E       		.uleb128 0xe
- 1262 00c6 3A       		.uleb128 0x3a
- 1263 00c7 0B       		.uleb128 0xb
- 1264 00c8 3B       		.uleb128 0x3b
- 1265 00c9 05       		.uleb128 0x5
- 1266 00ca 49       		.uleb128 0x49
- 1267 00cb 13       		.uleb128 0x13
- 1268 00cc 02       		.uleb128 0x2
- 1269 00cd 17       		.uleb128 0x17
- 1270 00ce 00       		.byte	0
- 1271 00cf 00       		.byte	0
- 1272 00d0 0D       		.uleb128 0xd
- 1273 00d1 898201   		.uleb128 0x4109
- 1274 00d4 01       		.byte	0x1
- 1275 00d5 11       		.uleb128 0x11
- 1276 00d6 01       		.uleb128 0x1
- 1277 00d7 31       		.uleb128 0x31
- 1278 00d8 13       		.uleb128 0x13
- 1279 00d9 00       		.byte	0
- 1280 00da 00       		.byte	0
- 1281 00db 0E       		.uleb128 0xe
- 1282 00dc 8A8201   		.uleb128 0x410a
- 1283 00df 00       		.byte	0
- 1284 00e0 02       		.uleb128 0x2
- 1285 00e1 18       		.uleb128 0x18
- 1286 00e2 9142     		.uleb128 0x2111
- 1287 00e4 18       		.uleb128 0x18
- 1288 00e5 00       		.byte	0
- 1289 00e6 00       		.byte	0
- 1290 00e7 0F       		.uleb128 0xf
- 1291 00e8 2E       		.uleb128 0x2e
- 1292 00e9 01       		.byte	0x1
- 1293 00ea 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 34
+ 1128 00c9 13       		.uleb128 0x13
+ 1129 00ca 00       		.byte	0
+ 1130 00cb 00       		.byte	0
+ 1131 00cc 0D       		.uleb128 0xd
+ 1132 00cd 8A8201   		.uleb128 0x410a
+ 1133 00d0 00       		.byte	0
+ 1134 00d1 02       		.uleb128 0x2
+ 1135 00d2 18       		.uleb128 0x18
+ 1136 00d3 9142     		.uleb128 0x2111
+ 1137 00d5 18       		.uleb128 0x18
+ 1138 00d6 00       		.byte	0
+ 1139 00d7 00       		.byte	0
+ 1140 00d8 0E       		.uleb128 0xe
+ 1141 00d9 2E       		.uleb128 0x2e
+ 1142 00da 01       		.byte	0x1
+ 1143 00db 3F       		.uleb128 0x3f
+ 1144 00dc 19       		.uleb128 0x19
+ 1145 00dd 03       		.uleb128 0x3
+ 1146 00de 0E       		.uleb128 0xe
+ 1147 00df 3A       		.uleb128 0x3a
+ 1148 00e0 0B       		.uleb128 0xb
+ 1149 00e1 3B       		.uleb128 0x3b
+ 1150 00e2 05       		.uleb128 0x5
+ 1151 00e3 27       		.uleb128 0x27
+ 1152 00e4 19       		.uleb128 0x19
+ 1153 00e5 49       		.uleb128 0x49
+ 1154 00e6 13       		.uleb128 0x13
+ 1155 00e7 11       		.uleb128 0x11
+ 1156 00e8 01       		.uleb128 0x1
+ 1157 00e9 12       		.uleb128 0x12
+ 1158 00ea 06       		.uleb128 0x6
+ 1159 00eb 40       		.uleb128 0x40
+ 1160 00ec 18       		.uleb128 0x18
+ 1161 00ed 9742     		.uleb128 0x2117
+ 1162 00ef 19       		.uleb128 0x19
+ 1163 00f0 01       		.uleb128 0x1
+ 1164 00f1 13       		.uleb128 0x13
+ 1165 00f2 00       		.byte	0
+ 1166 00f3 00       		.byte	0
+ 1167 00f4 0F       		.uleb128 0xf
+ 1168 00f5 898201   		.uleb128 0x4109
+ 1169 00f8 00       		.byte	0
+ 1170 00f9 11       		.uleb128 0x11
+ 1171 00fa 01       		.uleb128 0x1
+ 1172 00fb 31       		.uleb128 0x31
+ 1173 00fc 13       		.uleb128 0x13
+ 1174 00fd 00       		.byte	0
+ 1175 00fe 00       		.byte	0
+ 1176 00ff 10       		.uleb128 0x10
+ 1177 0100 34       		.uleb128 0x34
+ 1178 0101 00       		.byte	0
+ 1179 0102 03       		.uleb128 0x3
+ 1180 0103 0E       		.uleb128 0xe
+ 1181 0104 3A       		.uleb128 0x3a
+ 1182 0105 0B       		.uleb128 0xb
+ 1183 0106 3B       		.uleb128 0x3b
+ 1184 0107 0B       		.uleb128 0xb
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 32
 
 
- 1294 00eb 19       		.uleb128 0x19
- 1295 00ec 03       		.uleb128 0x3
- 1296 00ed 0E       		.uleb128 0xe
- 1297 00ee 3A       		.uleb128 0x3a
- 1298 00ef 0B       		.uleb128 0xb
- 1299 00f0 3B       		.uleb128 0x3b
- 1300 00f1 05       		.uleb128 0x5
- 1301 00f2 27       		.uleb128 0x27
- 1302 00f3 19       		.uleb128 0x19
- 1303 00f4 49       		.uleb128 0x49
- 1304 00f5 13       		.uleb128 0x13
- 1305 00f6 11       		.uleb128 0x11
- 1306 00f7 01       		.uleb128 0x1
- 1307 00f8 12       		.uleb128 0x12
- 1308 00f9 06       		.uleb128 0x6
- 1309 00fa 40       		.uleb128 0x40
- 1310 00fb 18       		.uleb128 0x18
- 1311 00fc 9742     		.uleb128 0x2117
- 1312 00fe 19       		.uleb128 0x19
- 1313 00ff 01       		.uleb128 0x1
- 1314 0100 13       		.uleb128 0x13
- 1315 0101 00       		.byte	0
- 1316 0102 00       		.byte	0
- 1317 0103 10       		.uleb128 0x10
- 1318 0104 898201   		.uleb128 0x4109
- 1319 0107 00       		.byte	0
- 1320 0108 11       		.uleb128 0x11
- 1321 0109 01       		.uleb128 0x1
- 1322 010a 31       		.uleb128 0x31
- 1323 010b 13       		.uleb128 0x13
- 1324 010c 00       		.byte	0
- 1325 010d 00       		.byte	0
- 1326 010e 11       		.uleb128 0x11
- 1327 010f 34       		.uleb128 0x34
- 1328 0110 00       		.byte	0
- 1329 0111 03       		.uleb128 0x3
- 1330 0112 0E       		.uleb128 0xe
- 1331 0113 3A       		.uleb128 0x3a
- 1332 0114 0B       		.uleb128 0xb
- 1333 0115 3B       		.uleb128 0x3b
- 1334 0116 0B       		.uleb128 0xb
- 1335 0117 49       		.uleb128 0x49
- 1336 0118 13       		.uleb128 0x13
- 1337 0119 02       		.uleb128 0x2
- 1338 011a 17       		.uleb128 0x17
- 1339 011b 00       		.byte	0
- 1340 011c 00       		.byte	0
- 1341 011d 12       		.uleb128 0x12
- 1342 011e 898201   		.uleb128 0x4109
- 1343 0121 01       		.byte	0x1
- 1344 0122 11       		.uleb128 0x11
- 1345 0123 01       		.uleb128 0x1
- 1346 0124 31       		.uleb128 0x31
- 1347 0125 13       		.uleb128 0x13
- 1348 0126 01       		.uleb128 0x1
- 1349 0127 13       		.uleb128 0x13
- 1350 0128 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 35
+ 1185 0108 49       		.uleb128 0x49
+ 1186 0109 13       		.uleb128 0x13
+ 1187 010a 02       		.uleb128 0x2
+ 1188 010b 17       		.uleb128 0x17
+ 1189 010c 00       		.byte	0
+ 1190 010d 00       		.byte	0
+ 1191 010e 11       		.uleb128 0x11
+ 1192 010f 898201   		.uleb128 0x4109
+ 1193 0112 01       		.byte	0x1
+ 1194 0113 11       		.uleb128 0x11
+ 1195 0114 01       		.uleb128 0x1
+ 1196 0115 31       		.uleb128 0x31
+ 1197 0116 13       		.uleb128 0x13
+ 1198 0117 01       		.uleb128 0x1
+ 1199 0118 13       		.uleb128 0x13
+ 1200 0119 00       		.byte	0
+ 1201 011a 00       		.byte	0
+ 1202 011b 12       		.uleb128 0x12
+ 1203 011c 34       		.uleb128 0x34
+ 1204 011d 00       		.byte	0
+ 1205 011e 03       		.uleb128 0x3
+ 1206 011f 0E       		.uleb128 0xe
+ 1207 0120 3A       		.uleb128 0x3a
+ 1208 0121 0B       		.uleb128 0xb
+ 1209 0122 3B       		.uleb128 0x3b
+ 1210 0123 0B       		.uleb128 0xb
+ 1211 0124 49       		.uleb128 0x49
+ 1212 0125 13       		.uleb128 0x13
+ 1213 0126 3F       		.uleb128 0x3f
+ 1214 0127 19       		.uleb128 0x19
+ 1215 0128 02       		.uleb128 0x2
+ 1216 0129 18       		.uleb128 0x18
+ 1217 012a 00       		.byte	0
+ 1218 012b 00       		.byte	0
+ 1219 012c 13       		.uleb128 0x13
+ 1220 012d 2E       		.uleb128 0x2e
+ 1221 012e 00       		.byte	0
+ 1222 012f 3F       		.uleb128 0x3f
+ 1223 0130 19       		.uleb128 0x19
+ 1224 0131 3C       		.uleb128 0x3c
+ 1225 0132 19       		.uleb128 0x19
+ 1226 0133 6E       		.uleb128 0x6e
+ 1227 0134 0E       		.uleb128 0xe
+ 1228 0135 03       		.uleb128 0x3
+ 1229 0136 0E       		.uleb128 0xe
+ 1230 0137 3A       		.uleb128 0x3a
+ 1231 0138 0B       		.uleb128 0xb
+ 1232 0139 3B       		.uleb128 0x3b
+ 1233 013a 05       		.uleb128 0x5
+ 1234 013b 00       		.byte	0
+ 1235 013c 00       		.byte	0
+ 1236 013d 14       		.uleb128 0x14
+ 1237 013e 2E       		.uleb128 0x2e
+ 1238 013f 00       		.byte	0
+ 1239 0140 3F       		.uleb128 0x3f
+ 1240 0141 19       		.uleb128 0x19
+ 1241 0142 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 33
 
 
- 1351 0129 00       		.byte	0
- 1352 012a 13       		.uleb128 0x13
- 1353 012b 34       		.uleb128 0x34
- 1354 012c 00       		.byte	0
- 1355 012d 03       		.uleb128 0x3
- 1356 012e 0E       		.uleb128 0xe
- 1357 012f 3A       		.uleb128 0x3a
- 1358 0130 0B       		.uleb128 0xb
- 1359 0131 3B       		.uleb128 0x3b
- 1360 0132 0B       		.uleb128 0xb
- 1361 0133 49       		.uleb128 0x49
- 1362 0134 13       		.uleb128 0x13
- 1363 0135 3F       		.uleb128 0x3f
- 1364 0136 19       		.uleb128 0x19
- 1365 0137 02       		.uleb128 0x2
- 1366 0138 18       		.uleb128 0x18
- 1367 0139 00       		.byte	0
- 1368 013a 00       		.byte	0
- 1369 013b 14       		.uleb128 0x14
- 1370 013c 2E       		.uleb128 0x2e
- 1371 013d 00       		.byte	0
- 1372 013e 3F       		.uleb128 0x3f
- 1373 013f 19       		.uleb128 0x19
- 1374 0140 3C       		.uleb128 0x3c
- 1375 0141 19       		.uleb128 0x19
- 1376 0142 6E       		.uleb128 0x6e
- 1377 0143 0E       		.uleb128 0xe
- 1378 0144 03       		.uleb128 0x3
- 1379 0145 0E       		.uleb128 0xe
- 1380 0146 3A       		.uleb128 0x3a
- 1381 0147 0B       		.uleb128 0xb
- 1382 0148 3B       		.uleb128 0x3b
- 1383 0149 05       		.uleb128 0x5
- 1384 014a 00       		.byte	0
- 1385 014b 00       		.byte	0
- 1386 014c 15       		.uleb128 0x15
- 1387 014d 2E       		.uleb128 0x2e
- 1388 014e 00       		.byte	0
- 1389 014f 3F       		.uleb128 0x3f
- 1390 0150 19       		.uleb128 0x19
- 1391 0151 3C       		.uleb128 0x3c
- 1392 0152 19       		.uleb128 0x19
- 1393 0153 6E       		.uleb128 0x6e
- 1394 0154 0E       		.uleb128 0xe
- 1395 0155 03       		.uleb128 0x3
- 1396 0156 0E       		.uleb128 0xe
- 1397 0157 3A       		.uleb128 0x3a
- 1398 0158 0B       		.uleb128 0xb
- 1399 0159 3B       		.uleb128 0x3b
- 1400 015a 0B       		.uleb128 0xb
- 1401 015b 00       		.byte	0
- 1402 015c 00       		.byte	0
- 1403 015d 00       		.byte	0
- 1404              		.section	.debug_loc,"",%progbits
- 1405              	.Ldebug_loc0:
- 1406              	.LLST0:
- 1407 0000 00000000 		.4byte	.LVL2
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 36
+ 1242 0143 19       		.uleb128 0x19
+ 1243 0144 6E       		.uleb128 0x6e
+ 1244 0145 0E       		.uleb128 0xe
+ 1245 0146 03       		.uleb128 0x3
+ 1246 0147 0E       		.uleb128 0xe
+ 1247 0148 3A       		.uleb128 0x3a
+ 1248 0149 0B       		.uleb128 0xb
+ 1249 014a 3B       		.uleb128 0x3b
+ 1250 014b 0B       		.uleb128 0xb
+ 1251 014c 00       		.byte	0
+ 1252 014d 00       		.byte	0
+ 1253 014e 00       		.byte	0
+ 1254              		.section	.debug_loc,"",%progbits
+ 1255              	.Ldebug_loc0:
+ 1256              	.LLST0:
+ 1257 0000 00000000 		.4byte	.LVL1
+ 1258 0004 06000000 		.4byte	.LVL2
+ 1259 0008 0100     		.2byte	0x1
+ 1260 000a 50       		.byte	0x50
+ 1261 000b 06000000 		.4byte	.LVL2
+ 1262 000f 09000000 		.4byte	.LVL3-1
+ 1263 0013 0100     		.2byte	0x1
+ 1264 0015 51       		.byte	0x51
+ 1265 0016 09000000 		.4byte	.LVL3-1
+ 1266 001a 10000000 		.4byte	.LFE7
+ 1267 001e 0400     		.2byte	0x4
+ 1268 0020 F3       		.byte	0xf3
+ 1269 0021 01       		.uleb128 0x1
+ 1270 0022 50       		.byte	0x50
+ 1271 0023 9F       		.byte	0x9f
+ 1272 0024 00000000 		.4byte	0
+ 1273 0028 00000000 		.4byte	0
+ 1274              	.LLST1:
+ 1275 002c 00000000 		.4byte	.LVL6
+ 1276 0030 06000000 		.4byte	.LVL7
+ 1277 0034 0100     		.2byte	0x1
+ 1278 0036 50       		.byte	0x50
+ 1279 0037 06000000 		.4byte	.LVL7
+ 1280 003b 09000000 		.4byte	.LVL8-1
+ 1281 003f 0100     		.2byte	0x1
+ 1282 0041 51       		.byte	0x51
+ 1283 0042 09000000 		.4byte	.LVL8-1
+ 1284 0046 10000000 		.4byte	.LFE10
+ 1285 004a 0400     		.2byte	0x4
+ 1286 004c F3       		.byte	0xf3
+ 1287 004d 01       		.uleb128 0x1
+ 1288 004e 50       		.byte	0x50
+ 1289 004f 9F       		.byte	0x9f
+ 1290 0050 00000000 		.4byte	0
+ 1291 0054 00000000 		.4byte	0
+ 1292              	.LLST2:
+ 1293 0058 00000000 		.4byte	.LVL10
+ 1294 005c 06000000 		.4byte	.LVL11
+ 1295 0060 0100     		.2byte	0x1
+ 1296 0062 50       		.byte	0x50
+ 1297 0063 06000000 		.4byte	.LVL11
+ 1298 0067 09000000 		.4byte	.LVL12-1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 34
 
 
- 1408 0004 06000000 		.4byte	.LVL3
- 1409 0008 0100     		.2byte	0x1
- 1410 000a 50       		.byte	0x50
- 1411 000b 06000000 		.4byte	.LVL3
- 1412 000f 09000000 		.4byte	.LVL4-1
- 1413 0013 0100     		.2byte	0x1
- 1414 0015 51       		.byte	0x51
- 1415 0016 09000000 		.4byte	.LVL4-1
- 1416 001a 10000000 		.4byte	.LFE9
- 1417 001e 0400     		.2byte	0x4
- 1418 0020 F3       		.byte	0xf3
- 1419 0021 01       		.uleb128 0x1
- 1420 0022 50       		.byte	0x50
- 1421 0023 9F       		.byte	0x9f
- 1422 0024 00000000 		.4byte	0
- 1423 0028 00000000 		.4byte	0
- 1424              	.LLST1:
- 1425 002c 00000000 		.4byte	.LVL7
- 1426 0030 06000000 		.4byte	.LVL8
- 1427 0034 0100     		.2byte	0x1
- 1428 0036 50       		.byte	0x50
- 1429 0037 06000000 		.4byte	.LVL8
- 1430 003b 09000000 		.4byte	.LVL9-1
- 1431 003f 0100     		.2byte	0x1
- 1432 0041 51       		.byte	0x51
- 1433 0042 09000000 		.4byte	.LVL9-1
- 1434 0046 10000000 		.4byte	.LFE12
- 1435 004a 0400     		.2byte	0x4
- 1436 004c F3       		.byte	0xf3
- 1437 004d 01       		.uleb128 0x1
- 1438 004e 50       		.byte	0x50
- 1439 004f 9F       		.byte	0x9f
- 1440 0050 00000000 		.4byte	0
- 1441 0054 00000000 		.4byte	0
- 1442              	.LLST2:
- 1443 0058 00000000 		.4byte	.LVL11
- 1444 005c 06000000 		.4byte	.LVL12
- 1445 0060 0100     		.2byte	0x1
- 1446 0062 50       		.byte	0x50
- 1447 0063 06000000 		.4byte	.LVL12
- 1448 0067 09000000 		.4byte	.LVL13-1
- 1449 006b 0100     		.2byte	0x1
- 1450 006d 51       		.byte	0x51
- 1451 006e 09000000 		.4byte	.LVL13-1
- 1452 0072 10000000 		.4byte	.LFE14
- 1453 0076 0400     		.2byte	0x4
- 1454 0078 F3       		.byte	0xf3
- 1455 0079 01       		.uleb128 0x1
- 1456 007a 50       		.byte	0x50
- 1457 007b 9F       		.byte	0x9f
- 1458 007c 00000000 		.4byte	0
- 1459 0080 00000000 		.4byte	0
- 1460              	.LLST3:
- 1461 0084 0A000000 		.4byte	.LVL17
- 1462 0088 0E000000 		.4byte	.LVL18
- 1463 008c 0100     		.2byte	0x1
- 1464 008e 53       		.byte	0x53
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 37
+ 1299 006b 0100     		.2byte	0x1
+ 1300 006d 51       		.byte	0x51
+ 1301 006e 09000000 		.4byte	.LVL12-1
+ 1302 0072 10000000 		.4byte	.LFE12
+ 1303 0076 0400     		.2byte	0x4
+ 1304 0078 F3       		.byte	0xf3
+ 1305 0079 01       		.uleb128 0x1
+ 1306 007a 50       		.byte	0x50
+ 1307 007b 9F       		.byte	0x9f
+ 1308 007c 00000000 		.4byte	0
+ 1309 0080 00000000 		.4byte	0
+ 1310              	.LLST3:
+ 1311 0084 26000000 		.4byte	.LVL22
+ 1312 0088 35000000 		.4byte	.LVL23-1
+ 1313 008c 0100     		.2byte	0x1
+ 1314 008e 50       		.byte	0x50
+ 1315 008f 00000000 		.4byte	0
+ 1316 0093 00000000 		.4byte	0
+ 1317              		.section	.debug_aranges,"",%progbits
+ 1318 0000 84000000 		.4byte	0x84
+ 1319 0004 0200     		.2byte	0x2
+ 1320 0006 00000000 		.4byte	.Ldebug_info0
+ 1321 000a 04       		.byte	0x4
+ 1322 000b 00       		.byte	0
+ 1323 000c 0000     		.2byte	0
+ 1324 000e 0000     		.2byte	0
+ 1325 0010 00000000 		.4byte	.LFB2
+ 1326 0014 02000000 		.4byte	.LFE2-.LFB2
+ 1327 0018 00000000 		.4byte	.LFB4
+ 1328 001c 02000000 		.4byte	.LFE4-.LFB4
+ 1329 0020 00000000 		.4byte	.LFB5
+ 1330 0024 0C000000 		.4byte	.LFE5-.LFB5
+ 1331 0028 00000000 		.4byte	.LFB6
+ 1332 002c 0C000000 		.4byte	.LFE6-.LFB6
+ 1333 0030 00000000 		.4byte	.LFB7
+ 1334 0034 10000000 		.4byte	.LFE7-.LFB7
+ 1335 0038 00000000 		.4byte	.LFB8
+ 1336 003c 18000000 		.4byte	.LFE8-.LFB8
+ 1337 0040 00000000 		.4byte	.LFB9
+ 1338 0044 10000000 		.4byte	.LFE9-.LFB9
+ 1339 0048 00000000 		.4byte	.LFB10
+ 1340 004c 10000000 		.4byte	.LFE10-.LFB10
+ 1341 0050 00000000 		.4byte	.LFB11
+ 1342 0054 10000000 		.4byte	.LFE11-.LFB11
+ 1343 0058 00000000 		.4byte	.LFB12
+ 1344 005c 10000000 		.4byte	.LFE12-.LFB12
+ 1345 0060 00000000 		.4byte	.LFB13
+ 1346 0064 10000000 		.4byte	.LFE13-.LFB13
+ 1347 0068 00000000 		.4byte	.LFB14
+ 1348 006c 12000000 		.4byte	.LFE14-.LFB14
+ 1349 0070 00000000 		.4byte	.LFB1
+ 1350 0074 40000000 		.4byte	.LFE1-.LFB1
+ 1351 0078 00000000 		.4byte	.LFB3
+ 1352 007c 1C000000 		.4byte	.LFE3-.LFB3
+ 1353 0080 00000000 		.4byte	0
+ 1354 0084 00000000 		.4byte	0
+ 1355              		.section	.debug_ranges,"",%progbits
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 35
 
 
- 1465 008f 18000000 		.4byte	.LVL19
- 1466 0093 1D000000 		.4byte	.LVL20-1
- 1467 0097 0100     		.2byte	0x1
- 1468 0099 53       		.byte	0x53
- 1469 009a 00000000 		.4byte	0
- 1470 009e 00000000 		.4byte	0
- 1471              	.LLST4:
- 1472 00a2 3E000000 		.4byte	.LVL26
- 1473 00a6 4D000000 		.4byte	.LVL27-1
- 1474 00aa 0100     		.2byte	0x1
- 1475 00ac 50       		.byte	0x50
- 1476 00ad 00000000 		.4byte	0
- 1477 00b1 00000000 		.4byte	0
- 1478              		.section	.debug_aranges,"",%progbits
- 1479 0000 94000000 		.4byte	0x94
- 1480 0004 0200     		.2byte	0x2
- 1481 0006 00000000 		.4byte	.Ldebug_info0
- 1482 000a 04       		.byte	0x4
- 1483 000b 00       		.byte	0
- 1484 000c 0000     		.2byte	0
- 1485 000e 0000     		.2byte	0
- 1486 0010 00000000 		.4byte	.LFB2
- 1487 0014 14000000 		.4byte	.LFE2-.LFB2
- 1488 0018 00000000 		.4byte	.LFB4
- 1489 001c 10000000 		.4byte	.LFE4-.LFB4
- 1490 0020 00000000 		.4byte	.LFB5
- 1491 0024 0C000000 		.4byte	.LFE5-.LFB5
- 1492 0028 00000000 		.4byte	.LFB6
- 1493 002c 0C000000 		.4byte	.LFE6-.LFB6
- 1494 0030 00000000 		.4byte	.LFB7
- 1495 0034 0C000000 		.4byte	.LFE7-.LFB7
- 1496 0038 00000000 		.4byte	.LFB8
- 1497 003c 0C000000 		.4byte	.LFE8-.LFB8
- 1498 0040 00000000 		.4byte	.LFB9
- 1499 0044 10000000 		.4byte	.LFE9-.LFB9
- 1500 0048 00000000 		.4byte	.LFB10
- 1501 004c 18000000 		.4byte	.LFE10-.LFB10
- 1502 0050 00000000 		.4byte	.LFB11
- 1503 0054 10000000 		.4byte	.LFE11-.LFB11
- 1504 0058 00000000 		.4byte	.LFB12
- 1505 005c 10000000 		.4byte	.LFE12-.LFB12
- 1506 0060 00000000 		.4byte	.LFB13
- 1507 0064 10000000 		.4byte	.LFE13-.LFB13
- 1508 0068 00000000 		.4byte	.LFB14
- 1509 006c 10000000 		.4byte	.LFE14-.LFB14
- 1510 0070 00000000 		.4byte	.LFB15
- 1511 0074 10000000 		.4byte	.LFE15-.LFB15
- 1512 0078 00000000 		.4byte	.LFB16
- 1513 007c 12000000 		.4byte	.LFE16-.LFB16
- 1514 0080 00000000 		.4byte	.LFB1
- 1515 0084 5C000000 		.4byte	.LFE1-.LFB1
- 1516 0088 00000000 		.4byte	.LFB3
- 1517 008c 20000000 		.4byte	.LFE3-.LFB3
- 1518 0090 00000000 		.4byte	0
- 1519 0094 00000000 		.4byte	0
- 1520              		.section	.debug_ranges,"",%progbits
- 1521              	.Ldebug_ranges0:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 38
+ 1356              	.Ldebug_ranges0:
+ 1357 0000 00000000 		.4byte	.LFB2
+ 1358 0004 02000000 		.4byte	.LFE2
+ 1359 0008 00000000 		.4byte	.LFB4
+ 1360 000c 02000000 		.4byte	.LFE4
+ 1361 0010 00000000 		.4byte	.LFB5
+ 1362 0014 0C000000 		.4byte	.LFE5
+ 1363 0018 00000000 		.4byte	.LFB6
+ 1364 001c 0C000000 		.4byte	.LFE6
+ 1365 0020 00000000 		.4byte	.LFB7
+ 1366 0024 10000000 		.4byte	.LFE7
+ 1367 0028 00000000 		.4byte	.LFB8
+ 1368 002c 18000000 		.4byte	.LFE8
+ 1369 0030 00000000 		.4byte	.LFB9
+ 1370 0034 10000000 		.4byte	.LFE9
+ 1371 0038 00000000 		.4byte	.LFB10
+ 1372 003c 10000000 		.4byte	.LFE10
+ 1373 0040 00000000 		.4byte	.LFB11
+ 1374 0044 10000000 		.4byte	.LFE11
+ 1375 0048 00000000 		.4byte	.LFB12
+ 1376 004c 10000000 		.4byte	.LFE12
+ 1377 0050 00000000 		.4byte	.LFB13
+ 1378 0054 10000000 		.4byte	.LFE13
+ 1379 0058 00000000 		.4byte	.LFB14
+ 1380 005c 12000000 		.4byte	.LFE14
+ 1381 0060 00000000 		.4byte	.LFB1
+ 1382 0064 40000000 		.4byte	.LFE1
+ 1383 0068 00000000 		.4byte	.LFB3
+ 1384 006c 1C000000 		.4byte	.LFE3
+ 1385 0070 00000000 		.4byte	0
+ 1386 0074 00000000 		.4byte	0
+ 1387              		.section	.debug_line,"",%progbits
+ 1388              	.Ldebug_line0:
+ 1389 0000 66010000 		.section	.debug_str,"MS",%progbits,1
+ 1389      02005200 
+ 1389      00000201 
+ 1389      FB0E0D00 
+ 1389      01010101 
+ 1390              	.LASF15:
+ 1391 0000 72656733 		.ascii	"reg32\000"
+ 1391      3200
+ 1392              	.LASF44:
+ 1393 0006 53746570 		.ascii	"Step_Timer_initVar\000"
+ 1393      5F54696D 
+ 1393      65725F69 
+ 1393      6E697456 
+ 1393      617200
+ 1394              	.LASF21:
+ 1395 0019 53746570 		.ascii	"Step_Timer_WriteCounter\000"
+ 1395      5F54696D 
+ 1395      65725F57 
+ 1395      72697465 
+ 1395      436F756E 
+ 1396              	.LASF27:
+ 1397 0031 70657269 		.ascii	"period\000"
+ 1397      6F6400
+ 1398              	.LASF3:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 36
 
 
- 1522 0000 00000000 		.4byte	.LFB2
- 1523 0004 14000000 		.4byte	.LFE2
- 1524 0008 00000000 		.4byte	.LFB4
- 1525 000c 10000000 		.4byte	.LFE4
- 1526 0010 00000000 		.4byte	.LFB5
- 1527 0014 0C000000 		.4byte	.LFE5
- 1528 0018 00000000 		.4byte	.LFB6
- 1529 001c 0C000000 		.4byte	.LFE6
- 1530 0020 00000000 		.4byte	.LFB7
- 1531 0024 0C000000 		.4byte	.LFE7
- 1532 0028 00000000 		.4byte	.LFB8
- 1533 002c 0C000000 		.4byte	.LFE8
- 1534 0030 00000000 		.4byte	.LFB9
- 1535 0034 10000000 		.4byte	.LFE9
- 1536 0038 00000000 		.4byte	.LFB10
- 1537 003c 18000000 		.4byte	.LFE10
- 1538 0040 00000000 		.4byte	.LFB11
- 1539 0044 10000000 		.4byte	.LFE11
- 1540 0048 00000000 		.4byte	.LFB12
- 1541 004c 10000000 		.4byte	.LFE12
- 1542 0050 00000000 		.4byte	.LFB13
- 1543 0054 10000000 		.4byte	.LFE13
- 1544 0058 00000000 		.4byte	.LFB14
- 1545 005c 10000000 		.4byte	.LFE14
- 1546 0060 00000000 		.4byte	.LFB15
- 1547 0064 10000000 		.4byte	.LFE15
- 1548 0068 00000000 		.4byte	.LFB16
- 1549 006c 12000000 		.4byte	.LFE16
- 1550 0070 00000000 		.4byte	.LFB1
- 1551 0074 5C000000 		.4byte	.LFE1
- 1552 0078 00000000 		.4byte	.LFB3
- 1553 007c 20000000 		.4byte	.LFE3
- 1554 0080 00000000 		.4byte	0
- 1555 0084 00000000 		.4byte	0
- 1556              		.section	.debug_line,"",%progbits
- 1557              	.Ldebug_line0:
- 1558 0000 8F010000 		.section	.debug_str,"MS",%progbits,1
- 1558      02005200 
- 1558      00000201 
- 1558      FB0E0D00 
- 1558      01010101 
- 1559              	.LASF15:
- 1560 0000 72656733 		.ascii	"reg32\000"
- 1560      3200
- 1561              	.LASF48:
- 1562 0006 53746570 		.ascii	"Step_Timer_initVar\000"
- 1562      5F54696D 
- 1562      65725F69 
- 1562      6E697456 
- 1562      617200
- 1563              	.LASF26:
- 1564 0019 53746570 		.ascii	"Step_Timer_WriteCounter\000"
- 1564      5F54696D 
- 1564      65725F57 
- 1564      72697465 
- 1564      436F756E 
- 1565              	.LASF31:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 39
+ 1399 0038 73686F72 		.ascii	"short unsigned int\000"
+ 1399      7420756E 
+ 1399      7369676E 
+ 1399      65642069 
+ 1399      6E7400
+ 1400              	.LASF41:
+ 1401 004b 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 1401      73657273 
+ 1401      5C636173 
+ 1401      65795C44 
+ 1401      65736B74 
+ 1402 0079 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 1402      53746570 
+ 1402      7065725F 
+ 1402      4D6F746F 
+ 1402      725F4472 
+ 1403              	.LASF8:
+ 1404 00a6 756E7369 		.ascii	"unsigned int\000"
+ 1404      676E6564 
+ 1404      20696E74 
+ 1404      00
+ 1405              	.LASF31:
+ 1406 00b3 53746570 		.ascii	"Step_Timer_ReadCompare\000"
+ 1406      5F54696D 
+ 1406      65725F52 
+ 1406      65616443 
+ 1406      6F6D7061 
+ 1407              	.LASF36:
+ 1408 00ca 43794765 		.ascii	"CyGetReg24\000"
+ 1408      74526567 
+ 1408      323400
+ 1409              	.LASF25:
+ 1410 00d5 53746570 		.ascii	"Step_Timer_ReadCapture\000"
+ 1410      5F54696D 
+ 1410      65725F52 
+ 1410      65616443 
+ 1410      61707475 
+ 1411              	.LASF11:
+ 1412 00ec 666C6F61 		.ascii	"float\000"
+ 1412      7400
+ 1413              	.LASF23:
+ 1414 00f2 636F756E 		.ascii	"counter\000"
+ 1414      74657200 
+ 1415              	.LASF7:
+ 1416 00fa 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1416      206C6F6E 
+ 1416      6720756E 
+ 1416      7369676E 
+ 1416      65642069 
+ 1417              	.LASF1:
+ 1418 0111 756E7369 		.ascii	"unsigned char\000"
+ 1418      676E6564 
+ 1418      20636861 
+ 1418      7200
+ 1419              	.LASF32:
+ 1420 011f 53746570 		.ascii	"Step_Timer_ClearFIFO\000"
+ 1420      5F54696D 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 37
 
 
- 1566 0031 70657269 		.ascii	"period\000"
- 1566      6F6400
- 1567              	.LASF3:
- 1568 0038 73686F72 		.ascii	"short unsigned int\000"
- 1568      7420756E 
- 1568      7369676E 
- 1568      65642069 
- 1568      6E7400
- 1569              	.LASF47:
- 1570 004b 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
- 1570      73657273 
- 1570      5C636173 
- 1570      65795C44 
- 1570      65736B74 
- 1571 0079 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
- 1571      53746570 
- 1571      7065725F 
- 1571      4D6F746F 
- 1571      725F4472 
- 1572              	.LASF8:
- 1573 00a6 756E7369 		.ascii	"unsigned int\000"
- 1573      676E6564 
- 1573      20696E74 
- 1573      00
- 1574              	.LASF35:
- 1575 00b3 53746570 		.ascii	"Step_Timer_ReadCompare\000"
- 1575      5F54696D 
- 1575      65725F52 
- 1575      65616443 
- 1575      6F6D7061 
- 1576              	.LASF42:
- 1577 00ca 43794765 		.ascii	"CyGetReg24\000"
- 1577      74526567 
- 1577      323400
- 1578              	.LASF21:
- 1579 00d5 53746570 		.ascii	"Step_Timer_ReadControlRegister\000"
- 1579      5F54696D 
- 1579      65725F52 
- 1579      65616443 
- 1579      6F6E7472 
- 1580              	.LASF29:
- 1581 00f4 53746570 		.ascii	"Step_Timer_ReadCapture\000"
- 1581      5F54696D 
- 1581      65725F52 
- 1581      65616443 
- 1581      61707475 
- 1582              	.LASF11:
- 1583 010b 666C6F61 		.ascii	"float\000"
- 1583      7400
- 1584              	.LASF27:
- 1585 0111 636F756E 		.ascii	"counter\000"
- 1585      74657200 
- 1586              	.LASF7:
- 1587 0119 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1587      206C6F6E 
- 1587      6720756E 
- 1587      7369676E 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 40
+ 1420      65725F43 
+ 1420      6C656172 
+ 1420      4649464F 
+ 1421              	.LASF14:
+ 1422 0134 72656738 		.ascii	"reg8\000"
+ 1422      00
+ 1423              	.LASF42:
+ 1424 0139 53746570 		.ascii	"Step_Timer_ReadStatusRegister\000"
+ 1424      5F54696D 
+ 1424      65725F52 
+ 1424      65616453 
+ 1424      74617475 
+ 1425              	.LASF5:
+ 1426 0157 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1426      20756E73 
+ 1426      69676E65 
+ 1426      6420696E 
+ 1426      7400
+ 1427              	.LASF9:
+ 1428 0169 75696E74 		.ascii	"uint8\000"
+ 1428      3800
+ 1429              	.LASF22:
+ 1430 016f 696E7465 		.ascii	"interruptsMask\000"
+ 1430      72727570 
+ 1430      74734D61 
+ 1430      736B00
+ 1431              	.LASF33:
+ 1432 017e 53746570 		.ascii	"Step_Timer_Init\000"
+ 1432      5F54696D 
+ 1432      65725F49 
+ 1432      6E697400 
+ 1433              	.LASF29:
+ 1434 018e 53746570 		.ascii	"Step_Timer_WriteCompare\000"
+ 1434      5F54696D 
+ 1434      65725F57 
+ 1434      72697465 
+ 1434      436F6D70 
+ 1435              	.LASF12:
+ 1436 01a6 646F7562 		.ascii	"double\000"
+ 1436      6C6500
+ 1437              	.LASF34:
+ 1438 01ad 53746570 		.ascii	"Step_Timer_Start\000"
+ 1438      5F54696D 
+ 1438      65725F53 
+ 1438      74617274 
+ 1438      00
+ 1439              	.LASF28:
+ 1440 01be 53746570 		.ascii	"Step_Timer_ReadPeriod\000"
+ 1440      5F54696D 
+ 1440      65725F52 
+ 1440      65616450 
+ 1440      6572696F 
+ 1441              	.LASF40:
+ 1442 01d4 47656E65 		.ascii	"Generated_Source\\PSoC4\\Step_Timer.c\000"
+ 1442      72617465 
+ 1442      645F536F 
+ 1442      75726365 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 38
 
 
- 1587      65642069 
- 1588              	.LASF1:
- 1589 0130 756E7369 		.ascii	"unsigned char\000"
- 1589      676E6564 
- 1589      20636861 
- 1589      7200
- 1590              	.LASF23:
- 1591 013e 53746570 		.ascii	"Step_Timer_WriteControlRegister\000"
- 1591      5F54696D 
- 1591      65725F57 
- 1591      72697465 
- 1591      436F6E74 
- 1592              	.LASF14:
- 1593 015e 72656738 		.ascii	"reg8\000"
- 1593      00
- 1594              	.LASF20:
- 1595 0163 53746570 		.ascii	"Step_Timer_ReadStatusRegister\000"
- 1595      5F54696D 
- 1595      65725F52 
- 1595      65616453 
- 1595      74617475 
- 1596              	.LASF5:
- 1597 0181 6C6F6E67 		.ascii	"long unsigned int\000"
- 1597      20756E73 
- 1597      69676E65 
- 1597      6420696E 
- 1597      7400
- 1598              	.LASF9:
- 1599 0193 75696E74 		.ascii	"uint8\000"
- 1599      3800
- 1600              	.LASF25:
- 1601 0199 636F6E74 		.ascii	"control\000"
- 1601      726F6C00 
- 1602              	.LASF24:
- 1603 01a1 696E7465 		.ascii	"interruptsMask\000"
- 1603      72727570 
- 1603      74734D61 
- 1603      736B00
- 1604              	.LASF37:
- 1605 01b0 53746570 		.ascii	"Step_Timer_Init\000"
- 1605      5F54696D 
- 1605      65725F49 
- 1605      6E697400 
- 1606              	.LASF33:
- 1607 01c0 53746570 		.ascii	"Step_Timer_WriteCompare\000"
- 1607      5F54696D 
- 1607      65725F57 
- 1607      72697465 
- 1607      436F6D70 
- 1608              	.LASF12:
- 1609 01d8 646F7562 		.ascii	"double\000"
- 1609      6C6500
- 1610              	.LASF40:
- 1611 01df 53746570 		.ascii	"Step_Timer_Start\000"
- 1611      5F54696D 
- 1611      65725F53 
- 1611      74617274 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 41
+ 1442      5C50536F 
+ 1443              	.LASF10:
+ 1444 01f8 75696E74 		.ascii	"uint32\000"
+ 1444      333200
+ 1445              	.LASF37:
+ 1446 01ff 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1446      74657243 
+ 1446      72697469 
+ 1446      63616C53 
+ 1446      65637469 
+ 1447              	.LASF24:
+ 1448 0216 53746570 		.ascii	"Step_Timer_ReadCounter\000"
+ 1448      5F54696D 
+ 1448      65725F52 
+ 1448      65616443 
+ 1448      6F756E74 
+ 1449              	.LASF43:
+ 1450 022d 53746570 		.ascii	"Step_Timer_interruptState\000"
+ 1450      5F54696D 
+ 1450      65725F69 
+ 1450      6E746572 
+ 1450      72757074 
+ 1451              	.LASF38:
+ 1452 0247 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1452      69744372 
+ 1452      69746963 
+ 1452      616C5365 
+ 1452      6374696F 
+ 1453              	.LASF18:
+ 1454 025d 53746570 		.ascii	"Step_Timer_Enable\000"
+ 1454      5F54696D 
+ 1454      65725F45 
+ 1454      6E61626C 
+ 1454      6500
+ 1455              	.LASF39:
+ 1456 026f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1456      43313120 
+ 1456      352E342E 
+ 1456      31203230 
+ 1456      31363036 
+ 1457 02a2 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1457      20726576 
+ 1457      6973696F 
+ 1457      6E203233 
+ 1457      37373135 
+ 1458 02d5 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1458      66756E63 
+ 1458      74696F6E 
+ 1458      2D736563 
+ 1458      74696F6E 
+ 1459              	.LASF17:
+ 1460 02fd 73697A65 		.ascii	"sizetype\000"
+ 1460      74797065 
+ 1460      00
+ 1461              	.LASF6:
+ 1462 0306 6C6F6E67 		.ascii	"long long int\000"
+ 1462      206C6F6E 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 39
 
 
- 1611      00
- 1612              	.LASF32:
- 1613 01f0 53746570 		.ascii	"Step_Timer_ReadPeriod\000"
- 1613      5F54696D 
- 1613      65725F52 
- 1613      65616450 
- 1613      6572696F 
- 1614              	.LASF46:
- 1615 0206 47656E65 		.ascii	"Generated_Source\\PSoC4\\Step_Timer.c\000"
- 1615      72617465 
- 1615      645F536F 
- 1615      75726365 
- 1615      5C50536F 
- 1616              	.LASF10:
- 1617 022a 75696E74 		.ascii	"uint32\000"
- 1617      333200
- 1618              	.LASF43:
- 1619 0231 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 1619      74657243 
- 1619      72697469 
- 1619      63616C53 
- 1619      65637469 
- 1620              	.LASF28:
- 1621 0248 53746570 		.ascii	"Step_Timer_ReadCounter\000"
- 1621      5F54696D 
- 1621      65725F52 
- 1621      65616443 
- 1621      6F756E74 
- 1622              	.LASF39:
- 1623 025f 53746570 		.ascii	"Step_Timer_interruptState\000"
- 1623      5F54696D 
- 1623      65725F69 
- 1623      6E746572 
- 1623      72757074 
- 1624              	.LASF44:
- 1625 0279 43794578 		.ascii	"CyExitCriticalSection\000"
- 1625      69744372 
- 1625      69746963 
- 1625      616C5365 
- 1625      6374696F 
- 1626              	.LASF18:
- 1627 028f 53746570 		.ascii	"Step_Timer_Enable\000"
- 1627      5F54696D 
- 1627      65725F45 
- 1627      6E61626C 
- 1627      6500
- 1628              	.LASF45:
- 1629 02a1 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 1629      43313120 
- 1629      352E342E 
- 1629      31203230 
- 1629      31363036 
- 1630 02d4 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
- 1630      20726576 
- 1630      6973696F 
- 1630      6E203233 
- 1630      37373135 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 42
-
-
- 1631 0307 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 1631      66756E63 
- 1631      74696F6E 
- 1631      2D736563 
- 1631      74696F6E 
- 1632              	.LASF38:
- 1633 032f 6374726C 		.ascii	"ctrl\000"
- 1633      00
- 1634              	.LASF17:
- 1635 0334 73697A65 		.ascii	"sizetype\000"
- 1635      74797065 
- 1635      00
- 1636              	.LASF6:
- 1637 033d 6C6F6E67 		.ascii	"long long int\000"
- 1637      206C6F6E 
- 1637      6720696E 
- 1637      7400
- 1638              	.LASF19:
- 1639 034b 53746570 		.ascii	"Step_Timer_Stop\000"
- 1639      5F54696D 
- 1639      65725F53 
- 1639      746F7000 
- 1640              	.LASF13:
- 1641 035b 63686172 		.ascii	"char\000"
- 1641      00
- 1642              	.LASF30:
- 1643 0360 53746570 		.ascii	"Step_Timer_WritePeriod\000"
- 1643      5F54696D 
- 1643      65725F57 
- 1643      72697465 
- 1643      50657269 
- 1644              	.LASF41:
- 1645 0377 43795365 		.ascii	"CySetReg24\000"
- 1645      74526567 
- 1645      323400
- 1646              	.LASF2:
- 1647 0382 73686F72 		.ascii	"short int\000"
- 1647      7420696E 
- 1647      7400
- 1648              	.LASF36:
- 1649 038c 53746570 		.ascii	"Step_Timer_ClearFIFO\000"
- 1649      5F54696D 
- 1649      65725F43 
- 1649      6C656172 
- 1649      4649464F 
- 1650              	.LASF4:
- 1651 03a1 6C6F6E67 		.ascii	"long int\000"
- 1651      20696E74 
- 1651      00
- 1652              	.LASF16:
- 1653 03aa 6C6F6E67 		.ascii	"long double\000"
- 1653      20646F75 
- 1653      626C6500 
- 1654              	.LASF0:
- 1655 03b6 7369676E 		.ascii	"signed char\000"
- 1655      65642063 
- 1655      68617200 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\ccq1xv64.s 			page 43
-
-
- 1656              	.LASF34:
- 1657 03c2 636F6D70 		.ascii	"compare\000"
- 1657      61726500 
- 1658              	.LASF22:
- 1659 03ca 53746570 		.ascii	"Step_Timer_SetInterruptMode\000"
- 1659      5F54696D 
- 1659      65725F53 
- 1659      6574496E 
- 1659      74657272 
- 1660              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 1462      6720696E 
+ 1462      7400
+ 1463              	.LASF19:
+ 1464 0314 53746570 		.ascii	"Step_Timer_Stop\000"
+ 1464      5F54696D 
+ 1464      65725F53 
+ 1464      746F7000 
+ 1465              	.LASF13:
+ 1466 0324 63686172 		.ascii	"char\000"
+ 1466      00
+ 1467              	.LASF26:
+ 1468 0329 53746570 		.ascii	"Step_Timer_WritePeriod\000"
+ 1468      5F54696D 
+ 1468      65725F57 
+ 1468      72697465 
+ 1468      50657269 
+ 1469              	.LASF35:
+ 1470 0340 43795365 		.ascii	"CySetReg24\000"
+ 1470      74526567 
+ 1470      323400
+ 1471              	.LASF2:
+ 1472 034b 73686F72 		.ascii	"short int\000"
+ 1472      7420696E 
+ 1472      7400
+ 1473              	.LASF4:
+ 1474 0355 6C6F6E67 		.ascii	"long int\000"
+ 1474      20696E74 
+ 1474      00
+ 1475              	.LASF16:
+ 1476 035e 6C6F6E67 		.ascii	"long double\000"
+ 1476      20646F75 
+ 1476      626C6500 
+ 1477              	.LASF0:
+ 1478 036a 7369676E 		.ascii	"signed char\000"
+ 1478      65642063 
+ 1478      68617200 
+ 1479              	.LASF30:
+ 1480 0376 636F6D70 		.ascii	"compare\000"
+ 1480      61726500 
+ 1481              	.LASF20:
+ 1482 037e 53746570 		.ascii	"Step_Timer_SetInterruptMode\000"
+ 1482      5F54696D 
+ 1482      65725F53 
+ 1482      6574496E 
+ 1482      74657272 
+ 1483              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

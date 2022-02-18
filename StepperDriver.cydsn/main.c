@@ -15,28 +15,57 @@
 
 const int CLOCK_FREQUENCY = 1000000;
 
-double maxVelocity = 1440; // deg/s
-double maxAcceleration = 360; // deg/s/s
-double stepSize;// deg/step
-int stepMode = 1; // microstep setting, 0 for full step
+double accel;
+double stepSize;
+int E_max;
 
 int targetPosition = 0;
 int dbg_step = 1;
 int E = 0;
-int E_max;
-int dir = 1;
 
-double getCurrentPosition()
+// position in steps
+int getCurrentPosition()
 {
     return Step_Counter_ReadCounter();
 }
 
+// speed in steps/sec
+void setSpeed(double speed) {
+    Step_Timer_WritePeriod(CLOCK_FREQUENCY/speed);
+}
+
+void AccelToTarget() {
+    int pos = getCurrentPosition();
+        
+    if (E > targetPosition - pos) {
+        E -= E > -E_max;
+    } else {
+        E += E < E_max;
+    }
+    
+    Direction_Write(E >= 0);
+    
+    if (E != 0) {
+        double new_freq = sqrt(abs(E)*accel);
+        setSpeed(new_freq);
+    }
+    
+    if (pos == targetPosition) {
+        if (E == 0) {
+            Enable_Write(0);
+        }
+    } else {
+        Enable_Write(1);
+    }
+}
+    
 void StartMove(int target)
 {
     targetPosition = target;
+    int pos = Step_Counter_ReadCounter();
     PrintInt(targetPosition);
     Println("");
-    Step_Counter_Enable();
+    AccelToTarget();
 }
 
 void GotoAngle(double angle) {
@@ -49,54 +78,25 @@ void Step(int steps) {
 
 CY_ISR(On_Lim_1) {
     Println("Hit limit switch 1");
-    Step_Timer_Stop();
+    Enable_Write(0);
     Step_Counter_WriteCounter(0);
     isr_lim_1_ClearPending();
 }
 
 CY_ISR(On_Lim_2) {
     Println("Hit limit switch 2");
-    Step_Timer_Stop();
+    Enable_Write(0);
     isr_lim_2_ClearPending();
 }
 
 CY_ISR(On_Fault) {
     Println("Driver fault");
-    Step_Timer_Stop();
+    Enable_Write(0);
     isr_fault_ClearPending();
 }
 
 CY_ISR(On_Step) {
-    int pos = Step_Counter_ReadCounter();
-    
-    if (E == 0) {
-        if (pos == targetPosition) {
-            Step_Timer_Stop();
-        }
-        else {
-            if (targetPosition >= pos) {   
-                Direction_Write(1);
-                dir = 1;
-            } else {
-                Direction_Write(0);
-                dir = -1;
-            }
-        }
-    }
-    if (E > targetPosition - pos) {
-        E -= dir;
-    } else if (E < E_max) {
-        E += dir;
-    }
-    
-    int new_period = CLOCK_FREQUENCY/sqrt(abs(E)*maxAcceleration/stepSize);
-    
-    if (CLOCK_FREQUENCY/new_period < 5000) {
-        
-        Step_Timer_WritePeriod(new_period);
-    } else {
-        Println("Step frequency capped at 5kHz, you fucked up");
-    }
+    AccelToTarget();
     isr_step_ClearPending();
 }
 
@@ -110,37 +110,47 @@ int main(void)
     isr_fault_StartEx(On_Fault);
     isr_step_StartEx(On_Step);
     Step_Counter_Start();
-    Step_Timer_Init(); // Init but don't start the counter
+    Step_Timer_Start();
     
     DBG_UART_Start();
     
     Println("Restart");
     
+    // TODO get these values from CAN init packet
+    int stepMode = 1;
+    double maxVelocity = 1440; // deg/s
+    double maxAcceleration = 360; // deg/s/s
+    
     if (stepMode == 1) {
         stepSize = 360.0/200;
     }
+    
+    accel = maxAcceleration/stepSize;
     E_max = (int) maxVelocity*maxVelocity/stepSize/2/maxAcceleration;
+    
+    
     Print("E_max is ");
     PrintInt(E_max);
     Println("");
     
     for(;;)
     {
-        
-        int currentPosition = Step_Counter_ReadCounter();
-        
         int data = DBG_UART_UartGetByte();
-        if (data == RIGHT) {
+        if (data == STATUS) {
+            Print(" Step period:");
+            PrintInt(Step_Timer_ReadPeriod());
+            Print(" Position:");
+            PrintInt(Step_Counter_ReadCounter());
+            Print(" E:");
+            PrintInt(E);
+            Println("");
+        } else if (data == RIGHT) {
             Step(dbg_step);
         } else if (data == LEFT) {
             Step(-dbg_step);
         } else if (data == UP) {
-            if (dbg_step < 200) {
-                dbg_step *= 2;
-            } else {
-                dbg_step = 200;
-            }
-            Print("Step is ");
+            dbg_step *= 2;
+            Print("Step by ");
             PrintInt(dbg_step);
             Println("");
         } else if (data == DOWN) {
@@ -149,8 +159,7 @@ int main(void)
             } else {
                 dbg_step = 1;
             }
-            Print("Step is ");
-
+            Print("Step by ");
             PrintInt(dbg_step);
             Println("");
         }

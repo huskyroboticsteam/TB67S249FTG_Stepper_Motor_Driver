@@ -65,6 +65,7 @@
 #include "Step_Timer.h"
 #include "isr_step.h"
 #include "StepClk.h"
+#include "Enable.h"
 #include "DBG_UART_SCBCLK.h"
 #include "DBG_UART_tx.h"
 #include "DBG_UART_tx_aliases.h"

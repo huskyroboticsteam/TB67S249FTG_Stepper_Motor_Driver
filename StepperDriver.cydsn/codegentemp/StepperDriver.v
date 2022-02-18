@@ -1,6 +1,6 @@
 // ======================================================================
 // StepperDriver.v generated from TopDesign.cysch
-// 02/15/2022 at 19:36
+// 02/17/2022 at 19:31
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -676,7 +676,7 @@ module CAN_v3_0_2 (
 
 endmodule
 
-// Counter_v3_0(CaptureMode=0, CaptureModeSoftware=0, ClockMode=0, CompareMode=1, CompareModeSoftware=0, CompareStatusEdgeSense=true, CompareValue=100, CONTROL3=0, ControlRegRemoved=0, CyGetRegReplacementString=CY_GET_REG24, CySetRegReplacementString=CY_SET_REG24, EnableMode=0, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, InitCounterValue=0, InterruptOnCapture=false, InterruptOnCompare=false, InterruptOnOverUnderFlow=false, InterruptOnTC=false, Period=16777214, RegDefReplacementString=reg32, RegSizeReplacementString=uint32, ReloadOnCapture=false, ReloadOnCompare=false, ReloadOnOverUnder=true, ReloadOnReset=true, Resolution=24, RunMode=0, UDB16=false, UDB24=true, UDB32=false, UDB8=false, UDBControlReg=true, UseInterrupt=true, VerilogSectionReplacementString=sC24, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Counter_v3_0, CY_CONFIG_TITLE=Step_Timer, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Step_Timer, CY_INSTANCE_SHORT_NAME=Step_Timer, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Step_Timer, )
+// Counter_v3_0(CaptureMode=0, CaptureModeSoftware=0, ClockMode=0, CompareMode=3, CompareModeSoftware=0, CompareStatusEdgeSense=true, CompareValue=0, CONTROL3=0, ControlRegRemoved=1, CyGetRegReplacementString=CY_GET_REG24, CySetRegReplacementString=CY_SET_REG24, EnableMode=1, FF16=false, FF8=false, FixedFunction=false, FixedFunctionUsed=0, InitCounterValue=0, InterruptOnCapture=false, InterruptOnCompare=false, InterruptOnOverUnderFlow=false, InterruptOnTC=false, Period=16777214, RegDefReplacementString=reg32, RegSizeReplacementString=uint32, ReloadOnCapture=false, ReloadOnCompare=false, ReloadOnOverUnder=true, ReloadOnReset=true, Resolution=24, RunMode=0, UDB16=false, UDB24=true, UDB32=false, UDB8=false, UDBControlReg=false, UseInterrupt=true, VerilogSectionReplacementString=sC24, CY_API_CALLBACK_HEADER_INCLUDE=#include "cyapicallbacks.h", CY_COMMENT=, CY_COMPONENT_NAME=Counter_v3_0, CY_CONFIG_TITLE=Step_Timer, CY_CONST_CONFIG=true, CY_CONTROL_FILE=<:default:>, CY_DATASHEET_FILE=<:default:>, CY_FITTER_NAME=Step_Timer, CY_INSTANCE_SHORT_NAME=Step_Timer, CY_MAJOR_VERSION=3, CY_MINOR_VERSION=0, CY_PDL_DRIVER_NAME=, CY_PDL_DRIVER_REQ_VERSION=, CY_PDL_DRIVER_SUBGROUP=, CY_PDL_DRIVER_VARIANT=, CY_REMOVE=false, CY_SUPPRESS_API_GEN=false, CY_VERSION=PSoC Creator  4.4, INSTANCE_NAME=Step_Timer, )
 module Counter_v3_0_3 (
     capture,
     clock,
@@ -703,9 +703,9 @@ module Counter_v3_0_3 (
 
     parameter CaptureMode = 0;
     parameter ClockMode = 0;
-    parameter CompareMode = 1;
+    parameter CompareMode = 3;
     parameter CompareStatusEdgeSense = 1;
-    parameter EnableMode = 0;
+    parameter EnableMode = 1;
     parameter ReloadOnCapture = 0;
     parameter ReloadOnCompare = 0;
     parameter ReloadOnOverUnder = 1;
@@ -737,9 +737,9 @@ module Counter_v3_0_3 (
         .upcnt(upCnt));
     defparam CounterUDB.CaptureMode = 0;
     defparam CounterUDB.ClockMode = 0;
-    defparam CounterUDB.CompareMode = 1;
+    defparam CounterUDB.CompareMode = 3;
     defparam CounterUDB.CompareStatusEdgeSense = 1;
-    defparam CounterUDB.EnableMode = 0;
+    defparam CounterUDB.EnableMode = 1;
     defparam CounterUDB.ReloadOnCapture = 0;
     defparam CounterUDB.ReloadOnCompare = 0;
     defparam CounterUDB.ReloadOnOverUnder = 1;
@@ -755,12 +755,21 @@ endmodule
 // top
 module top ;
 
+          wire  Net_975;
+          wire  Net_974;
+          wire  Net_973;
+          wire  Net_972;
+          wire  Net_971;
+          wire  Net_970;
+          wire  Net_969;
+          wire  Net_968;
+          wire  Net_966;
           wire  Net_855;
           wire  Net_959;
           wire  Net_958;
+          wire  Net_960;
           wire  Net_956;
           wire  Net_955;
-          wire  Net_954;
           wire  Net_953;
           wire  Net_952;
           wire  Net_739;
@@ -830,10 +839,10 @@ module top ;
           wire  Net_794;
           wire  Net_460;
           wire  Net_769;
-          wire  Net_768;
           wire  Net_814;
+          wire  Net_768;
+          wire  Net_976;
           wire  Net_853;
-          wire  Net_960;
           wire  Net_656;
           wire  Net_624;
           wire  Net_734;
@@ -844,7 +853,7 @@ module top ;
     FreqDiv_v1_0 ClockDiv (
         .clock(Net_814),
         .div(Net_853),
-        .en(1'b1),
+        .en(Net_768),
         .reset(1'b0));
     defparam ClockDiv.Divider = 2;
     defparam ClockDiv.highPulse = 1;
@@ -2149,7 +2158,7 @@ module top ;
         .comp(Net_624),
         .count(Net_853),
         .downCnt(1'b0),
-        .enable(1'b0),
+        .enable(Net_976),
         .interrupt(Net_955),
         .reset(1'b0),
         .tc(Net_960),
@@ -2157,9 +2166,9 @@ module top ;
         .upCnt(1'b0));
     defparam Step_Timer.CaptureMode = 0;
     defparam Step_Timer.ClockMode = 0;
-    defparam Step_Timer.CompareMode = 1;
+    defparam Step_Timer.CompareMode = 3;
     defparam Step_Timer.CompareStatusEdgeSense = 1;
-    defparam Step_Timer.EnableMode = 0;
+    defparam Step_Timer.EnableMode = 1;
     defparam Step_Timer.ReloadOnCapture = 0;
     defparam Step_Timer.ReloadOnCompare = 0;
     defparam Step_Timer.ReloadOnOverUnder = 1;
@@ -2170,9 +2179,9 @@ module top ;
 
 
 	cy_isr_v1_0
-		#(.int_type(2'b10))
+		#(.int_type(2'b00))
 		isr_step
-		 (.int_signal(Net_960));
+		 (.int_signal(Net_624));
 
 
 
@@ -2182,10 +2191,36 @@ module top ;
 		  .divisor(0),
 		  .period("500000000"),
 		  .is_direct(0),
-		  .is_digital(0))
+		  .is_digital(1))
 		StepClk
 		 (.clock_out(Net_814));
 
+
+    CyControlReg_v1_80 Enable (
+        .clock(1'b0),
+        .control_0(Net_976),
+        .control_1(Net_968),
+        .control_2(Net_969),
+        .control_3(Net_970),
+        .control_4(Net_971),
+        .control_5(Net_972),
+        .control_6(Net_973),
+        .control_7(Net_974),
+        .reset(1'b0));
+    defparam Enable.Bit0Mode = 0;
+    defparam Enable.Bit1Mode = 0;
+    defparam Enable.Bit2Mode = 0;
+    defparam Enable.Bit3Mode = 0;
+    defparam Enable.Bit4Mode = 0;
+    defparam Enable.Bit5Mode = 0;
+    defparam Enable.Bit6Mode = 0;
+    defparam Enable.Bit7Mode = 0;
+    defparam Enable.BitValue = 0;
+    defparam Enable.BusDisplay = 0;
+    defparam Enable.ExtrReset = 0;
+    defparam Enable.NumOutputs = 1;
+
+    assign Net_768 = 1'h1;
 
 
 

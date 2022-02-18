@@ -1,40 +1,42 @@
 dont_use_io iocell 3 2
 dont_use_io iocell 3 3
-set_location "\Step_Counter:CounterUDB:sC32:counterdp:u0\" datapathcell 0 3 2 
-set_location "\Step_Timer:CounterUDB:status_2\" macrocell 0 1 0 3
-set_location "Net_719" macrocell 1 1 1 3
-set_location "\Step_Timer:CounterUDB:status_0\" macrocell 1 0 1 1
-set_location "\Step_Counter:CounterUDB:sC32:counterdp:u2\" datapathcell 1 2 2 
-set_location "\Step_Counter:CounterUDB:status_0\" macrocell 0 2 0 0
-set_location "\Step_Counter:CounterUDB:count_enable\" macrocell 1 3 0 0
-set_location "\Step_Timer:CounterUDB:prevCompare\" macrocell 1 2 1 2
-set_location "\Step_Timer:CounterUDB:count_stored_i\" macrocell 0 1 0 1
-set_location "\Step_Timer:CounterUDB:count_enable\" macrocell 0 1 0 0
-set_location "\Step_Counter:CounterUDB:sC32:counterdp:u1\" datapathcell 1 3 2 
-set_location "\Step_Timer:CounterUDB:sSTSReg:stsreg\" statusicell 1 0 4 
-set_location "\Step_Timer:CounterUDB:sC24:counterdp:u0\" datapathcell 0 1 2 
-set_location "\Step_Timer:CounterUDB:sC24:counterdp:u2\" datapathcell 1 0 2 
-set_location "Net_853" macrocell 0 1 1 0
-set_location "\Step_Counter:CounterUDB:sC32:counterdp:u3\" datapathcell 0 2 2 
-set_location "\Step_Counter:CounterUDB:status_3\" macrocell 0 2 0 3
-set_location "Net_635" macrocell 1 1 0 3
-set_location "\Step_Counter:CounterUDB:underflow_reg_i\" macrocell 0 2 1 1
-set_location "\ClockDiv:not_last_reset\" macrocell 0 1 1 2
-set_location "\Step_Timer:CounterUDB:overflow_reg_i\" macrocell 0 1 0 2
-set_location "\Step_Timer:CounterUDB:sC24:counterdp:u1\" datapathcell 1 1 2 
-set_location "\Step_Counter:CounterUDB:sSTSReg:stsreg\" statusicell 0 2 4 
-set_location "__ONE__" macrocell 0 1 1 3
-set_location "\Step_Counter:CounterUDB:status_2\" macrocell 0 2 0 2
+set_location "\Step_Timer:CounterUDB:status_2\" macrocell 1 0 0 3
+set_location "Net_719" macrocell 1 1 0 1
 set_location "\Step_Counter:CounterUDB:overflow_reg_i\" macrocell 0 2 1 0
-set_location "\ClockDiv:count_0\" macrocell 0 1 1 1
+set_location "\Step_Timer:CounterUDB:overflow_reg_i\" macrocell 1 0 0 2
 set_location "\Step_Counter:CounterUDB:prevCompare\" macrocell 0 2 0 1
+set_location "\Step_Timer:CounterUDB:count_stored_i\" macrocell 0 1 0 1
+set_location "\Step_Counter:CounterUDB:sC32:counterdp:u2\" datapathcell 1 2 2 
+set_location "\Step_Counter:CounterUDB:sC32:counterdp:u1\" datapathcell 1 3 2 
 set_location "\Step_Counter:CounterUDB:count_stored_i\" macrocell 1 3 0 1
+set_location "\Step_Timer:CounterUDB:prevCompare\" macrocell 1 2 1 0
+set_location "\Step_Counter:CounterUDB:underflow_reg_i\" macrocell 0 2 1 1
+set_location "\Step_Timer:CounterUDB:sSTSReg:stsreg\" statusicell 1 0 4 
+set_location "\Step_Counter:CounterUDB:status_0\" macrocell 0 2 0 0
+set_location "Net_853" macrocell 0 1 1 0
+set_location "\Step_Counter:CounterUDB:status_2\" macrocell 0 2 0 2
+set_location "Net_635" macrocell 1 1 1 0
+set_location "\ClockDiv:not_last_reset\" macrocell 0 1 1 2
+set_location "\Step_Counter:CounterUDB:sC32:counterdp:u0\" datapathcell 0 3 2 
+set_location "\Step_Timer:CounterUDB:sC24:counterdp:u0\" datapathcell 0 1 2 
+set_location "\Step_Counter:CounterUDB:sC32:counterdp:u3\" datapathcell 0 2 2 
+set_location "\Step_Counter:CounterUDB:sSTSReg:stsreg\" statusicell 0 2 4 
+set_location "__ONE__" macrocell 1 1 1 3
+set_location "\Step_Counter:CounterUDB:status_3\" macrocell 0 2 0 3
+set_location "\Step_Timer:CounterUDB:status_0\" macrocell 1 0 1 1
+set_location "\Step_Counter:CounterUDB:count_enable\" macrocell 1 3 0 0
+set_location "\Step_Timer:CounterUDB:sC24:counterdp:u1\" datapathcell 1 1 2 
+set_location "\Step_Timer:CounterUDB:sC24:counterdp:u2\" datapathcell 1 0 2 
+set_location "\ClockDiv:count_0\" macrocell 0 1 1 1
+set_location "\Step_Timer:CounterUDB:count_enable\" macrocell 0 1 0 0
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
 set_io "Dip_4(0)" iocell 11 7
 set_io "Fault(0)" iocell 11 6
-set_location "\CAN_addr:sts:sts_reg\" statuscell 0 3 3 
+set_location "\CAN_addr:sts:sts_reg\" statuscell 0 1 3 
+set_location "\Enable:Sync:ctrl_reg\" controlcell 0 1 6 
 set_io "LED_Pin(0)" iocell 5 2
 set_io "\DBG_UART:tx(0)\" iocell 4 1
+set_location "ClockBlock" m0s8clockblockcell -1 -1 0
 set_location "isr_lim_1" interrupt -1 -1 2
 set_location "isr_lim_2" interrupt -1 -1 3
 set_location "isr_step" interrupt -1 -1 4
@@ -43,8 +45,6 @@ set_location "\Direction:Sync:ctrl_reg\" controlcell 0 3 6
 set_io "CAN_RX(0)" iocell 0 0
 set_io "D2(0)" iocell 11 4
 set_location "\CAN:CanIP\" cancell -1 -1 1
-set_location "\Step_Timer:CounterUDB:sCTRLReg:ctrlreg\" controlcell 0 1 6 
-set_location "ClockBlock" m0s8clockblockcell -1 -1 0
 set_location "isr_done" interrupt -1 -1 0
 set_location "\CAN:isr\" interrupt -1 -1 29
 set_io "Lim_1(0)" iocell 2 1

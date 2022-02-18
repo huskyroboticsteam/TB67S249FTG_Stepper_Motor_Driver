@@ -131,6 +131,7 @@
 <dep name=".\Generated_Source\PSoC4\Direction.h" />
 <dep name=".\Generated_Source\PSoC4\Direction_Pin.h" />
 <dep name=".\Generated_Source\PSoC4\Direction_Pin_aliases.h" />
+<dep name=".\Generated_Source\PSoC4\Enable.h" />
 <dep name=".\Generated_Source\PSoC4\Fault.h" />
 <dep name=".\Generated_Source\PSoC4\Fault_aliases.h" />
 <dep name=".\Generated_Source\PSoC4\LED_Pin.h" />
@@ -207,6 +208,7 @@
 <file name=".\Generated_Source\PSoC4\Direction.h" />
 <file name=".\Generated_Source\PSoC4\Direction_Pin.h" />
 <file name=".\Generated_Source\PSoC4\Direction_Pin_aliases.h" />
+<file name=".\Generated_Source\PSoC4\Enable.h" />
 <file name=".\Generated_Source\PSoC4\Fault.h" />
 <file name=".\Generated_Source\PSoC4\Fault_aliases.h" />
 <file name=".\Generated_Source\PSoC4\LED_Pin.h" />
@@ -242,10 +244,6 @@
 <file name=".\cyapicallbacks.h" />
 <file name=".\main.c" />
 <file name=".\main.h" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\test.o">
-<dep name=".\test.c" />
-</file>
-<file name=".\test.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\CAN.o">
 <dep name=".\Generated_Source\PSoC4\CAN.c" />
 <dep name=".\Generated_Source\PSoC4\CAN.h" />
@@ -775,6 +773,22 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\Direction_Pin_PM.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Enable.o">
+<dep name=".\Generated_Source\PSoC4\Enable.c" />
+<dep name=".\Generated_Source\PSoC4\Enable.h" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Enable.c" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\Enable_PM.o">
+<dep name=".\Generated_Source\PSoC4\Enable.h" />
+<dep name=".\Generated_Source\PSoC4\Enable_PM.c" />
+<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
+<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
+<dep name=".\Generated_Source\PSoC4\cytypes.h" />
+</file>
+<file name=".\Generated_Source\PSoC4\Enable_PM.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\Fault.o">
 <dep name=".\Generated_Source\PSoC4\Fault.c" />
 <dep name=".\Generated_Source\PSoC4\Fault.h" />
@@ -1027,8 +1041,11 @@
 <file name=".\Generated_Source\PSoC4\CyBootAsmGnu.s" />
 <file name=".\Generated_Source\PSoC4\cydevicegnu_trm.inc" />
 <file name=".\Generated_Source\PSoC4\cyfittergnu.inc" />
+<file name=".\CortexM0\ARM_GCC_541\Debug\test.o">
+<dep name=".\test.c" />
+</file>
+<file name=".\test.c" />
 <file name=".\Generated_Source\PSoC4\BUS_CLK_1.h" />
-<file name=".\Generated_Source\PSoC4\Enable.h" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\BUS_CLK_1.o">
 <dep name=".\Generated_Source\PSoC4\BUS_CLK_1.c" />
 <dep name=".\Generated_Source\PSoC4\BUS_CLK_1.h" />
@@ -1037,22 +1054,6 @@
 <dep name=".\Generated_Source\PSoC4\cytypes.h" />
 </file>
 <file name=".\Generated_Source\PSoC4\BUS_CLK_1.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Enable.o">
-<dep name=".\Generated_Source\PSoC4\Enable.c" />
-<dep name=".\Generated_Source\PSoC4\Enable.h" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\Enable.c" />
-<file name=".\CortexM0\ARM_GCC_541\Debug\Enable_PM.o">
-<dep name=".\Generated_Source\PSoC4\Enable.h" />
-<dep name=".\Generated_Source\PSoC4\Enable_PM.c" />
-<dep name=".\Generated_Source\PSoC4\cydevice_trm.h" />
-<dep name=".\Generated_Source\PSoC4\cyfitter.h" />
-<dep name=".\Generated_Source\PSoC4\cytypes.h" />
-</file>
-<file name=".\Generated_Source\PSoC4\Enable_PM.c" />
 <file name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o">
 <dep name=".\Generated_Source\PSoC4\cymetadata.c" />
 </file>
@@ -1069,6 +1070,8 @@
 <dep name=".\CortexM0\ARM_GCC_541\Debug\main.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\cymetadata.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Enable.o" />
+<dep name=".\CortexM0\ARM_GCC_541\Debug\Enable_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Step_Pin.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Step_Pin_PM.o" />
 <dep name=".\CortexM0\ARM_GCC_541\Debug\Direction_Pin.o" />
@@ -1748,7 +1751,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="132894561921306895" />
+<deps_time v="132896287274384431" />
 <top_block v="TopDesign" />
 <last_generation v="1" />
 <pdl_path v="" />
@@ -1758,7 +1761,7 @@
 <dataGuid v="769d31ea-68b1-4f0c-b90a-7c10a43ee563">
 <CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563 type_name="CyDesigner.Common.ProjMgmt.Model.CyLinkCustomData" version="1">
 <link_deps_times>
-<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132895166688567846" />
+<name_val_pair name="c9323d49-d323-40b8-9b59-cc008d68a989@Debug@CortexM0" v="132896294292249606" />
 </link_deps_times>
 </CyGuid_769d31ea-68b1-4f0c-b90a-7c10a43ee563>
 </dataGuid>

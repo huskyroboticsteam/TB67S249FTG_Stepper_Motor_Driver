@@ -27,5 +27,6 @@ char debugOutput[32];
 #define UP 119
 #define RIGHT 100
 #define DOWN 115
+#define STATUS 113
 
 /* [] END OF FILE */

@@ -114,6 +114,9 @@
   <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\isr_step.h" value="HEADER;;;;;isr_step" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\StepClk.c" value="SOURCE_C;CortexM0;;;;StepClk" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\StepClk.h" value="HEADER;;;;;StepClk" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\Enable.h" value="HEADER;;;;;Enable" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\Enable.c" value="SOURCE_C;CortexM0;;;;Enable" />
+  <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\Enable_PM.c" value="SOURCE_C;CortexM0;;;;Enable" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\DBG_UART_SCBCLK.c" value="SOURCE_C;CortexM0;;;;DBG_UART_SCBCLK" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\DBG_UART_SCBCLK.h" value="HEADER;;;;;DBG_UART_SCBCLK" />
   <file name="C:\Users\casey\Desktop\Robotics Stuff\TB67S249FTG_Stepper_Motor_Driver\StepperDriver.cydsn\codegentemp\DBG_UART_tx.c" value="SOURCE_C;CortexM0;;;;DBG_UART_tx" />
