@@ -2,7 +2,7 @@
 --	Conversion of StepperDriver.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Thu Feb 17 19:32:00 2022
+--	Sat Feb 19 14:11:28 2022
 --
 
 USE cypress.cypress.all;
@@ -216,7 +216,7 @@ SIGNAL \ClockDiv:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
 SIGNAL \ClockDiv:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL Net_622 : bit;
 SIGNAL tmpOE__Step_Pin_net_0 : bit;
-SIGNAL Net_624 : bit;
+SIGNAL Net_998 : bit;
 SIGNAL tmpFB_0__Step_Pin_net_0 : bit;
 SIGNAL tmpIO_0__Step_Pin_net_0 : bit;
 TERMINAL tmpSIOVREF__Step_Pin_net_0 : bit;
@@ -231,6 +231,7 @@ TERMINAL tmpSIOVREF__Direction_Pin_net_0 : bit;
 SIGNAL tmpINTERRUPT_0__Direction_Pin_net_0 : bit;
 SIGNAL Net_794 : bit;
 SIGNAL tmpOE__LED_Pin_net_0 : bit;
+SIGNAL Net_997 : bit;
 SIGNAL tmpFB_0__LED_Pin_net_0 : bit;
 SIGNAL tmpIO_0__LED_Pin_net_0 : bit;
 TERMINAL tmpSIOVREF__LED_Pin_net_0 : bit;
@@ -748,7 +749,7 @@ SIGNAL \Step_Timer:CounterUDB:hwCapture\ : bit;
 SIGNAL \Step_Timer:CounterUDB:reload\ : bit;
 SIGNAL \Step_Timer:CounterUDB:reload_tc\ : bit;
 SIGNAL \Step_Timer:CounterUDB:final_enable\ : bit;
-SIGNAL Net_976 : bit;
+SIGNAL Net_989 : bit;
 SIGNAL \Step_Timer:CounterUDB:counter_enable\ : bit;
 SIGNAL \Step_Timer:CounterUDB:status_0\ : bit;
 SIGNAL \Step_Timer:CounterUDB:cmp_out_status\ : bit;
@@ -775,7 +776,6 @@ SIGNAL \Step_Timer:CounterUDB:tc_i\ : bit;
 SIGNAL \Step_Timer:CounterUDB:tc_reg_i\ : bit;
 SIGNAL Net_960 : bit;
 SIGNAL \Step_Timer:CounterUDB:cmp_out_i\ : bit;
-SIGNAL \Step_Timer:CounterUDB:cmp_less\ : bit;
 SIGNAL \Step_Timer:CounterUDB:cmp_equal\ : bit;
 SIGNAL \Step_Timer:CounterUDB:prevCompare\ : bit;
 SIGNAL \Step_Timer:CounterUDB:cmp_out_reg_i\ : bit;
@@ -928,6 +928,7 @@ SIGNAL \Step_Timer:CounterUDB:sC24:counterdp:cap1_0\ : bit;
 SIGNAL \Step_Timer:CounterUDB:sC24:counterdp:cfb1\ : bit;
 SIGNAL \Step_Timer:CounterUDB:nc44\ : bit;
 SIGNAL \Step_Timer:CounterUDB:per_FF\ : bit;
+SIGNAL \Step_Timer:CounterUDB:cmp_less\ : bit;
 SIGNAL \Step_Timer:CounterUDB:sC24:counterdp:z1_2\ : bit;
 ATTRIBUTE port_state_att of \Step_Timer:CounterUDB:sC24:counterdp:z1_2\:SIGNAL IS 2;
 SIGNAL \Step_Timer:CounterUDB:sC24:counterdp:ff1_2\ : bit;
@@ -1047,17 +1048,17 @@ zero <=  ('0') ;
 \Step_Counter:CounterUDB:tc_i\ <= (\Step_Counter:CounterUDB:status_1\
 	OR \Step_Counter:CounterUDB:overflow\);
 
-\Step_Counter:CounterUDB:count_enable\ <= ((not \Step_Counter:CounterUDB:count_stored_i\ and Net_624 and \Step_Counter:CounterUDB:control_7\));
+\Step_Counter:CounterUDB:count_enable\ <= ((not \Step_Counter:CounterUDB:count_stored_i\ and Net_998 and \Step_Counter:CounterUDB:control_7\));
 
-\Step_Timer:CounterUDB:status_0\ <= ((not \Step_Timer:CounterUDB:cmp_less\ and not \Step_Timer:CounterUDB:cmp_equal\ and not \Step_Timer:CounterUDB:prevCompare\));
+\Step_Timer:CounterUDB:status_0\ <= ((not \Step_Timer:CounterUDB:prevCompare\ and \Step_Timer:CounterUDB:cmp_out_i\));
 
 \Step_Timer:CounterUDB:status_2\ <= ((not \Step_Timer:CounterUDB:overflow_reg_i\ and \Step_Timer:CounterUDB:reload\));
 
-\Step_Timer:CounterUDB:cmp_out_i\ <= ((not \Step_Timer:CounterUDB:cmp_less\ and not \Step_Timer:CounterUDB:cmp_equal\));
-
-\Step_Timer:CounterUDB:count_enable\ <= ((not \Step_Timer:CounterUDB:count_stored_i\ and Net_853 and Net_976));
+\Step_Timer:CounterUDB:count_enable\ <= ((not \Step_Timer:CounterUDB:count_stored_i\ and Net_853 and Net_989));
 
 Net_768 <=  ('1') ;
+
+Net_997 <= (not Net_998);
 
 \ClockDiv:MODULE_1:g2:a0:g1:z1:s0:g1:u0:gs(24):g2:g3:ub\:cy_buf
 	PORT MAP(x=>zero,
@@ -1135,7 +1136,7 @@ Step_Pin:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(Net_768),
-		y=>Net_624,
+		y=>Net_998,
 		fb=>(tmpFB_0__Step_Pin_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__Step_Pin_net_0),
@@ -1275,7 +1276,7 @@ LED_Pin:cy_psoc3_pins_v1_10
 		ovt_hyst_trim=>"0",
 		input_buffer_sel=>"00")
 	PORT MAP(oe=>(Net_768),
-		y=>Net_624,
+		y=>Net_997,
 		fb=>(tmpFB_0__LED_Pin_net_0),
 		analog=>(open),
 		io=>(tmpIO_0__LED_Pin_net_0),
@@ -2956,7 +2957,7 @@ isr_fault:cy_isr_v1_0
 		cl0=>\Step_Timer:CounterUDB:nc44\,
 		z0=>\Step_Timer:CounterUDB:status_1\,
 		ff0=>\Step_Timer:CounterUDB:per_FF\,
-		ce1=>\Step_Timer:CounterUDB:cmp_equal\,
+		ce1=>\Step_Timer:CounterUDB:cmp_out_i\,
 		cl1=>\Step_Timer:CounterUDB:cmp_less\,
 		z1=>open,
 		ff1=>open,
@@ -3010,7 +3011,7 @@ isr_fault:cy_isr_v1_0
 isr_step:cy_isr_v1_0
 	GENERIC MAP(int_type=>"00",
 		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_624);
+	PORT MAP(int_signal=>Net_960);
 StepClk:cy_clock_v1_0
 	GENERIC MAP(cy_registers=>"",
 		id=>"0aa604fe-2577-427b-9d62-f8892e3538bc",
@@ -3030,7 +3031,7 @@ StepClk:cy_clock_v1_0
 	PORT MAP(reset=>zero,
 		clock=>zero,
 		control=>(\Enable:control_7\, \Enable:control_6\, \Enable:control_5\, \Enable:control_4\,
-			\Enable:control_3\, \Enable:control_2\, \Enable:control_1\, Net_976));
+			\Enable:control_3\, \Enable:control_2\, \Enable:control_1\, Net_989));
 \ClockDiv:not_last_reset\:cy_dff
 	PORT MAP(d=>Net_768,
 		clk=>Net_814,
@@ -3068,7 +3069,7 @@ Net_853:cy_dff
 		clk=>\Step_Counter:CounterUDB:ClockOutFromEnBlock\,
 		q=>\Step_Counter:CounterUDB:cmp_out_reg_i\);
 \Step_Counter:CounterUDB:count_stored_i\:cy_dff
-	PORT MAP(d=>Net_624,
+	PORT MAP(d=>Net_998,
 		clk=>\Step_Counter:CounterUDB:ClockOutFromEnBlock\,
 		q=>\Step_Counter:CounterUDB:count_stored_i\);
 \Debouncer_Lim_1:DEBOUNCER[0]:d_sync_0\:cy_dff
@@ -3126,7 +3127,7 @@ Net_714:cy_dff
 \Step_Timer:CounterUDB:tc_reg_i\:cy_dff
 	PORT MAP(d=>\Step_Timer:CounterUDB:reload\,
 		clk=>\Step_Timer:CounterUDB:ClockOutFromEnBlock\,
-		q=>\Step_Timer:CounterUDB:tc_reg_i\);
+		q=>Net_960);
 \Step_Timer:CounterUDB:prevCompare\:cy_dff
 	PORT MAP(d=>\Step_Timer:CounterUDB:cmp_out_i\,
 		clk=>\Step_Timer:CounterUDB:ClockOutFromEnBlock\,
@@ -3134,7 +3135,7 @@ Net_714:cy_dff
 \Step_Timer:CounterUDB:cmp_out_reg_i\:cy_dff
 	PORT MAP(d=>\Step_Timer:CounterUDB:cmp_out_i\,
 		clk=>\Step_Timer:CounterUDB:ClockOutFromEnBlock\,
-		q=>Net_624);
+		q=>Net_998);
 \Step_Timer:CounterUDB:count_stored_i\:cy_dff
 	PORT MAP(d=>Net_853,
 		clk=>\Step_Timer:CounterUDB:ClockOutFromEnBlock\,

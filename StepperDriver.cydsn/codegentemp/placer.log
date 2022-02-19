@@ -6,7 +6,7 @@
 
 #Build Date:         Sep  9 2019 11:47:43
 
-#File Generated:     Feb 17 2022 19:32:01
+#File Generated:     Feb 19 2022 14:11:30
 
 #Purpose:            
 
@@ -44,7 +44,7 @@ Phase 2
 Phase 3
 
 Design Statistics after Packing
-    Number of Combinational MCs 	:	8
+    Number of Combinational MCs 	:	9
     Number of Sequential MCs    	:	12
     Number of DPs               	:	7
     Number of Controls          	:	3
@@ -53,7 +53,7 @@ Design Statistics after Packing
     Number of count7cells       	:	0
 
 Device Utilization Summary after Packing
-    Macrocells                  :	20/64
+    Macrocells                  :	21/64
     UDBS                        :	8/8
     IOs                         :	17/99
 
@@ -77,7 +77,7 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 9
-Clock: CyHFClk              | Frequency:  29.9 MHz | Target:  48.0 MHz
+Clock: CyHFClk              | Frequency:  29.6 MHz | Target:  48.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
@@ -98,7 +98,7 @@ Phase 7
                      Clock Summary 
 ======================================================================
 Number of clocks: 9
-Clock: CyHFClk              | Frequency:  29.9 MHz | Target:  48.0 MHz
+Clock: CyHFClk              | Frequency:  29.6 MHz | Target:  48.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
@@ -111,10 +111,10 @@ Clock: StepClk              | Frequency:  34.7 MHz | Target:   2.0 MHz
 ======================================================================
                      End of Clock Summary
 ######################################################################
-D2088: Phase 7, elapsed time : 0.2 (sec)
+D2088: Phase 7, elapsed time : 0.4 (sec)
 
 Final Design Statistics
-    Number of Combinational MCs 	:	8
+    Number of Combinational MCs 	:	9
     Number of Sequential MCs    	:	12
     Number of DPs               	:	7
     Number of Controls          	:	3
@@ -124,7 +124,7 @@ Final Design Statistics
     Number of IOs       	:	17
 
 Device Utilization Summary
-    Macrocells                  :	20/64
+    Macrocells                  :	21/64
     IOs                         :	17/99
 
 
@@ -142,7 +142,7 @@ analysis after routing.
                      Clock Summary 
 ======================================================================
 Number of clocks: 9
-Clock: CyHFClk              | Frequency:  29.9 MHz | Target:  48.0 MHz
+Clock: CyHFClk              | Frequency:  29.5 MHz | Target:  48.0 MHz
 Clock: CyILO                | Frequency: N/A       | Target:   0.0 MHz
 Clock: CyIMO                | Frequency: N/A       | Target:  48.0 MHz
 Clock: CyLFClk              | Frequency: N/A       | Target:   0.0 MHz
@@ -161,5 +161,5 @@ D2088: Phase 8, elapsed time : 0.0 (sec)
 
 D2054: Placement of the design completed successfully
 
-I2076: Total run-time: 0.6 sec.
+I2076: Total run-time: 0.9 sec.
 

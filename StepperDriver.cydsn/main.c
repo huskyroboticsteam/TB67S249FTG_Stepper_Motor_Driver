@@ -16,6 +16,7 @@
 const int CLOCK_FREQUENCY = 1000000;
 
 double accel;
+double vel;
 double stepSize;
 int E_max;
 
@@ -39,7 +40,8 @@ void AccelToTarget() {
         
     if (E > targetPosition - pos) {
         E -= E > -E_max;
-    } else {
+    }
+    if (E < targetPosition - pos) {
         E += E < E_max;
     }
     
@@ -118,15 +120,28 @@ int main(void)
     
     // TODO get these values from CAN init packet
     int stepMode = 1;
-    double maxVelocity = 1440; // deg/s
-    double maxAcceleration = 360; // deg/s/s
+    double maxVelocity = 6000; // deg/s
+    double maxAcceleration = 1000; // deg/s/s
+    
+    
     
     if (stepMode == 1) {
         stepSize = 360.0/200;
     }
     
+    if (maxVelocity > 6000) {
+        maxVelocity = 6000;
+    }
+    vel = maxVelocity/stepSize;
     accel = maxAcceleration/stepSize;
-    E_max = (int) maxVelocity*maxVelocity/stepSize/2/maxAcceleration;
+    
+    
+    E_max = vel*vel/2/accel;
+    
+    if (E_max == 0) {
+        E_max = 1;
+        accel = vel*vel;
+    }
     
     
     Print("E_max is ");

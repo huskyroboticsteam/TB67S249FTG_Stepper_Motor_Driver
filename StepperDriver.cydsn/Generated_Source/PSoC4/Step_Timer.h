@@ -161,13 +161,13 @@ void Step_Timer_Wakeup(void)        ;
 #if (Step_Timer_UsingFixedFunction)
 #define Step_Timer_INIT_INTERRUPTS_MASK    ((uint8)((uint8)0u << Step_Timer_STATUS_ZERO_INT_EN_MASK_SHIFT))
 #else
-#define Step_Timer_INIT_COMPARE_VALUE      0u
+#define Step_Timer_INIT_COMPARE_VALUE      1u
 #define Step_Timer_INIT_INTERRUPTS_MASK ((uint8)((uint8)0u << Step_Timer_STATUS_ZERO_INT_EN_MASK_SHIFT) | \
         ((uint8)((uint8)0u << Step_Timer_STATUS_CAPTURE_INT_EN_MASK_SHIFT)) | \
         ((uint8)((uint8)0u << Step_Timer_STATUS_CMP_INT_EN_MASK_SHIFT)) | \
         ((uint8)((uint8)0u << Step_Timer_STATUS_OVERFLOW_INT_EN_MASK_SHIFT)) | \
         ((uint8)((uint8)0u << Step_Timer_STATUS_UNDERFLOW_INT_EN_MASK_SHIFT)))
-#define Step_Timer_DEFAULT_COMPARE_MODE    3u
+#define Step_Timer_DEFAULT_COMPARE_MODE    0u
 
 #if( 0 != Step_Timer_CAPTURE_MODE_CONF)
     #define Step_Timer_DEFAULT_CAPTURE_MODE    ((uint8)((uint8)0u << Step_Timer_CTRL_CAPMODE0_SHIFT))

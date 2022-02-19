@@ -1,5 +1,5 @@
 -- Project:   StepperDriver
--- Generated: 02/17/2022 19:32:01
+-- Generated: 02/19/2022 14:11:30
 -- PSoC Creator  4.4
 
 ENTITY StepperDriver IS
@@ -87,7 +87,8 @@ ARCHITECTURE __DEFAULT__ OF StepperDriver IS
     SIGNAL Net_814_digital : bit;
     ATTRIBUTE global_signal OF Net_814_digital : SIGNAL IS true;
     SIGNAL Net_853 : bit;
-    SIGNAL Net_976 : bit;
+    SIGNAL Net_989 : bit;
+    SIGNAL Net_997 : bit;
     SIGNAL Step_Pin(0)__PA : bit;
     SIGNAL \ClockDiv:count_0\ : bit;
     SIGNAL \ClockDiv:not_last_reset\ : bit;
@@ -143,8 +144,7 @@ ARCHITECTURE __DEFAULT__ OF StepperDriver IS
     SIGNAL \Step_Counter:CounterUDB:status_5\ : bit;
     SIGNAL \Step_Counter:CounterUDB:status_6\ : bit;
     SIGNAL \Step_Counter:CounterUDB:underflow_reg_i\ : bit;
-    SIGNAL \Step_Timer:CounterUDB:cmp_equal\ : bit;
-    SIGNAL \Step_Timer:CounterUDB:cmp_less\ : bit;
+    SIGNAL \Step_Timer:CounterUDB:cmp_out_i\ : bit;
     SIGNAL \Step_Timer:CounterUDB:count_enable\ : bit;
     SIGNAL \Step_Timer:CounterUDB:count_stored_i\ : bit;
     SIGNAL \Step_Timer:CounterUDB:overflow_reg_i\ : bit;
@@ -267,6 +267,7 @@ ARCHITECTURE __DEFAULT__ OF StepperDriver IS
     ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:status_0\ : LABEL IS "macrocell6";
     ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:status_2\ : LABEL IS "macrocell7";
     ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:count_enable\ : LABEL IS "macrocell8";
+    ATTRIBUTE lib_model OF Net_997 : LABEL IS "macrocell9";
     ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:sCTRLReg:ctrlreg\ : LABEL IS "controlcell1";
     ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:sSTSReg:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:sC32:counterdp:u0\ : LABEL IS "datapathcell1";
@@ -280,18 +281,18 @@ ARCHITECTURE __DEFAULT__ OF StepperDriver IS
     ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:sC24:counterdp:u1\ : LABEL IS "datapathcell6";
     ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:sC24:counterdp:u2\ : LABEL IS "datapathcell7";
     ATTRIBUTE lib_model OF \Enable:Sync:ctrl_reg\ : LABEL IS "controlcell3";
-    ATTRIBUTE lib_model OF \ClockDiv:not_last_reset\ : LABEL IS "macrocell9";
-    ATTRIBUTE lib_model OF Net_853 : LABEL IS "macrocell10";
-    ATTRIBUTE lib_model OF \ClockDiv:count_0\ : LABEL IS "macrocell11";
-    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell12";
-    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell13";
-    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:prevCompare\ : LABEL IS "macrocell14";
-    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:count_stored_i\ : LABEL IS "macrocell15";
-    ATTRIBUTE lib_model OF Net_635 : LABEL IS "macrocell16";
-    ATTRIBUTE lib_model OF Net_719 : LABEL IS "macrocell17";
-    ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell18";
-    ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:prevCompare\ : LABEL IS "macrocell19";
-    ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:count_stored_i\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \ClockDiv:not_last_reset\ : LABEL IS "macrocell10";
+    ATTRIBUTE lib_model OF Net_853 : LABEL IS "macrocell11";
+    ATTRIBUTE lib_model OF \ClockDiv:count_0\ : LABEL IS "macrocell12";
+    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell13";
+    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:underflow_reg_i\ : LABEL IS "macrocell14";
+    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:prevCompare\ : LABEL IS "macrocell15";
+    ATTRIBUTE lib_model OF \Step_Counter:CounterUDB:count_stored_i\ : LABEL IS "macrocell16";
+    ATTRIBUTE lib_model OF Net_635 : LABEL IS "macrocell17";
+    ATTRIBUTE lib_model OF Net_719 : LABEL IS "macrocell18";
+    ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:overflow_reg_i\ : LABEL IS "macrocell19";
+    ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:prevCompare\ : LABEL IS "macrocell20";
+    ATTRIBUTE lib_model OF \Step_Timer:CounterUDB:count_stored_i\ : LABEL IS "macrocell21";
     COMPONENT cancell
         PORT (
             clock : IN std_ulogic;
@@ -978,7 +979,7 @@ BEGIN
         PORT MAP(
             pa_out => LED_Pin(0)__PA,
             oe => open,
-            pin_input => \Step_Timer:CounterUDB:prevCompare\,
+            pin_input => Net_997,
             pad_out => LED_Pin(0)_PAD,
             pad_in => LED_Pin(0)_PAD,
             in_clock => open,
@@ -2314,14 +2315,13 @@ BEGIN
 
     \Step_Timer:CounterUDB:status_0\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1 * !main_2)",
+            eqn_main => "(main_0 * !main_1)",
             regmode => 0,
             clken_mode => 1)
         PORT MAP(
             q => \Step_Timer:CounterUDB:status_0\,
-            main_0 => \Step_Timer:CounterUDB:cmp_less\,
-            main_1 => \Step_Timer:CounterUDB:cmp_equal\,
-            main_2 => \Step_Timer:CounterUDB:prevCompare\);
+            main_0 => \Step_Timer:CounterUDB:cmp_out_i\,
+            main_1 => \Step_Timer:CounterUDB:prevCompare\);
 
     \Step_Timer:CounterUDB:status_2\:macrocell
         GENERIC MAP(
@@ -2341,8 +2341,17 @@ BEGIN
         PORT MAP(
             q => \Step_Timer:CounterUDB:count_enable\,
             main_0 => Net_853,
-            main_1 => Net_976,
+            main_1 => Net_989,
             main_2 => \Step_Timer:CounterUDB:count_stored_i\);
+
+    Net_997:macrocell
+        GENERIC MAP(
+            eqn_main => "(!main_0)",
+            regmode => 0,
+            clken_mode => 1)
+        PORT MAP(
+            q => Net_997,
+            main_0 => \Step_Timer:CounterUDB:prevCompare\);
 
     \Step_Counter:CounterUDB:sCTRLReg:ctrlreg\:controlcell
         GENERIC MAP(
@@ -2865,8 +2874,7 @@ BEGIN
             cs_addr_0 => \Step_Timer:CounterUDB:reload\,
             ce0_comb => \Step_Timer:CounterUDB:reload\,
             z0_comb => \Step_Timer:CounterUDB:status_1\,
-            ce1_comb => \Step_Timer:CounterUDB:cmp_equal\,
-            cl1_comb => \Step_Timer:CounterUDB:cmp_less\,
+            ce1_comb => \Step_Timer:CounterUDB:cmp_out_i\,
             f0_bus_stat_comb => \Step_Timer:CounterUDB:status_6\,
             f0_blk_stat_comb => \Step_Timer:CounterUDB:status_5\,
             busclk => ClockBlock_HFClk,
@@ -2889,7 +2897,7 @@ BEGIN
             int_type => "00",
             is_nmi => 0)
         PORT MAP(
-            interrupt => \Step_Timer:CounterUDB:prevCompare\,
+            interrupt => \Step_Timer:CounterUDB:overflow_reg_i\,
             clock => ClockBlock_HFClk);
 
     \Enable:Sync:ctrl_reg\:controlcell
@@ -2908,7 +2916,7 @@ BEGIN
             control_3 => \Enable:control_3\,
             control_2 => \Enable:control_2\,
             control_1 => \Enable:control_1\,
-            control_0 => Net_976,
+            control_0 => Net_989,
             busclk => ClockBlock_HFClk);
 
     \ClockDiv:not_last_reset\:macrocell
@@ -3023,15 +3031,14 @@ BEGIN
 
     \Step_Timer:CounterUDB:prevCompare\:macrocell
         GENERIC MAP(
-            eqn_main => "(!main_0 * !main_1)",
+            eqn_main => "(main_0)",
             regmode => 1,
             clk_inv => '0',
             clken_mode => 1)
         PORT MAP(
             q => \Step_Timer:CounterUDB:prevCompare\,
             clock_0 => ClockBlock_HFClk,
-            main_0 => \Step_Timer:CounterUDB:cmp_less\,
-            main_1 => \Step_Timer:CounterUDB:cmp_equal\);
+            main_0 => \Step_Timer:CounterUDB:cmp_out_i\);
 
     \Step_Timer:CounterUDB:count_stored_i\:macrocell
         GENERIC MAP(

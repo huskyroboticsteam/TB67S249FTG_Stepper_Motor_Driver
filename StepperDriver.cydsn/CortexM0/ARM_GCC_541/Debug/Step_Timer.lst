@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
   28:Generated_Source\PSoC4/Step_Timer.c **** *     Initialize to the schematic state
   29:Generated_Source\PSoC4/Step_Timer.c **** * 
   30:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 2
 
 
   31:Generated_Source\PSoC4/Step_Timer.c **** *  void  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
   85:Generated_Source\PSoC4/Step_Timer.c ****             #if( 0 != Step_Timer_CAPTURE_MODE_CONF)
   86:Generated_Source\PSoC4/Step_Timer.c ****                 Step_Timer_CONTROL = ctrl | Step_Timer_DEFAULT_CAPTURE_MODE;
   87:Generated_Source\PSoC4/Step_Timer.c ****             #else
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 3
 
 
   88:Generated_Source\PSoC4/Step_Timer.c ****                 Step_Timer_CONTROL = ctrl;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  142:Generated_Source\PSoC4/Step_Timer.c **** *******************************************************************************/
  143:Generated_Source\PSoC4/Step_Timer.c **** void Step_Timer_Enable(void) 
  144:Generated_Source\PSoC4/Step_Timer.c **** {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 4
 
 
   28              		.loc 1 144 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  180:Generated_Source\PSoC4/Step_Timer.c ****     if(Step_Timer_initVar == 0u)
  181:Generated_Source\PSoC4/Step_Timer.c ****     {
  182:Generated_Source\PSoC4/Step_Timer.c ****         Step_Timer_Init();
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 5
 
 
  183:Generated_Source\PSoC4/Step_Timer.c ****         
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
   63              		.type	Step_Timer_SetInterruptMode, %function
   64              	Step_Timer_SetInterruptMode:
   65              	.LFB5:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 6
 
 
  221:Generated_Source\PSoC4/Step_Timer.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  248:Generated_Source\PSoC4/Step_Timer.c **** *       defined types for the bit-field information as the bits in this
  249:Generated_Source\PSoC4/Step_Timer.c **** *       register may be permuteable.
  250:Generated_Source\PSoC4/Step_Timer.c **** *
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 7
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 7
 
 
  251:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  278:Generated_Source\PSoC4/Step_Timer.c **** *
  279:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  280:Generated_Source\PSoC4/Step_Timer.c **** *  (uint8) The contents of the control register
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 8
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 8
 
 
  281:Generated_Source\PSoC4/Step_Timer.c **** *
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  126              		.cfi_def_cfa_offset 8
  127              		.cfi_offset 4, -8
  128              		.cfi_offset 14, -4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 9
 
 
  129 0002 0100     		movs	r1, r0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  153              		.loc 1 358 0
  154              		.cfi_startproc
  155              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 10
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 10
 
 
  156              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  382:Generated_Source\PSoC4/Step_Timer.c **** *
  383:Generated_Source\PSoC4/Step_Timer.c **** * Parameters:  
  384:Generated_Source\PSoC4/Step_Timer.c **** *  void
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 11
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 11
 
 
  385:Generated_Source\PSoC4/Step_Timer.c **** *
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  409:Generated_Source\PSoC4/Step_Timer.c **** *         the counter remaining at zero.  
  410:Generated_Source\PSoC4/Step_Timer.c **** *
  411:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 12
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 12
 
 
  412:Generated_Source\PSoC4/Step_Timer.c **** *  void
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  433:Generated_Source\PSoC4/Step_Timer.c **** *
  434:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  435:Generated_Source\PSoC4/Step_Timer.c **** *  (uint32) Present period value.
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 13
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 13
 
 
  436:Generated_Source\PSoC4/Step_Timer.c **** *
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  460:Generated_Source\PSoC4/Step_Timer.c **** *
  461:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  462:Generated_Source\PSoC4/Step_Timer.c **** *  void
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 14
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 14
 
 
  463:Generated_Source\PSoC4/Step_Timer.c **** *
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  484:Generated_Source\PSoC4/Step_Timer.c **** *
  485:Generated_Source\PSoC4/Step_Timer.c **** * Return: 
  486:Generated_Source\PSoC4/Step_Timer.c **** *  (uint32) Present compare value.
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 15
 
 
  487:Generated_Source\PSoC4/Step_Timer.c **** *
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  511:Generated_Source\PSoC4/Step_Timer.c ****     /* Clear the compare mode bits in the control register */
  512:Generated_Source\PSoC4/Step_Timer.c ****     Step_Timer_CONTROL &= ((uint8)(~Step_Timer_CTRL_CMPMODE_MASK));
  513:Generated_Source\PSoC4/Step_Timer.c ****     
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 16
 
 
  514:Generated_Source\PSoC4/Step_Timer.c ****     /* Write the new setting */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  560:Generated_Source\PSoC4/Step_Timer.c **** 
  561:Generated_Source\PSoC4/Step_Timer.c ****     while(0u != (Step_Timer_ReadStatusRegister() & Step_Timer_STATUS_FIFONEMP))
  351              		.loc 1 561 0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 17
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 17
 
 
  352 0002 01E0     		b	.L31
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  104:Generated_Source\PSoC4/Step_Timer.c ****         
  396              		.loc 1 104 0
  397 0012 0020     		movs	r0, #0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 18
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 18
 
 
  398 0014 FFF7FEFF 		bl	Step_Timer_SetInterruptMode
@@ -1029,7 +1029,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  402              	.LVL20:
  110:Generated_Source\PSoC4/Step_Timer.c ****             /* Use the interrupt output of the status register for IRQ output */
  403              		.loc 1 110 0
- 404 001c 0020     		movs	r0, #0
+ 404 001c 0120     		movs	r0, #1
  405 001e FFF7FEFF 		bl	Step_Timer_WriteCompare
  406              	.LVL21:
  115:Generated_Source\PSoC4/Step_Timer.c ****             
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  445              		.cfi_offset 4, -8
  446              		.cfi_offset 14, -4
  180:Generated_Source\PSoC4/Step_Timer.c ****     {
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 19
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 19
 
 
  447              		.loc 1 180 0
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  498 0028 6A030000 		.4byte	.LASF0
  499 002c 02       		.uleb128 0x2
  500 002d 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 20
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 20
 
 
  501 002e 08       		.byte	0x8
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  555 0093 08       		.byte	0x8
  556 0094 24030000 		.4byte	.LASF13
  557 0098 04       		.uleb128 0x4
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 21
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 21
 
 
  558 0099 34010000 		.4byte	.LASF14
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  612 010d 09       		.uleb128 0x9
  613 010e 39010000 		.4byte	.LASF42
  614 0112 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 22
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 22
 
 
  615 0113 0501     		.2byte	0x105
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  669 0189 50       		.byte	0x50
  670 018a 05       		.uleb128 0x5
  671 018b 0C       		.byte	0xc
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 23
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 23
 
 
  672 018c 44000F40 		.4byte	0x400f0044
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  726 01fe 50       		.byte	0x50
  727 01ff 00       		.byte	0
  728 0200 00       		.byte	0
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 24
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 24
 
 
  729 0201 0E       		.uleb128 0xe
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  783 0270 0E       		.uleb128 0xe
  784 0271 B3000000 		.4byte	.LASF31
  785 0275 01       		.byte	0x1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 25
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 25
 
 
  786 0276 E901     		.2byte	0x1e9
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  840 02f9 C0010000 		.4byte	0x1c0
  841 02fd 0B030000 		.4byte	0x30b
  842 0301 0D       		.uleb128 0xd
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 26
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 26
 
 
  843 0302 01       		.uleb128 0x1
@@ -1538,7 +1538,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  877 0348 01       		.uleb128 0x1
  878 0349 50       		.byte	0x50
  879 034a 01       		.uleb128 0x1
- 880 034b 30       		.byte	0x30
+ 880 034b 31       		.byte	0x31
  881 034c 00       		.byte	0
  882 034d 0F       		.uleb128 0xf
  883 034e 26000000 		.4byte	.LVL22
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  897 0371 7F030000 		.4byte	0x37f
  898 0375 0F       		.uleb128 0xf
  899 0376 0E000000 		.4byte	.LVL24
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 27
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 27
 
 
  900 037a C7020000 		.4byte	0x2c7
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  954 0015 00       		.byte	0
  955 0016 0B       		.uleb128 0xb
  956 0017 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 28
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 28
 
 
  957 0018 3E       		.uleb128 0x3e
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1011 004e 40       		.uleb128 0x40
  1012 004f 18       		.uleb128 0x18
  1013 0050 9742     		.uleb128 0x2117
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 29
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 29
 
 
  1014 0052 19       		.uleb128 0x19
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1068 0089 27       		.uleb128 0x27
  1069 008a 19       		.uleb128 0x19
  1070 008b 49       		.uleb128 0x49
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 30
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 30
 
 
  1071 008c 13       		.uleb128 0x13
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1125 00c6 11       		.uleb128 0x11
  1126 00c7 01       		.uleb128 0x1
  1127 00c8 31       		.uleb128 0x31
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 31
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 31
 
 
  1128 00c9 13       		.uleb128 0x13
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1182 0105 0B       		.uleb128 0xb
  1183 0106 3B       		.uleb128 0x3b
  1184 0107 0B       		.uleb128 0xb
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 32
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 32
 
 
  1185 0108 49       		.uleb128 0x49
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1239 0140 3F       		.uleb128 0x3f
  1240 0141 19       		.uleb128 0x19
  1241 0142 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 33
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 33
 
 
  1242 0143 19       		.uleb128 0x19
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1296 0062 50       		.byte	0x50
  1297 0063 06000000 		.4byte	.LVL11
  1298 0067 09000000 		.4byte	.LVL12-1
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 34
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 34
 
 
  1299 006b 0100     		.2byte	0x1
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1353 0080 00000000 		.4byte	0
  1354 0084 00000000 		.4byte	0
  1355              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 35
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 35
 
 
  1356              	.Ldebug_ranges0:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1397 0031 70657269 		.ascii	"period\000"
  1397      6F6400
  1398              	.LASF3:
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 36
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 36
 
 
  1399 0038 73686F72 		.ascii	"short unsigned int\000"
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1419              	.LASF32:
  1420 011f 53746570 		.ascii	"Step_Timer_ClearFIFO\000"
  1420      5F54696D 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 37
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 37
 
 
  1420      65725F43 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1442      72617465 
  1442      645F536F 
  1442      75726365 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 38
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 38
 
 
  1442      5C50536F 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 1
  1461              	.LASF6:
  1462 0306 6C6F6E67 		.ascii	"long long int\000"
  1462      206C6F6E 
-ARM GAS  C:\Users\casey\AppData\Local\Temp\cc5HtKoy.s 			page 39
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccH2p3km.s 			page 39
 
 
  1462      6720696E 
