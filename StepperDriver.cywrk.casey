@@ -18,6 +18,7 @@
 <v>StepperDriver</v>
 <v>StepperDriver\StepperDriver</v>
 <v>StepperDriver\StepperDriver\TopDesign</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr</v>
 <v>StepperDriver\StepperDriver\Header Files</v>
 <v>StepperDriver\StepperDriver\Source Files</v>
 </ExpandedNodeIds>
@@ -26,6 +27,14 @@
 <v>StepperDriver\StepperDriver</v>
 <v>StepperDriver\StepperDriver\TopDesign</v>
 <v>StepperDriver\StepperDriver\StepperDriver.cydwr</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\Pins</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\Analog</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\DMA</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\Clocks</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\Interrupts</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\System</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\Directives</v>
+<v>StepperDriver\StepperDriver\StepperDriver.cydwr\Flash Security</v>
 <v>StepperDriver\StepperDriver\Header Files</v>
 <v>StepperDriver\StepperDriver\Header Files\cyapicallbacks.h</v>
 <v>StepperDriver\StepperDriver\Header Files\main.h</v>

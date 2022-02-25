@@ -1,5 +1,5 @@
 -- Project:   StepperDriver
--- Generated: 02/19/2022 14:11:31
+-- Generated: 02/24/2022 19:28:03
 -- PSoC Creator  4.4
 
 ENTITY StepperDriver IS

@@ -30,6 +30,12 @@ int getCurrentPosition()
     return Step_Counter_ReadCounter();
 }
 
+void stop() {
+    Enable_Write(0);
+    targetPosition = getCurrentPosition();
+    E = 0;
+}
+
 // speed in steps/sec
 void setSpeed(double speed) {
     Step_Timer_WritePeriod(CLOCK_FREQUENCY/speed);
@@ -55,18 +61,17 @@ void AccelToTarget() {
     if (pos == targetPosition) {
         if (E == 0) {
             Enable_Write(0);
+            Println("Arrived at Target™");
         }
-    } else {
-        Enable_Write(1);
     }
 }
     
 void StartMove(int target)
 {
     targetPosition = target;
-    int pos = Step_Counter_ReadCounter();
     PrintInt(targetPosition);
     Println("");
+    Enable_Write(1);
     AccelToTarget();
 }
 
@@ -80,20 +85,23 @@ void Step(int steps) {
 
 CY_ISR(On_Lim_1) {
     Println("Hit limit switch 1");
-    Enable_Write(0);
-    Step_Counter_WriteCounter(0);
+    stop();
+    
     isr_lim_1_ClearPending();
 }
 
 CY_ISR(On_Lim_2) {
     Println("Hit limit switch 2");
-    Enable_Write(0);
+    stop();
+    
     isr_lim_2_ClearPending();
 }
 
 CY_ISR(On_Fault) {
     Println("Driver fault");
-    Enable_Write(0);
+    Step_Counter_WriteCounter(0);
+    stop();
+    
     isr_fault_ClearPending();
 }
 
@@ -152,8 +160,10 @@ int main(void)
     {
         int data = DBG_UART_UartGetByte();
         if (data == STATUS) {
-            Print(" Step period:");
+            Print("Step period:");
             PrintInt(Step_Timer_ReadPeriod());
+            Print(" Timer Count:");
+            PrintInt(Step_Timer_ReadCounter());
             Print(" Position:");
             PrintInt(Step_Counter_ReadCounter());
             Print(" E:");
