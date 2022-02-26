@@ -161,7 +161,7 @@ void Step_Counter_Wakeup(void)        ;
 #if (Step_Counter_UsingFixedFunction)
 #define Step_Counter_INIT_INTERRUPTS_MASK    ((uint8)((uint8)0u << Step_Counter_STATUS_ZERO_INT_EN_MASK_SHIFT))
 #else
-#define Step_Counter_INIT_COMPARE_VALUE      128u
+#define Step_Counter_INIT_COMPARE_VALUE      4294967295u
 #define Step_Counter_INIT_INTERRUPTS_MASK ((uint8)((uint8)0u << Step_Counter_STATUS_ZERO_INT_EN_MASK_SHIFT) | \
         ((uint8)((uint8)0u << Step_Counter_STATUS_CAPTURE_INT_EN_MASK_SHIFT)) | \
         ((uint8)((uint8)1u << Step_Counter_STATUS_CMP_INT_EN_MASK_SHIFT)) | \

@@ -19,6 +19,7 @@ double accel;
 double vel;
 double stepSize;
 int E_max;
+int pos = 0;
 
 int targetPosition = 0;
 int dbg_step = 1;
@@ -42,8 +43,12 @@ void setSpeed(double speed) {
 }
 
 void AccelToTarget() {
-    int pos = getCurrentPosition();
-        
+    pos = getCurrentPosition();
+    
+    if (E == 0) {
+        Direction_Write(targetPosition > pos);
+    }
+    
     if (E > targetPosition - pos) {
         E -= E > -E_max;
     }
@@ -51,18 +56,12 @@ void AccelToTarget() {
         E += E < E_max;
     }
     
-    Direction_Write(E >= 0);
-    
     if (E != 0) {
-        double new_freq = sqrt(abs(E)*accel);
+        double new_freq = sqrt(2*abs(E)*accel);
         setSpeed(new_freq);
-    }
-    
-    if (pos == targetPosition) {
-        if (E == 0) {
-            Enable_Write(0);
-            Println("Arrived at Target™");
-        }
+    } else if (pos == targetPosition) {
+        Enable_Write(0);
+        Println("Arrived at Target™");
     }
 }
     
@@ -127,33 +126,31 @@ int main(void)
     Println("Restart");
     
     // TODO get these values from CAN init packet
-    int stepMode = 1;
-    double maxVelocity = 6000; // deg/s
-    double maxAcceleration = 1000; // deg/s/s
+    int stepMode = 0;
+    double maxVelocity = 720; // deg/s
+    double maxAcceleration = 100000; // deg/s/s
+    
+    stepSize = 360.0/200/pow(2,stepMode);
     
     
-    
-    if (stepMode == 1) {
-        stepSize = 360.0/200;
-    }
-    
-    if (maxVelocity > 6000) {
-        maxVelocity = 6000;
-    }
     vel = maxVelocity/stepSize;
+    if (vel > 10000) {
+        vel = 10000;
+        Println("Max velocity capped at 10,000 steps/sec");
+    }
     accel = maxAcceleration/stepSize;
     
-    
     E_max = vel*vel/2/accel;
-    
-    if (E_max == 0) {
-        E_max = 1;
-        accel = vel*vel;
-    }
+    if (E_max == 0) E_max = 1;
+    accel = vel*vel/2/E_max;
     
     
     Print("E_max is ");
     PrintInt(E_max);
+    Print(" vel is ");
+    PrintInt(vel);
+    Print(" accel is ");
+    PrintInt(accel);
     Println("");
     
     for(;;)
