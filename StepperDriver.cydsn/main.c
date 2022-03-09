@@ -12,6 +12,7 @@
 #include "project.h"
 #include <stdlib.h>
 #include "main.h"
+#include "../CAN_Library/CANLibrary.h"
 
 const int CLOCK_FREQUENCY = 1000000;
 
@@ -24,6 +25,12 @@ int pos = 0;
 int targetPosition = 0;
 int dbg_step = 1;
 int E = 0;
+int mode = IDLE;
+
+uint8 address = 0;
+
+CANPacket can_recieve;
+CANPacket can_send;
 
 // position in steps
 int getCurrentPosition()
@@ -32,6 +39,7 @@ int getCurrentPosition()
 }
 
 void stop() {
+    mode = IDLE;
     Enable_Write(0);
     targetPosition = getCurrentPosition();
     E = 0;
@@ -60,26 +68,37 @@ void AccelToTarget() {
         double new_freq = sqrt(2*abs(E)*accel);
         setSpeed(new_freq);
     } else if (pos == targetPosition) {
+        mode = IDLE;
         Enable_Write(0);
         Println("Arrived at Target™");
     }
 }
     
-void StartMove(int target)
+void move_position(int target)
 {
     targetPosition = target;
     PrintInt(targetPosition);
     Println("");
+    
+    mode = POSITION;
     Enable_Write(1);
     AccelToTarget();
 }
 
+void move_velocity(double velocity) {
+    mode = VELOCITY;
+    // E = velocity*abs(velocity)/2/accel; // combine velocity and E?
+    
+    Direction_Write(velocity > 0);
+    setSpeed(abs(velocity));
+}
+
 void GotoAngle(double angle) {
-    StartMove(round(angle / stepSize));
+    move_position(round(angle / stepSize));
 }
 
 void Step(int steps) {
-    StartMove(targetPosition + steps);
+    move_position(targetPosition + steps);
 }
 
 CY_ISR(On_Lim_1) {
@@ -105,7 +124,9 @@ CY_ISR(On_Fault) {
 }
 
 CY_ISR(On_Step) {
-    AccelToTarget();
+    if (mode == POSITION) {
+        AccelToTarget();
+    }
     isr_step_ClearPending();
 }
 
@@ -123,12 +144,15 @@ int main(void)
     
     DBG_UART_Start();
     
+    address = CAN_addr_Read();
+    InitCAN(0x4, (int)address);
+    
     Println("Restart");
     
     // TODO get these values from CAN init packet
     int stepMode = 0;
     double maxVelocity = 720; // deg/s
-    double maxAcceleration = 100000; // deg/s/s
+    double maxAcceleration = 1000; // deg/s/s
     
     stepSize = 360.0/200/pow(2,stepMode);
     
@@ -155,6 +179,7 @@ int main(void)
     
     for(;;)
     {
+        uint16_t packageID = ReadCAN(can_recieve);
         int data = DBG_UART_UartGetByte();
         if (data == STATUS) {
             Print("Step period:");
@@ -186,6 +211,18 @@ int main(void)
             Println("");
         }
     }
+}
+
+uint16_t ReadCAN(CANPacket *receivedPacket){
+    volatile int error = PollAndReceiveCANPacket(receivedPacket);
+    if(!error){
+        #ifdef CAN_LED
+        CAN_LED_Write(LED_ON);
+        #endif
+        CAN_time_LED = 0;
+        return receivedPacket->data[0];
+    }
+    return NO_NEW_CAN_PACKET; //Means no Packet
 }
 
 /* [] END OF FILE */

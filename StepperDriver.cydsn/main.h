@@ -29,4 +29,8 @@ char debugOutput[32];
 #define DOWN 115
 #define STATUS 113
 
+#define IDLE 0
+#define POSITION 1
+#define VELOCITY 2
+
 /* [] END OF FILE */

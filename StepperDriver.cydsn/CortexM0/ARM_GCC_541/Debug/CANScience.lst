@@ -1,0 +1,1688 @@
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"CANScience.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.AssembleScienceSensorPullPacket,"ax",%progbits
+  20              		.align	2
+  21              		.global	AssembleScienceSensorPullPacket
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	AssembleScienceSensorPullPacket, %function
+  25              	AssembleScienceSensorPullPacket:
+  26              	.LFB0:
+  27              		.file 1 "CAN Library\\CANScience.c"
+   1:CAN Library/CANScience.c **** #include "CANPacket.h"
+   2:CAN Library/CANScience.c **** #include "CANCommon.h"
+   3:CAN Library/CANScience.c **** #include "CANScience.h"
+   4:CAN Library/CANScience.c **** #include "CANMotorUnit.h"
+   5:CAN Library/CANScience.c **** 
+   6:CAN Library/CANScience.c **** void AssembleScienceSensorPullPacket(CANPacket *packetToAssemble,
+   7:CAN Library/CANScience.c **** 	uint8_t targetGroup,
+   8:CAN Library/CANScience.c **** 	uint8_t targetSerial,
+   9:CAN Library/CANScience.c **** 	uint8_t sensorCode)
+  10:CAN Library/CANScience.c **** {
+  28              		.loc 1 10 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  11:CAN Library/CANScience.c **** 	AssembleTelemetryPullPacket(packetToAssemble, targetGroup, targetSerial, sensorCode);
+  37              		.loc 1 11 0
+  38 0002 FFF7FEFF 		bl	AssembleTelemetryPullPacket
+  39              	.LVL1:
+  12:CAN Library/CANScience.c **** }
+  40              		.loc 1 12 0
+  41              		@ sp needed
+  42 0006 10BD     		pop	{r4, pc}
+  43              		.cfi_endproc
+  44              	.LFE0:
+  45              		.size	AssembleScienceSensorPullPacket, .-AssembleScienceSensorPullPacket
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 2
+
+
+  46              		.section	.text.AssembleScienceMotorControlPacket,"ax",%progbits
+  47              		.align	2
+  48              		.global	AssembleScienceMotorControlPacket
+  49              		.code	16
+  50              		.thumb_func
+  51              		.type	AssembleScienceMotorControlPacket, %function
+  52              	AssembleScienceMotorControlPacket:
+  53              	.LFB1:
+  13:CAN Library/CANScience.c **** 
+  14:CAN Library/CANScience.c **** void AssembleScienceMotorControlPacket(CANPacket *packetToAssemble,
+  15:CAN Library/CANScience.c **** 	uint8_t targetGroup,
+  16:CAN Library/CANScience.c **** 	uint8_t targetSerial,
+  17:CAN Library/CANScience.c **** 	uint8_t motor,
+  18:CAN Library/CANScience.c **** 	int16_t PWMSet)
+  19:CAN Library/CANScience.c **** {
+  54              		.loc 1 19 0
+  55              		.cfi_startproc
+  56              		@ args = 4, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              	.LVL2:
+  59 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  60              		.cfi_def_cfa_offset 20
+  61              		.cfi_offset 4, -20
+  62              		.cfi_offset 5, -16
+  63              		.cfi_offset 6, -12
+  64              		.cfi_offset 7, -8
+  65              		.cfi_offset 14, -4
+  66 0002 4746     		mov	r7, r8
+  67 0004 80B4     		push	{r7}
+  68              		.cfi_def_cfa_offset 24
+  69              		.cfi_offset 8, -24
+  70 0006 0500     		movs	r5, r0
+  71 0008 1F00     		movs	r7, r3
+  72 000a 06AB     		add	r3, sp, #24
+  73              	.LVL3:
+  74 000c 0020     		movs	r0, #0
+  75 000e 1B5E     		ldrsh	r3, [r3, r0]
+  76              	.LVL4:
+  77 0010 9846     		mov	r8, r3
+  20:CAN Library/CANScience.c **** 	packetToAssemble->id = ConstructCANID(PRIO_MOTOR_UNIT_PWM_DIR_SET, targetGroup, targetSerial);
+  78              		.loc 1 20 0
+  79 0012 0120     		movs	r0, #1
+  80 0014 FFF7FEFF 		bl	ConstructCANID
+  81              	.LVL5:
+  82 0018 2880     		strh	r0, [r5]
+  21:CAN Library/CANScience.c **** 	packetToAssemble->dlc = 4;
+  83              		.loc 1 21 0
+  84 001a 0423     		movs	r3, #4
+  85 001c AB70     		strb	r3, [r5, #2]
+  22:CAN Library/CANScience.c **** 	int nextByte = WritePacketIDOnly(packetToAssemble->data, ID_MOTOR_UNIT_PWM_DIR_SET);
+  86              		.loc 1 22 0
+  87 001e EE1C     		adds	r6, r5, #3
+  88 0020 0321     		movs	r1, #3
+  89 0022 3000     		movs	r0, r6
+  90 0024 FFF7FEFF 		bl	WritePacketIDOnly
+  91              	.LVL6:
+  92 0028 0400     		movs	r4, r0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 3
+
+
+  93              	.LVL7:
+  23:CAN Library/CANScience.c **** 	PackShortIntoDataMSBFirst(packetToAssemble->data, PWMSet, nextByte);
+  94              		.loc 1 23 0
+  95 002a 0200     		movs	r2, r0
+  96 002c 4146     		mov	r1, r8
+  97 002e 3000     		movs	r0, r6
+  98              	.LVL8:
+  99 0030 FFF7FEFF 		bl	PackShortIntoDataMSBFirst
+ 100              	.LVL9:
+  24:CAN Library/CANScience.c **** 	packetToAssemble->data[nextByte + 2] = motor;
+ 101              		.loc 1 24 0
+ 102 0034 0234     		adds	r4, r4, #2
+ 103              	.LVL10:
+ 104 0036 2C19     		adds	r4, r5, r4
+ 105              	.LVL11:
+ 106 0038 E770     		strb	r7, [r4, #3]
+  25:CAN Library/CANScience.c **** }
+ 107              		.loc 1 25 0
+ 108              		@ sp needed
+ 109              	.LVL12:
+ 110              	.LVL13:
+ 111 003a 04BC     		pop	{r2}
+ 112 003c 9046     		mov	r8, r2
+ 113 003e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 114              		.cfi_endproc
+ 115              	.LFE1:
+ 116              		.size	AssembleScienceMotorControlPacket, .-AssembleScienceMotorControlPacket
+ 117              		.section	.text.AssembleScienceServoPacket,"ax",%progbits
+ 118              		.align	2
+ 119              		.global	AssembleScienceServoPacket
+ 120              		.code	16
+ 121              		.thumb_func
+ 122              		.type	AssembleScienceServoPacket, %function
+ 123              	AssembleScienceServoPacket:
+ 124              	.LFB2:
+  26:CAN Library/CANScience.c **** 
+  27:CAN Library/CANScience.c **** void AssembleScienceServoPacket(CANPacket *packetToAssemble,
+  28:CAN Library/CANScience.c **** 	uint8_t targetGroup,
+  29:CAN Library/CANScience.c **** 	uint8_t targetSerial,
+  30:CAN Library/CANScience.c **** 	uint8_t servo,
+  31:CAN Library/CANScience.c **** 	uint8_t degrees)
+  32:CAN Library/CANScience.c **** {
+ 125              		.loc 1 32 0
+ 126              		.cfi_startproc
+ 127              		@ args = 4, pretend = 0, frame = 0
+ 128              		@ frame_needed = 0, uses_anonymous_args = 0
+ 129              	.LVL14:
+ 130 0000 70B5     		push	{r4, r5, r6, lr}
+ 131              		.cfi_def_cfa_offset 16
+ 132              		.cfi_offset 4, -16
+ 133              		.cfi_offset 5, -12
+ 134              		.cfi_offset 6, -8
+ 135              		.cfi_offset 14, -4
+ 136 0002 0400     		movs	r4, r0
+ 137 0004 1E00     		movs	r6, r3
+ 138 0006 04AB     		add	r3, sp, #16
+ 139              	.LVL15:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 4
+
+
+ 140 0008 1D78     		ldrb	r5, [r3]
+  33:CAN Library/CANScience.c **** 	packetToAssemble->id = ConstructCANID(PACKET_PRIORITY_NORMAL, targetGroup, targetSerial);
+ 141              		.loc 1 33 0
+ 142 000a 0120     		movs	r0, #1
+ 143              	.LVL16:
+ 144 000c FFF7FEFF 		bl	ConstructCANID
+ 145              	.LVL17:
+ 146 0010 2080     		strh	r0, [r4]
+  34:CAN Library/CANScience.c **** 	packetToAssemble->dlc = 3;
+ 147              		.loc 1 34 0
+ 148 0012 0323     		movs	r3, #3
+ 149 0014 A370     		strb	r3, [r4, #2]
+  35:CAN Library/CANScience.c **** 	WritePacketIDOnly(packetToAssemble->data, ID_SCIENCE_SERVO_SET);
+ 150              		.loc 1 35 0
+ 151 0016 E01C     		adds	r0, r4, #3
+ 152 0018 0D21     		movs	r1, #13
+ 153 001a FFF7FEFF 		bl	WritePacketIDOnly
+ 154              	.LVL18:
+  36:CAN Library/CANScience.c **** 	packetToAssemble->data[1] = servo;
+ 155              		.loc 1 36 0
+ 156 001e 2671     		strb	r6, [r4, #4]
+  37:CAN Library/CANScience.c **** 	packetToAssemble->data[2] = degrees;
+ 157              		.loc 1 37 0
+ 158 0020 6571     		strb	r5, [r4, #5]
+  38:CAN Library/CANScience.c **** }
+ 159              		.loc 1 38 0
+ 160              		@ sp needed
+ 161              	.LVL19:
+ 162 0022 70BD     		pop	{r4, r5, r6, pc}
+ 163              		.cfi_endproc
+ 164              	.LFE2:
+ 165              		.size	AssembleScienceServoPacket, .-AssembleScienceServoPacket
+ 166              		.section	.text.GetScienceMotorPWMFromPacket,"ax",%progbits
+ 167              		.align	2
+ 168              		.global	GetScienceMotorPWMFromPacket
+ 169              		.code	16
+ 170              		.thumb_func
+ 171              		.type	GetScienceMotorPWMFromPacket, %function
+ 172              	GetScienceMotorPWMFromPacket:
+ 173              	.LFB3:
+  39:CAN Library/CANScience.c **** 
+  40:CAN Library/CANScience.c **** int16_t GetScienceMotorPWMFromPacket(CANPacket *packet){
+ 174              		.loc 1 40 0
+ 175              		.cfi_startproc
+ 176              		@ args = 0, pretend = 0, frame = 0
+ 177              		@ frame_needed = 0, uses_anonymous_args = 0
+ 178              	.LVL20:
+ 179 0000 10B5     		push	{r4, lr}
+ 180              		.cfi_def_cfa_offset 8
+ 181              		.cfi_offset 4, -8
+ 182              		.cfi_offset 14, -4
+  41:CAN Library/CANScience.c **** 	return DecodeBytesToIntMSBFirst(packet->data, 1, 2);
+ 183              		.loc 1 41 0
+ 184 0002 0330     		adds	r0, r0, #3
+ 185              	.LVL21:
+ 186 0004 0222     		movs	r2, #2
+ 187 0006 0121     		movs	r1, #1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 5
+
+
+ 188 0008 FFF7FEFF 		bl	DecodeBytesToIntMSBFirst
+ 189              	.LVL22:
+ 190 000c 00B2     		sxth	r0, r0
+  42:CAN Library/CANScience.c **** }
+ 191              		.loc 1 42 0
+ 192              		@ sp needed
+ 193 000e 10BD     		pop	{r4, pc}
+ 194              		.cfi_endproc
+ 195              	.LFE3:
+ 196              		.size	GetScienceMotorPWMFromPacket, .-GetScienceMotorPWMFromPacket
+ 197              		.section	.text.GetScienceServoAngleFromPacket,"ax",%progbits
+ 198              		.align	2
+ 199              		.global	GetScienceServoAngleFromPacket
+ 200              		.code	16
+ 201              		.thumb_func
+ 202              		.type	GetScienceServoAngleFromPacket, %function
+ 203              	GetScienceServoAngleFromPacket:
+ 204              	.LFB4:
+  43:CAN Library/CANScience.c **** 
+  44:CAN Library/CANScience.c **** uint8_t GetScienceServoAngleFromPacket(CANPacket *packet){
+ 205              		.loc 1 44 0
+ 206              		.cfi_startproc
+ 207              		@ args = 0, pretend = 0, frame = 0
+ 208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 209              		@ link register save eliminated.
+ 210              	.LVL23:
+  45:CAN Library/CANScience.c **** 	return packet->data[2];
+ 211              		.loc 1 45 0
+ 212 0000 4079     		ldrb	r0, [r0, #5]
+ 213              	.LVL24:
+  46:CAN Library/CANScience.c **** }
+ 214              		.loc 1 46 0
+ 215              		@ sp needed
+ 216 0002 7047     		bx	lr
+ 217              		.cfi_endproc
+ 218              	.LFE4:
+ 219              		.size	GetScienceServoAngleFromPacket, .-GetScienceServoAngleFromPacket
+ 220              		.section	.text.GetScienceMotorIDFromPacket,"ax",%progbits
+ 221              		.align	2
+ 222              		.global	GetScienceMotorIDFromPacket
+ 223              		.code	16
+ 224              		.thumb_func
+ 225              		.type	GetScienceMotorIDFromPacket, %function
+ 226              	GetScienceMotorIDFromPacket:
+ 227              	.LFB5:
+  47:CAN Library/CANScience.c **** 
+  48:CAN Library/CANScience.c **** uint8_t GetScienceMotorIDFromPacket(CANPacket *packet){
+ 228              		.loc 1 48 0
+ 229              		.cfi_startproc
+ 230              		@ args = 0, pretend = 0, frame = 0
+ 231              		@ frame_needed = 0, uses_anonymous_args = 0
+ 232              		@ link register save eliminated.
+ 233              	.LVL25:
+  49:CAN Library/CANScience.c **** 	return packet->data[3];
+ 234              		.loc 1 49 0
+ 235 0000 8079     		ldrb	r0, [r0, #6]
+ 236              	.LVL26:
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 6
+
+
+  50:CAN Library/CANScience.c **** }
+ 237              		.loc 1 50 0
+ 238              		@ sp needed
+ 239 0002 7047     		bx	lr
+ 240              		.cfi_endproc
+ 241              	.LFE5:
+ 242              		.size	GetScienceMotorIDFromPacket, .-GetScienceMotorIDFromPacket
+ 243              		.section	.text.GetScienceServoIDFromPacket,"ax",%progbits
+ 244              		.align	2
+ 245              		.global	GetScienceServoIDFromPacket
+ 246              		.code	16
+ 247              		.thumb_func
+ 248              		.type	GetScienceServoIDFromPacket, %function
+ 249              	GetScienceServoIDFromPacket:
+ 250              	.LFB6:
+  51:CAN Library/CANScience.c **** 
+  52:CAN Library/CANScience.c **** uint8_t GetScienceServoIDFromPacket(CANPacket *packet){
+ 251              		.loc 1 52 0
+ 252              		.cfi_startproc
+ 253              		@ args = 0, pretend = 0, frame = 0
+ 254              		@ frame_needed = 0, uses_anonymous_args = 0
+ 255              		@ link register save eliminated.
+ 256              	.LVL27:
+  53:CAN Library/CANScience.c **** 	return packet->data[1];
+ 257              		.loc 1 53 0
+ 258 0000 0079     		ldrb	r0, [r0, #4]
+ 259              	.LVL28:
+  54:CAN Library/CANScience.c **** }
+ 260              		.loc 1 54 0
+ 261              		@ sp needed
+ 262 0002 7047     		bx	lr
+ 263              		.cfi_endproc
+ 264              	.LFE6:
+ 265              		.size	GetScienceServoIDFromPacket, .-GetScienceServoIDFromPacket
+ 266              		.text
+ 267              	.Letext0:
+ 268              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 269              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 270              		.file 4 "CAN Library\\CANPacket.h"
+ 271              		.file 5 "CAN Library\\CANCommon.h"
+ 272              		.section	.debug_info,"",%progbits
+ 273              	.Ldebug_info0:
+ 274 0000 9A030000 		.4byte	0x39a
+ 275 0004 0400     		.2byte	0x4
+ 276 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 277 000a 04       		.byte	0x4
+ 278 000b 01       		.uleb128 0x1
+ 279 000c 26020000 		.4byte	.LASF39
+ 280 0010 0C       		.byte	0xc
+ 281 0011 F0020000 		.4byte	.LASF40
+ 282 0015 4A000000 		.4byte	.LASF41
+ 283 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 284 001d 00000000 		.4byte	0
+ 285 0021 00000000 		.4byte	.Ldebug_line0
+ 286 0025 02       		.uleb128 0x2
+ 287 0026 01       		.byte	0x1
+ 288 0027 06       		.byte	0x6
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 7
+
+
+ 289 0028 49030000 		.4byte	.LASF0
+ 290 002c 03       		.uleb128 0x3
+ 291 002d 1C000000 		.4byte	.LASF2
+ 292 0031 02       		.byte	0x2
+ 293 0032 1D       		.byte	0x1d
+ 294 0033 37000000 		.4byte	0x37
+ 295 0037 02       		.uleb128 0x2
+ 296 0038 01       		.byte	0x1
+ 297 0039 08       		.byte	0x8
+ 298 003a FE000000 		.4byte	.LASF1
+ 299 003e 03       		.uleb128 0x3
+ 300 003f 35000000 		.4byte	.LASF3
+ 301 0043 02       		.byte	0x2
+ 302 0044 29       		.byte	0x29
+ 303 0045 49000000 		.4byte	0x49
+ 304 0049 02       		.uleb128 0x2
+ 305 004a 02       		.byte	0x2
+ 306 004b 05       		.byte	0x5
+ 307 004c 09030000 		.4byte	.LASF4
+ 308 0050 03       		.uleb128 0x3
+ 309 0051 4F010000 		.4byte	.LASF5
+ 310 0055 02       		.byte	0x2
+ 311 0056 2B       		.byte	0x2b
+ 312 0057 5B000000 		.4byte	0x5b
+ 313 005b 02       		.uleb128 0x2
+ 314 005c 02       		.byte	0x2
+ 315 005d 07       		.byte	0x7
+ 316 005e 2F010000 		.4byte	.LASF6
+ 317 0062 02       		.uleb128 0x2
+ 318 0063 04       		.byte	0x4
+ 319 0064 05       		.byte	0x5
+ 320 0065 2E030000 		.4byte	.LASF7
+ 321 0069 02       		.uleb128 0x2
+ 322 006a 04       		.byte	0x4
+ 323 006b 07       		.byte	0x7
+ 324 006c 1D010000 		.4byte	.LASF8
+ 325 0070 02       		.uleb128 0x2
+ 326 0071 08       		.byte	0x8
+ 327 0072 05       		.byte	0x5
+ 328 0073 D9020000 		.4byte	.LASF9
+ 329 0077 02       		.uleb128 0x2
+ 330 0078 08       		.byte	0x8
+ 331 0079 07       		.byte	0x7
+ 332 007a DC010000 		.4byte	.LASF10
+ 333 007e 04       		.uleb128 0x4
+ 334 007f 04       		.byte	0x4
+ 335 0080 05       		.byte	0x5
+ 336 0081 696E7400 		.ascii	"int\000"
+ 337 0085 02       		.uleb128 0x2
+ 338 0086 04       		.byte	0x4
+ 339 0087 07       		.byte	0x7
+ 340 0088 AD010000 		.4byte	.LASF11
+ 341 008c 03       		.uleb128 0x3
+ 342 008d F3010000 		.4byte	.LASF12
+ 343 0091 03       		.byte	0x3
+ 344 0092 18       		.byte	0x18
+ 345 0093 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 8
+
+
+ 346 0097 03       		.uleb128 0x3
+ 347 0098 01020000 		.4byte	.LASF13
+ 348 009c 03       		.byte	0x3
+ 349 009d 20       		.byte	0x20
+ 350 009e 3E000000 		.4byte	0x3e
+ 351 00a2 03       		.uleb128 0x3
+ 352 00a3 13030000 		.4byte	.LASF14
+ 353 00a7 03       		.byte	0x3
+ 354 00a8 24       		.byte	0x24
+ 355 00a9 50000000 		.4byte	0x50
+ 356 00ad 05       		.uleb128 0x5
+ 357 00ae 0C       		.byte	0xc
+ 358 00af 04       		.byte	0x4
+ 359 00b0 0F       		.byte	0xf
+ 360 00b1 D9000000 		.4byte	0xd9
+ 361 00b5 06       		.uleb128 0x6
+ 362 00b6 696400   		.ascii	"id\000"
+ 363 00b9 04       		.byte	0x4
+ 364 00ba 11       		.byte	0x11
+ 365 00bb A2000000 		.4byte	0xa2
+ 366 00bf 00       		.byte	0
+ 367 00c0 06       		.uleb128 0x6
+ 368 00c1 646C6300 		.ascii	"dlc\000"
+ 369 00c5 04       		.byte	0x4
+ 370 00c6 12       		.byte	0x12
+ 371 00c7 8C000000 		.4byte	0x8c
+ 372 00cb 02       		.byte	0x2
+ 373 00cc 07       		.uleb128 0x7
+ 374 00cd F9000000 		.4byte	.LASF15
+ 375 00d1 04       		.byte	0x4
+ 376 00d2 13       		.byte	0x13
+ 377 00d3 D9000000 		.4byte	0xd9
+ 378 00d7 03       		.byte	0x3
+ 379 00d8 00       		.byte	0
+ 380 00d9 08       		.uleb128 0x8
+ 381 00da 8C000000 		.4byte	0x8c
+ 382 00de E9000000 		.4byte	0xe9
+ 383 00e2 09       		.uleb128 0x9
+ 384 00e3 E9000000 		.4byte	0xe9
+ 385 00e7 07       		.byte	0x7
+ 386 00e8 00       		.byte	0
+ 387 00e9 02       		.uleb128 0x2
+ 388 00ea 04       		.byte	0x4
+ 389 00eb 07       		.byte	0x7
+ 390 00ec B4020000 		.4byte	.LASF16
+ 391 00f0 03       		.uleb128 0x3
+ 392 00f1 69010000 		.4byte	.LASF17
+ 393 00f5 04       		.byte	0x4
+ 394 00f6 14       		.byte	0x14
+ 395 00f7 AD000000 		.4byte	0xad
+ 396 00fb 0A       		.uleb128 0xa
+ 397 00fc 73010000 		.4byte	.LASF22
+ 398 0100 01       		.byte	0x1
+ 399 0101 06       		.byte	0x6
+ 400 0102 00000000 		.4byte	.LFB0
+ 401 0106 08000000 		.4byte	.LFE0-.LFB0
+ 402 010a 01       		.uleb128 0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 9
+
+
+ 403 010b 9C       		.byte	0x9c
+ 404 010c 5E010000 		.4byte	0x15e
+ 405 0110 0B       		.uleb128 0xb
+ 406 0111 0C010000 		.4byte	.LASF18
+ 407 0115 01       		.byte	0x1
+ 408 0116 06       		.byte	0x6
+ 409 0117 5E010000 		.4byte	0x15e
+ 410 011b 00000000 		.4byte	.LLST0
+ 411 011f 0B       		.uleb128 0xb
+ 412 0120 37030000 		.4byte	.LASF19
+ 413 0124 01       		.byte	0x1
+ 414 0125 07       		.byte	0x7
+ 415 0126 8C000000 		.4byte	0x8c
+ 416 012a 21000000 		.4byte	.LLST1
+ 417 012e 0B       		.uleb128 0xb
+ 418 012f 42010000 		.4byte	.LASF20
+ 419 0133 01       		.byte	0x1
+ 420 0134 08       		.byte	0x8
+ 421 0135 8C000000 		.4byte	0x8c
+ 422 0139 42000000 		.4byte	.LLST2
+ 423 013d 0B       		.uleb128 0xb
+ 424 013e 3F000000 		.4byte	.LASF21
+ 425 0142 01       		.byte	0x1
+ 426 0143 09       		.byte	0x9
+ 427 0144 8C000000 		.4byte	0x8c
+ 428 0148 63000000 		.4byte	.LLST3
+ 429 014c 0C       		.uleb128 0xc
+ 430 014d 06000000 		.4byte	.LVL1
+ 431 0151 66030000 		.4byte	0x366
+ 432 0155 0D       		.uleb128 0xd
+ 433 0156 01       		.uleb128 0x1
+ 434 0157 50       		.byte	0x50
+ 435 0158 03       		.uleb128 0x3
+ 436 0159 F3       		.byte	0xf3
+ 437 015a 01       		.uleb128 0x1
+ 438 015b 50       		.byte	0x50
+ 439 015c 00       		.byte	0
+ 440 015d 00       		.byte	0
+ 441 015e 0E       		.uleb128 0xe
+ 442 015f 04       		.byte	0x4
+ 443 0160 F0000000 		.4byte	0xf0
+ 444 0164 0A       		.uleb128 0xa
+ 445 0165 BA010000 		.4byte	.LASF23
+ 446 0169 01       		.byte	0x1
+ 447 016a 0E       		.byte	0xe
+ 448 016b 00000000 		.4byte	.LFB1
+ 449 016f 40000000 		.4byte	.LFE1-.LFB1
+ 450 0173 01       		.uleb128 0x1
+ 451 0174 9C       		.byte	0x9c
+ 452 0175 1C020000 		.4byte	0x21c
+ 453 0179 0B       		.uleb128 0xb
+ 454 017a 0C010000 		.4byte	.LASF18
+ 455 017e 01       		.byte	0x1
+ 456 017f 0E       		.byte	0xe
+ 457 0180 5E010000 		.4byte	0x15e
+ 458 0184 84000000 		.4byte	.LLST4
+ 459 0188 0B       		.uleb128 0xb
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 10
+
+
+ 460 0189 37030000 		.4byte	.LASF19
+ 461 018d 01       		.byte	0x1
+ 462 018e 0F       		.byte	0xf
+ 463 018f 8C000000 		.4byte	0x8c
+ 464 0193 BD000000 		.4byte	.LLST5
+ 465 0197 0B       		.uleb128 0xb
+ 466 0198 42010000 		.4byte	.LASF20
+ 467 019c 01       		.byte	0x1
+ 468 019d 10       		.byte	0x10
+ 469 019e 8C000000 		.4byte	0x8c
+ 470 01a2 DE000000 		.4byte	.LLST6
+ 471 01a6 0B       		.uleb128 0xb
+ 472 01a7 FB010000 		.4byte	.LASF24
+ 473 01ab 01       		.byte	0x1
+ 474 01ac 11       		.byte	0x11
+ 475 01ad 8C000000 		.4byte	0x8c
+ 476 01b1 FF000000 		.4byte	.LLST7
+ 477 01b5 0B       		.uleb128 0xb
+ 478 01b6 70030000 		.4byte	.LASF25
+ 479 01ba 01       		.byte	0x1
+ 480 01bb 12       		.byte	0x12
+ 481 01bc 97000000 		.4byte	0x97
+ 482 01c0 20010000 		.4byte	.LLST8
+ 483 01c4 0F       		.uleb128 0xf
+ 484 01c5 E7020000 		.4byte	.LASF42
+ 485 01c9 01       		.byte	0x1
+ 486 01ca 16       		.byte	0x16
+ 487 01cb 7E000000 		.4byte	0x7e
+ 488 01cf 4C010000 		.4byte	.LLST9
+ 489 01d3 10       		.uleb128 0x10
+ 490 01d4 18000000 		.4byte	.LVL5
+ 491 01d8 71030000 		.4byte	0x371
+ 492 01dc E6010000 		.4byte	0x1e6
+ 493 01e0 0D       		.uleb128 0xd
+ 494 01e1 01       		.uleb128 0x1
+ 495 01e2 50       		.byte	0x50
+ 496 01e3 01       		.uleb128 0x1
+ 497 01e4 31       		.byte	0x31
+ 498 01e5 00       		.byte	0
+ 499 01e6 10       		.uleb128 0x10
+ 500 01e7 28000000 		.4byte	.LVL6
+ 501 01eb 7C030000 		.4byte	0x37c
+ 502 01ef FF010000 		.4byte	0x1ff
+ 503 01f3 0D       		.uleb128 0xd
+ 504 01f4 01       		.uleb128 0x1
+ 505 01f5 50       		.byte	0x50
+ 506 01f6 02       		.uleb128 0x2
+ 507 01f7 76       		.byte	0x76
+ 508 01f8 00       		.sleb128 0
+ 509 01f9 0D       		.uleb128 0xd
+ 510 01fa 01       		.uleb128 0x1
+ 511 01fb 51       		.byte	0x51
+ 512 01fc 01       		.uleb128 0x1
+ 513 01fd 33       		.byte	0x33
+ 514 01fe 00       		.byte	0
+ 515 01ff 0C       		.uleb128 0xc
+ 516 0200 34000000 		.4byte	.LVL9
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 11
+
+
+ 517 0204 87030000 		.4byte	0x387
+ 518 0208 0D       		.uleb128 0xd
+ 519 0209 01       		.uleb128 0x1
+ 520 020a 50       		.byte	0x50
+ 521 020b 02       		.uleb128 0x2
+ 522 020c 76       		.byte	0x76
+ 523 020d 00       		.sleb128 0
+ 524 020e 0D       		.uleb128 0xd
+ 525 020f 01       		.uleb128 0x1
+ 526 0210 51       		.byte	0x51
+ 527 0211 02       		.uleb128 0x2
+ 528 0212 78       		.byte	0x78
+ 529 0213 00       		.sleb128 0
+ 530 0214 0D       		.uleb128 0xd
+ 531 0215 01       		.uleb128 0x1
+ 532 0216 52       		.byte	0x52
+ 533 0217 02       		.uleb128 0x2
+ 534 0218 74       		.byte	0x74
+ 535 0219 00       		.sleb128 0
+ 536 021a 00       		.byte	0
+ 537 021b 00       		.byte	0
+ 538 021c 0A       		.uleb128 0xa
+ 539 021d 55030000 		.4byte	.LASF26
+ 540 0221 01       		.byte	0x1
+ 541 0222 1B       		.byte	0x1b
+ 542 0223 00000000 		.4byte	.LFB2
+ 543 0227 24000000 		.4byte	.LFE2-.LFB2
+ 544 022b 01       		.uleb128 0x1
+ 545 022c 9C       		.byte	0x9c
+ 546 022d A5020000 		.4byte	0x2a5
+ 547 0231 0B       		.uleb128 0xb
+ 548 0232 0C010000 		.4byte	.LASF18
+ 549 0236 01       		.byte	0x1
+ 550 0237 1B       		.byte	0x1b
+ 551 0238 5E010000 		.4byte	0x15e
+ 552 023c 82010000 		.4byte	.LLST10
+ 553 0240 0B       		.uleb128 0xb
+ 554 0241 37030000 		.4byte	.LASF19
+ 555 0245 01       		.byte	0x1
+ 556 0246 1C       		.byte	0x1c
+ 557 0247 8C000000 		.4byte	0x8c
+ 558 024b AE010000 		.4byte	.LLST11
+ 559 024f 0B       		.uleb128 0xb
+ 560 0250 42010000 		.4byte	.LASF20
+ 561 0254 01       		.byte	0x1
+ 562 0255 1D       		.byte	0x1d
+ 563 0256 8C000000 		.4byte	0x8c
+ 564 025a CF010000 		.4byte	.LLST12
+ 565 025e 0B       		.uleb128 0xb
+ 566 025f 43030000 		.4byte	.LASF27
+ 567 0263 01       		.byte	0x1
+ 568 0264 1E       		.byte	0x1e
+ 569 0265 8C000000 		.4byte	0x8c
+ 570 0269 F0010000 		.4byte	.LLST13
+ 571 026d 0B       		.uleb128 0xb
+ 572 026e 5A010000 		.4byte	.LASF28
+ 573 0272 01       		.byte	0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 12
+
+
+ 574 0273 1F       		.byte	0x1f
+ 575 0274 8C000000 		.4byte	0x8c
+ 576 0278 11020000 		.4byte	.LLST14
+ 577 027c 10       		.uleb128 0x10
+ 578 027d 10000000 		.4byte	.LVL17
+ 579 0281 71030000 		.4byte	0x371
+ 580 0285 8F020000 		.4byte	0x28f
+ 581 0289 0D       		.uleb128 0xd
+ 582 028a 01       		.uleb128 0x1
+ 583 028b 50       		.byte	0x50
+ 584 028c 01       		.uleb128 0x1
+ 585 028d 31       		.byte	0x31
+ 586 028e 00       		.byte	0
+ 587 028f 0C       		.uleb128 0xc
+ 588 0290 1E000000 		.4byte	.LVL18
+ 589 0294 7C030000 		.4byte	0x37c
+ 590 0298 0D       		.uleb128 0xd
+ 591 0299 01       		.uleb128 0x1
+ 592 029a 50       		.byte	0x50
+ 593 029b 02       		.uleb128 0x2
+ 594 029c 74       		.byte	0x74
+ 595 029d 03       		.sleb128 3
+ 596 029e 0D       		.uleb128 0xd
+ 597 029f 01       		.uleb128 0x1
+ 598 02a0 51       		.byte	0x51
+ 599 02a1 01       		.uleb128 0x1
+ 600 02a2 3D       		.byte	0x3d
+ 601 02a3 00       		.byte	0
+ 602 02a4 00       		.byte	0
+ 603 02a5 11       		.uleb128 0x11
+ 604 02a6 09020000 		.4byte	.LASF30
+ 605 02aa 01       		.byte	0x1
+ 606 02ab 28       		.byte	0x28
+ 607 02ac 97000000 		.4byte	0x97
+ 608 02b0 00000000 		.4byte	.LFB3
+ 609 02b4 10000000 		.4byte	.LFE3-.LFB3
+ 610 02b8 01       		.uleb128 0x1
+ 611 02b9 9C       		.byte	0x9c
+ 612 02ba EB020000 		.4byte	0x2eb
+ 613 02be 0B       		.uleb128 0xb
+ 614 02bf 62010000 		.4byte	.LASF29
+ 615 02c3 01       		.byte	0x1
+ 616 02c4 28       		.byte	0x28
+ 617 02c5 5E010000 		.4byte	0x15e
+ 618 02c9 3D020000 		.4byte	.LLST15
+ 619 02cd 0C       		.uleb128 0xc
+ 620 02ce 0C000000 		.4byte	.LVL22
+ 621 02d2 92030000 		.4byte	0x392
+ 622 02d6 0D       		.uleb128 0xd
+ 623 02d7 01       		.uleb128 0x1
+ 624 02d8 50       		.byte	0x50
+ 625 02d9 05       		.uleb128 0x5
+ 626 02da F3       		.byte	0xf3
+ 627 02db 01       		.uleb128 0x1
+ 628 02dc 50       		.byte	0x50
+ 629 02dd 23       		.byte	0x23
+ 630 02de 03       		.uleb128 0x3
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 13
+
+
+ 631 02df 0D       		.uleb128 0xd
+ 632 02e0 01       		.uleb128 0x1
+ 633 02e1 51       		.byte	0x51
+ 634 02e2 01       		.uleb128 0x1
+ 635 02e3 31       		.byte	0x31
+ 636 02e4 0D       		.uleb128 0xd
+ 637 02e5 01       		.uleb128 0x1
+ 638 02e6 52       		.byte	0x52
+ 639 02e7 01       		.uleb128 0x1
+ 640 02e8 32       		.byte	0x32
+ 641 02e9 00       		.byte	0
+ 642 02ea 00       		.byte	0
+ 643 02eb 11       		.uleb128 0x11
+ 644 02ec DA000000 		.4byte	.LASF31
+ 645 02f0 01       		.byte	0x1
+ 646 02f1 2C       		.byte	0x2c
+ 647 02f2 8C000000 		.4byte	0x8c
+ 648 02f6 00000000 		.4byte	.LFB4
+ 649 02fa 04000000 		.4byte	.LFE4-.LFB4
+ 650 02fe 01       		.uleb128 0x1
+ 651 02ff 9C       		.byte	0x9c
+ 652 0300 14030000 		.4byte	0x314
+ 653 0304 0B       		.uleb128 0xb
+ 654 0305 62010000 		.4byte	.LASF29
+ 655 0309 01       		.byte	0x1
+ 656 030a 2C       		.byte	0x2c
+ 657 030b 5E010000 		.4byte	0x15e
+ 658 030f 6B020000 		.4byte	.LLST16
+ 659 0313 00       		.byte	0
+ 660 0314 11       		.uleb128 0x11
+ 661 0315 BD020000 		.4byte	.LASF32
+ 662 0319 01       		.byte	0x1
+ 663 031a 30       		.byte	0x30
+ 664 031b 8C000000 		.4byte	0x8c
+ 665 031f 00000000 		.4byte	.LFB5
+ 666 0323 04000000 		.4byte	.LFE5-.LFB5
+ 667 0327 01       		.uleb128 0x1
+ 668 0328 9C       		.byte	0x9c
+ 669 0329 3D030000 		.4byte	0x33d
+ 670 032d 0B       		.uleb128 0xb
+ 671 032e 62010000 		.4byte	.LASF29
+ 672 0332 01       		.byte	0x1
+ 673 0333 30       		.byte	0x30
+ 674 0334 5E010000 		.4byte	0x15e
+ 675 0338 8C020000 		.4byte	.LLST17
+ 676 033c 00       		.byte	0
+ 677 033d 11       		.uleb128 0x11
+ 678 033e 00000000 		.4byte	.LASF33
+ 679 0342 01       		.byte	0x1
+ 680 0343 34       		.byte	0x34
+ 681 0344 8C000000 		.4byte	0x8c
+ 682 0348 00000000 		.4byte	.LFB6
+ 683 034c 04000000 		.4byte	.LFE6-.LFB6
+ 684 0350 01       		.uleb128 0x1
+ 685 0351 9C       		.byte	0x9c
+ 686 0352 66030000 		.4byte	0x366
+ 687 0356 0B       		.uleb128 0xb
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 14
+
+
+ 688 0357 62010000 		.4byte	.LASF29
+ 689 035b 01       		.byte	0x1
+ 690 035c 34       		.byte	0x34
+ 691 035d 5E010000 		.4byte	0x15e
+ 692 0361 AD020000 		.4byte	.LLST18
+ 693 0365 00       		.byte	0
+ 694 0366 12       		.uleb128 0x12
+ 695 0367 A5000000 		.4byte	.LASF34
+ 696 036b A5000000 		.4byte	.LASF34
+ 697 036f 05       		.byte	0x5
+ 698 0370 37       		.byte	0x37
+ 699 0371 12       		.uleb128 0x12
+ 700 0372 26000000 		.4byte	.LASF35
+ 701 0376 26000000 		.4byte	.LASF35
+ 702 037a 04       		.byte	0x4
+ 703 037b 17       		.byte	0x17
+ 704 037c 12       		.uleb128 0x12
+ 705 037d 1C030000 		.4byte	.LASF36
+ 706 0381 1C030000 		.4byte	.LASF36
+ 707 0385 04       		.byte	0x4
+ 708 0386 1B       		.byte	0x1b
+ 709 0387 12       		.uleb128 0x12
+ 710 0388 93010000 		.4byte	.LASF37
+ 711 038c 93010000 		.4byte	.LASF37
+ 712 0390 04       		.byte	0x4
+ 713 0391 2D       		.byte	0x2d
+ 714 0392 12       		.uleb128 0x12
+ 715 0393 C1000000 		.4byte	.LASF38
+ 716 0397 C1000000 		.4byte	.LASF38
+ 717 039b 04       		.byte	0x4
+ 718 039c 2E       		.byte	0x2e
+ 719 039d 00       		.byte	0
+ 720              		.section	.debug_abbrev,"",%progbits
+ 721              	.Ldebug_abbrev0:
+ 722 0000 01       		.uleb128 0x1
+ 723 0001 11       		.uleb128 0x11
+ 724 0002 01       		.byte	0x1
+ 725 0003 25       		.uleb128 0x25
+ 726 0004 0E       		.uleb128 0xe
+ 727 0005 13       		.uleb128 0x13
+ 728 0006 0B       		.uleb128 0xb
+ 729 0007 03       		.uleb128 0x3
+ 730 0008 0E       		.uleb128 0xe
+ 731 0009 1B       		.uleb128 0x1b
+ 732 000a 0E       		.uleb128 0xe
+ 733 000b 55       		.uleb128 0x55
+ 734 000c 17       		.uleb128 0x17
+ 735 000d 11       		.uleb128 0x11
+ 736 000e 01       		.uleb128 0x1
+ 737 000f 10       		.uleb128 0x10
+ 738 0010 17       		.uleb128 0x17
+ 739 0011 00       		.byte	0
+ 740 0012 00       		.byte	0
+ 741 0013 02       		.uleb128 0x2
+ 742 0014 24       		.uleb128 0x24
+ 743 0015 00       		.byte	0
+ 744 0016 0B       		.uleb128 0xb
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 15
+
+
+ 745 0017 0B       		.uleb128 0xb
+ 746 0018 3E       		.uleb128 0x3e
+ 747 0019 0B       		.uleb128 0xb
+ 748 001a 03       		.uleb128 0x3
+ 749 001b 0E       		.uleb128 0xe
+ 750 001c 00       		.byte	0
+ 751 001d 00       		.byte	0
+ 752 001e 03       		.uleb128 0x3
+ 753 001f 16       		.uleb128 0x16
+ 754 0020 00       		.byte	0
+ 755 0021 03       		.uleb128 0x3
+ 756 0022 0E       		.uleb128 0xe
+ 757 0023 3A       		.uleb128 0x3a
+ 758 0024 0B       		.uleb128 0xb
+ 759 0025 3B       		.uleb128 0x3b
+ 760 0026 0B       		.uleb128 0xb
+ 761 0027 49       		.uleb128 0x49
+ 762 0028 13       		.uleb128 0x13
+ 763 0029 00       		.byte	0
+ 764 002a 00       		.byte	0
+ 765 002b 04       		.uleb128 0x4
+ 766 002c 24       		.uleb128 0x24
+ 767 002d 00       		.byte	0
+ 768 002e 0B       		.uleb128 0xb
+ 769 002f 0B       		.uleb128 0xb
+ 770 0030 3E       		.uleb128 0x3e
+ 771 0031 0B       		.uleb128 0xb
+ 772 0032 03       		.uleb128 0x3
+ 773 0033 08       		.uleb128 0x8
+ 774 0034 00       		.byte	0
+ 775 0035 00       		.byte	0
+ 776 0036 05       		.uleb128 0x5
+ 777 0037 13       		.uleb128 0x13
+ 778 0038 01       		.byte	0x1
+ 779 0039 0B       		.uleb128 0xb
+ 780 003a 0B       		.uleb128 0xb
+ 781 003b 3A       		.uleb128 0x3a
+ 782 003c 0B       		.uleb128 0xb
+ 783 003d 3B       		.uleb128 0x3b
+ 784 003e 0B       		.uleb128 0xb
+ 785 003f 01       		.uleb128 0x1
+ 786 0040 13       		.uleb128 0x13
+ 787 0041 00       		.byte	0
+ 788 0042 00       		.byte	0
+ 789 0043 06       		.uleb128 0x6
+ 790 0044 0D       		.uleb128 0xd
+ 791 0045 00       		.byte	0
+ 792 0046 03       		.uleb128 0x3
+ 793 0047 08       		.uleb128 0x8
+ 794 0048 3A       		.uleb128 0x3a
+ 795 0049 0B       		.uleb128 0xb
+ 796 004a 3B       		.uleb128 0x3b
+ 797 004b 0B       		.uleb128 0xb
+ 798 004c 49       		.uleb128 0x49
+ 799 004d 13       		.uleb128 0x13
+ 800 004e 38       		.uleb128 0x38
+ 801 004f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 16
+
+
+ 802 0050 00       		.byte	0
+ 803 0051 00       		.byte	0
+ 804 0052 07       		.uleb128 0x7
+ 805 0053 0D       		.uleb128 0xd
+ 806 0054 00       		.byte	0
+ 807 0055 03       		.uleb128 0x3
+ 808 0056 0E       		.uleb128 0xe
+ 809 0057 3A       		.uleb128 0x3a
+ 810 0058 0B       		.uleb128 0xb
+ 811 0059 3B       		.uleb128 0x3b
+ 812 005a 0B       		.uleb128 0xb
+ 813 005b 49       		.uleb128 0x49
+ 814 005c 13       		.uleb128 0x13
+ 815 005d 38       		.uleb128 0x38
+ 816 005e 0B       		.uleb128 0xb
+ 817 005f 00       		.byte	0
+ 818 0060 00       		.byte	0
+ 819 0061 08       		.uleb128 0x8
+ 820 0062 01       		.uleb128 0x1
+ 821 0063 01       		.byte	0x1
+ 822 0064 49       		.uleb128 0x49
+ 823 0065 13       		.uleb128 0x13
+ 824 0066 01       		.uleb128 0x1
+ 825 0067 13       		.uleb128 0x13
+ 826 0068 00       		.byte	0
+ 827 0069 00       		.byte	0
+ 828 006a 09       		.uleb128 0x9
+ 829 006b 21       		.uleb128 0x21
+ 830 006c 00       		.byte	0
+ 831 006d 49       		.uleb128 0x49
+ 832 006e 13       		.uleb128 0x13
+ 833 006f 2F       		.uleb128 0x2f
+ 834 0070 0B       		.uleb128 0xb
+ 835 0071 00       		.byte	0
+ 836 0072 00       		.byte	0
+ 837 0073 0A       		.uleb128 0xa
+ 838 0074 2E       		.uleb128 0x2e
+ 839 0075 01       		.byte	0x1
+ 840 0076 3F       		.uleb128 0x3f
+ 841 0077 19       		.uleb128 0x19
+ 842 0078 03       		.uleb128 0x3
+ 843 0079 0E       		.uleb128 0xe
+ 844 007a 3A       		.uleb128 0x3a
+ 845 007b 0B       		.uleb128 0xb
+ 846 007c 3B       		.uleb128 0x3b
+ 847 007d 0B       		.uleb128 0xb
+ 848 007e 27       		.uleb128 0x27
+ 849 007f 19       		.uleb128 0x19
+ 850 0080 11       		.uleb128 0x11
+ 851 0081 01       		.uleb128 0x1
+ 852 0082 12       		.uleb128 0x12
+ 853 0083 06       		.uleb128 0x6
+ 854 0084 40       		.uleb128 0x40
+ 855 0085 18       		.uleb128 0x18
+ 856 0086 9742     		.uleb128 0x2117
+ 857 0088 19       		.uleb128 0x19
+ 858 0089 01       		.uleb128 0x1
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 17
+
+
+ 859 008a 13       		.uleb128 0x13
+ 860 008b 00       		.byte	0
+ 861 008c 00       		.byte	0
+ 862 008d 0B       		.uleb128 0xb
+ 863 008e 05       		.uleb128 0x5
+ 864 008f 00       		.byte	0
+ 865 0090 03       		.uleb128 0x3
+ 866 0091 0E       		.uleb128 0xe
+ 867 0092 3A       		.uleb128 0x3a
+ 868 0093 0B       		.uleb128 0xb
+ 869 0094 3B       		.uleb128 0x3b
+ 870 0095 0B       		.uleb128 0xb
+ 871 0096 49       		.uleb128 0x49
+ 872 0097 13       		.uleb128 0x13
+ 873 0098 02       		.uleb128 0x2
+ 874 0099 17       		.uleb128 0x17
+ 875 009a 00       		.byte	0
+ 876 009b 00       		.byte	0
+ 877 009c 0C       		.uleb128 0xc
+ 878 009d 898201   		.uleb128 0x4109
+ 879 00a0 01       		.byte	0x1
+ 880 00a1 11       		.uleb128 0x11
+ 881 00a2 01       		.uleb128 0x1
+ 882 00a3 31       		.uleb128 0x31
+ 883 00a4 13       		.uleb128 0x13
+ 884 00a5 00       		.byte	0
+ 885 00a6 00       		.byte	0
+ 886 00a7 0D       		.uleb128 0xd
+ 887 00a8 8A8201   		.uleb128 0x410a
+ 888 00ab 00       		.byte	0
+ 889 00ac 02       		.uleb128 0x2
+ 890 00ad 18       		.uleb128 0x18
+ 891 00ae 9142     		.uleb128 0x2111
+ 892 00b0 18       		.uleb128 0x18
+ 893 00b1 00       		.byte	0
+ 894 00b2 00       		.byte	0
+ 895 00b3 0E       		.uleb128 0xe
+ 896 00b4 0F       		.uleb128 0xf
+ 897 00b5 00       		.byte	0
+ 898 00b6 0B       		.uleb128 0xb
+ 899 00b7 0B       		.uleb128 0xb
+ 900 00b8 49       		.uleb128 0x49
+ 901 00b9 13       		.uleb128 0x13
+ 902 00ba 00       		.byte	0
+ 903 00bb 00       		.byte	0
+ 904 00bc 0F       		.uleb128 0xf
+ 905 00bd 34       		.uleb128 0x34
+ 906 00be 00       		.byte	0
+ 907 00bf 03       		.uleb128 0x3
+ 908 00c0 0E       		.uleb128 0xe
+ 909 00c1 3A       		.uleb128 0x3a
+ 910 00c2 0B       		.uleb128 0xb
+ 911 00c3 3B       		.uleb128 0x3b
+ 912 00c4 0B       		.uleb128 0xb
+ 913 00c5 49       		.uleb128 0x49
+ 914 00c6 13       		.uleb128 0x13
+ 915 00c7 02       		.uleb128 0x2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 18
+
+
+ 916 00c8 17       		.uleb128 0x17
+ 917 00c9 00       		.byte	0
+ 918 00ca 00       		.byte	0
+ 919 00cb 10       		.uleb128 0x10
+ 920 00cc 898201   		.uleb128 0x4109
+ 921 00cf 01       		.byte	0x1
+ 922 00d0 11       		.uleb128 0x11
+ 923 00d1 01       		.uleb128 0x1
+ 924 00d2 31       		.uleb128 0x31
+ 925 00d3 13       		.uleb128 0x13
+ 926 00d4 01       		.uleb128 0x1
+ 927 00d5 13       		.uleb128 0x13
+ 928 00d6 00       		.byte	0
+ 929 00d7 00       		.byte	0
+ 930 00d8 11       		.uleb128 0x11
+ 931 00d9 2E       		.uleb128 0x2e
+ 932 00da 01       		.byte	0x1
+ 933 00db 3F       		.uleb128 0x3f
+ 934 00dc 19       		.uleb128 0x19
+ 935 00dd 03       		.uleb128 0x3
+ 936 00de 0E       		.uleb128 0xe
+ 937 00df 3A       		.uleb128 0x3a
+ 938 00e0 0B       		.uleb128 0xb
+ 939 00e1 3B       		.uleb128 0x3b
+ 940 00e2 0B       		.uleb128 0xb
+ 941 00e3 27       		.uleb128 0x27
+ 942 00e4 19       		.uleb128 0x19
+ 943 00e5 49       		.uleb128 0x49
+ 944 00e6 13       		.uleb128 0x13
+ 945 00e7 11       		.uleb128 0x11
+ 946 00e8 01       		.uleb128 0x1
+ 947 00e9 12       		.uleb128 0x12
+ 948 00ea 06       		.uleb128 0x6
+ 949 00eb 40       		.uleb128 0x40
+ 950 00ec 18       		.uleb128 0x18
+ 951 00ed 9742     		.uleb128 0x2117
+ 952 00ef 19       		.uleb128 0x19
+ 953 00f0 01       		.uleb128 0x1
+ 954 00f1 13       		.uleb128 0x13
+ 955 00f2 00       		.byte	0
+ 956 00f3 00       		.byte	0
+ 957 00f4 12       		.uleb128 0x12
+ 958 00f5 2E       		.uleb128 0x2e
+ 959 00f6 00       		.byte	0
+ 960 00f7 3F       		.uleb128 0x3f
+ 961 00f8 19       		.uleb128 0x19
+ 962 00f9 3C       		.uleb128 0x3c
+ 963 00fa 19       		.uleb128 0x19
+ 964 00fb 6E       		.uleb128 0x6e
+ 965 00fc 0E       		.uleb128 0xe
+ 966 00fd 03       		.uleb128 0x3
+ 967 00fe 0E       		.uleb128 0xe
+ 968 00ff 3A       		.uleb128 0x3a
+ 969 0100 0B       		.uleb128 0xb
+ 970 0101 3B       		.uleb128 0x3b
+ 971 0102 0B       		.uleb128 0xb
+ 972 0103 00       		.byte	0
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 19
+
+
+ 973 0104 00       		.byte	0
+ 974 0105 00       		.byte	0
+ 975              		.section	.debug_loc,"",%progbits
+ 976              	.Ldebug_loc0:
+ 977              	.LLST0:
+ 978 0000 00000000 		.4byte	.LVL0
+ 979 0004 05000000 		.4byte	.LVL1-1
+ 980 0008 0100     		.2byte	0x1
+ 981 000a 50       		.byte	0x50
+ 982 000b 05000000 		.4byte	.LVL1-1
+ 983 000f 08000000 		.4byte	.LFE0
+ 984 0013 0400     		.2byte	0x4
+ 985 0015 F3       		.byte	0xf3
+ 986 0016 01       		.uleb128 0x1
+ 987 0017 50       		.byte	0x50
+ 988 0018 9F       		.byte	0x9f
+ 989 0019 00000000 		.4byte	0
+ 990 001d 00000000 		.4byte	0
+ 991              	.LLST1:
+ 992 0021 00000000 		.4byte	.LVL0
+ 993 0025 05000000 		.4byte	.LVL1-1
+ 994 0029 0100     		.2byte	0x1
+ 995 002b 51       		.byte	0x51
+ 996 002c 05000000 		.4byte	.LVL1-1
+ 997 0030 08000000 		.4byte	.LFE0
+ 998 0034 0400     		.2byte	0x4
+ 999 0036 F3       		.byte	0xf3
+ 1000 0037 01       		.uleb128 0x1
+ 1001 0038 51       		.byte	0x51
+ 1002 0039 9F       		.byte	0x9f
+ 1003 003a 00000000 		.4byte	0
+ 1004 003e 00000000 		.4byte	0
+ 1005              	.LLST2:
+ 1006 0042 00000000 		.4byte	.LVL0
+ 1007 0046 05000000 		.4byte	.LVL1-1
+ 1008 004a 0100     		.2byte	0x1
+ 1009 004c 52       		.byte	0x52
+ 1010 004d 05000000 		.4byte	.LVL1-1
+ 1011 0051 08000000 		.4byte	.LFE0
+ 1012 0055 0400     		.2byte	0x4
+ 1013 0057 F3       		.byte	0xf3
+ 1014 0058 01       		.uleb128 0x1
+ 1015 0059 52       		.byte	0x52
+ 1016 005a 9F       		.byte	0x9f
+ 1017 005b 00000000 		.4byte	0
+ 1018 005f 00000000 		.4byte	0
+ 1019              	.LLST3:
+ 1020 0063 00000000 		.4byte	.LVL0
+ 1021 0067 05000000 		.4byte	.LVL1-1
+ 1022 006b 0100     		.2byte	0x1
+ 1023 006d 53       		.byte	0x53
+ 1024 006e 05000000 		.4byte	.LVL1-1
+ 1025 0072 08000000 		.4byte	.LFE0
+ 1026 0076 0400     		.2byte	0x4
+ 1027 0078 F3       		.byte	0xf3
+ 1028 0079 01       		.uleb128 0x1
+ 1029 007a 53       		.byte	0x53
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 20
+
+
+ 1030 007b 9F       		.byte	0x9f
+ 1031 007c 00000000 		.4byte	0
+ 1032 0080 00000000 		.4byte	0
+ 1033              	.LLST4:
+ 1034 0084 00000000 		.4byte	.LVL2
+ 1035 0088 10000000 		.4byte	.LVL4
+ 1036 008c 0100     		.2byte	0x1
+ 1037 008e 50       		.byte	0x50
+ 1038 008f 10000000 		.4byte	.LVL4
+ 1039 0093 3A000000 		.4byte	.LVL12
+ 1040 0097 0100     		.2byte	0x1
+ 1041 0099 55       		.byte	0x55
+ 1042 009a 3A000000 		.4byte	.LVL12
+ 1043 009e 3A000000 		.4byte	.LVL13
+ 1044 00a2 0300     		.2byte	0x3
+ 1045 00a4 76       		.byte	0x76
+ 1046 00a5 7D       		.sleb128 -3
+ 1047 00a6 9F       		.byte	0x9f
+ 1048 00a7 3A000000 		.4byte	.LVL13
+ 1049 00ab 40000000 		.4byte	.LFE1
+ 1050 00af 0400     		.2byte	0x4
+ 1051 00b1 F3       		.byte	0xf3
+ 1052 00b2 01       		.uleb128 0x1
+ 1053 00b3 50       		.byte	0x50
+ 1054 00b4 9F       		.byte	0x9f
+ 1055 00b5 00000000 		.4byte	0
+ 1056 00b9 00000000 		.4byte	0
+ 1057              	.LLST5:
+ 1058 00bd 00000000 		.4byte	.LVL2
+ 1059 00c1 17000000 		.4byte	.LVL5-1
+ 1060 00c5 0100     		.2byte	0x1
+ 1061 00c7 51       		.byte	0x51
+ 1062 00c8 17000000 		.4byte	.LVL5-1
+ 1063 00cc 40000000 		.4byte	.LFE1
+ 1064 00d0 0400     		.2byte	0x4
+ 1065 00d2 F3       		.byte	0xf3
+ 1066 00d3 01       		.uleb128 0x1
+ 1067 00d4 51       		.byte	0x51
+ 1068 00d5 9F       		.byte	0x9f
+ 1069 00d6 00000000 		.4byte	0
+ 1070 00da 00000000 		.4byte	0
+ 1071              	.LLST6:
+ 1072 00de 00000000 		.4byte	.LVL2
+ 1073 00e2 17000000 		.4byte	.LVL5-1
+ 1074 00e6 0100     		.2byte	0x1
+ 1075 00e8 52       		.byte	0x52
+ 1076 00e9 17000000 		.4byte	.LVL5-1
+ 1077 00ed 40000000 		.4byte	.LFE1
+ 1078 00f1 0400     		.2byte	0x4
+ 1079 00f3 F3       		.byte	0xf3
+ 1080 00f4 01       		.uleb128 0x1
+ 1081 00f5 52       		.byte	0x52
+ 1082 00f6 9F       		.byte	0x9f
+ 1083 00f7 00000000 		.4byte	0
+ 1084 00fb 00000000 		.4byte	0
+ 1085              	.LLST7:
+ 1086 00ff 00000000 		.4byte	.LVL2
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 21
+
+
+ 1087 0103 0C000000 		.4byte	.LVL3
+ 1088 0107 0100     		.2byte	0x1
+ 1089 0109 53       		.byte	0x53
+ 1090 010a 0C000000 		.4byte	.LVL3
+ 1091 010e 40000000 		.4byte	.LFE1
+ 1092 0112 0400     		.2byte	0x4
+ 1093 0114 F3       		.byte	0xf3
+ 1094 0115 01       		.uleb128 0x1
+ 1095 0116 53       		.byte	0x53
+ 1096 0117 9F       		.byte	0x9f
+ 1097 0118 00000000 		.4byte	0
+ 1098 011c 00000000 		.4byte	0
+ 1099              	.LLST8:
+ 1100 0120 00000000 		.4byte	.LVL2
+ 1101 0124 0C000000 		.4byte	.LVL3
+ 1102 0128 0200     		.2byte	0x2
+ 1103 012a 91       		.byte	0x91
+ 1104 012b 00       		.sleb128 0
+ 1105 012c 0C000000 		.4byte	.LVL3
+ 1106 0130 10000000 		.4byte	.LVL4
+ 1107 0134 0200     		.2byte	0x2
+ 1108 0136 73       		.byte	0x73
+ 1109 0137 00       		.sleb128 0
+ 1110 0138 10000000 		.4byte	.LVL4
+ 1111 013c 40000000 		.4byte	.LFE1
+ 1112 0140 0200     		.2byte	0x2
+ 1113 0142 91       		.byte	0x91
+ 1114 0143 00       		.sleb128 0
+ 1115 0144 00000000 		.4byte	0
+ 1116 0148 00000000 		.4byte	0
+ 1117              	.LLST9:
+ 1118 014c 2A000000 		.4byte	.LVL7
+ 1119 0150 30000000 		.4byte	.LVL8
+ 1120 0154 0100     		.2byte	0x1
+ 1121 0156 50       		.byte	0x50
+ 1122 0157 30000000 		.4byte	.LVL8
+ 1123 015b 33000000 		.4byte	.LVL9-1
+ 1124 015f 0100     		.2byte	0x1
+ 1125 0161 52       		.byte	0x52
+ 1126 0162 33000000 		.4byte	.LVL9-1
+ 1127 0166 36000000 		.4byte	.LVL10
+ 1128 016a 0100     		.2byte	0x1
+ 1129 016c 54       		.byte	0x54
+ 1130 016d 36000000 		.4byte	.LVL10
+ 1131 0171 38000000 		.4byte	.LVL11
+ 1132 0175 0300     		.2byte	0x3
+ 1133 0177 74       		.byte	0x74
+ 1134 0178 7E       		.sleb128 -2
+ 1135 0179 9F       		.byte	0x9f
+ 1136 017a 00000000 		.4byte	0
+ 1137 017e 00000000 		.4byte	0
+ 1138              	.LLST10:
+ 1139 0182 00000000 		.4byte	.LVL14
+ 1140 0186 0C000000 		.4byte	.LVL16
+ 1141 018a 0100     		.2byte	0x1
+ 1142 018c 50       		.byte	0x50
+ 1143 018d 0C000000 		.4byte	.LVL16
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 22
+
+
+ 1144 0191 22000000 		.4byte	.LVL19
+ 1145 0195 0100     		.2byte	0x1
+ 1146 0197 54       		.byte	0x54
+ 1147 0198 22000000 		.4byte	.LVL19
+ 1148 019c 24000000 		.4byte	.LFE2
+ 1149 01a0 0400     		.2byte	0x4
+ 1150 01a2 F3       		.byte	0xf3
+ 1151 01a3 01       		.uleb128 0x1
+ 1152 01a4 50       		.byte	0x50
+ 1153 01a5 9F       		.byte	0x9f
+ 1154 01a6 00000000 		.4byte	0
+ 1155 01aa 00000000 		.4byte	0
+ 1156              	.LLST11:
+ 1157 01ae 00000000 		.4byte	.LVL14
+ 1158 01b2 0F000000 		.4byte	.LVL17-1
+ 1159 01b6 0100     		.2byte	0x1
+ 1160 01b8 51       		.byte	0x51
+ 1161 01b9 0F000000 		.4byte	.LVL17-1
+ 1162 01bd 24000000 		.4byte	.LFE2
+ 1163 01c1 0400     		.2byte	0x4
+ 1164 01c3 F3       		.byte	0xf3
+ 1165 01c4 01       		.uleb128 0x1
+ 1166 01c5 51       		.byte	0x51
+ 1167 01c6 9F       		.byte	0x9f
+ 1168 01c7 00000000 		.4byte	0
+ 1169 01cb 00000000 		.4byte	0
+ 1170              	.LLST12:
+ 1171 01cf 00000000 		.4byte	.LVL14
+ 1172 01d3 0F000000 		.4byte	.LVL17-1
+ 1173 01d7 0100     		.2byte	0x1
+ 1174 01d9 52       		.byte	0x52
+ 1175 01da 0F000000 		.4byte	.LVL17-1
+ 1176 01de 24000000 		.4byte	.LFE2
+ 1177 01e2 0400     		.2byte	0x4
+ 1178 01e4 F3       		.byte	0xf3
+ 1179 01e5 01       		.uleb128 0x1
+ 1180 01e6 52       		.byte	0x52
+ 1181 01e7 9F       		.byte	0x9f
+ 1182 01e8 00000000 		.4byte	0
+ 1183 01ec 00000000 		.4byte	0
+ 1184              	.LLST13:
+ 1185 01f0 00000000 		.4byte	.LVL14
+ 1186 01f4 08000000 		.4byte	.LVL15
+ 1187 01f8 0100     		.2byte	0x1
+ 1188 01fa 53       		.byte	0x53
+ 1189 01fb 08000000 		.4byte	.LVL15
+ 1190 01ff 24000000 		.4byte	.LFE2
+ 1191 0203 0400     		.2byte	0x4
+ 1192 0205 F3       		.byte	0xf3
+ 1193 0206 01       		.uleb128 0x1
+ 1194 0207 53       		.byte	0x53
+ 1195 0208 9F       		.byte	0x9f
+ 1196 0209 00000000 		.4byte	0
+ 1197 020d 00000000 		.4byte	0
+ 1198              	.LLST14:
+ 1199 0211 00000000 		.4byte	.LVL14
+ 1200 0215 08000000 		.4byte	.LVL15
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 23
+
+
+ 1201 0219 0200     		.2byte	0x2
+ 1202 021b 91       		.byte	0x91
+ 1203 021c 00       		.sleb128 0
+ 1204 021d 08000000 		.4byte	.LVL15
+ 1205 0221 0F000000 		.4byte	.LVL17-1
+ 1206 0225 0200     		.2byte	0x2
+ 1207 0227 73       		.byte	0x73
+ 1208 0228 00       		.sleb128 0
+ 1209 0229 0F000000 		.4byte	.LVL17-1
+ 1210 022d 24000000 		.4byte	.LFE2
+ 1211 0231 0200     		.2byte	0x2
+ 1212 0233 91       		.byte	0x91
+ 1213 0234 00       		.sleb128 0
+ 1214 0235 00000000 		.4byte	0
+ 1215 0239 00000000 		.4byte	0
+ 1216              	.LLST15:
+ 1217 023d 00000000 		.4byte	.LVL20
+ 1218 0241 04000000 		.4byte	.LVL21
+ 1219 0245 0100     		.2byte	0x1
+ 1220 0247 50       		.byte	0x50
+ 1221 0248 04000000 		.4byte	.LVL21
+ 1222 024c 0B000000 		.4byte	.LVL22-1
+ 1223 0250 0300     		.2byte	0x3
+ 1224 0252 70       		.byte	0x70
+ 1225 0253 7D       		.sleb128 -3
+ 1226 0254 9F       		.byte	0x9f
+ 1227 0255 0B000000 		.4byte	.LVL22-1
+ 1228 0259 10000000 		.4byte	.LFE3
+ 1229 025d 0400     		.2byte	0x4
+ 1230 025f F3       		.byte	0xf3
+ 1231 0260 01       		.uleb128 0x1
+ 1232 0261 50       		.byte	0x50
+ 1233 0262 9F       		.byte	0x9f
+ 1234 0263 00000000 		.4byte	0
+ 1235 0267 00000000 		.4byte	0
+ 1236              	.LLST16:
+ 1237 026b 00000000 		.4byte	.LVL23
+ 1238 026f 02000000 		.4byte	.LVL24
+ 1239 0273 0100     		.2byte	0x1
+ 1240 0275 50       		.byte	0x50
+ 1241 0276 02000000 		.4byte	.LVL24
+ 1242 027a 04000000 		.4byte	.LFE4
+ 1243 027e 0400     		.2byte	0x4
+ 1244 0280 F3       		.byte	0xf3
+ 1245 0281 01       		.uleb128 0x1
+ 1246 0282 50       		.byte	0x50
+ 1247 0283 9F       		.byte	0x9f
+ 1248 0284 00000000 		.4byte	0
+ 1249 0288 00000000 		.4byte	0
+ 1250              	.LLST17:
+ 1251 028c 00000000 		.4byte	.LVL25
+ 1252 0290 02000000 		.4byte	.LVL26
+ 1253 0294 0100     		.2byte	0x1
+ 1254 0296 50       		.byte	0x50
+ 1255 0297 02000000 		.4byte	.LVL26
+ 1256 029b 04000000 		.4byte	.LFE5
+ 1257 029f 0400     		.2byte	0x4
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 24
+
+
+ 1258 02a1 F3       		.byte	0xf3
+ 1259 02a2 01       		.uleb128 0x1
+ 1260 02a3 50       		.byte	0x50
+ 1261 02a4 9F       		.byte	0x9f
+ 1262 02a5 00000000 		.4byte	0
+ 1263 02a9 00000000 		.4byte	0
+ 1264              	.LLST18:
+ 1265 02ad 00000000 		.4byte	.LVL27
+ 1266 02b1 02000000 		.4byte	.LVL28
+ 1267 02b5 0100     		.2byte	0x1
+ 1268 02b7 50       		.byte	0x50
+ 1269 02b8 02000000 		.4byte	.LVL28
+ 1270 02bc 04000000 		.4byte	.LFE6
+ 1271 02c0 0400     		.2byte	0x4
+ 1272 02c2 F3       		.byte	0xf3
+ 1273 02c3 01       		.uleb128 0x1
+ 1274 02c4 50       		.byte	0x50
+ 1275 02c5 9F       		.byte	0x9f
+ 1276 02c6 00000000 		.4byte	0
+ 1277 02ca 00000000 		.4byte	0
+ 1278              		.section	.debug_aranges,"",%progbits
+ 1279 0000 4C000000 		.4byte	0x4c
+ 1280 0004 0200     		.2byte	0x2
+ 1281 0006 00000000 		.4byte	.Ldebug_info0
+ 1282 000a 04       		.byte	0x4
+ 1283 000b 00       		.byte	0
+ 1284 000c 0000     		.2byte	0
+ 1285 000e 0000     		.2byte	0
+ 1286 0010 00000000 		.4byte	.LFB0
+ 1287 0014 08000000 		.4byte	.LFE0-.LFB0
+ 1288 0018 00000000 		.4byte	.LFB1
+ 1289 001c 40000000 		.4byte	.LFE1-.LFB1
+ 1290 0020 00000000 		.4byte	.LFB2
+ 1291 0024 24000000 		.4byte	.LFE2-.LFB2
+ 1292 0028 00000000 		.4byte	.LFB3
+ 1293 002c 10000000 		.4byte	.LFE3-.LFB3
+ 1294 0030 00000000 		.4byte	.LFB4
+ 1295 0034 04000000 		.4byte	.LFE4-.LFB4
+ 1296 0038 00000000 		.4byte	.LFB5
+ 1297 003c 04000000 		.4byte	.LFE5-.LFB5
+ 1298 0040 00000000 		.4byte	.LFB6
+ 1299 0044 04000000 		.4byte	.LFE6-.LFB6
+ 1300 0048 00000000 		.4byte	0
+ 1301 004c 00000000 		.4byte	0
+ 1302              		.section	.debug_ranges,"",%progbits
+ 1303              	.Ldebug_ranges0:
+ 1304 0000 00000000 		.4byte	.LFB0
+ 1305 0004 08000000 		.4byte	.LFE0
+ 1306 0008 00000000 		.4byte	.LFB1
+ 1307 000c 40000000 		.4byte	.LFE1
+ 1308 0010 00000000 		.4byte	.LFB2
+ 1309 0014 24000000 		.4byte	.LFE2
+ 1310 0018 00000000 		.4byte	.LFB3
+ 1311 001c 10000000 		.4byte	.LFE3
+ 1312 0020 00000000 		.4byte	.LFB4
+ 1313 0024 04000000 		.4byte	.LFE4
+ 1314 0028 00000000 		.4byte	.LFB5
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 25
+
+
+ 1315 002c 04000000 		.4byte	.LFE5
+ 1316 0030 00000000 		.4byte	.LFB6
+ 1317 0034 04000000 		.4byte	.LFE6
+ 1318 0038 00000000 		.4byte	0
+ 1319 003c 00000000 		.4byte	0
+ 1320              		.section	.debug_line,"",%progbits
+ 1321              	.Ldebug_line0:
+ 1322 0000 CF010000 		.section	.debug_str,"MS",%progbits,1
+ 1322      02004A01 
+ 1322      00000201 
+ 1322      FB0E0D00 
+ 1322      01010101 
+ 1323              	.LASF33:
+ 1324 0000 47657453 		.ascii	"GetScienceServoIDFromPacket\000"
+ 1324      6369656E 
+ 1324      63655365 
+ 1324      72766F49 
+ 1324      4446726F 
+ 1325              	.LASF2:
+ 1326 001c 5F5F7569 		.ascii	"__uint8_t\000"
+ 1326      6E74385F 
+ 1326      7400
+ 1327              	.LASF35:
+ 1328 0026 436F6E73 		.ascii	"ConstructCANID\000"
+ 1328      74727563 
+ 1328      7443414E 
+ 1328      494400
+ 1329              	.LASF3:
+ 1330 0035 5F5F696E 		.ascii	"__int16_t\000"
+ 1330      7431365F 
+ 1330      7400
+ 1331              	.LASF21:
+ 1332 003f 73656E73 		.ascii	"sensorCode\000"
+ 1332      6F72436F 
+ 1332      646500
+ 1333              	.LASF41:
+ 1334 004a 433A5C55 		.ascii	"C:\\Users\\casey\\Desktop\\Robotics Stuff\\TB67S249"
+ 1334      73657273 
+ 1334      5C636173 
+ 1334      65795C44 
+ 1334      65736B74 
+ 1335 0078 4654475F 		.ascii	"FTG_Stepper_Motor_Driver\\StepperDriver.cydsn\000"
+ 1335      53746570 
+ 1335      7065725F 
+ 1335      4D6F746F 
+ 1335      725F4472 
+ 1336              	.LASF34:
+ 1337 00a5 41737365 		.ascii	"AssembleTelemetryPullPacket\000"
+ 1337      6D626C65 
+ 1337      54656C65 
+ 1337      6D657472 
+ 1337      7950756C 
+ 1338              	.LASF38:
+ 1339 00c1 4465636F 		.ascii	"DecodeBytesToIntMSBFirst\000"
+ 1339      64654279 
+ 1339      74657354 
+ 1339      6F496E74 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 26
+
+
+ 1339      4D534246 
+ 1340              	.LASF31:
+ 1341 00da 47657453 		.ascii	"GetScienceServoAngleFromPacket\000"
+ 1341      6369656E 
+ 1341      63655365 
+ 1341      72766F41 
+ 1341      6E676C65 
+ 1342              	.LASF15:
+ 1343 00f9 64617461 		.ascii	"data\000"
+ 1343      00
+ 1344              	.LASF1:
+ 1345 00fe 756E7369 		.ascii	"unsigned char\000"
+ 1345      676E6564 
+ 1345      20636861 
+ 1345      7200
+ 1346              	.LASF18:
+ 1347 010c 7061636B 		.ascii	"packetToAssemble\000"
+ 1347      6574546F 
+ 1347      41737365 
+ 1347      6D626C65 
+ 1347      00
+ 1348              	.LASF8:
+ 1349 011d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1349      20756E73 
+ 1349      69676E65 
+ 1349      6420696E 
+ 1349      7400
+ 1350              	.LASF6:
+ 1351 012f 73686F72 		.ascii	"short unsigned int\000"
+ 1351      7420756E 
+ 1351      7369676E 
+ 1351      65642069 
+ 1351      6E7400
+ 1352              	.LASF20:
+ 1353 0142 74617267 		.ascii	"targetSerial\000"
+ 1353      65745365 
+ 1353      7269616C 
+ 1353      00
+ 1354              	.LASF5:
+ 1355 014f 5F5F7569 		.ascii	"__uint16_t\000"
+ 1355      6E743136 
+ 1355      5F7400
+ 1356              	.LASF28:
+ 1357 015a 64656772 		.ascii	"degrees\000"
+ 1357      65657300 
+ 1358              	.LASF29:
+ 1359 0162 7061636B 		.ascii	"packet\000"
+ 1359      657400
+ 1360              	.LASF17:
+ 1361 0169 43414E50 		.ascii	"CANPacket\000"
+ 1361      61636B65 
+ 1361      7400
+ 1362              	.LASF22:
+ 1363 0173 41737365 		.ascii	"AssembleScienceSensorPullPacket\000"
+ 1363      6D626C65 
+ 1363      53636965 
+ 1363      6E636553 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 27
+
+
+ 1363      656E736F 
+ 1364              	.LASF37:
+ 1365 0193 5061636B 		.ascii	"PackShortIntoDataMSBFirst\000"
+ 1365      53686F72 
+ 1365      74496E74 
+ 1365      6F446174 
+ 1365      614D5342 
+ 1366              	.LASF11:
+ 1367 01ad 756E7369 		.ascii	"unsigned int\000"
+ 1367      676E6564 
+ 1367      20696E74 
+ 1367      00
+ 1368              	.LASF23:
+ 1369 01ba 41737365 		.ascii	"AssembleScienceMotorControlPacket\000"
+ 1369      6D626C65 
+ 1369      53636965 
+ 1369      6E63654D 
+ 1369      6F746F72 
+ 1370              	.LASF10:
+ 1371 01dc 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1371      206C6F6E 
+ 1371      6720756E 
+ 1371      7369676E 
+ 1371      65642069 
+ 1372              	.LASF12:
+ 1373 01f3 75696E74 		.ascii	"uint8_t\000"
+ 1373      385F7400 
+ 1374              	.LASF24:
+ 1375 01fb 6D6F746F 		.ascii	"motor\000"
+ 1375      7200
+ 1376              	.LASF13:
+ 1377 0201 696E7431 		.ascii	"int16_t\000"
+ 1377      365F7400 
+ 1378              	.LASF30:
+ 1379 0209 47657453 		.ascii	"GetScienceMotorPWMFromPacket\000"
+ 1379      6369656E 
+ 1379      63654D6F 
+ 1379      746F7250 
+ 1379      574D4672 
+ 1380              	.LASF39:
+ 1381 0226 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1381      43313120 
+ 1381      352E342E 
+ 1381      31203230 
+ 1381      31363036 
+ 1382 0259 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1382      20726576 
+ 1382      6973696F 
+ 1382      6E203233 
+ 1382      37373135 
+ 1383 028c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1383      66756E63 
+ 1383      74696F6E 
+ 1383      2D736563 
+ 1383      74696F6E 
+ 1384              	.LASF16:
+ 1385 02b4 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 28
+
+
+ 1385      74797065 
+ 1385      00
+ 1386              	.LASF32:
+ 1387 02bd 47657453 		.ascii	"GetScienceMotorIDFromPacket\000"
+ 1387      6369656E 
+ 1387      63654D6F 
+ 1387      746F7249 
+ 1387      4446726F 
+ 1388              	.LASF9:
+ 1389 02d9 6C6F6E67 		.ascii	"long long int\000"
+ 1389      206C6F6E 
+ 1389      6720696E 
+ 1389      7400
+ 1390              	.LASF42:
+ 1391 02e7 6E657874 		.ascii	"nextByte\000"
+ 1391      42797465 
+ 1391      00
+ 1392              	.LASF40:
+ 1393 02f0 43414E20 		.ascii	"CAN Library\\CANScience.c\000"
+ 1393      4C696272 
+ 1393      6172795C 
+ 1393      43414E53 
+ 1393      6369656E 
+ 1394              	.LASF4:
+ 1395 0309 73686F72 		.ascii	"short int\000"
+ 1395      7420696E 
+ 1395      7400
+ 1396              	.LASF14:
+ 1397 0313 75696E74 		.ascii	"uint16_t\000"
+ 1397      31365F74 
+ 1397      00
+ 1398              	.LASF36:
+ 1399 031c 57726974 		.ascii	"WritePacketIDOnly\000"
+ 1399      65506163 
+ 1399      6B657449 
+ 1399      444F6E6C 
+ 1399      7900
+ 1400              	.LASF7:
+ 1401 032e 6C6F6E67 		.ascii	"long int\000"
+ 1401      20696E74 
+ 1401      00
+ 1402              	.LASF19:
+ 1403 0337 74617267 		.ascii	"targetGroup\000"
+ 1403      65744772 
+ 1403      6F757000 
+ 1404              	.LASF27:
+ 1405 0343 73657276 		.ascii	"servo\000"
+ 1405      6F00
+ 1406              	.LASF0:
+ 1407 0349 7369676E 		.ascii	"signed char\000"
+ 1407      65642063 
+ 1407      68617200 
+ 1408              	.LASF26:
+ 1409 0355 41737365 		.ascii	"AssembleScienceServoPacket\000"
+ 1409      6D626C65 
+ 1409      53636965 
+ 1409      6E636553 
+ARM GAS  C:\Users\casey\AppData\Local\Temp\ccPpDh9T.s 			page 29
+
+
+ 1409      6572766F 
+ 1410              	.LASF25:
+ 1411 0370 50574D53 		.ascii	"PWMSet\000"
+ 1411      657400
+ 1412              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
